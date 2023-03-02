@@ -33,6 +33,10 @@ namespace IEye.RulersOfTheRedPlane
             LoadDispatchers = new Action[] 
             {
             delegate
+            {
+                new Modules.Items().Initialize();
+            },
+            delegate
                 {
                     DefNotSS2Log.Info($"Populating EntityStateConfigurations");
                     SerializableContentPack.entityStateConfigurations = RRPAssets.LoadAllAssetsOfType<EntityStateConfiguration>(RRPBundle.All);

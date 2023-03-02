@@ -55,6 +55,8 @@ namespace IEye.RulersOfTheRedPlane
             DefNotSS2Log.logger = Logger;
 
             new RRPAssets().Init();
+            new RRPContent().Init();
+            
 		}	
 	}
 }
