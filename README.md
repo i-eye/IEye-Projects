@@ -5,3 +5,6 @@ A vanilla like(hopefully) mod that plans on adding what the imp expansion would 
 Items:
 Four-DimensionalDagger: 15%(+15%) chance on hit to cause an enemy within 25 meters to bleed
   Indev
+  
+  
+  Credit to Nebby and everyone on the Starstorm team for MSU and the loading scripts that I heavily referenced
