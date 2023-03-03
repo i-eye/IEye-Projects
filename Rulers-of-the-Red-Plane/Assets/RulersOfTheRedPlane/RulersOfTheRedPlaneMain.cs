@@ -9,6 +9,9 @@ using R2API.ScriptableObjects;
 using R2API.Utils;
 using R2API.ContentManagement;
 using UnityEngine;
+using Moonstorm;
+
+
 
 namespace IEye.RulersOfTheRedPlane
 {
@@ -42,10 +45,10 @@ namespace IEye.RulersOfTheRedPlane
 	public class RulersOfTheRedPlaneMain : BaseUnityPlugin
 	{
 		public const string GUID = "com.I_Eye.RulersOfTheRedPlane";
-		public const string MODNAME = "Rules of the Red Plane";
+		public const string MODNAME = "Rulers of the Red Plane";
 		public const string VERSION = "0.0.1";
 
-		public static RulersOfTheRedPlaneMain Instance { get; private set; }
+        public static RulersOfTheRedPlaneMain Instance;
         public static PluginInfo pluginInfo;
 
 		private void Awake()
@@ -56,6 +59,7 @@ namespace IEye.RulersOfTheRedPlane
 
             new RRPAssets().Init();
             new RRPContent().Init();
+            ConfigurableFieldManager.AddMod(this);
             
 		}	
 	}

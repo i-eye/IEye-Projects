@@ -22,7 +22,7 @@ namespace IEye.RulersOfTheRedPlane.Items {
         public static float radiusBase = 25f;
 
         [TokenModifier(token, StatTypes.MultiplyByN, 100)]
-        public static float percentChance = .15f;
+        public static float percentChance = 1f;
 
         [TokenModifier(token, StatTypes.Default, 0)]
         public static float duration = 1f;
@@ -30,10 +30,7 @@ namespace IEye.RulersOfTheRedPlane.Items {
         
         public sealed class Behavior : BaseItemMasterBehavior, IOnDamageDealtServerReceiver
         {
-            public void Awake()
-            {
-                DefNotSS2Log.Info("Is Awake");
-            }
+           
             [ItemDefAssociation]
             private static ItemDef GetItemDef() => RRPContent.Items.FourDimensionalDagger;
 
@@ -43,7 +40,7 @@ namespace IEye.RulersOfTheRedPlane.Items {
                 var attackVictim = report.victim;
                 var attacker = report.attacker;
                 TeamIndex teamIndex = report.attackerBody.teamComponent.teamIndex;
-                if(Random.value >  percentChance)
+                if(Random.value <  percentChance)
                 {
                     DefNotSS2Log.Message("Item Proc");
                     HurtBox victim = PickNextTarget(report.victimBody.corePosition, attackVictim, teamIndex);
