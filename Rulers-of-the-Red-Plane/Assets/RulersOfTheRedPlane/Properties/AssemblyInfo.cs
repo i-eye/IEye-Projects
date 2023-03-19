@@ -10,7 +10,7 @@ using System.Security.Permissions;
 [assembly: AssemblyDescription("Gaming")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("")]
+[assembly: AssemblyProduct("Rulers of the Red Plane")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

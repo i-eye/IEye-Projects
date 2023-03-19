@@ -1,0 +1,8 @@
+{
+  "strings": {
+    "RRP_ITEM_FOURDIMENSIONALDAGGER_NAME": "Four Dimensional Dagger",
+    "RRP_ITEM_FOURDIMENSIONALDAGGER_DESC": "15%(+15%) chance on hit to bleed an enemy within 25 meters",
+    "RRP_ITEM_FOURDIMENSIONALDAGGER_PICKUP": "Bleed nearby enemies",
+    "RRP_ITEM_FOURDIMENSIONALDAGGER_LORE": "Recent advances in technology have allowed for reach into the fourth dimension. The first application of this was in scalpels, allowing for surgery without the skin having to be cut. This reduced the amount of incisions needed and blood loss. But this dangerous invention didn't last long. The blood of those carelessly massacred in the vicinity spoke for itself."
+  }
+}

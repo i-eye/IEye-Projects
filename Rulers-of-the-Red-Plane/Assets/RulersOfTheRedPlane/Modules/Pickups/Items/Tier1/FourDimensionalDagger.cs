@@ -10,52 +10,72 @@ using System.Linq;
 namespace IEye.RulersOfTheRedPlane.Items {
     public class FourDimensionalDagger : ItemBase
     {
-        public override void Initialize()
-        {
-            base.Initialize();
-            DefNotSS2Log.Info("4D script loaded");
-        }
+        
         private const string token = "RRP_ITEM_FOURDIMENSIONALDAGGER_DESC";
         public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("FourDimensionalDagger", RRPBundle.Items);
 
-        [TokenModifier(token, StatTypes.Default, 0)]
+        [ConfigurableField(ConfigName = "Radius")]
+        //[TokenModifier(token, StatTypes.Default, 0)]
         public static float radiusBase = 25f;
 
-        [TokenModifier(token, StatTypes.MultiplyByN, 100)]
-        public static float percentChance = 1f;
+        [ConfigurableField(ConfigName = "Chance")]
+        //[TokenModifier(token, StatTypes.MultiplyByN, 100)]
+        public static float percentChance = .15f;
 
-        [TokenModifier(token, StatTypes.Default, 0)]
-        public static float duration = 1f;
+        [ConfigurableField(ConfigName = "Duration")]
+        //[TokenModifier(token, StatTypes.Default, 0)]
+        public static float duration = 3f;
+
 
         
-        public sealed class Behavior : BaseItemMasterBehavior, IOnDamageDealtServerReceiver
+        public sealed class Behavior : BaseItemBodyBehavior, IOnDamageDealtServerReceiver
         {
-           
+            
             [ItemDefAssociation]
             private static ItemDef GetItemDef() => RRPContent.Items.FourDimensionalDagger;
-
+            
             public void OnDamageDealtServer(DamageReport report)
             {
-                DefNotSS2Log.Info("4D dagger has OnDamgeDealtServer");
+                if (report.damageInfo.procCoefficient == 0f)
+                {
+                    return;
+                }
                 var attackVictim = report.victim;
                 var attacker = report.attacker;
                 TeamIndex teamIndex = report.attackerBody.teamComponent.teamIndex;
-                if(Random.value <  percentChance)
-                {
-                    DefNotSS2Log.Message("Item Proc");
-                    HurtBox victim = PickNextTarget(report.victimBody.corePosition, attackVictim, teamIndex);
-                    DotController.InflictDot(victim.gameObject, attacker, DotController.DotIndex.Bleed, duration * report.damageInfo.procCoefficient, 1f);
-                    DefNotSS2Log.Message("I hope an enemy nearby has an effect lol");
+                if (!report.damageInfo.procChainMask.HasProc(ProcType.BleedOnHit)){
+                    ProcChainMask procChainMask = report.damageInfo.procChainMask;
+                    procChainMask.AddProc(ProcType.BleedOnHit);
+                    if (Random.value < (percentChance * stack))
+                    {
+                        HealthComponent victim = PickNextTarget(report.victimBody.corePosition, attackVictim);
+                        if(victim == null)
+                        {
+                            return;
+                        }
+                        //DefNotSS2Log.Message("Victim:" + victim.gameObject.name);
+                        var dotInfo = new InflictDotInfo()
+                        {
+                            attackerObject = attacker,
+                            victimObject = victim.gameObject,
+                            dotIndex = DotController.DotIndex.Bleed,
+                            duration = report.damageInfo.procCoefficient * duration,
+                            damageMultiplier = 1f,
+                        };
+                        //DefNotSS2Log.Message("Before inflict");
+                        DotController.InflictDot(ref dotInfo);
+                        //DefNotSS2Log.Message("I hope an enemy nearby has an effect lol");
+
+                    }
                 }
-                
 
 
             }
 
 
-            public HurtBox PickNextTarget(Vector3 position, HealthComponent currentVictim, TeamIndex teamIndex)
+            public HealthComponent PickNextTarget(Vector3 position, HealthComponent currentVictim)
             {
-                index = teamIndex;
+                
                 if (this.search == null)
                 {
                     this.search = new SphereSearch();
@@ -66,22 +86,46 @@ namespace IEye.RulersOfTheRedPlane.Items {
                     range += currentVictim.body.radius;
                 }
 
+                TeamMask mask = TeamMask.AllExcept(TeamIndex.Player);
+                this.search.mask = LayerIndex.entityPrecise.mask;
                 this.search.radius = range;
                 this.search.origin = position;
-                this.search.RefreshCandidates();
-                this.search.FilterCandidatesByHurtBoxTeam(TeamMask.GetEnemyTeams(teamIndex));
+                this.search.queryTriggerInteraction = QueryTriggerInteraction.UseGlobal;
 
 
-                HurtBox[] hurtBoxes = this.search.GetHurtBoxes();
-                HurtBox selected = hurtBoxes[Random.Range(0, hurtBoxes.Length)];
-                DefNotSS2Log.Message("Should have hurtbox now");
-                return selected;
+                while (true)
+                {
+                    this.search.RefreshCandidates();
+                    this.search.FilterCandidatesByHurtBoxTeam(mask);
+                    this.search.FilterCandidatesByDistinctHurtBoxEntities();
 
+                    HurtBox[] hurtBoxes = this.search.GetHurtBoxes();
+                    List<HealthComponent> healthComponents = new List<HealthComponent>();
+                    foreach(HurtBox hurtBox in hurtBoxes)
+                    {
+                        if(hurtBox.healthComponent != currentVictim)
+                        {
+                            healthComponents.Add(hurtBox.healthComponent);
+                        }
+                    }
+                    if (healthComponents.Count != 0)
+                    {
+                        //DefNotSS2Log.Message("Found healthcomponent array(length): " + healthComponents.Length);
+                        selected = healthComponents[Random.Range(0, healthComponents.Count)];
+                    }
+                    else
+                    {
+                        DefNotSS2Log.Message("Search is null");
+                        return null;
+                    }
+
+                    return selected;
+                    
+                }
                 
             }
             private SphereSearch search;
-            public TeamIndex index;
-            public List<HealthComponent> bouncedObjects;
+            private HealthComponent selected;
             public float baseRange = radiusBase;
         }
     }

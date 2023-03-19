@@ -54,6 +54,19 @@ namespace IEye.RulersOfTheRedPlane
                 {
                     DefNotSS2Log.Info($"Populating EntityStateConfigurations");
                     SerializableContentPack.entityStateConfigurations = RRPAssets.LoadAllAssetsOfType<EntityStateConfiguration>(RRPBundle.All);
+                },
+            delegate
+                {
+                    DefNotSS2Log.Info($"Populating effect prefabs");
+                    SerializableContentPack.effectPrefabs = SerializableContentPack.effectPrefabs.Concat(RRPAssets.LoadAllAssetsOfType<GameObject>(RRPBundle.All)
+                    .Where(go => go.GetComponent<EffectComponent>()))
+                    .ToArray();
+                },
+                delegate
+                {
+                    DefNotSS2Log.Info($"Swapping material shaders");
+                    RRPAssets.Instance.SwapMaterialShaders();
+                    RRPAssets.Instance.FinalizeCopiedMaterials();
                 }
             };
             PopulateFieldsDispatchers = new Action[]

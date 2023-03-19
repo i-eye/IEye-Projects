@@ -16,6 +16,6 @@ MonoBehaviour:
   requiredEntitlement: {fileID: 0}
   nameToken: RRP_EXPANSION_NAME
   descriptionToken: RRP_EXPANSION_DESC
-  iconSprite: {fileID: 0}
-  disabledIconSprite: {fileID: 0}
+  iconSprite: {fileID: 21300000, guid: 71d8bea197940054eac93e9c0cf7fc97, type: 3}
+  disabledIconSprite: {fileID: 21300000, guid: 1973417585079444ea976f56d0d6ddd5, type: 3}
   runBehaviorPrefab: {fileID: 0}

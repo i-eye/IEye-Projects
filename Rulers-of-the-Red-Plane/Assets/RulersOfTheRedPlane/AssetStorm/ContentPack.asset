@@ -38,5 +38,6 @@ MonoBehaviour:
   miscPickupDefs: []
   entityStateConfigurations: []
   entityStateTypes: []
-  expansionDefs: []
+  expansionDefs:
+  - {fileID: 11400000, guid: 0d7ea78905bfc2c4c8636a77b83a5661, type: 2}
   entitlementDefs: []

@@ -7,6 +7,7 @@ using BepInEx;
 using R2API;
 using R2API.ScriptableObjects;
 using R2API.Utils;
+using R2API.Networking;
 using R2API.ContentManagement;
 using UnityEngine;
 using Moonstorm;
@@ -15,34 +16,20 @@ using Moonstorm;
 
 namespace IEye.RulersOfTheRedPlane
 {
-    [BepInDependency("com.TeamMoonstorm.MoonstormSharedUtils")]
-    [BepInDependency("com.bepis.r2api.artifactcode")]
-    [BepInDependency("com.bepis.r2api.colors")]
-    [BepInDependency("com.bepis.r2api.commandhelper")]
-    [BepInDependency("com.bepis.r2api.content_management")]
-    [BepInDependency("com.bepis.r2api")]
-    [BepInDependency("com.bepis.r2api.damagetype")]
-    [BepInDependency("com.bepis.r2api.deployable")]
-    [BepInDependency("com.bepis.r2api.difficulty")]
-    [BepInDependency("com.bepis.r2api.director")]
+    #region R2API
     [BepInDependency("com.bepis.r2api.dot")]
-    [BepInDependency("com.bepis.r2api.elites")]
-    [BepInDependency("com.bepis.r2api.items")]
-    [BepInDependency("com.bepis.r2api.language")]
-    [BepInDependency("com.bepis.r2api.loadout")]
-    [BepInDependency("com.bepis.r2api.lobbyconfig")]
     [BepInDependency("com.bepis.r2api.networking")]
-    [BepInDependency("com.bepis.r2api.orb")]
     [BepInDependency("com.bepis.r2api.prefab")]
-    [BepInDependency("com.bepis.r2api.recalculatestats")]
-    [BepInDependency("com.bepis.r2api.rules")]
-    [BepInDependency("com.bepis.r2api.sceneasset")]
-    [BepInDependency("com.bepis.r2api.sound")]
-    [BepInDependency("com.bepis.r2api.tempvisualeffect")]
-    [BepInDependency("com.bepis.r2api.unlockable")]
-
-	[BepInPlugin(GUID, MODNAME, VERSION)]
-	public class RulersOfTheRedPlaneMain : BaseUnityPlugin
+    [BepInDependency("com.bepis.r2api.difficulty")]
+    #endregion
+    [BepInDependency("com.TeamMoonstorm.MoonstormSharedUtils", BepInDependency.DependencyFlags.HardDependency)]
+    [BepInDependency("com.DestroyedClone.AncientScepter", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency("com.RiskyLives.RiskyMod", BepInDependency.DependencyFlags.SoftDependency)]
+    [R2APISubmoduleDependency(
+        nameof(DotAPI),
+        nameof(PrefabAPI))]
+    [BepInPlugin(GUID, MODNAME, VERSION)]
+    public class RulersOfTheRedPlaneMain : BaseUnityPlugin
 	{
 		public const string GUID = "com.I_Eye.RulersOfTheRedPlane";
 		public const string MODNAME = "Rulers of the Red Plane";
@@ -59,6 +46,7 @@ namespace IEye.RulersOfTheRedPlane
 
             new RRPAssets().Init();
             new RRPContent().Init();
+            new RRPLanguage().Init();
             ConfigurableFieldManager.AddMod(this);
             
 		}	
