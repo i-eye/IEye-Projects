@@ -1,0 +1,8 @@
+{
+  "strings": {
+    "RRP_ITEM_DOUBLESWORD_NAME": "Double Sided Sword",
+    "RRP_ITEM_DOUBLESWORD_PICKUP": "BLEED THE WORLD<style=cDeath>...including yourself</style>",
+    "RRP_ITEM_DOUBLESWORD_DESC": "On taking damage, <style=cIsDamage>bleed</style> the world around {0} m and yourself for <style=cIsUtility>{2} s</style> <style=cStack>(damage increases on stack).</style>",
+    "RRP_ITEM_DOUBLESWORD_LORE": "This is a story of sacrifice. We are all in debt. Soontm"
+  }
+}

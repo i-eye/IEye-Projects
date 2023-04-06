@@ -14,16 +14,20 @@ namespace IEye.RulersOfTheRedPlane.Items {
         private const string token = "RRP_ITEM_FOURDIMENSIONALDAGGER_DESC";
         public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("FourDimensionalDagger", RRPBundle.Items);
 
-        [ConfigurableField(ConfigName = "Radius")]
-        //[TokenModifier(token, StatTypes.Default, 0)]
-        public static float radiusBase = 25f;
+        
 
         [ConfigurableField(ConfigName = "Chance")]
-        //[TokenModifier(token, StatTypes.MultiplyByN, 100)]
+        [TokenModifier(token, StatTypes.MultiplyByN, 0, "100")]
         public static float percentChance = .15f;
 
+        [ConfigurableField(ConfigName = "Radius")]
+        [TokenModifier(token, StatTypes.Default, 1)]
+        public static float radiusBase = 25f;
+
+        [TokenModifier(token, StatTypes.Default, 2)]
+        public static float radiusIncrease = (radiusBase * .2f);
+
         [ConfigurableField(ConfigName = "Duration")]
-        //[TokenModifier(token, StatTypes.Default, 0)]
         public static float duration = 3f;
 
 
@@ -88,40 +92,40 @@ namespace IEye.RulersOfTheRedPlane.Items {
 
                 TeamMask mask = TeamMask.AllExcept(TeamIndex.Player);
                 this.search.mask = LayerIndex.entityPrecise.mask;
-                this.search.radius = range;
+                this.search.radius = range + (radiusIncrease * .2f);
                 this.search.origin = position;
                 this.search.queryTriggerInteraction = QueryTriggerInteraction.UseGlobal;
 
 
-                while (true)
+                
+                
+                this.search.RefreshCandidates();
+                this.search.FilterCandidatesByHurtBoxTeam(mask);
+                this.search.FilterCandidatesByDistinctHurtBoxEntities();
+
+                HurtBox[] hurtBoxes = this.search.GetHurtBoxes();
+                List<HealthComponent> healthComponents = new List<HealthComponent>();
+                foreach(HurtBox hurtBox in hurtBoxes)
                 {
-                    this.search.RefreshCandidates();
-                    this.search.FilterCandidatesByHurtBoxTeam(mask);
-                    this.search.FilterCandidatesByDistinctHurtBoxEntities();
-
-                    HurtBox[] hurtBoxes = this.search.GetHurtBoxes();
-                    List<HealthComponent> healthComponents = new List<HealthComponent>();
-                    foreach(HurtBox hurtBox in hurtBoxes)
+                    if(hurtBox.healthComponent != currentVictim)
                     {
-                        if(hurtBox.healthComponent != currentVictim)
-                        {
-                            healthComponents.Add(hurtBox.healthComponent);
-                        }
+                        healthComponents.Add(hurtBox.healthComponent);
                     }
-                    if (healthComponents.Count != 0)
-                    {
-                        //DefNotSS2Log.Message("Found healthcomponent array(length): " + healthComponents.Length);
-                        selected = healthComponents[Random.Range(0, healthComponents.Count)];
-                    }
-                    else
-                    {
-                        DefNotSS2Log.Message("Search is null");
-                        return null;
-                    }
-
-                    return selected;
-                    
                 }
+                if (healthComponents.Count != 0)
+                {
+                    //DefNotSS2Log.Message("Found healthcomponent array(length): " + healthComponents.Length);
+                    selected = healthComponents[Random.Range(0, healthComponents.Count)];
+                }
+                else
+                {
+                    //DefNotSS2Log.Message("Search is null");
+                    return null;
+                }
+
+                return selected;
+                    
+                
                 
             }
             private SphereSearch search;

@@ -23,11 +23,11 @@ namespace IEye.RulersOfTheRedPlane
     [BepInDependency("com.bepis.r2api.difficulty")]
     #endregion
     [BepInDependency("com.TeamMoonstorm.MoonstormSharedUtils", BepInDependency.DependencyFlags.HardDependency)]
-    [BepInDependency("com.DestroyedClone.AncientScepter", BepInDependency.DependencyFlags.SoftDependency)]
-    [BepInDependency("com.RiskyLives.RiskyMod", BepInDependency.DependencyFlags.SoftDependency)]
+    [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.EveryoneNeedSameModVersion)]
     [R2APISubmoduleDependency(
         nameof(DotAPI),
-        nameof(PrefabAPI))]
+        nameof(PrefabAPI),
+        nameof(NetworkingAPI))]
     [BepInPlugin(GUID, MODNAME, VERSION)]
     public class RulersOfTheRedPlaneMain : BaseUnityPlugin
 	{
@@ -45,6 +45,7 @@ namespace IEye.RulersOfTheRedPlane
             DefNotSS2Log.logger = Logger;
 
             new RRPAssets().Init();
+            new RRPConfig().Init();
             new RRPContent().Init();
             new RRPLanguage().Init();
             ConfigurableFieldManager.AddMod(this);

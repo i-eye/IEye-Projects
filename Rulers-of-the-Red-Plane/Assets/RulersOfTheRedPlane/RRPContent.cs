@@ -17,6 +17,7 @@ namespace IEye.RulersOfTheRedPlane
         public static class Items
         {
             public static ItemDef FourDimensionalDagger;
+            public static ItemDef DoubleSidedSword;
         }
         public override string identifier => RulersOfTheRedPlaneMain.GUID;
 
