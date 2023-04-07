@@ -5,9 +5,9 @@ using Moonstorm;
 using RoR2;
 using RoR2.Items;
 using R2API;
-
 namespace IEye.RulersOfTheRedPlane.Items
 {
+    [DisabledContent]
     public class IntrospectiveInsect : ItemBase
     {
         public static float healCoef = .25f;

@@ -32,8 +32,7 @@ MonoBehaviour:
   - <ManifestPluginStaging>
   Author: IEye
   Name: Rulers of the Red Plane
-  Description: An overambitious mod with two items. Actual logo coming soon. Featuring
-    art by Nightshade. Heavily referencing some Starstorm 2 stuff.
+  Description: An overambitious mod with two items currently.
   Version: 0.0.3
   Dependencies:
   - {fileID: 11400000, guid: 5ceb1d8ed3af40d4d806e9756b403649, type: 2}

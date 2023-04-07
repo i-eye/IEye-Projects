@@ -18,12 +18,16 @@ namespace IEye.RulersOfTheRedPlane.Items
         public static float radiusBase = 50f;
 
         [ConfigurableField(ConfigName = "Damage")]
-        [TokenModifier(token, StatTypes.Default, 1)]
+        [TokenModifier(token, StatTypes.MultiplyByN, 1, "240")]
         public static float damage = 2f;
 
         [ConfigurableField(ConfigName = "Duration")]
         [TokenModifier(token, StatTypes.Default, 2)]
         public static float duration = 3f;
+
+        [ConfigurableField(ConfigName = "Player Coef")]
+        [TokenModifier(token, StatTypes.Default, 3)]
+        public static float playerCoef = .2f;
 
        
 
@@ -34,7 +38,9 @@ namespace IEye.RulersOfTheRedPlane.Items
             public void OnTakeDamageServer(DamageReport report)
             {
                 //DefNotSS2Log.Message("dotIndex is: " + report.damageInfo.dotIndex);
-                if (report.damageInfo.procCoefficient > 0 && report.damageInfo.dotIndex == DotController.DotIndex.None)
+                //DefNotSS2Log.Message("profCoef is: " + report.damageInfo.procCoefficient);
+                //DefNotSS2Log.Message("damgageType is: " + ((int)report.damageInfo.damageType));
+                if ((report.damageInfo.procCoefficient > 0) && (report.damageInfo.dotIndex.Equals(DotController.DotIndex.None)) && ((int)report.damageInfo.damageType) != 66)
                 {
                     var victim = report.victim;
                     
@@ -45,7 +51,7 @@ namespace IEye.RulersOfTheRedPlane.Items
                         victimObject = victim.gameObject,
                         dotIndex = DotController.DotIndex.Bleed,
                         duration = duration * report.damageInfo.procCoefficient,
-                        damageMultiplier = damage * .2f * stack,
+                        damageMultiplier = damage * playerCoef * stack,
                     };
                     DotController.InflictDot(ref dotInfoVictim);
 
@@ -54,6 +60,7 @@ namespace IEye.RulersOfTheRedPlane.Items
                     {
                         foreach (HealthComponent component in components)
                         {
+                            
                             var dotInfo = new InflictDotInfo()
                             {
                                 attackerObject = victim.gameObject,
@@ -104,7 +111,7 @@ namespace IEye.RulersOfTheRedPlane.Items
                 }
                 if (healthComponents.Length == 0 || healthComponents == null)
                 {
-                    DefNotSS2Log.Message("Search is null");
+                    //DefNotSS2Log.Message("Search is null");
                     return null;
                 }
                 return healthComponents;

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ChangeAssemblyBuildMode
   m_EditorClassIdentifier: 
   Active: 1
-  buildMode: 0
+  buildMode: 1
 --- !u!114 &-6388910531699748535
 MonoBehaviour:
   m_ObjectHideFlags: 0
