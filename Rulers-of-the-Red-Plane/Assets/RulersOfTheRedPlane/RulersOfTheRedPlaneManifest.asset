@@ -31,7 +31,7 @@ MonoBehaviour:
   StagingPaths:
   - <ManifestPluginStaging>
   Author: IEye
-  Name: Rulers of the Red Plane
+  Name: Rulers_of_the_Red_Plane
   Description: An overambitious mod with two items currently.
   Version: 0.0.3
   Dependencies:
@@ -40,6 +40,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 484664494380feb55f0413b710f656ac, type: 2}
   - {fileID: 11400000, guid: a644a53693d44639c70550096ce74b93, type: 2}
   - {fileID: 11400000, guid: 1b5df2a4c826b6f799002dab33a6b684, type: 2}
+  - {fileID: 11400000, guid: 5674b391a71ca7b6c4189c6fd99a9f26, type: 2}
+  - {fileID: 11400000, guid: 96b1b0a099d0aa02c665488b89e05f9c, type: 2}
+  - {fileID: 11400000, guid: 1f1d261aeee91427ddd08b6378ec4e5a, type: 2}
+  - {fileID: 11400000, guid: cf53c440617523c88133e24838fdcb20, type: 2}
+  - {fileID: 11400000, guid: 184f0fdf3edcd6bad171410f4e0fd947, type: 2}
+  - {fileID: 11400000, guid: c4d029bdf5bc95fb2fff2155c8689ef3, type: 2}
+  - {fileID: 11400000, guid: e3489f21cf727f06414f0494e9dce911, type: 2}
+  - {fileID: 11400000, guid: 98480314448d120c05e373472456e52b, type: 2}
+  - {fileID: 11400000, guid: 19f404b4f1d413a691a8b0edda7faba9, type: 2}
 --- !u!114 &-6429385041958414480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,6 +101,7 @@ MonoBehaviour:
   - <BuildPath>
   files:
   - {fileID: 2800000, guid: c1353823a843d1f489dc764c8145ccb6, type: 3}
+  - {fileID: 4900000, guid: c1831a92e9e58df4a99c8c7937d85c1b, type: 3}
 --- !u!114 &2765314773197025085
 MonoBehaviour:
   m_ObjectHideFlags: 0
