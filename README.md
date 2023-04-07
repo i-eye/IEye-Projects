@@ -25,15 +25,15 @@ Nightshade for creating the logo
 ### 0.0.3
 - Fixed Double Sided Sword and added better descriptions
 - 4D Dagger 30m radius -> 25m (+5m per stack)
+- Added logo
 
 ### 0.0.2
-Unreleased
+Github Pre-release
 - Added Double Sided Sword
-- Added Logo
 - Added language/token support
 
 ### 0.0.1
-Github Pre-release
+Unreleased(you don't want it)
 - Added Four Dimensional Dagger
 - 4D Dagger 30m radius
 - Mod actually is in game
