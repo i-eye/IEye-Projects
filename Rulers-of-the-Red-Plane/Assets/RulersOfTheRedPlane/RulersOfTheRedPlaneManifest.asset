@@ -33,7 +33,7 @@ MonoBehaviour:
   Author: IEye
   Name: Rulers_of_the_Red_Plane
   Description: An overambitious mod with two items currently.
-  Version: 0.0.3
+  Version: 0.0.5
   Dependencies:
   - {fileID: 11400000, guid: 5ceb1d8ed3af40d4d806e9756b403649, type: 2}
   - {fileID: 11400000, guid: 890a1759ee352a00d2367557b4d6225f, type: 2}
@@ -123,6 +123,11 @@ MonoBehaviour:
     - {fileID: 4900000, guid: 462f2db432fe83442bdaa463425af489, type: 3}
     - {fileID: 4900000, guid: e0f3afdfda238a943903a588c1c20efc, type: 3}
     - {fileID: 4900000, guid: cb07451ca47b64949bb883a0fd49c9f7, type: 3}
+  - languageName: es-ES
+    languageFiles:
+    - {fileID: 4900000, guid: a2a81b2fc585c0d42b5e589793678f16, type: 3}
+    - {fileID: 4900000, guid: ee4e3400fc5c578499adbf3d7ee77150, type: 3}
+    - {fileID: 4900000, guid: 32ce9a08566b58d428a91e904bbf8295, type: 3}
 --- !u!114 &3190296122889749491
 MonoBehaviour:
   m_ObjectHideFlags: 0

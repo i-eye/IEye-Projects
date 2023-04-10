@@ -17,8 +17,8 @@ namespace IEye.RulersOfTheRedPlane.Items {
         
 
         [ConfigurableField(ConfigName = "Chance")]
-        [TokenModifier(token, StatTypes.MultiplyByN, 0, "100")]
-        public static float percentChance = .15f;
+        [TokenModifier(token, StatTypes.Default, 0)]
+        public static float percentChance = 15f;
 
         [ConfigurableField(ConfigName = "Radius")]
         [TokenModifier(token, StatTypes.Default, 1)]
@@ -50,7 +50,7 @@ namespace IEye.RulersOfTheRedPlane.Items {
                 if (!report.damageInfo.procChainMask.HasProc(ProcType.BleedOnHit)){
                     ProcChainMask procChainMask = report.damageInfo.procChainMask;
                     procChainMask.AddProc(ProcType.BleedOnHit);
-                    if (Random.value < (percentChance * stack))
+                    if (Util.CheckRoll(report.damageInfo.procCoefficient * percentChance * stack, report.attackerBody.master))
                     {
                         HealthComponent victim = PickNextTarget(report.victimBody.corePosition, attackVictim);
                         if(victim == null)

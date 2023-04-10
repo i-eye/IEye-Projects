@@ -1,0 +1,8 @@
+{
+  "strings": {
+    "RRP_ITEM_FOURDIMENSIONALDAGGER_NAME": "Daga de tetra dimensiónes",
+    "RRP_ITEM_FOURDIMENSIONALDAGGER_DESC": "<style=cIsDamage>{0}%</style> <style=cStack>(+{0}% por accumulación)</style> probabilidad en blanco causar hemorragia a un enemigo en <style=cIsDamage>{1}m</style> <style=cStack>(+{2}m por accumulación)</style> por <style=cIsDamage>240% daño base</style>.",
+    "RRP_ITEM_FOURDIMENSIONALDAGGER_PICKUP": "Probabilidad de causar hemorragia enemigos cercanos en blanco.",
+    "RRP_ITEM_FOURDIMENSIONALDAGGER_LORE": "Reciente advances en tecnología hacen permitido por alcance en el dimensional cuatro dimensiónes. El primer uso de este fue en bisturís, permitiendo por cirugía sin cortes de piel. Este quita la cantidad de incisiónes necesarios y pérdida de sangre. Pero este invento peligroso no hace mucho tiempo. El sangre de los que fue masacrar sin cuidado en el vecindad habló por sí mismo."
+  }
+}

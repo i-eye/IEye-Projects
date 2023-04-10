@@ -1,8 +1,8 @@
 {
   "strings": {
-    "RRP_ITEM_DOUBLESWORD_NAME": "Double Sided Sword",
+    "RRP_ITEM_DOUBLESWORD_NAME": "Double sided sword",
     "RRP_ITEM_DOUBLESWORD_PICKUP": "BLEED THE WORLD<style=cDeath>...including yourself</style>",
     "RRP_ITEM_DOUBLESWORD_DESC": "On taking damage, <style=cIsDamage>bleed</style> everything around <style=cIsDamage>{0}m</style> of you for <style=cIsDamage>{2}s</style> for <style=cIsDamage>{1}% base damage</style> <style=cStack>(+{1}% base damage per stack)</style>.\nDamage is <style=cIsDamage>{3}x</style> effective on you.",
-    "RRP_ITEM_DOUBLESWORD_LORE": "Soontm"
+    "RRP_ITEM_DOUBLESWORD_LORE": "Blood.\n\nEverything bleeds. The vermin you protect, the golems, the dunepeople, creations of soul, every helpless creature dies simply upon losing enough blood. There is no way around it. Even my creations bleed. As do you.\n\nThe imps were of inspiration. Their natural anti-coagulants made them lethal to the plagues you choose to protect. You brought this to my attention. I have to thank your obsession on hunting them down. You may have thought they were too weak to be more than an annoyance. They're organically made, and in low quanitity too. They require physical contact. The stronger found a way to inflict this at a range; however, primitive methods are used. But the potential is higher than you anticipated.\n\nOr maybe you just forgot. I see everything you do. And you do receive these. I know of it.\n\nOr maybe you just ignore. Just know that you will fail. Your fainthearted attempts to keep me at bay are ineffective. You will fail." 
   }
 }

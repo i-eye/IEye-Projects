@@ -33,7 +33,7 @@ namespace IEye.RulersOfTheRedPlane
 	{
 		public const string GUID = "com.I_Eye.RulersOfTheRedPlane";
 		public const string MODNAME = "Rulers of the Red Plane";
-		public const string VERSION = "0.0.1";
+		public const string VERSION = "0.0.5";
 
         public static RulersOfTheRedPlaneMain Instance;
         public static PluginInfo pluginInfo;
