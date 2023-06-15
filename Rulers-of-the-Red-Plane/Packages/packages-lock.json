@@ -6,6 +6,18 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "bubbet-zioconfigfile": {
+      "version": "file:ZioConfigFile",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "bubbet-zioriskofoptions": {
+      "version": "file:ZioRiskOfOptions",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.passivepicasso.thunderkit": {
       "version": "https://github.com/PassivePicasso/ThunderKit.git",
       "depth": 0,
@@ -29,8 +41,17 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.ide.visualstudio": {
+      "version": "2.0.18",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.9"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.ide.vscode": {
-      "version": "1.2.3",
+      "version": "1.2.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -229,6 +250,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "riskofthunder-r2api_skins": {
+      "version": "file:R2API_Skins",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "riskofthunder-r2api_sound": {
       "version": "file:R2API_Sound",
       "depth": 0,
@@ -248,13 +275,20 @@
       "dependencies": {}
     },
     "riskofthunder-ror2editorkit": {
-      "version": "file:RoR2EditorKit",
+      "version": "https://github.com/risk-of-thunder/RoR2EditorKit.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "4cc702d61eac40b65e33be38f99fca9881bf2026"
+    },
+    "riskofthunder-ror2importextensions": {
+      "version": "file:RoR2ImportExtensions",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
     },
-    "riskofthunder-ror2importextensions": {
-      "version": "file:RoR2ImportExtensions",
+    "rune580-risk_of_options": {
+      "version": "file:Risk_Of_Options",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
@@ -264,7 +298,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "cb012483b6d04f83dfe352b1db4da73d2a3e2c43"
+      "hash": "fef67c2772fa14a2da0557a73ad32705dc7fe2da"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

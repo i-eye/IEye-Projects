@@ -18,6 +18,18 @@ namespace IEye.RulersOfTheRedPlane
         {
             public static ItemDef FourDimensionalDagger;
             public static ItemDef DoubleSidedSword;
+            public static ItemDef IntrospectiveInsect;
+            public static ItemDef AgressiveInsect;
+
+            public static ItemDef SacrificialHelper;
+        }
+        public static class Buffs
+        {
+            public static BuffDef InsectPoison;
+        }
+        public static class ItemTierDefs
+        {
+            public static ItemTierDef Sacrificial;
         }
         public override string identifier => RulersOfTheRedPlaneMain.GUID;
 
@@ -39,6 +51,14 @@ namespace IEye.RulersOfTheRedPlane
             },
             delegate
             {
+                new Modules.Buffs().Initialize();
+            },
+            delegate
+            {
+                new Modules.ItemTiers().Initialize();
+            },
+            delegate
+            {
                 DefNotSS2Log.Info($"Populating entity state array");
                 GetType().Assembly.GetTypes()
                                       .Where(type => typeof(EntityStates.EntityState).IsAssignableFrom(type))
@@ -55,13 +75,6 @@ namespace IEye.RulersOfTheRedPlane
                 {
                     DefNotSS2Log.Info($"Populating EntityStateConfigurations");
                     SerializableContentPack.entityStateConfigurations = RRPAssets.LoadAllAssetsOfType<EntityStateConfiguration>(RRPBundle.All);
-                },
-            delegate
-                {
-                    DefNotSS2Log.Info($"Populating effect prefabs");
-                    SerializableContentPack.effectPrefabs = SerializableContentPack.effectPrefabs.Concat(RRPAssets.LoadAllAssetsOfType<GameObject>(RRPBundle.All)
-                    .Where(go => go.GetComponent<EffectComponent>()))
-                    .ToArray();
                 },
                 delegate
                 {
@@ -80,6 +93,14 @@ namespace IEye.RulersOfTheRedPlane
                 {
                     PopulateTypeFields(typeof(Items), ContentPack.itemDefs);
                 },
+                delegate
+                {
+                    PopulateTypeFields(typeof(Buffs), ContentPack.buffDefs);
+                },
+                delegate
+                {
+                    PopulateTypeFields(typeof(ItemTierDefs), ContentPack.itemTierDefs);
+                }
             };
         }
     }
