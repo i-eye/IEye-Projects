@@ -18,7 +18,7 @@ namespace IEye.RulersOfTheRedPlane.Buffs
             
             public void ModifyStatArguments(RecalculateStatsAPI.StatHookEventArgs args)
             {
-                args.damageMultAdd -= IntrospectiveInsect.insectDamageCripple;
+                args.damageMultAdd -= IntrospectiveInsect.insectDamageCripple / 100;
             }
         }
     }

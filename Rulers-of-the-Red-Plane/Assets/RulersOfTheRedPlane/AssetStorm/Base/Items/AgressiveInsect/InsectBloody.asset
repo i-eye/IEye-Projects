@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1783169300, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-  m_Name: InsectPoison
+  m_Name: InsectBloody
   m_EditorClassIdentifier: 
   iconPath: 
-  iconSprite: {fileID: 21300000, guid: 28f15bb8a026e7e4ca6927666223a5aa, type: 3}
-  buffColor: {r: 0.24281725, g: 0.254717, b: 0.046858322, a: 1}
+  iconSprite: {fileID: 21300000, guid: 1973417585079444ea976f56d0d6ddd5, type: 3}
+  buffColor: {r: 0.2830189, g: 0.057404775, b: 0.057404775, a: 1}
   canStack: 0
   eliteDef: {fileID: 0}
   isDebuff: 1

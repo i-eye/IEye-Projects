@@ -16,18 +16,19 @@ namespace IEye.RulersOfTheRedPlane.Items {
 
         
 
-        [ConfigurableField(ConfigName = "Chance")]
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Chance for this item to proc per stack(default 15%).")]
         [TokenModifier(token, StatTypes.Default, 0)]
         public static float percentChance = 15f;
 
-        [ConfigurableField(ConfigName = "Radius")]
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base search radius(default 25m).")]
         [TokenModifier(token, StatTypes.Default, 1)]
-        public static float radiusBase = 25f;
+        public static int radiusBase = 25;
 
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Added search radius per stack past 1(default 5m).")]
         [TokenModifier(token, StatTypes.Default, 2)]
-        public static float radiusIncrease = (radiusBase * .2f);
+        public static int radiusIncrease = 5;
 
-        [ConfigurableField(ConfigName = "Duration")]
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the bleed in second(default 3s).")]
         public static float duration = 3f;
 
 

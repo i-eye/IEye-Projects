@@ -20,12 +20,17 @@ namespace IEye.RulersOfTheRedPlane
             public static ItemDef DoubleSidedSword;
             public static ItemDef IntrospectiveInsect;
             public static ItemDef AgressiveInsect;
+            public static ItemDef AdrenalineFrenzy;
+            public static ItemDef InnerPiece;
 
             public static ItemDef SacrificialHelper;
         }
         public static class Buffs
         {
             public static BuffDef InsectPoison;
+            public static BuffDef InsectBloody;
+            public static BuffDef AdrenalineOnGettingHit;
+            public static BuffDef AdrenalineOnKill;
         }
         public static class ItemTierDefs
         {

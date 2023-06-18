@@ -51,6 +51,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 19f404b4f1d413a691a8b0edda7faba9, type: 2}
   - {fileID: 11400000, guid: 484664494380feb55f0413b710f656ac, type: 2}
   - {fileID: 11400000, guid: 890a1759ee352a00d2367557b4d6225f, type: 2}
+  - {fileID: 11400000, guid: e8166746ca0c6d98ee8c97fe787f2b80, type: 2}
+  - {fileID: 11400000, guid: 16c8e91a5b2bc2e4cd510a3c418d5c06, type: 2}
+  - {fileID: 11400000, guid: 7e223af718a9b1766e42836ea3d31194, type: 2}
 --- !u!114 &-6429385041958414480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +154,7 @@ MonoBehaviour:
     - {fileID: 2800000, guid: d81e27f129f7d054e8b370adaa949464, type: 3}
     - {fileID: 2800000, guid: 1973417585079444ea976f56d0d6ddd5, type: 3}
     - {fileID: 11400000, guid: 0d7ea78905bfc2c4c8636a77b83a5661, type: 2}
+    - {fileID: 2800000, guid: c1353823a843d1f489dc764c8145ccb6, type: 3}
   - assetBundleName: rrpitems
     assets:
     - {fileID: 102900000, guid: 2a88a7292400ca04b9609e5a52630d07, type: 3}

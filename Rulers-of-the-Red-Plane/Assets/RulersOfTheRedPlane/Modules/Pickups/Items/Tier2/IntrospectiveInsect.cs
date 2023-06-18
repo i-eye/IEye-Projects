@@ -19,12 +19,14 @@ namespace IEye.RulersOfTheRedPlane.Items
 
         //[TokenModifier(token, StatTypes.Default, 0)]
         //public static float healCoef = 1.5f;
-        
-        [TokenModifier(token, StatTypes.Default, 1)]
-        public static float duration = 10f;
 
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the insect posion(default 10s)")]
+        [TokenModifier(token, StatTypes.Default, 1)]
+        public static int duration = 10;
+
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percentage of damage taken away from insect poison target(default 20%)")]
         [TokenModifier(token, StatTypes.MultiplyByN, 2, "100")]
-        public static float insectDamageCripple = .20f;
+        public static float insectDamageCripple = (.20f * 100);
 
         public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("IntrospectiveInsect", RRPBundle.Items);
 
@@ -52,7 +54,7 @@ namespace IEye.RulersOfTheRedPlane.Items
 
                 if (cbVictim.activeBuffsList.Contains(RRPContent.Buffs.InsectPoison.buffIndex))
                 {
-                    float healthValueCoef = 3 - (2.5f / (1f + (.2f * stack)));
+                    float healthValueCoef = 3 - (3f / (1.1f + (.1f * stack)));
                     attacker.healthComponent.Heal(healthValueCoef * cbVictim.damage, damageReport.damageInfo.procChainMask);
                 }
             }

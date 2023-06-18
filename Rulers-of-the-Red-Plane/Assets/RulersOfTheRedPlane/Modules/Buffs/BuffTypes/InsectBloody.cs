@@ -14,11 +14,11 @@ namespace IEye.RulersOfTheRedPlane.Buffs
         public sealed class Behavior : BaseBuffBodyBehavior, IBodyStatArgModifier, IOnDamageInflictedServerReceiver
         {
             [BuffDefAssociation]
-            private static BuffDef GetBuffDef() => RRPContent.Buffs.InsectPoison;
+            private static BuffDef GetBuffDef() => RRPContent.Buffs.InsectBloody;
 
             public void ModifyStatArguments(RecalculateStatsAPI.StatHookEventArgs args)
             {
-                args.damageMultAdd -= AgressiveInsect.bloodyInsectDamageCripple;
+                args.damageMultAdd -= AgressiveInsect.bloodyInsectDamageCripple / 100;
                 args.armorAdd -= AgressiveInsect.bloodyInsectArmorCripple;
             }
 

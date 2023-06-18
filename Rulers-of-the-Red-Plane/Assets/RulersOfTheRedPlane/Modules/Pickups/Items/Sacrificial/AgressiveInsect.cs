@@ -18,9 +18,14 @@ namespace IEye.RulersOfTheRedPlane.Items
         public const string token = "RRP_ITEM_AGROINSECT_DESC";
         public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("AgressiveInsect", RRPBundle.Items);
 
-        public static float duration = 5f;
-        public static float bloodyInsectDamageCripple = .1f;
-        public static float bloodyInsectArmorCripple = 25f;
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the insect blood debuff(default 3s)")]
+        public static float duration = 3f;
+
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percentage of damage taken away from insect blood debuff target(default 5%)")]
+        public static float bloodyInsectDamageCripple = (.05f * 100);
+
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Armor taken away from the insect blood debuff victim(default 20)")]
+        public static int bloodyInsectArmorCripple = 20;
         public sealed class Behavior : BaseItemBodyBehavior, IOnDamageDealtServerReceiver
         {
             [ItemDefAssociation]
@@ -41,13 +46,13 @@ namespace IEye.RulersOfTheRedPlane.Items
             }
             private void applyPoision(CharacterBody cb)
             {
-                int buffCount = cb.GetBuffCount(RRPContent.Buffs.InsectPoison);
+                int buffCount = cb.GetBuffCount(RRPContent.Buffs.InsectBloody);
 
                 if (buffCount > 0)
                 {
-                    cb.RemoveOldestTimedBuff(RRPContent.Buffs.InsectPoison.buffIndex);
+                    cb.RemoveOldestTimedBuff(RRPContent.Buffs.InsectBloody.buffIndex);
                 }
-                cb.AddTimedBuffAuthority(RRPContent.Buffs.InsectPoison.buffIndex, duration);
+                cb.AddTimedBuffAuthority(RRPContent.Buffs.InsectBloody.buffIndex, duration);
             }
 
         }

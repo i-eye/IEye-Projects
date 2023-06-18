@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1284244208, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-  m_Name: FourDimensionalDagger
+  m_Name: InnerPiece
   m_EditorClassIdentifier: 
-  deprecatedTier: 0
+  deprecatedTier: 2
   _itemTierDef: {fileID: 0}
-  nameToken: RRP_ITEM_FOURDIMENSIONALDAGGER_NAME
-  pickupToken: RRP_ITEM_FOURDIMENSIONALDAGGER_PICKUP
-  descriptionToken: RRP_ITEM_FOURDIMENSIONALDAGGER_DESC
-  loreToken: RRP_ITEM_FOURDIMENSIONALDAGGER_LORE
+  nameToken: RRP_ITEM_INNERPIECE_NAME
+  pickupToken: RRP_ITEM_INNERPIECE_PICKUP
+  descriptionToken: RRP_ITEM_INNERPIECE_DESC
+  loreToken: RRP_ITEM_INNERPIECE_LORE
   unlockableDef: {fileID: 0}
-  pickupModelPrefab: {fileID: 3071711993593440008, guid: 7c406dd811dbcab459169a8592c87844,
-    type: 3}
-  pickupIconSprite: {fileID: 21300000, guid: 6fa83a0581132114793cbf670dcb200d, type: 3}
+  pickupModelPrefab: {fileID: 0}
+  pickupIconSprite: {fileID: 0}
   hidden: 0
   canRemove: 1
-  tags: 01000000
+  tags: 03000000
   requiredExpansion: {fileID: 11400000, guid: 0d7ea78905bfc2c4c8636a77b83a5661, type: 2}

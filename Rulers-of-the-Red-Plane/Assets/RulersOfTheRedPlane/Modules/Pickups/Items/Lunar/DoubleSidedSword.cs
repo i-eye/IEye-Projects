@@ -13,21 +13,21 @@ namespace IEye.RulersOfTheRedPlane.Items
         public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("DoubleSidedSword", RRPBundle.Items);
 
 
-        [ConfigurableField(ConfigName = "Radius")]
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base radius for bleed effect(default 50m).")]
         [TokenModifier(token, StatTypes.Default, 0)]
-        public static float radiusBase = 50f;
+        public static int radiusBase = 50;
 
-        [ConfigurableField(ConfigName = "Damage")]
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Damage Coefficient for bleed damage(default 2).")]
         [TokenModifier(token, StatTypes.MultiplyByN, 1, "240")]
         public static float damage = 2f;
 
-        [ConfigurableField(ConfigName = "Duration")]
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of bleed(default 3).")]
         [TokenModifier(token, StatTypes.Default, 2)]
         public static float duration = 3f;
 
-        [ConfigurableField(ConfigName = "Player Coef")]
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percentage of base damage done to the player(default 20%).")]
         [TokenModifier(token, StatTypes.Default, 3)]
-        public static float playerCoef = .2f;
+        public static float playerCoef = (.2f * 100);
 
        
 
@@ -51,7 +51,7 @@ namespace IEye.RulersOfTheRedPlane.Items
                         victimObject = victim.gameObject,
                         dotIndex = DotController.DotIndex.Bleed,
                         duration = duration * report.damageInfo.procCoefficient,
-                        damageMultiplier = damage * playerCoef * stack,
+                        damageMultiplier = damage * playerCoef * stack * .01f,
                     };
                     DotController.InflictDot(ref dotInfoVictim);
 

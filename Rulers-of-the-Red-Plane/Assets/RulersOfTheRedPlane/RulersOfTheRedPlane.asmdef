@@ -45,7 +45,10 @@
         "LegacyResourcesAPI.dll",
         "DebugToolkit.dll",
         "R2API.Core.dll",
-        "R2API.ContentManagement.dll"
+        "R2API.ContentManagement.dll",
+        "RiskOfOptions.dll",
+        "ZioRiskOfOptions.dll",
+        "ZioConfigFile.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [],
