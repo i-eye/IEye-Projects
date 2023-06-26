@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using R2API.Networking;
 
-namespace IEye.RulersOfTheRedPlane.Items
+namespace IEye.RRP.Items
 {
     public class AdrenalineFrenzy : ItemBase
     {
@@ -58,8 +58,10 @@ namespace IEye.RulersOfTheRedPlane.Items
 
             public void OnTakeDamageServer(DamageReport report)
             {
-                var cb = report.victim.GetComponent<CharacterBody>();
-                cb.AddTimedBuffAuthority(RRPContent.Buffs.AdrenalineOnGettingHit.buffIndex, onHitSpeedDuration);
+                if ((report.damageInfo.procCoefficient > 0) && (report.damageInfo.dotIndex.Equals(DotController.DotIndex.None)) && ((int)report.damageInfo.damageType) != 66){
+                    var cb = report.victim.GetComponent<CharacterBody>();
+                    cb.AddTimedBuffAuthority(RRPContent.Buffs.AdrenalineOnGettingHit.buffIndex, onHitSpeedDuration);
+                }
             }
         }
 

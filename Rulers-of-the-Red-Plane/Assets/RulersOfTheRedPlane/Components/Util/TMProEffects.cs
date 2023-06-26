@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace IEye.RulersOfTheRedPlane
+namespace IEye.RRP
 {
     public class TMProEffects
     {

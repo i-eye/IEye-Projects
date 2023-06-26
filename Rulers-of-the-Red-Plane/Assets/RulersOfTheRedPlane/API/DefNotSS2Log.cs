@@ -1,7 +1,7 @@
 ﻿using BepInEx.Logging;
 using System.Runtime.CompilerServices;
 
-namespace IEye.RulersOfTheRedPlane
+namespace IEye.RRP
 {
     public class DefNotSS2Log
     {

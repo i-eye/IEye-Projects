@@ -128,6 +128,7 @@ MonoBehaviour:
     - {fileID: 4900000, guid: 462f2db432fe83442bdaa463425af489, type: 3}
     - {fileID: 4900000, guid: e0f3afdfda238a943903a588c1c20efc, type: 3}
     - {fileID: 4900000, guid: cb07451ca47b64949bb883a0fd49c9f7, type: 3}
+    - {fileID: 4900000, guid: 767e98beaf79e5b4e8e049d9a31daa1a, type: 3}
   - languageName: es-ES
     languageFiles:
     - {fileID: 4900000, guid: a2a81b2fc585c0d42b5e589793678f16, type: 3}
@@ -161,3 +162,6 @@ MonoBehaviour:
   - assetBundleName: rrpbase
     assets:
     - {fileID: 102900000, guid: 0dc73bf08c1ae6a46969a7687887d424, type: 3}
+  - assetBundleName: rrpinteractables
+    assets:
+    - {fileID: 102900000, guid: ddb18936a6dc2fe4180f603a614d4ded, type: 3}

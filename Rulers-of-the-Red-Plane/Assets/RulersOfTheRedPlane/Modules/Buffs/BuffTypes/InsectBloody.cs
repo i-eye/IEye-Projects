@@ -1,10 +1,10 @@
 ﻿using Moonstorm.Components;
-using IEye.RulersOfTheRedPlane.Items;
+using IEye.RRP.Items;
 using R2API;
 using RoR2;
 using Moonstorm;
 
-namespace IEye.RulersOfTheRedPlane.Buffs
+namespace IEye.RRP.Buffs
 {
     public class InsectBloody : BuffBase
     {
@@ -25,7 +25,7 @@ namespace IEye.RulersOfTheRedPlane.Buffs
             public void OnDamageInflictedServer(DamageReport damageReport)
             {
                 float damageDealt = damageReport.damageDealt;
-                float healAmount = damageDealt * .1f * damageReport.victimBody.inventory.GetItemCount(RRPContent.Items.AgressiveInsect);
+                float healAmount = damageDealt * .1f;
                 damageReport.attackerBody.healthComponent.Heal(healAmount, new ProcChainMask());
             }
 

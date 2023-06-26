@@ -7,7 +7,7 @@ using RoR2.Items;
 using R2API;
 using System.Linq;
 
-namespace IEye.RulersOfTheRedPlane.Items {
+namespace IEye.RRP.Items {
     public class FourDimensionalDagger : ItemBase
     {
         

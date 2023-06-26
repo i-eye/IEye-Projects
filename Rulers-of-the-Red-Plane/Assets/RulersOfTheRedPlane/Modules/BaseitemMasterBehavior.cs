@@ -11,7 +11,7 @@ using HG.Reflection;
 using JetBrains.Annotations;
 using System.Reflection;
 
-namespace IEye.RulersOfTheRedPlane
+namespace IEye.RRP
 {
 	public abstract class BaseItemMasterBehavior : MonoBehaviour
 	{

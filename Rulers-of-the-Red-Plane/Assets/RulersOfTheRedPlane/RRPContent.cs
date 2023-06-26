@@ -6,7 +6,7 @@ using System;
 using System.Linq;
 using UnityEngine;
 
-namespace IEye.RulersOfTheRedPlane
+namespace IEye.RRP
 {
     public class RRPContent : ContentLoader<RRPContent>
     {
@@ -16,21 +16,37 @@ namespace IEye.RulersOfTheRedPlane
         }
         public static class Items
         {
+            //white
             public static ItemDef FourDimensionalDagger;
-            public static ItemDef DoubleSidedSword;
+            
+            //green
             public static ItemDef IntrospectiveInsect;
-            public static ItemDef AgressiveInsect;
-            public static ItemDef AdrenalineFrenzy;
+            
+            //red
             public static ItemDef InnerPiece;
 
+            //lunar
+            public static ItemDef DoubleSidedSword;
+
+            //bloody
+            public static ItemDef AgressiveInsect;
+            public static ItemDef AdrenalineFrenzy;
+            public static ItemDef FocusedHemorrhage;
+            public static ItemDef PredatorySavagery;
+
+            //hidden
             public static ItemDef SacrificialHelper;
         }
         public static class Buffs
         {
+            //debuffs
             public static BuffDef InsectPoison;
             public static BuffDef InsectBloody;
+
+            //buffs
             public static BuffDef AdrenalineOnGettingHit;
             public static BuffDef AdrenalineOnKill;
+            public static BuffDef PredatoryRush;
         }
         public static class ItemTierDefs
         {
@@ -61,6 +77,10 @@ namespace IEye.RulersOfTheRedPlane
             delegate
             {
                 new Modules.ItemTiers().Initialize();
+            },
+            delegate
+            {
+                new Modules.Interactables().Initialize();   
             },
             delegate
             {

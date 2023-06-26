@@ -1,10 +1,10 @@
 ﻿using Moonstorm.Components;
-using IEye.RulersOfTheRedPlane.Items;
+using IEye.RRP.Items;
 using R2API;
 using RoR2;
 using Moonstorm;
 
-namespace IEye.RulersOfTheRedPlane.Buffs
+namespace IEye.RRP.Buffs
 {
     public class InsectPoison : BuffBase
     {

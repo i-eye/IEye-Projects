@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IEye.RulersOfTheRedPlane.Modules
+namespace IEye.RRP.Modules
 {
     public sealed class ItemTiers : ItemTierModuleBase
     {

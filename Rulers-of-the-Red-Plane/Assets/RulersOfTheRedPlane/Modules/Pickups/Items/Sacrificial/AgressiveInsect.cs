@@ -4,12 +4,12 @@ using UnityEngine;
 using Moonstorm;
 using RoR2;
 using RoR2.Items;
-using IEye.RulersOfTheRedPlane.Buffs;
+using IEye.RRP.Buffs;
 using R2API;
 using Mono.Cecil;
 using System.Linq;
 
-namespace IEye.RulersOfTheRedPlane.Items
+namespace IEye.RRP.Items
 {
     //[DisabledContent]
     public class AgressiveInsect : ItemBase
@@ -18,14 +18,15 @@ namespace IEye.RulersOfTheRedPlane.Items
         public const string token = "RRP_ITEM_AGROINSECT_DESC";
         public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("AgressiveInsect", RRPBundle.Items);
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the insect blood debuff(default 3s)")]
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the insect blood debuff per stack(default 3s)")]
         public static float duration = 3f;
 
         [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percentage of damage taken away from insect blood debuff target(default 5%)")]
-        public static float bloodyInsectDamageCripple = (.05f * 100);
+        public static float bloodyInsectDamageCripple = .05f;
 
         [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Armor taken away from the insect blood debuff victim(default 20)")]
-        public static int bloodyInsectArmorCripple = 20;
+        public static int bloodyInsectArmorCripple = 25;
+
         public sealed class Behavior : BaseItemBodyBehavior, IOnDamageDealtServerReceiver
         {
             [ItemDefAssociation]
@@ -52,7 +53,7 @@ namespace IEye.RulersOfTheRedPlane.Items
                 {
                     cb.RemoveOldestTimedBuff(RRPContent.Buffs.InsectBloody.buffIndex);
                 }
-                cb.AddTimedBuffAuthority(RRPContent.Buffs.InsectBloody.buffIndex, duration);
+                cb.AddTimedBuffAuthority(RRPContent.Buffs.InsectBloody.buffIndex, duration * stack);
             }
 
         }

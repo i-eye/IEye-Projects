@@ -5,9 +5,9 @@ using Moonstorm;
 using RoR2;
 using Moonstorm.Components;
 using R2API;
-using IEye.RulersOfTheRedPlane.Items;
+using IEye.RRP.Items;
 
-namespace IEye.RulersOfTheRedPlane.Buffs
+namespace IEye.RRP.Buffs
 {
     
     public class AdrenalineOnKill : BuffBase

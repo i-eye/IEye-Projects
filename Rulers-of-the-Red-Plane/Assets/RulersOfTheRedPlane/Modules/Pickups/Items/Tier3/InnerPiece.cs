@@ -2,31 +2,36 @@
 using Moonstorm;
 using RoR2;
 using RoR2.Items;
-using IEye.RulersOfTheRedPlane.Buffs;
+using IEye.RRP.Buffs;
 using R2API;
 using Mono.Cecil;
 using System.Linq;
 
-namespace IEye.RulersOfTheRedPlane.Items
+namespace IEye.RRP.Items
 {
-    //[DisabledContent]
+    [DisabledContent]
     public class InnerPiece : ItemBase
     {
-
+        
         public const string token = "RRP_ITEM_INNERPIECE_DESC";
         public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("InnerPiece", RRPBundle.Items);
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the insect blood debuff(default 3s)")]
-        public static float speed = 50;
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Added speed(default 75%).")]
+        public static float speed = 75f;
+
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Added sprint speed(default 30%).")]
+        public static float SprintSpeed = 30f;
 
         public sealed class Behavior : BaseItemBodyBehavior, IBodyStatArgModifier
         {
             [ItemDefAssociation]
             private static ItemDef GetItemDef() => RRPContent.Items.InnerPiece;
 
-            public void ModifyStatArguments(RecalculateStatsAPI.StatHookEventArgs args)
+            private bool isGood = true;
+            int numDebuff;
+            public void Update()
             {
-                int numDebuff = 0;
+                numDebuff = 0;
                 BuffIndex[] debuffBuffIndices = BuffCatalog.debuffBuffIndices;
                 foreach (BuffIndex buffType in debuffBuffIndices)
                 {
@@ -36,18 +41,37 @@ namespace IEye.RulersOfTheRedPlane.Items
                     }
                 }
                 DotController dotController = DotController.FindDotController(body.gameObject);
-                for (DotController.DotIndex dotIndex = DotController.DotIndex.Bleed; dotIndex < DotController.DotIndex.Count; dotIndex++)
+                if (dotController)
                 {
-                    if (dotController.HasDotActive(dotIndex))
+                    for (DotController.DotIndex dotIndex = DotController.DotIndex.Bleed; dotIndex < DotController.DotIndex.Count; dotIndex++)
                     {
-                        numDebuff++;
+                        if (dotController.HasDotActive(dotIndex))
+                        {
+                            numDebuff++;
+                        }
                     }
                 }
-                if(numDebuff > 0 && !body.healthComponent.isHealthLow)
+                //DefNotSS2Log.Message(numDebuff);
+                if(body.healthComponent.isHealthLow || numDebuff > 1)
                 {
-                    args.moveSpeedMultAdd += speed / 100;
+                    isGood = false;
+                } else
+                {
+                    isGood = true;
                 }
                 
+                
+            }
+
+            public void ModifyStatArguments(RecalculateStatsAPI.StatHookEventArgs args)
+            {
+                //DefNotSS2Log.Message("isgood = " + isGood);
+                if (isGood)
+                {
+                    args.moveSpeedMultAdd += speed * stack / 100;
+                    args.sprintSpeedAdd += SprintSpeed * stack / 100;
+                }
+
             }
         }
     }

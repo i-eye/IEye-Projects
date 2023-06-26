@@ -5,7 +5,7 @@ using R2API.ScriptableObjects;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace IEye.RulersOfTheRedPlane.Modules
+namespace IEye.RRP.Modules
 {
     public sealed class Items : ItemModuleBase
     {

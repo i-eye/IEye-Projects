@@ -12,7 +12,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.Rendering.PostProcessing;
 using Path = System.IO.Path;
 
-namespace IEye.RulersOfTheRedPlane
+namespace IEye.RRP
 {
     public enum RRPBundle
     {
@@ -22,6 +22,7 @@ namespace IEye.RulersOfTheRedPlane
         Base,
         Artifacts,
         Equipments,
+        Interactables,
         Items,
         Events,
         Vanilla,
@@ -35,6 +36,7 @@ namespace IEye.RulersOfTheRedPlane
         private const string BASE = "rrpbase";
         private const string ARTIFACTS = "rrpartifacts";
         private const string EQUIPS = "rrpequipments";
+        private const string INTERACTS = "rrpinteractables";
         private const string ITEMS = "rrpitems";
         private const string VANILLA = "rrpvanilla";
         private const string DEV = "rrpdev";
@@ -102,6 +104,7 @@ namespace IEye.RulersOfTheRedPlane
                     case BASE: LoadBundle(path, RRPBundle.Base); break;
                     case ARTIFACTS: LoadBundle(path, RRPBundle.Artifacts); break;
                     case EQUIPS: LoadBundle(path, RRPBundle.Equipments); break;
+                    case INTERACTS: LoadBundle(path, RRPBundle.Interactables); break;
                     case ITEMS: LoadBundle(path, RRPBundle.Items); break;
                     case VANILLA: LoadBundle(path, RRPBundle.Vanilla); break;
                     case DEV: LoadBundle(path, RRPBundle.Indev); break;

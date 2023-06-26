@@ -9,7 +9,7 @@ using RiskOfOptions.OptionConfigs;
 using RiskOfOptions;
 using System.Data;
 
-namespace IEye.RulersOfTheRedPlane
+namespace IEye.RRP
 {
     public class RRPConfig : ConfigLoader<RRPConfig>
     {
@@ -18,6 +18,7 @@ namespace IEye.RulersOfTheRedPlane
         public const string PREFIX = "RRP.";
         internal const string IDMain = PREFIX + "Main";
         internal const string IDItem = PREFIX + "Items";
+        internal const string IDInteractable = PREFIX + "Interactables";
         //internal const string IDArtifact = PREFIX + "Artifacts";
         //internal const string IDSurvivor = PREFIX + "Survivors";
         //internal const string IDMisc = PREFIX + "Miscellaneous";
@@ -26,6 +27,7 @@ namespace IEye.RulersOfTheRedPlane
 
         public static ConfigFile ConfigMain;
         public static ConfigFile ConfigItem;
+        public static ConfigFile ConfigInteractable;
         public static ConfigFile ConfigArtifact;
         public static ConfigFile ConfigSurvivor;
         public static ConfigFile ConfigMisc;
@@ -57,6 +59,7 @@ namespace IEye.RulersOfTheRedPlane
 
             ConfigMain = CreateConfigFile(IDMain);
             ConfigItem = CreateConfigFile(IDItem);
+            ConfigInteractable = CreateConfigFile(IDInteractable);
             //ConfigSurvivor = CreateConfigFile(IDSurvivor);
             //ConfigArtifact = CreateConfigFile(IDArtifact);
             //ConfigMisc = CreateConfigFile(IDMisc);

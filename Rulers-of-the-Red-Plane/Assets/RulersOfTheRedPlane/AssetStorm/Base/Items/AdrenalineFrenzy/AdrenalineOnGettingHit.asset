@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: AdrenalineOnGettingHit
   m_EditorClassIdentifier: 
   iconPath: 
-  iconSprite: {fileID: 21300000, guid: d81e27f129f7d054e8b370adaa949464, type: 3}
-  buffColor: {r: 0.22352941, g: 1, b: 0.9411765, a: 1}
+  iconSprite: {fileID: 21300000, guid: d0bed30fdc3745d47bb2ccd02170af39, type: 3}
+  buffColor: {r: 0.22352941, g: 1, b: 0.9411765, a: 0.39215687}
   canStack: 1
   eliteDef: {fileID: 0}
   isDebuff: 0

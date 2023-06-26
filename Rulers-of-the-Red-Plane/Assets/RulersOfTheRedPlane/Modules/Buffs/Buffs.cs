@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Moonstorm;
 
-namespace IEye.RulersOfTheRedPlane.Modules
+namespace IEye.RRP.Modules
 {
     public sealed class Buffs : BuffModuleBase
     {

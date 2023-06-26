@@ -1,6 +1,6 @@
 ﻿using Moonstorm.Loaders;
 
-namespace IEye.RulersOfTheRedPlane
+namespace IEye.RRP
 {
     public class RRPLanguage : LanguageLoader<RRPLanguage>
     {

@@ -4,7 +4,7 @@ using Moonstorm;
 using RoR2;
 using RoR2.Items;
 
-namespace IEye.RulersOfTheRedPlane.Items
+namespace IEye.RRP.Items
 {
     public class DoubleSidedSword : ItemBase
     {

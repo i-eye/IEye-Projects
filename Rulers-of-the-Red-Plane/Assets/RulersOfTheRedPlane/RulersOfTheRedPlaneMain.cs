@@ -11,10 +11,9 @@ using R2API.Networking;
 using R2API.ContentManagement;
 using UnityEngine;
 using Moonstorm;
+using IEye.RRP.Items;
 
-
-
-namespace IEye.RulersOfTheRedPlane
+namespace IEye.RRP
 {
     #region R2API
     [BepInDependency("com.bepis.r2api.dot")]
@@ -49,7 +48,8 @@ namespace IEye.RulersOfTheRedPlane
             new RRPConfig().Init();
             new RRPContent().Init();
             new RRPLanguage().Init();
-            ConfigurableFieldManager.AddMod(this);
+            //ConfigurableFieldManager.AddMod(this);
+            ConfigSystem.AddMod(this);
             
 		}	
 	}

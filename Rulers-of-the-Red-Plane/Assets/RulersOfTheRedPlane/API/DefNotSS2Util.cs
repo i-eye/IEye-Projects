@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using Moonstorm;
 
-namespace IEye.RulersOfTheRedPlane
+namespace IEye.RRP
 {
     public static class DefNotSS2Util
     {

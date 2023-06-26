@@ -15,7 +15,7 @@ MonoBehaviour:
   _tier: 10
   bgIconTexture: {fileID: 2800000, guid: c1353823a843d1f489dc764c8145ccb6, type: 3}
   colorIndex: 9
-  darkColorIndex: 17
+  darkColorIndex: 20
   isDroppable: 1
   canScrap: 0
   canRestack: 0

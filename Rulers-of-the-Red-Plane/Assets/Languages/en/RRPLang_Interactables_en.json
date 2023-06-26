@@ -1,0 +1,9 @@
+{
+  "strings": {
+    "RRP_INTERACT_PRISM_USE": "<style=cIsDamage>{0} summoned a horde of {1}s to sacrifice.</style>",
+	"RRP_INTERACT_PRISM_USE_2P": "<style=cIsDamage>You summoned a horde of {1}s to sacrifice.</style>",
+	"RRP_INTERACTABLE_PRISM_NAME" : "Bloody Prism",
+	"RRP_INTERACTABLE_PRISM_CONTEXT" : "<style=cIsDamage>SACRIFICE THEM</style>",
+    
+  }
+}

@@ -4,12 +4,12 @@ using UnityEngine;
 using Moonstorm;
 using RoR2;
 using RoR2.Items;
-using IEye.RulersOfTheRedPlane.Buffs;
+using IEye.RRP.Buffs;
 using R2API;
 using Mono.Cecil;
 using System.Linq;
 
-namespace IEye.RulersOfTheRedPlane.Items
+namespace IEye.RRP.Items
 {
     //[DisabledContent]
     public class IntrospectiveInsect : ItemBase
