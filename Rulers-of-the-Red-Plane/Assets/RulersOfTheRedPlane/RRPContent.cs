@@ -23,7 +23,7 @@ namespace IEye.RRP
             public static ItemDef IntrospectiveInsect;
             
             //red
-            public static ItemDef InnerPiece;
+            //public static ItemDef InnerPiece;
 
             //lunar
             public static ItemDef DoubleSidedSword;

@@ -8,6 +8,7 @@ using RiskOfOptions.Options;
 using RiskOfOptions.OptionConfigs;
 using RiskOfOptions;
 using System.Data;
+//using UnityEngine.XR.WSA.Input;
 
 namespace IEye.RRP
 {
@@ -19,6 +20,7 @@ namespace IEye.RRP
         internal const string IDMain = PREFIX + "Main";
         internal const string IDItem = PREFIX + "Items";
         internal const string IDInteractable = PREFIX + "Interactables";
+        internal const string IDItemTier = PREFIX + "Item Tier";
         //internal const string IDArtifact = PREFIX + "Artifacts";
         //internal const string IDSurvivor = PREFIX + "Survivors";
         //internal const string IDMisc = PREFIX + "Miscellaneous";
@@ -28,6 +30,7 @@ namespace IEye.RRP
         public static ConfigFile ConfigMain;
         public static ConfigFile ConfigItem;
         public static ConfigFile ConfigInteractable;
+        public static ConfigFile ConfigItemTier;
         public static ConfigFile ConfigArtifact;
         public static ConfigFile ConfigSurvivor;
         public static ConfigFile ConfigMisc;
@@ -60,6 +63,7 @@ namespace IEye.RRP
             ConfigMain = CreateConfigFile(IDMain);
             ConfigItem = CreateConfigFile(IDItem);
             ConfigInteractable = CreateConfigFile(IDInteractable);
+            ConfigItemTier = CreateConfigFile(IDItemTier);
             //ConfigSurvivor = CreateConfigFile(IDSurvivor);
             //ConfigArtifact = CreateConfigFile(IDArtifact);
             //ConfigMisc = CreateConfigFile(IDMisc);

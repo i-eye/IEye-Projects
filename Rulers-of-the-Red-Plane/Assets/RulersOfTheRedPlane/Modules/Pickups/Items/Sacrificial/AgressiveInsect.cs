@@ -19,12 +19,15 @@ namespace IEye.RRP.Items
         public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("AgressiveInsect", RRPBundle.Items);
 
         [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the insect blood debuff per stack(default 3s)")]
+        [TokenModifier(token, StatTypes.Default, 0)]
         public static float duration = 3f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percentage of damage taken away from insect blood debuff target(default 5%)")]
+        //[RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percentage of damage taken away from insect blood debuff target(default 5%)")]
+        [TokenModifier(token, StatTypes.MultiplyByN, 1, 100)]
         public static float bloodyInsectDamageCripple = .05f;
 
         [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Armor taken away from the insect blood debuff victim(default 20)")]
+        [TokenModifier(token, StatTypes.Default, 2)]
         public static int bloodyInsectArmorCripple = 25;
 
         public sealed class Behavior : BaseItemBodyBehavior, IOnDamageDealtServerReceiver

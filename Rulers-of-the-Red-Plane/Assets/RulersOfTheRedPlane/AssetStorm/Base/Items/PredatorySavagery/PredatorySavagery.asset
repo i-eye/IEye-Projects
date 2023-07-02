@@ -19,9 +19,9 @@ MonoBehaviour:
   descriptionToken: RRP_ITEM_PREDATORY_DESC
   loreToken: RRP_ITEM_PREDATORY_LORE
   unlockableDef: {fileID: 0}
-  pickupModelPrefab: {fileID: 1614199219989413290, guid: 12c68d45225584744a3bdc28d5714ed8,
+  pickupModelPrefab: {fileID: 1302520330770790550, guid: c0560176d8565fd48b8b9afff46ab01b,
     type: 3}
-  pickupIconSprite: {fileID: 21300000, guid: 96bf7b2963f2bd64386180003172a54d, type: 3}
+  pickupIconSprite: {fileID: 21300000, guid: f564000f79c548b4794d4de3de2e6a2b, type: 3}
   hidden: 0
   canRemove: 1
   tags: 0100000006000000

@@ -10,6 +10,7 @@ using System.Linq;
 namespace IEye.RRP.Items
 {
     [DisabledContent]
+    
     public class InnerPiece : ItemBase
     {
         
@@ -24,8 +25,8 @@ namespace IEye.RRP.Items
 
         public sealed class Behavior : BaseItemBodyBehavior, IBodyStatArgModifier
         {
-            [ItemDefAssociation]
-            private static ItemDef GetItemDef() => RRPContent.Items.InnerPiece;
+            //[ItemDefAssociation]
+            //private static ItemDef GetItemDef() => RRPContent.Items.InnerPiece;
 
             private bool isGood = true;
             int numDebuff;

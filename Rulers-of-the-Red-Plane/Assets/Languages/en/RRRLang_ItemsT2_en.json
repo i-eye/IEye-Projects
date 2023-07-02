@@ -1,0 +1,9 @@
+{
+  "strings": {
+    "RRP_ITEM_INTROINSECT_NAME": "Introspective Insect",
+	"RRP_ITEM_INTROINSECT_PICKUP": "Heal upon killing those who have hurt you",
+	"RRP_ITEM_INTROINSECT_DESC": "On getting hit, inflict the enemy with a debuff lasting {0} seconds and decreasing the base damage of the enemy by {1}%. Get health back based on a complicated formula based on the base damage of the enemy which increases healing on stack.",
+	
+    
+  }
+}

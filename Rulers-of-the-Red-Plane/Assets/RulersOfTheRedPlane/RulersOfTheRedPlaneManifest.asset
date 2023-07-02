@@ -32,8 +32,8 @@ MonoBehaviour:
   - <ManifestPluginStaging>
   Author: IEye
   Name: Rulers_of_the_Red_Plane
-  Description: An overambitious mod with two items currently.
-  Version: 0.0.5
+  Description: 0.1.0 - New Item Tier Update!
+  Version: 0.1.0
   Dependencies:
   - {fileID: 11400000, guid: 5ceb1d8ed3af40d4d806e9756b403649, type: 2}
   - {fileID: 11400000, guid: 890a1759ee352a00d2367557b4d6225f, type: 2}
@@ -129,6 +129,8 @@ MonoBehaviour:
     - {fileID: 4900000, guid: e0f3afdfda238a943903a588c1c20efc, type: 3}
     - {fileID: 4900000, guid: cb07451ca47b64949bb883a0fd49c9f7, type: 3}
     - {fileID: 4900000, guid: 767e98beaf79e5b4e8e049d9a31daa1a, type: 3}
+    - {fileID: 4900000, guid: ccddd241e438e8243a01a458a3e1b98b, type: 3}
+    - {fileID: 4900000, guid: 89a8672b4e202e349b1acb7c5dcfda85, type: 3}
   - languageName: es-ES
     languageFiles:
     - {fileID: 4900000, guid: a2a81b2fc585c0d42b5e589793678f16, type: 3}

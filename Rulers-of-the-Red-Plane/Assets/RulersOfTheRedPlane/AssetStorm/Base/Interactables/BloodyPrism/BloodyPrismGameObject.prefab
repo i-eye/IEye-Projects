@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 9178628359081376712}
   - component: {fileID: -5114303073284197904}
   - component: {fileID: 605578408279087756}
-  - component: {fileID: -328307604454263066}
   m_Layer: 0
   m_Name: BloodyPrismGameObject
   m_TagString: Untagged
@@ -243,16 +242,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entity: {fileID: 800851431774492465}
---- !u!114 &-328307604454263066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800851431774492465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da4c5c5f84442de4784f843c5b75bbad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  token: RRP_INTERACT_PRISM_USE

@@ -11,11 +11,12 @@ namespace IEye.RRP.Items
 {
     public class FocusedHemorrhage : ItemBase
     {
-        public const string token = "RRP_ITEM_FHEMORRAGE_DESC";
+        public const string token = "RRP_ITEM_FHEMORRHAGE_DESC";
         public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("FocusedHemorrhage", RRPBundle.Items);
 
 
         [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Chance on hit to apply Hemorrhage(default 10%).")]
+        [TokenModifier(token, StatTypes.Default, 0)]
         public static float percentChance = 10f;
 
         /*[RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Should there be reduced damage on the first stack?(default true).")]
@@ -25,9 +26,14 @@ namespace IEye.RRP.Items
         public static float percentDamageReduceOnOneStack = 40f;
         */
         [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Added to damage multiplier(default 35%).")]
+        
         public static float percentDamageOver = 35f;
 
+        [TokenModifier(token, StatTypes.Default, 1)]
+        public static float percentDamage = 100f + percentDamageOver;
+
         [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of Hemorrhage(default 15s).")]
+        [TokenModifier(token, StatTypes.Default, 2)]
         public static float duration = 15f;
 
 

@@ -15,23 +15,29 @@ namespace IEye.RRP.Items
         public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("AdrenalineFrenzy");
 
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base percentage speed added on kill(default 5%).")]
-        public static float killSpeed = 5f;
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base percentage speed added on kill(default 6%).")]
+        [TokenModifier(token, StatTypes.Default, 0)]
+        public static float killSpeed = 6f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base percentage speed added on kill per stack(default 3%).")]
-        public static float killSpeedStack = 3f;
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base percentage speed added on kill per stack(default 4%).")]
+        [TokenModifier(token, StatTypes.Default, 1)]
+        public static float killSpeedStack = 4f;
 
         [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base time for on kill speed boost(default 10s).")]
+        [TokenModifier(token, StatTypes.Default, 2)]
         public static float killSpeedDuration = 10f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base percentage speed added on getting hit(default 10%).")]
-        public static float onHitSpeed = 10f;
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base percentage speed added on getting hit(default 12%).")]
+        [TokenModifier(token, StatTypes.Default, 3)]
+        public static float onHitSpeed = 12f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base percentage speed added on getting hit per stack(default(5%).")]
-        public static float onHitSpeedStack = 5f;
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base percentage speed added on getting hit per stack(default(7%).")]
+        [TokenModifier(token, StatTypes.Default, 4)]
+        public static float onHitSpeedStack = 7f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base time for on getting hit speed boost(default 10s).")]
-        public static float onHitSpeedDuration = 10f;
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base time for on getting hit speed boost(default 8s).")]
+        [TokenModifier(token, StatTypes.Default, 5)]
+        public static float onHitSpeedDuration = 8f;
 
         public sealed class Behavior : BaseItemBodyBehavior, IOnTakeDamageServerReceiver, IOnKilledOtherServerReceiver
         {

@@ -16,7 +16,7 @@ MonoBehaviour:
   sendOverNetwork: 1
   hullSize: 1
   nodeGraphType: 0
-  requiredFlags: 1
+  requiredFlags: 0
   forbiddenFlags: 0
   directorCreditCost: 30
   occupyPosition: 0
@@ -28,17 +28,17 @@ MonoBehaviour:
   maxSpawnsPerStage: -1
   directorCard:
     spawnCard: {fileID: 11400000}
-    selectionWeight: 15
+    selectionWeight: 10
     spawnDistance: 0
     preventOverhead: 0
-    minimumStageCompletions: 2
+    minimumStageCompletions: 0
     requiredUnlockable: 
     forbiddenUnlockable: 
     requiredUnlockableDef: {fileID: 0}
     forbiddenUnlockableDef: {fileID: 0}
   interactableCategory: 1
   customCategory: ImpStuff
-  stages: 268325886
+  stages: 268358654
   customStages: []
   requiredExpansions:
   - address: 

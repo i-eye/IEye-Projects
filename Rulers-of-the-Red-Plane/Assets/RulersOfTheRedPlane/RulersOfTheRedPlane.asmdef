@@ -48,7 +48,8 @@
         "R2API.ContentManagement.dll",
         "RiskOfOptions.dll",
         "ZioRiskOfOptions.dll",
-        "ZioConfigFile.dll"
+        "ZioConfigFile.dll",
+        "R2API.Director.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [],

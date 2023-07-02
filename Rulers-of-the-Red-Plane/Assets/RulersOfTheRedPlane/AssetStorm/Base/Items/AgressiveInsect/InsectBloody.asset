@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: InsectBloody
   m_EditorClassIdentifier: 
   iconPath: 
-  iconSprite: {fileID: 21300000, guid: 1973417585079444ea976f56d0d6ddd5, type: 3}
-  buffColor: {r: 0.2830189, g: 0.081434675, b: 0.081434675, a: 0.39215687}
+  iconSprite: {fileID: 21300000, guid: 66bd2f69a38adf14396f3eb35cc11325, type: 3}
+  buffColor: {r: 0.2830189, g: 0.081434675, b: 0.081434675, a: 1}
   canStack: 0
   eliteDef: {fileID: 0}
   isDebuff: 1

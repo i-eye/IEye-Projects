@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: -1284244208, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
   m_Name: SacrificialHelper
   m_EditorClassIdentifier: 
-  deprecatedTier: 3
+  deprecatedTier: 5
   _itemTierDef: {fileID: 11400000, guid: 76146b10c4426a24192ea9ebaaf046c2, type: 2}
   nameToken: RRP_SACRIFICE_NAME
   pickupToken: RRP_SACRIFICE_PICKUP

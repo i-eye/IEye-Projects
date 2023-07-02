@@ -21,12 +21,12 @@ namespace IEye.RRP.Items
         //public static float healCoef = 1.5f;
 
         [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the insect posion(default 10s)")]
-        [TokenModifier(token, StatTypes.Default, 1)]
+        [TokenModifier(token, StatTypes.Default, 0)]
         public static int duration = 10;
 
         [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percentage of damage taken away from insect poison target(default 20%)")]
-        [TokenModifier(token, StatTypes.MultiplyByN, 2, "100")]
-        public static float insectDamageCripple = (.20f * 100);
+        [TokenModifier(token, StatTypes.Default, 1)]
+        public static float insectDamageCripple = 20f;
 
         public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("IntrospectiveInsect", RRPBundle.Items);
 

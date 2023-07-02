@@ -10,8 +10,15 @@ namespace IEye.RRP.ItemTiers
 {
     public class Sacrificial : ItemTierBase
     {
+        [RooConfigurableField(RRPConfig.IDItemTier, ConfigDesc = "Multiplied by difficulty to calculate number of kills needed for sacrifice(default 2.2).")]
+        public static float multiplier = 2.2f;
 
-        [SerializeField] int index;
+        [RooConfigurableField(RRPConfig.IDItemTier, ConfigDesc = "Max number of kills for a sacrifice(lowers to this when above)(default 33).")]
+        public static int cap = 33;
+
+
+
+
         public override ItemTierDef ItemTierDef => RRPAssets.LoadAsset<ItemTierDef>("Sacrificial", RRPBundle.Base);
         public static ItemTierDef def = RRPAssets.LoadAsset<ItemTierDef>("Sacrificial", RRPBundle.Base);
         public override GameObject PickupDisplayVFX => RRPAssets.LoadAsset<GameObject>("SacrificialPickupDisplayVFX", RRPBundle.Base);

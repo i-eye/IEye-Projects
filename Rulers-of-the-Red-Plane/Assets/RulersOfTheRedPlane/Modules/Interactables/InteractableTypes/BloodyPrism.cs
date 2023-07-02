@@ -1,5 +1,7 @@
 ﻿using RoR2;
 using Moonstorm;
+using Moonstorm.AddressableAssets;
+using R2API;
 using IEye.RRP;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,8 +23,9 @@ namespace IEye.RRP.Interactables
 
         public override MSInteractableDirectorCard InteractableDirectorCard { get; } = RRPAssets.LoadAsset<MSInteractableDirectorCard>("BloodyPrism", RRPBundle.Interactables);
 
-        
 
+        [RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Credits multiplied by difficulty for prism on use(default 110)")]
+        public static int creditsCoef = 110;
         /*
         [RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Weight of bloody prism(default 15).")]
         public int weight = 15;
@@ -33,7 +36,7 @@ namespace IEye.RRP.Interactables
         */
         public override void Initialize()
         {
-
+            
             //DefNotSS2Log.Message("InitializePrism");
             var interactableToken = Interactable.AddComponent<PrismInteractableToken>();
             interactableToken.combatDirector = Interactable.AddComponent<CombatDirector>();
@@ -41,6 +44,8 @@ namespace IEye.RRP.Interactables
             interactableToken.Interaction = Interactable.GetComponent<PurchaseInteraction>();
             interactableToken.dropTransform = Interactable.GetComponent<Transform>();
             interactableToken.symbolTranform = null;
+            InteractableDirectorCard.DirectorCardHolder.InteractableCategorySelectionWeight = 4;
+            
 
             /*
             InteractableDirectorCard.directorCard.selectionWeight = weight;
@@ -95,7 +100,7 @@ namespace IEye.RRP.Interactables
                     
                     if (item == RRPContent.Items.FocusedHemorrhage)
                     {
-                        entry.pickupWeight = .1f;
+                        entry.pickupWeight = .15f;
                     }
                     else
                     {
@@ -117,6 +122,11 @@ namespace IEye.RRP.Interactables
                 //DefNotSS2Log.Message(index.pickupDef.itemIndex);
                 Vector3 val = Vector3.up * dropUpVelocityStrength + dropTransform.forward * dropForwardVelocityStrength;
                 PickupDropletController.CreatePickupDroplet(index, dropTransform.position + Vector3.up * 1.5f, val);
+
+                Chat.SimpleChatMessage message = new Chat.SimpleChatMessage();
+                message.baseToken = "RRP_INTERACT_PRISM_END";
+                Chat.SendBroadcastChat(message);
+                
                 Destroy(this.gameObject);
                 
                 
@@ -128,7 +138,7 @@ namespace IEye.RRP.Interactables
                 if (!interactor) { return; }
                 Interaction.SetAvailable(false);
 
-                float monsterCredit = Run.instance.ambientLevelFloor * 100;
+                float monsterCredit = (float)(Run.instance.difficultyCoefficient * creditsCoef);
 
                 if(NetworkServer.active)
                 {

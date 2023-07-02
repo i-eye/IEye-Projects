@@ -1,0 +1,23 @@
+{
+  "strings": {
+    "RRP_ITEM_ADRFRENZY_NAME" : "Adrenaline Frenzy",
+	"RRP_ITEM_ADRFRENZY_PICKUP": "Gain speed on kill and on getting hit",
+	"RRP_ITEM_ADRFRENZY_DESC": "On kill, gain <style=cIsUtility>{0}% speed</style> <style=cStack>(+{1}% per stack)</style>  for {2} seconds. On getting hit, gain <style=cIsUtility>{3}% speed</style> <style=cStack>(+{4}% per stack)</style> for {5} seconds. <style=cDeath>Sacrifices Energy Drink.</style>",
+	
+	
+	"RRP_ITEM_AGROINSECT_NAME" : "Agressive Insect",
+	"RRP_ITEM_AGROINSECT_PICKUP" : "Cripple armor on hit...<style=cDeath>however, activate lifesteal on hit as well</style>",
+	"RRP_ITEM_AGROINSECT_DESC" : "On hit, inflict a debuff that causes <style=cIsDamage>{1}% damage loss</style> and <style=cIsUtility>takes {2} armor</style> for {0} seconds <style=cStack>(+{0} seconds per stack)</style>; <style=cDeath>however, it also gives 10% lifesteal. Sacrifices Introspective Insect.</style>",
+	
+	
+	"RRP_ITEM_FHEMORRHAGE_NAME": "Focused Hemorrhage",
+	"RRP_ITEM_FHEMORRHAGE_PICKUP": "Chance for bloodier bleeding",
+	"RRP_ITEM_FHEMORRHAGE_DESC": "{0}% chance on hit to apply Hemorrhage 1 <style=cStack>(+1 per stack)</style> times with a <style=cIsDamage>{1}% damage multiplier</style> over {2} seconds. <style=cDeath>Sacrifices a combination of Tri-Tip Dagger and Four Dimensional Dagger.</style>",
+	
+	
+	"RRP_ITEM_PREDATORY_NAME": "Predatory Savagery",
+	"RRP_ITEM_PREDATORY_PICKUP": "Chance on hit to unleash vicious power",
+	"RRP_ITEM_PREDATORY_DESC": "Grants a {8}% chance on hit and an {9}% chance on kill to grant a <style=cDeath>predatory rush</style>, giving <style=cIsHealing>{0} armor</style> <style=cStack>(+{0} per stack)</style>, <style=cIsDamage>{1}% base damage</style> <style=cStack>(+{1}% per stack)</style>, <style=cIsUtility>{2}% cooldown reduction</style> <style=cStack>(+{2}% per stack)</style> stacking up to 50%, <style=cIsUtility>{3}% jump force</style>, <style=cIsDamage>{4}% crit damage</style> <style=cStack>(+{4}% per stack)</style>, and <style=cIsDamage>{5}% crit chance</style> for {6} seconds <style=cStack>(+{7} seconds per stack)</style>. <style=cDeath>Sacrifices Predatory Insticts.</style>",
+	
+  }
+}

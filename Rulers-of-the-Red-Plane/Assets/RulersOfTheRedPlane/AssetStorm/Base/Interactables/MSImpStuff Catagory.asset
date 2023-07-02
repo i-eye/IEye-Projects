@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf608e3d54fedd42ae604799fca7a5b, type: 3}
+  m_Name: MSImpStuff Catagory
+  m_EditorClassIdentifier: 
+  targetCardCategorySelection: {fileID: 11400000, guid: c281e480f1744284a86f9ef83baeeecb,
+    type: 2}
+  categories:
+  - name: ImpStuff
+    cards:
+    - spawnCard:
+        address: 
+        useDirectReference: 1
+        asset: {fileID: 11400000, guid: 5bd0bb1ad709f10479ad3fc725b4d3d7, type: 2}
+      selectionWeight: 2
+      spawnDistance: 0
+      preventOverhead: 0
+      minimumStageCompletions: 0
+      requiredUnlockableDef:
+        address: 
+        useDirectReference: 0
+        asset: {fileID: 0}
+      forbiddenUnlockableDef:
+        address: 
+        useDirectReference: 0
+        asset: {fileID: 0}
+    selectionWeight: 2
