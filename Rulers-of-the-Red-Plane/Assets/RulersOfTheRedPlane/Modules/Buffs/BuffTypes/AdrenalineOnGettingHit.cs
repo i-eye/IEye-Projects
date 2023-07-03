@@ -11,7 +11,7 @@ namespace IEye.RRP.Buffs
 {
     public class AdrenalineOnGettingHit : BuffBase
     {
-        public override BuffDef BuffDef { get; } = RRPAssets.LoadAsset<BuffDef>("AdrenalineOnGettinghit");
+        public override BuffDef BuffDef { get; } = RRPAssets.LoadAsset<BuffDef>("AdrenalineOnGettinghit", RRPBundle.Items);
 
         public sealed class Behavior : BaseBuffBodyBehavior, IBodyStatArgModifier
         {

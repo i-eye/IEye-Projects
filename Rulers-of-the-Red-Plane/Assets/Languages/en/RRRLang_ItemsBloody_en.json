@@ -2,7 +2,7 @@
   "strings": {
     "RRP_ITEM_ADRFRENZY_NAME" : "Adrenaline Frenzy",
 	"RRP_ITEM_ADRFRENZY_PICKUP": "Gain speed on kill and on getting hit",
-	"RRP_ITEM_ADRFRENZY_DESC": "On kill, gain <style=cIsUtility>{0}% speed</style> <style=cStack>(+{1}% per stack)</style>  for {2} seconds. On getting hit, gain <style=cIsUtility>{3}% speed</style> <style=cStack>(+{4}% per stack)</style> for {5} seconds. <style=cDeath>Sacrifices Energy Drink.</style>",
+	"RRP_ITEM_ADRFRENZY_DESC": "On kill, gain <style=cIsUtility>{0}% sprint speed</style> <style=cStack>(+{1}% per stack)</style>  for {2} seconds. On getting hit, gain <style=cIsUtility>{3}% speed</style> <style=cStack>(+{4}% per stack)</style> for {5} seconds. <style=cDeath>Sacrifices Energy Drink.</style>",
 	
 	
 	"RRP_ITEM_AGROINSECT_NAME" : "Agressive Insect",

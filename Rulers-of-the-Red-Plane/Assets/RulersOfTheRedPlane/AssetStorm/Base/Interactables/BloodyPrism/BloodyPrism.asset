@@ -18,7 +18,7 @@ MonoBehaviour:
   nodeGraphType: 0
   requiredFlags: 0
   forbiddenFlags: 0
-  directorCreditCost: 30
+  directorCreditCost: 25
   occupyPosition: 0
   eliteRules: 0
   orientToFloor: 1
@@ -28,7 +28,7 @@ MonoBehaviour:
   maxSpawnsPerStage: -1
   directorCard:
     spawnCard: {fileID: 11400000}
-    selectionWeight: 10
+    selectionWeight: 7
     spawnDistance: 0
     preventOverhead: 0
     minimumStageCompletions: 0

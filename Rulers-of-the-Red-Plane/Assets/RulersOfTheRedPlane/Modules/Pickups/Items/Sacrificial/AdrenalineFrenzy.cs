@@ -12,7 +12,7 @@ namespace IEye.RRP.Items
     public class AdrenalineFrenzy : ItemBase
     {
         public const string token = "RRP_ITEM_ADRFRENZY_DESC";
-        public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("AdrenalineFrenzy");
+        public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("AdrenalineFrenzy", RRPBundle.Items);
 
 
         [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base percentage speed added on kill(default 6%).")]

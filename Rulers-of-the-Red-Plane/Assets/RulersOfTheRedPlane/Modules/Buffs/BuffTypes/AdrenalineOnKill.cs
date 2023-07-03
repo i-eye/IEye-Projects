@@ -12,7 +12,7 @@ namespace IEye.RRP.Buffs
     
     public class AdrenalineOnKill : BuffBase
     {
-        public override BuffDef BuffDef { get; } = RRPAssets.LoadAsset<BuffDef>("AdrenalineOnKill");
+        public override BuffDef BuffDef { get; } = RRPAssets.LoadAsset<BuffDef>("AdrenalineOnKill", RRPBundle.Items);
 
         public sealed class Behavior : BaseBuffBodyBehavior, IBodyStatArgModifier
         {
