@@ -25,6 +25,10 @@ ihazkirbro for the sacrificial item tier idea
 Nightshade for creating the logo
 
 # Changelog
+### 0.1.1
+- Fixed bloody prisms just popping the item out after enough teleporter enemies are killed
+  - Side effect/probably gonna be kept - can't be activated after teleporter
+
 ### 0.1.0
 - New 4D dagger model
 - Introspective Insect added

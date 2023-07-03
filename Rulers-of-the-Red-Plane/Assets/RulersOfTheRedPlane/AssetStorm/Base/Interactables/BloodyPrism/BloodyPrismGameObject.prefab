@@ -207,7 +207,7 @@ MonoBehaviour:
   requiredUnlockable: 
   ignoreSpherecastForInteractability: 0
   purchaseStatNames: []
-  setUnavailableOnTeleporterActivated: 0
+  setUnavailableOnTeleporterActivated: 1
   isShrine: 0
   isGoldShrine: 0
   lastActivator: {fileID: 0}

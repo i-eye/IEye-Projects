@@ -56,6 +56,7 @@ namespace IEye.RRP.Interactables
         //[RequireComponent(typeof(PurchaseInteraction))]
         public class PrismInteractableToken : NetworkBehaviour
         {
+            bool hasActivated = false;
             public CharacterBody Activator;
             public PurchaseInteraction Interaction;
             public CombatDirector combatDirector;
@@ -117,23 +118,26 @@ namespace IEye.RRP.Interactables
 
             public void OnDefeatedServer()
             {
-                index = dropTable.GenerateDrop(rng);
-                //DefNotSS2Log.Message(index);
-                //DefNotSS2Log.Message(index.pickupDef.itemIndex);
-                Vector3 val = Vector3.up * dropUpVelocityStrength + dropTransform.forward * dropForwardVelocityStrength;
-                PickupDropletController.CreatePickupDroplet(index, dropTransform.position + Vector3.up * 1.5f, val);
+                if (hasActivated)
+                {
+                    index = dropTable.GenerateDrop(rng);
+                    //DefNotSS2Log.Message(index);
+                    //DefNotSS2Log.Message(index.pickupDef.itemIndex);
+                    Vector3 val = Vector3.up * dropUpVelocityStrength + dropTransform.forward * dropForwardVelocityStrength;
+                    PickupDropletController.CreatePickupDroplet(index, dropTransform.position + Vector3.up * 1.5f, val);
 
-                Chat.SimpleChatMessage message = new Chat.SimpleChatMessage();
-                message.baseToken = "RRP_INTERACT_PRISM_END";
-                Chat.SendBroadcastChat(message);
-                
-                Destroy(this.gameObject);
-                
+                    Chat.SimpleChatMessage message = new Chat.SimpleChatMessage();
+                    message.baseToken = "RRP_INTERACT_PRISM_END";
+                    Chat.SendBroadcastChat(message);
+
+                    Destroy(this.gameObject);
+                }
                 
                 
             }
             public void PrismInteractAttempt(Interactor interactor)
             {
+
                 //DefNotSS2Log.Message("Attempting Interaction");
                 if (!interactor) { return; }
                 Interaction.SetAvailable(false);
@@ -144,11 +148,12 @@ namespace IEye.RRP.Interactables
                 {
                     DirectorCard card = combatDirector.SelectMonsterCardForCombatShrine(monsterCredit);
                     SacrificeActivation(interactor, monsterCredit, card);
-                    
+
                     /*foreach(CharacterMaster master in combatSquad.membersList)
                     {
                         master.gameObject.AddComponent<PositionIndicator>();
                     } */
+                    hasActivated = true;
                 }
             }
 

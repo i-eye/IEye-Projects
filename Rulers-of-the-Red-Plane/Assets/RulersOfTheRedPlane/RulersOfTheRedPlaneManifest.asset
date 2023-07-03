@@ -32,8 +32,8 @@ MonoBehaviour:
   - <ManifestPluginStaging>
   Author: IEye
   Name: Rulers_of_the_Red_Plane
-  Description: 0.1.0 - New Item Tier Update!
-  Version: 0.1.0
+  Description: 0.1.0 - New Item Tier Update!(well it's 0.1.1 now but whatever)
+  Version: 0.1.1
   Dependencies:
   - {fileID: 11400000, guid: 5ceb1d8ed3af40d4d806e9756b403649, type: 2}
   - {fileID: 11400000, guid: 890a1759ee352a00d2367557b4d6225f, type: 2}
