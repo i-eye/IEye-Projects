@@ -12,6 +12,9 @@ using System;
 using HG;
 using System.Linq;
 using Mono.Cecil;
+using RiskOfOptions;
+using BepInEx.Configuration;
+using Moonstorm.Config;
 
 namespace IEye.RRP.Interactables
 {
@@ -23,9 +26,18 @@ namespace IEye.RRP.Interactables
 
         public override MSInteractableDirectorCard InteractableDirectorCard { get; } = RRPAssets.LoadAsset<MSInteractableDirectorCard>("BloodyPrism", RRPBundle.Interactables);
 
+        /*
+        [RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Credits for the Imp Stuff interactable catagory(default 3.2)")]
+        public static ConfigurableFloat impStuffCredits = new ConfigurableFloat(3.2f);
+        */
+        
 
-        [RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Credits multiplied by difficulty for prism on use(default 110)")]
+        [RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Credits multiplied by difficulty for prism combat director on use(default 110)")]
         public static int creditsCoef = 110;
+
+        //[RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Chance for for spawning(1.9 is default, 3 is void catagory(Probably requires restart)(may not work)")]
+        public static float catagoryWeight = 1.9f;
+
         /*
         [RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Weight of bloody prism(default 15).")]
         public int weight = 15;
@@ -36,7 +48,7 @@ namespace IEye.RRP.Interactables
         */
         public override void Initialize()
         {
-            
+            //impStuffCredits.SetUseStepSlider(true);
             //DefNotSS2Log.Message("InitializePrism");
             var interactableToken = Interactable.AddComponent<PrismInteractableToken>();
             interactableToken.combatDirector = Interactable.AddComponent<CombatDirector>();
@@ -44,7 +56,7 @@ namespace IEye.RRP.Interactables
             interactableToken.Interaction = Interactable.GetComponent<PurchaseInteraction>();
             interactableToken.dropTransform = Interactable.GetComponent<Transform>();
             interactableToken.symbolTranform = null;
-            InteractableDirectorCard.DirectorCardHolder.InteractableCategorySelectionWeight = 4;
+            InteractableDirectorCard.DirectorCardHolder.InteractableCategorySelectionWeight = catagoryWeight;
             
 
             /*

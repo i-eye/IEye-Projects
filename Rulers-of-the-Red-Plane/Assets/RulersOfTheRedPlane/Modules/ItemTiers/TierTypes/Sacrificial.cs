@@ -10,11 +10,11 @@ namespace IEye.RRP.ItemTiers
 {
     public class Sacrificial : ItemTierBase
     {
-        [RooConfigurableField(RRPConfig.IDItemTier, ConfigDesc = "Multiplied by difficulty to calculate number of kills needed for sacrifice(default 2.2).")]
-        public static float multiplier = 2.2f;
+        [RooConfigurableField(RRPConfig.IDItemTier, ConfigDesc = "Multiplied by difficulty to calculate number of kills needed for sacrifice(default 3.8).")]
+        public static float multiplier = 3.8f;
 
-        [RooConfigurableField(RRPConfig.IDItemTier, ConfigDesc = "Max number of kills for a sacrifice(lowers to this when above)(default 33).")]
-        public static int cap = 33;
+        [RooConfigurableField(RRPConfig.IDItemTier, ConfigDesc = "Max number of kills for a sacrifice(lowers to this when above)(default 34).")]
+        public static int cap = 34;
 
 
 

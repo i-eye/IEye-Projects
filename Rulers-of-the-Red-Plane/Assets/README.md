@@ -25,6 +25,15 @@ ihazkirbro for the sacrificial item tier idea
 Nightshade for creating the logo
 
 # Changelog
+
+### 0 .1.3
+- Lowered selection weight for bloody prism from 3.2 to 1.9
+- Increased sacrificial kill coeffecient from 2.2 to 3.8
+- Fixed a typo
+
+### 0.1.2 I literally just recompiled it
+- Updated to director api 2.0
+
 ### 0.1.1
 - Fixed bloody prisms just popping the item out after enough teleporter enemies are killed
   - Side effect/probably gonna be kept - can't be activated after teleporter

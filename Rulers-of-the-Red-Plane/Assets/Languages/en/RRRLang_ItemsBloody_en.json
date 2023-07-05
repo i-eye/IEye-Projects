@@ -12,7 +12,7 @@
 	
 	"RRP_ITEM_FHEMORRHAGE_NAME": "Focused Hemorrhage",
 	"RRP_ITEM_FHEMORRHAGE_PICKUP": "Chance for bloodier bleeding",
-	"RRP_ITEM_FHEMORRHAGE_DESC": "{0}% chance on hit to apply Hemorrhage 1 time <style=cStack>(+1 tiem per stack)</style> with a <style=cIsDamage>{1}% damage multiplier</style> over {2} seconds. <style=cDeath>Sacrifices a combination of Tri-Tip Dagger and Four Dimensional Dagger.</style>",
+	"RRP_ITEM_FHEMORRHAGE_DESC": "{0}% chance on hit to apply Hemorrhage 1 time <style=cStack>(+1 time per stack)</style> with a <style=cIsDamage>{1}% damage multiplier</style> over {2} seconds. <style=cDeath>Sacrifices a combination of Tri-Tip Dagger and Four Dimensional Dagger.</style>",
 	
 	
 	"RRP_ITEM_PREDATORY_NAME": "Predatory Savagery",
