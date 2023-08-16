@@ -80,6 +80,8 @@ namespace IEye.RRP.Interactables
             public float dropUpVelocityStrength = 25f;
             public float dropForwardVelocityStrength = 3f;
 
+            public GameObject destroyVFX { get; } = RRPAssets.LoadAsset<GameObject>("PrismVFX", RRPBundle.Interactables);
+
             public ExplicitPickupDropTable dropTable { get; } = RRPAssets.LoadAsset<ExplicitPickupDropTable>("PrismDroptable", RRPBundle.Interactables);
 
             public static event Action<PrismInteractableToken> onDefeatedServer;
@@ -95,6 +97,7 @@ namespace IEye.RRP.Interactables
                 combatDirector.combatSquad = combatSquad;
                 //DefNotSS2Log.Message("Got Combat Squad");
                 combatSquad.onDefeatedServer += OnDefeatedServer;
+                
                 Interaction.onPurchase.AddListener(PrismInteractAttempt);
                 rng = new Xoroshiro128Plus(Run.instance.treasureRng.nextUlong);
                 combatDirector.expRewardCoefficient = .1f;
@@ -142,6 +145,16 @@ namespace IEye.RRP.Interactables
                     message.baseToken = "RRP_INTERACT_PRISM_END";
                     Chat.SendBroadcastChat(message);
 
+
+
+                    
+                    if (destroyVFX)
+                    {
+                        DefNotSS2Log.Message("Bloody VFX about to instantiate");
+                        EffectManager.SimpleEffect(destroyVFX, dropTransform.position, dropTransform.rotation, true);
+                        DefNotSS2Log.Message("Bloody VFX instantiated");
+                    }
+                    
                     Destroy(this.gameObject);
                 }
                 

@@ -167,3 +167,4 @@ MonoBehaviour:
   - assetBundleName: rrpinteractables
     assets:
     - {fileID: 102900000, guid: ddb18936a6dc2fe4180f603a614d4ded, type: 3}
+    - {fileID: 4300000, guid: bd3a9a0faf1f9da498b3a5fa570e307d, type: 2}

@@ -66,7 +66,7 @@ namespace IEye.RRP.Items
                          damageMultiplier = 1f + (percentDamageOver / 100),
                      };
                     
-                    for(int i = 0; i < stack; i++)
+                    for(int i = 0; i < ((stack - 1) / 2) + 1; i++)
                     {
                         DotController.InflictDot(ref dotInfo);
                     }

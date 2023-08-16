@@ -178,7 +178,7 @@ namespace IEye.RRP.Items
                         //StartCoroutine(RunSacrificialAnnouncer(RRPContent.Items.IntrospectiveInsect, RRPContent.Items.AgressiveInsect));
                         body.inventory.GiveItem(RRPContent.Items.AgressiveInsect, 1);
                         body.inventory.RemoveItem(RRPContent.Items.IntrospectiveInsect, 1);
-                        SacrificeChat(RRPContent.Items.IntrospectiveInsect.nameToken, RRPContent.Items.AgressiveInsect.nameToken);
+                        SacrificeChat(RRPContent.Items.IntrospectiveInsect, RRPContent.Items.AgressiveInsect);
                         count1Going = false;
                         num1KillCount = 0;
                         CheckForSacrifice();
@@ -191,7 +191,7 @@ namespace IEye.RRP.Items
                         //StartCoroutine(RunSacrificialAnnouncer(RoR2Content.Items.SprintBonus, RRPContent.Items.AdrenalineFrenzy));
                         body.inventory.GiveItem(RRPContent.Items.AdrenalineFrenzy, 1);
                         body.inventory.RemoveItem(RoR2Content.Items.SprintBonus, 1);
-                        SacrificeChat(RoR2Content.Items.SprintBonus.nameToken, RRPContent.Items.AdrenalineFrenzy.nameToken);
+                        SacrificeChat(RoR2Content.Items.SprintBonus, RRPContent.Items.AdrenalineFrenzy);
                         count2Going = false;
                         num2KillCount = 0;
                         CheckForSacrifice();
@@ -200,10 +200,10 @@ namespace IEye.RRP.Items
                         
                         count3Going = true;
                         yield return new WaitUntil(() => num3KillCount == numSacrifice);
-                        body.inventory.GiveItem(RRPContent.Items.FocusedHemorrhage, 1);
+                        body.inventory.GiveItem(RRPContent.Items.FocusedHemorrhage, 2);
                         body.inventory.RemoveItem(RoR2Content.Items.BleedOnHit, 1);
                         body.inventory.RemoveItem(RRPContent.Items.FourDimensionalDagger, 1);
-                        SacrificeChat(RoR2Content.Items.BleedOnHit.nameToken, RRPContent.Items.FourDimensionalDagger.nameToken, RRPContent.Items.FocusedHemorrhage.nameToken);
+                        SacrificeChat(RoR2Content.Items.BleedOnHit, RRPContent.Items.FourDimensionalDagger, RRPContent.Items.FocusedHemorrhage);
                         num3KillCount = 0;
                         count3Going = false;
                         CheckForSacrifice();
@@ -214,7 +214,7 @@ namespace IEye.RRP.Items
                         yield return new WaitUntil(() => num4KillCount == numSacrifice);
                         body.inventory.GiveItem(RRPContent.Items.PredatorySavagery, 1);
                         body.inventory.RemoveItem(RoR2Content.Items.AttackSpeedOnCrit, 1);
-                        SacrificeChat(RoR2Content.Items.AttackSpeedOnCrit.nameToken, RRPContent.Items.PredatorySavagery.nameToken);
+                        SacrificeChat(RoR2Content.Items.AttackSpeedOnCrit, RRPContent.Items.PredatorySavagery);
                         num4KillCount = 0;
                         count4Going = false;
                         CheckForSacrifice();
@@ -238,22 +238,27 @@ namespace IEye.RRP.Items
                 }
             }
 
-            private void SacrificeChat(string one, string two)
+            private void SacrificeChat(ItemDef one, ItemDef two)
             {
-                Chat.SubjectFormatChatMessage subjectFormatChatMessage = new Chat.SubjectFormatChatMessage();
+                CharacterMasterNotificationQueue.SendTransformNotification(body.master, one.itemIndex, two.itemIndex, CharacterMasterNotificationQueue.TransformationType.Default);
+                /*Chat.SubjectFormatChatMessage subjectFormatChatMessage = new Chat.SubjectFormatChatMessage();
                 subjectFormatChatMessage.subjectAsCharacterBody = body;
                 subjectFormatChatMessage.baseToken = "RRP_SACRIFICE_ITEM_REG";
                 subjectFormatChatMessage.paramTokens = new string[2] { one, two };
-                Chat.SendBroadcastChat(subjectFormatChatMessage);
+                Chat.SendBroadcastChat(subjectFormatChatMessage); */
             }
 
-            private void SacrificeChat(string one, string two, string three)
+            private void SacrificeChat(ItemDef one, ItemDef two, ItemDef three)
             {
+                CharacterMasterNotificationQueue.SendTransformNotification(body.master, one.itemIndex, three.itemIndex, CharacterMasterNotificationQueue.TransformationType.Default);
+                CharacterMasterNotificationQueue.SendTransformNotification(body.master, two.itemIndex, three.itemIndex, CharacterMasterNotificationQueue.TransformationType.Default);
+                /*
                 Chat.SubjectFormatChatMessage subjectFormatChatMessage = new Chat.SubjectFormatChatMessage();
                 subjectFormatChatMessage.subjectAsCharacterBody = body;
                 subjectFormatChatMessage.baseToken = "RRP_SACRIFICE_ITEM_DOUBLE";
                 subjectFormatChatMessage.paramTokens = new string[3] { one, two, three};
                 Chat.SendBroadcastChat(subjectFormatChatMessage);
+                */
             }
 
             /*

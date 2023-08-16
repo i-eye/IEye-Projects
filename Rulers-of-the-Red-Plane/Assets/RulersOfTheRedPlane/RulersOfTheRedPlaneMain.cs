@@ -37,6 +37,7 @@ namespace IEye.RRP
 
         public static RulersOfTheRedPlaneMain Instance;
         public static PluginInfo pluginInfo;
+        
 
 		private void Awake()
 		{

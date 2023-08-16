@@ -33,6 +33,7 @@ namespace IEye.RRP
             public static ItemDef AdrenalineFrenzy;
             public static ItemDef FocusedHemorrhage;
             public static ItemDef PredatorySavagery;
+            public static ItemDef BloodyIvy;
 
             //hidden
             public static ItemDef SacrificialHelper;
