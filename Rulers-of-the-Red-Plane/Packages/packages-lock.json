@@ -124,6 +124,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "riskofthunder-r2api_addressables": {
+      "version": "file:R2API_Addressables",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "riskofthunder-r2api_artifactcode": {
       "version": "file:R2API_ArtifactCode",
       "depth": 0,
@@ -262,6 +268,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "riskofthunder-r2api_stages": {
+      "version": "file:R2API_Stages",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "riskofthunder-r2api_tempvisualeffect": {
       "version": "file:R2API_TempVisualEffect",
       "depth": 0,
@@ -293,11 +305,11 @@
       "dependencies": {}
     },
     "teammoonstorm-moonstormsharedutils": {
-      "version": "https://github.com/TeamMoonstorm/MoonstormSharedUtils.git#1.5.3",
+      "version": "https://github.com/TeamMoonstorm/MoonstormSharedUtils.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "59356d47c170c64e6c885abe912545609e3d1a54"
+      "hash": "8bb6260f546627cf35824ac89436424fdfc839f0"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

@@ -30,7 +30,7 @@ namespace IEye.RRP.Modules
             Instance = this;
             base.Initialize();
             if (!EnableInteractables) return;
-            DefNotSS2Log.Info($"Initializing Interactables.");
+            RRPMain.logger.LogInfo($"Initializing Interactables.");
             GetInteractableBases();
         }
 

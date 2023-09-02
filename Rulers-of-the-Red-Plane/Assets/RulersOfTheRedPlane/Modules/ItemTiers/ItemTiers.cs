@@ -17,7 +17,7 @@ namespace IEye.RRP.Modules
         {
             Instance = this;
             base.Initialize();
-            DefNotSS2Log.Info("Initializing Item Tiers...");
+            RRPMain.logger.LogInfo("Initializing Item Tiers...");
             GetItemTierBases();
         }
 

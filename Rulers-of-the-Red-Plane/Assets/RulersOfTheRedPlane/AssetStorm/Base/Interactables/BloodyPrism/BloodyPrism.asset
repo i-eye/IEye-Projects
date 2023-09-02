@@ -18,7 +18,7 @@ MonoBehaviour:
   nodeGraphType: 0
   requiredFlags: 0
   forbiddenFlags: 0
-  directorCreditCost: 25
+  directorCreditCost: 30
   occupyPosition: 0
   eliteRules: 0
   orientToFloor: 1
@@ -26,6 +26,23 @@ MonoBehaviour:
   skipSpawnWhenSacrificeArtifactEnabled: 0
   weightScalarWhenSacrificeArtifactEnabled: 1
   maxSpawnsPerStage: -1
+  addressReferencedDirectorCard:
+    spawnCard:
+      _asset: {fileID: 0}
+      _address: 
+      _useDirectReference: 0
+    selectionWeight: 5
+    spawnDistance: 0
+    preventOverhead: 0
+    minimumStageCompletions: 1
+    requiredUnlockableDef:
+      _asset: {fileID: 0}
+      _address: 
+      _useDirectReference: 0
+    forbiddenUnlockableDef:
+      _asset: {fileID: 0}
+      _address: 
+      _useDirectReference: 0
   directorCard:
     spawnCard: {fileID: 11400000}
     selectionWeight: 7
@@ -38,8 +55,10 @@ MonoBehaviour:
     forbiddenUnlockableDef: {fileID: 0}
   interactableCategory: 1
   customCategory: ImpStuff
+  customCategoryWeight: 2.6
   stages: 268358654
   customStages: []
+  requiredExpansionDefs: []
   requiredExpansions:
   - address: 
     useDirectReference: 1

@@ -42,11 +42,11 @@ namespace IEye.RRP
 				MethodInfo methodInfo;
 				if ((methodInfo = (itemDefAssociationAttribute.target as MethodInfo)) == null)
 				{
-					DefNotSS2Log.Error("ItemDefAssociationAttribute cannot be applied to object of type '" + ((itemDefAssociationAttribute != null) ? itemDefAssociationAttribute.GetType().FullName : null) + "'");
+					RRPMain.logger.LogError("ItemDefAssociationAttribute cannot be applied to object of type '" + ((itemDefAssociationAttribute != null) ? itemDefAssociationAttribute.GetType().FullName : null) + "'");
 				}
 				else if (!methodInfo.IsStatic)
 				{
-					DefNotSS2Log.Error(string.Concat(new string[]
+                    RRPMain.logger.LogError(string.Concat(new string[]
 					{
 						"ItemDefAssociationAttribute cannot be applied to method ",
 						methodInfo.DeclaringType.FullName,
@@ -60,7 +60,7 @@ namespace IEye.RRP
 					Type type = itemDefAssociationAttribute.behaviorTypeOverride ?? methodInfo.DeclaringType;
 					if (!masterBehaviourType.IsAssignableFrom(type))
 					{
-						DefNotSS2Log.Error(string.Concat(new string[]
+						RRPMain.logger.LogError(string.Concat(new string[]
 						{
 							"ItemDefAssociationAttribute cannot be applied to method ",
 							methodInfo.DeclaringType.FullName,
@@ -75,7 +75,7 @@ namespace IEye.RRP
 					}
 					else if (type.IsAbstract)
 					{
-						DefNotSS2Log.Error(string.Concat(new string[]
+						RRPMain.logger.LogError(string.Concat(new string[]
 						{
 							"ItemDefAssociationAttribute cannot be applied to method ",
 							methodInfo.DeclaringType.FullName,
@@ -99,11 +99,11 @@ namespace IEye.RRP
 						Type returnType = methodInfo.ReturnType;
 						array[num] = (((returnType != null) ? returnType.FullName : null) ?? "void");
 						array[6] = itemDefType.FullName;
-						DefNotSS2Log.Error(string.Format(format, array));
+						RRPMain.logger.LogError(string.Format(format, array));
 					}
 					else if (methodInfo.GetGenericArguments().Length != 0)
 					{
-						DefNotSS2Log.Error(string.Format("{0} cannot be applied to method {1}.{2}: {3}.{4} must take no arguments.", new object[]
+						RRPMain.logger.LogError(string.Format("{0} cannot be applied to method {1}.{2}: {3}.{4} must take no arguments.", new object[]
 						{
 							"ItemDefAssociationAttribute",
 							methodInfo.DeclaringType.FullName,
@@ -117,11 +117,11 @@ namespace IEye.RRP
 						ItemDef itemDef = (ItemDef)methodInfo.Invoke(null, Array.Empty<object>());
 						if (!itemDef)
 						{
-							DefNotSS2Log.Error(methodInfo.DeclaringType.FullName + "." + methodInfo.Name + " returned null.");
+							RRPMain.logger.LogError(methodInfo.DeclaringType.FullName + "." + methodInfo.Name + " returned null.");
 						}
 						else if (itemDef.itemIndex < (ItemIndex)0)
 						{
-							DefNotSS2Log.Error(string.Format("{0}.{1} returned an ItemDef that's not registered in the ItemCatalog. result={2}", methodInfo.DeclaringType.FullName, methodInfo.Name, itemDef));
+							RRPMain.logger.LogError(string.Format("{0}.{1} returned an ItemDef that's not registered in the ItemCatalog. result={2}", methodInfo.DeclaringType.FullName, methodInfo.Name, itemDef));
 						}
 						else
 						{

@@ -14,7 +14,7 @@ namespace IEye.RRP
 {
     public class RRPConfig : ConfigLoader<RRPConfig>
     {
-        public override BaseUnityPlugin MainClass => RulersOfTheRedPlaneMain.Instance;
+        public override BaseUnityPlugin MainClass => RRPMain.Instance;
 
         public const string PREFIX = "RRP.";
         internal const string IDMain = PREFIX + "Main";
@@ -40,8 +40,8 @@ namespace IEye.RRP
             Section = "General",
             Key = "Unlock All",
             Description = "Setting this to true unlocks all the content in Rulers of the Red Plane(THERE ARE NO UNLOCKS YET LMAOOO)",
-            ModGUID = RulersOfTheRedPlaneMain.GUID,
-            ModName = RulersOfTheRedPlaneMain.MODNAME,
+            ModGUID = RRPMain.GUID,
+            ModName = RRPMain.MODNAME,
             CheckBoxConfig = new CheckBoxConfig
             {
                 restartRequired = true,
@@ -57,13 +57,13 @@ namespace IEye.RRP
         public void Init()
         {
             Sprite icon = RRPAssets.LoadAsset<Sprite>("icon", RRPBundle.Main);
-            ModSettingsManager.SetModIcon(icon, RulersOfTheRedPlaneMain.GUID, RulersOfTheRedPlaneMain.MODNAME);
-            ModSettingsManager.SetModDescription("A general content mod that is way too overambitioujs", RulersOfTheRedPlaneMain.GUID, RulersOfTheRedPlaneMain.MODNAME);
+            ModSettingsManager.SetModIcon(icon, RRPMain.GUID, RRPMain.MODNAME);
+            ModSettingsManager.SetModDescription("A general content mod that is way too overambitioujs", RRPMain.GUID, RRPMain.MODNAME);
 
-            ConfigMain = CreateConfigFile(IDMain);
-            ConfigItem = CreateConfigFile(IDItem);
-            ConfigInteractable = CreateConfigFile(IDInteractable);
-            ConfigItemTier = CreateConfigFile(IDItemTier);
+            ConfigMain = CreateConfigFile(IDMain, true);
+            ConfigItem = CreateConfigFile(IDItem, true);
+            ConfigInteractable = CreateConfigFile(IDInteractable, true);
+            ConfigItemTier = CreateConfigFile(IDItemTier, true);
             //ConfigSurvivor = CreateConfigFile(IDSurvivor);
             //ConfigArtifact = CreateConfigFile(IDArtifact);
             //ConfigMisc = CreateConfigFile(IDMisc);

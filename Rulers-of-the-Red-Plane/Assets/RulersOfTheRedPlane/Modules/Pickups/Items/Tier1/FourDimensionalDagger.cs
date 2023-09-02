@@ -67,7 +67,7 @@ namespace IEye.RRP.Items {
                             duration = report.damageInfo.procCoefficient * duration,
                             damageMultiplier = 1f,
                         };
-                        //DefNotSS2Log.Message("Before inflict");
+                        RRPMain.logger.LogMessage("Before inflict");
                         DotController.InflictDot(ref dotInfo);
                         //DefNotSS2Log.Message("I hope an enemy nearby has an effect lol");
 
@@ -93,7 +93,7 @@ namespace IEye.RRP.Items {
 
                 TeamMask mask = TeamMask.AllExcept(TeamIndex.Player);
                 this.search.mask = LayerIndex.entityPrecise.mask;
-                this.search.radius = range + (radiusIncrease * .2f);
+                this.search.radius = range + (radiusIncrease * (stack - 1));
                 this.search.origin = position;
                 this.search.queryTriggerInteraction = QueryTriggerInteraction.UseGlobal;
 

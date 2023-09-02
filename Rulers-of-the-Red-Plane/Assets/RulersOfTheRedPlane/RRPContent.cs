@@ -21,6 +21,7 @@ namespace IEye.RRP
             
             //green
             public static ItemDef IntrospectiveInsect;
+            public static ItemDef PoisonIvy;
             
             //red
             //public static ItemDef InnerPiece;
@@ -48,12 +49,14 @@ namespace IEye.RRP
             public static BuffDef AdrenalineOnGettingHit;
             public static BuffDef AdrenalineOnKill;
             public static BuffDef PredatoryRush;
+            public static BuffDef IvyPower;
+            public static BuffDef IvyBlight;
         }
         public static class ItemTierDefs
         {
             public static ItemTierDef Sacrificial;
         }
-        public override string identifier => RulersOfTheRedPlaneMain.GUID;
+        public override string identifier => RRPMain.GUID;
 
         public override R2APISerializableContentPack SerializableContentPack { get; protected set; } = RRPAssets.LoadAsset<R2APISerializableContentPack>("ContentPack", RRPBundle.Main);
 
@@ -85,26 +88,26 @@ namespace IEye.RRP
             },
             delegate
             {
-                DefNotSS2Log.Info($"Populating entity state array");
+                RRPMain.logger.LogInfo($"Populating entity state array");
                 GetType().Assembly.GetTypes()
                                       .Where(type => typeof(EntityStates.EntityState).IsAssignableFrom(type))
                                       .ToList()
                                       .ForEach(state => HG.ArrayUtils.ArrayAppend(ref SerializableContentPack.entityStateTypes, new EntityStates.SerializableEntityStateType(state)));
             },
             delegate{
-                    DefNotSS2Log.Info($"Populating effect prefabs");
+                    RRPMain.logger.LogInfo($"Populating effect prefabs");
                     SerializableContentPack.effectPrefabs = SerializableContentPack.effectPrefabs.Concat(RRPAssets.LoadAllAssetsOfType<GameObject>(RRPBundle.All)
                     .Where(go => go.GetComponent<EffectComponent>()))
                     .ToArray();
             },
             delegate
                 {
-                    DefNotSS2Log.Info($"Populating EntityStateConfigurations");
+                    RRPMain.logger.LogInfo($"Populating EntityStateConfigurations");
                     SerializableContentPack.entityStateConfigurations = RRPAssets.LoadAllAssetsOfType<EntityStateConfiguration>(RRPBundle.All);
                 },
                 delegate
                 {
-                    DefNotSS2Log.Info($"Swapping material shaders");
+                    RRPMain.logger.LogInfo($"Swapping material shaders");
                     RRPAssets.Instance.SwapMaterialShaders();
                     RRPAssets.Instance.FinalizeCopiedMaterials();
                 }

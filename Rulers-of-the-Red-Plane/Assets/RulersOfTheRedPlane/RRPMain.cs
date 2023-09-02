@@ -29,21 +29,22 @@ namespace IEye.RRP
         nameof(PrefabAPI),
         nameof(NetworkingAPI))]
     [BepInPlugin(GUID, MODNAME, VERSION)]
-    public class RulersOfTheRedPlaneMain : BaseUnityPlugin
+    public class RRPMain : BaseUnityPlugin
 	{
 		public const string GUID = "com.I_Eye.RulersOfTheRedPlane";
 		public const string MODNAME = "Rulers of the Red Plane";
 		public const string VERSION = "0.0.5";
 
-        public static RulersOfTheRedPlaneMain Instance;
+        public static RRPMain Instance;
         public static PluginInfo pluginInfo;
+        public static DefNotSS2Log logger;
         
 
 		private void Awake()
 		{
 			Instance = this;
             pluginInfo = Info;
-            DefNotSS2Log.logger = Logger;
+            logger = new DefNotSS2Log(Logger);
 
             new RRPAssets().Init();
             new RRPConfig().Init();

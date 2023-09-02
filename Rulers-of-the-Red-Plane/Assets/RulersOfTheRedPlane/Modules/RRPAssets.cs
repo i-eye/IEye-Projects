@@ -49,7 +49,7 @@ namespace IEye.RRP
 #if DEBUG
             var stackTrace = new StackTrace();
             var method = stackTrace.GetFrame(1).GetMethod();
-            DefNotSS2Log.Warning($"Assembly {Assembly.GetCallingAssembly()} is trying to load an asset of name {name} and type {typeof(TAsset).Name} without specifying what bundle to use for loading. This causes large performance loss as SS2Assets has to search thru the entire bundle collection. Avoid calling LoadAsset without specifying the AssetBundle. (Method: {method.DeclaringType.FullName}.{method.Name}()");
+            RRPMain.logger.LogWarning($"Assembly {Assembly.GetCallingAssembly()} is trying to load an asset of name {name} and type {typeof(TAsset).Name} without specifying what bundle to use for loading. This causes large performance loss as SS2Assets has to search thru the entire bundle collection. Avoid calling LoadAsset without specifying the AssetBundle. (Method: {method.DeclaringType.FullName}.{method.Name}()");
 #endif
             return LoadAsset<TAsset>(name, RRPBundle.All);
         }
@@ -59,7 +59,7 @@ namespace IEye.RRP
 #if DEBUG
             var stackTrace = new StackTrace();
             var method = stackTrace.GetFrame(1).GetMethod();
-            DefNotSS2Log.Warning($"Assembly {Assembly.GetCallingAssembly()} is trying to load an asset of name {name} and type {typeof(TAsset).Name} without specifying what bundle to use for loading. This causes large performance loss as SS2Assets has to search thru the entire bundle collection. Avoid calling LoadAsset without specifying the AssetBundle. (Method: {method.DeclaringType.FullName}.{method.Name}()");
+            RRPMain.logger.LogWarning($"Assembly {Assembly.GetCallingAssembly()} is trying to load an asset of name {name} and type {typeof(TAsset).Name} without specifying what bundle to use for loading. This causes large performance loss as SS2Assets has to search thru the entire bundle collection. Avoid calling LoadAsset without specifying the AssetBundle. (Method: {method.DeclaringType.FullName}.{method.Name}()");
 #endif
             return LoadAllAssetsOfType<TAsset>(RRPBundle.All);
         }
@@ -77,14 +77,14 @@ namespace IEye.RRP
         {
             if (Instance == null)
             {
-                DefNotSS2Log.Error("Cannot load asset when ther's not instance of RRPAssets!");
+                RRPMain.logger.LogError("Cannot load asset when ther's not instance of RRPAssets!");
                 return null;
             }
             return Instance.LoadAllAssetsOfTypeInternal<TAsset>(bundle);
         }
         public override AssetBundle MainAssetBundle => GetAssetBundle(RRPBundle.Main);
 
-        public string AssemblyDir => Path.GetDirectoryName(RulersOfTheRedPlaneMain.pluginInfo.Location);
+        public string AssemblyDir => Path.GetDirectoryName(RRPMain.pluginInfo.Location);
 
         public AssetBundle GetAssetBundle(RRPBundle bundle)
         {
@@ -109,7 +109,7 @@ namespace IEye.RRP
                     case VANILLA: LoadBundle(path, RRPBundle.Vanilla); break;
                     case DEV: LoadBundle(path, RRPBundle.Indev); break;
                     case SHARED: LoadBundle(path, RRPBundle.Shared); break;
-                    default: DefNotSS2Log.Warning($"Invalid or Unexpected file in the AssetBundles folder (File name: {fileName}, Path: {path})"); break;
+                    default: RRPMain.logger.LogWarning($"Invalid or Unexpected file in the AssetBundles folder (File name: {fileName}, Path: {path})"); break;
                 }
             }
 
@@ -132,7 +132,7 @@ namespace IEye.RRP
                 }
                 catch (Exception e)
                 {
-                    DefNotSS2Log.Error($"Could not load assetbundle at path {path} and assign to enum {bundleEnum}. {e}");
+                    RRPMain.logger.LogError($"Could not load assetbundle at path {path} and assign to enum {bundleEnum}. {e}");
                 }
             }
         }
@@ -146,11 +146,11 @@ namespace IEye.RRP
 #if DEBUG
                 if (!asset)
                 {
-                    DefNotSS2Log.Warning($"Could not find asset of type {typeof(TAsset).Name} with name {name} in any of the bundles.");
+                    RRPMain.logger.LogWarning($"Could not find asset of type {typeof(TAsset).Name} with name {name} in any of the bundles.");
                 }
                 else
                 {
-                    DefNotSS2Log.Info($"Asset of type {typeof(TAsset).Name} was found inside bundle {foundInBundle}, it is recommended that you load the asset directly");
+                    RRPMain.logger.LogInfo($"Asset of type {typeof(TAsset).Name} was found inside bundle {foundInBundle}, it is recommended that you load the asset directly");
                 }
 #endif
                 return asset;
@@ -163,7 +163,7 @@ namespace IEye.RRP
                 var stackTrace = new StackTrace();
                 var method = stackTrace.GetFrame(1).GetMethod();
 
-                DefNotSS2Log.Warning($"The  method \"{method.DeclaringType.FullName}.{method.Name}()\" is calling \"LoadAsset<TAsset>(string, SS2Bundle)\" with the arguments \"{typeof(TAsset).Name}\", \"{name}\" and \"{bundle}\", however, the asset could not be found.\n" +
+                RRPMain.logger.LogWarning($"The  method \"{method.DeclaringType.FullName}.{method.Name}()\" is calling \"LoadAsset<TAsset>(string, SS2Bundle)\" with the arguments \"{typeof(TAsset).Name}\", \"{name}\" and \"{bundle}\", however, the asset could not be found.\n" +
                     $"A complete search of all the bundles will be done and the correct bundle enum will be logged.");
                 return LoadAssetInternal<TAsset>(name, RRPBundle.All);
             }
@@ -195,7 +195,7 @@ namespace IEye.RRP
 #if DEBUG
                 if (loadedAssets.Count == 0)
                 {
-                    DefNotSS2Log.Warning($"Could not find any asset of type {typeof(TAsset)} inside any of the bundles");
+                    RRPMain.logger.LogWarning($"Could not find any asset of type {typeof(TAsset)} inside any of the bundles");
                 }
 #endif
                 return loadedAssets.ToArray();
@@ -205,7 +205,7 @@ namespace IEye.RRP
 #if DEBUG
             if (loadedAssets.Count == 0)
             {
-                DefNotSS2Log.Warning($"Could not find any asset of type {typeof(TAsset)} inside the bundle {bundle}");
+                RRPMain.logger.LogWarning($"Could not find any asset of type {typeof(TAsset)} inside the bundle {bundle}");
             }
 #endif
             return loadedAssets.ToArray();

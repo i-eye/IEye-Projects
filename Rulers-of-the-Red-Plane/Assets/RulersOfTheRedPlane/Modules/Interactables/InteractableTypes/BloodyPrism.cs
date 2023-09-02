@@ -15,6 +15,8 @@ using Mono.Cecil;
 using RiskOfOptions;
 using BepInEx.Configuration;
 using Moonstorm.Config;
+using RoR2.Hologram;
+using EntityStates.Headstompers;
 
 namespace IEye.RRP.Interactables
 {
@@ -24,13 +26,13 @@ namespace IEye.RRP.Interactables
     {
         public override GameObject Interactable { get; } = RRPAssets.LoadAsset<GameObject>("BloodyPrismGameObject", RRPBundle.Interactables);
 
-        public override MSInteractableDirectorCard InteractableDirectorCard { get; } = RRPAssets.LoadAsset<MSInteractableDirectorCard>("BloodyPrism", RRPBundle.Interactables);
+        public override List<MSInteractableDirectorCard> InteractableDirectorCards { get; } = new List<MSInteractableDirectorCard>();
 
         /*
         [RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Credits for the Imp Stuff interactable catagory(default 3.2)")]
         public static ConfigurableFloat impStuffCredits = new ConfigurableFloat(3.2f);
         */
-        
+
 
         [RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Credits multiplied by difficulty for prism combat director on use(default 110)")]
         public static int creditsCoef = 110;
@@ -48,6 +50,7 @@ namespace IEye.RRP.Interactables
         */
         public override void Initialize()
         {
+            InteractableDirectorCards.Add(RRPAssets.LoadAsset<MSInteractableDirectorCard>("BloodyPrism", RRPBundle.Interactables));
             //impStuffCredits.SetUseStepSlider(true);
             //DefNotSS2Log.Message("InitializePrism");
             var interactableToken = Interactable.AddComponent<PrismInteractableToken>();
@@ -56,7 +59,8 @@ namespace IEye.RRP.Interactables
             interactableToken.Interaction = Interactable.GetComponent<PurchaseInteraction>();
             interactableToken.dropTransform = Interactable.GetComponent<Transform>();
             interactableToken.symbolTranform = null;
-            InteractableDirectorCard.DirectorCardHolder.InteractableCategorySelectionWeight = catagoryWeight;
+            interactableToken.behavior = Interactable.GetComponent<ShopTerminalBehavior>();
+            
             
 
             /*
@@ -66,6 +70,8 @@ namespace IEye.RRP.Interactables
             */
         }
         //[RequireComponent(typeof(PurchaseInteraction))]
+
+        
         public class PrismInteractableToken : NetworkBehaviour
         {
             bool hasActivated = false;
@@ -75,19 +81,23 @@ namespace IEye.RRP.Interactables
             public CombatSquad combatSquad;
             public Transform symbolTranform;
             public Xoroshiro128Plus rng;
+            public ShopTerminalBehavior behavior;
+            
             public PickupIndex index;
             public Transform dropTransform;
             public float dropUpVelocityStrength = 25f;
             public float dropForwardVelocityStrength = 3f;
 
-            public GameObject destroyVFX { get; } = RRPAssets.LoadAsset<GameObject>("PrismVFX", RRPBundle.Interactables);
+            public GameObject destroyVFX;
 
             public ExplicitPickupDropTable dropTable { get; } = RRPAssets.LoadAsset<ExplicitPickupDropTable>("PrismDroptable", RRPBundle.Interactables);
 
             public static event Action<PrismInteractableToken> onDefeatedServer;
-
+            
             public void Start()
             {
+
+                destroyVFX = RRPAssets.LoadAsset<GameObject>("PrismVFX", RRPBundle.Interactables);
                 
                 if (NetworkServer.active && Run.instance)
                 {
@@ -107,7 +117,10 @@ namespace IEye.RRP.Interactables
                 Array.Resize(ref dropTable.pickupEntries, items.Count);
                 //DefNotSS2Log.Message(dropTable.pickupEntries.IsFixedSize);
                 //DefNotSS2Log.Message(dropTable.pickupEntries.Length);
-                for(int i = 0; i < dropTable.pickupEntries.Length; i++)
+
+                
+
+                for (int i = 0; i < dropTable.pickupEntries.Length; i++)
                 {
                     ItemDef item = items[i];
                     ExplicitPickupDropTable.PickupDefEntry entry = new ExplicitPickupDropTable.PickupDefEntry();
@@ -127,32 +140,37 @@ namespace IEye.RRP.Interactables
                     //DefNotSS2Log.Message(dropTable.pickupEntries[i].pickupDef);
                 }
                 dropTable.Regenerate(Run.instance);
-                //DefNotSS2Log.Message(dropTable.pickupEntries);
+
+                RRPMain.logger.LogMessage("About to generate pickups");
+                behavior.GenerateNewPickupServer();
+                behavior.UpdatePickupDisplayAndAnimations();
+                RRPMain.logger.LogMessage("PickupIndex is:" + behavior.pickupIndex);
+
                 
+                
+                //DefNotSS2Log.Message(dropTable.pickupEntries);
+
             }
 
             public void OnDefeatedServer()
             {
                 if (hasActivated)
                 {
-                    index = dropTable.GenerateDrop(rng);
+
                     //DefNotSS2Log.Message(index);
                     //DefNotSS2Log.Message(index.pickupDef.itemIndex);
-                    Vector3 val = Vector3.up * dropUpVelocityStrength + dropTransform.forward * dropForwardVelocityStrength;
-                    PickupDropletController.CreatePickupDroplet(index, dropTransform.position + Vector3.up * 1.5f, val);
+                    behavior.DropPickup();
 
                     Chat.SimpleChatMessage message = new Chat.SimpleChatMessage();
                     message.baseToken = "RRP_INTERACT_PRISM_END";
                     Chat.SendBroadcastChat(message);
-
-
-
                     
                     if (destroyVFX)
                     {
-                        DefNotSS2Log.Message("Bloody VFX about to instantiate");
+                        RRPMain.logger.LogMessage("Bloody VFX about to instantiate");
                         EffectManager.SimpleEffect(destroyVFX, dropTransform.position, dropTransform.rotation, true);
-                        DefNotSS2Log.Message("Bloody VFX instantiated");
+
+                        RRPMain.logger.LogMessage("Bloody VFX instantiated");
                     }
                     
                     Destroy(this.gameObject);

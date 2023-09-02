@@ -66,7 +66,7 @@ namespace IEye.RRP.Items
                 //DefNotSS2Log.Message("Damage Dealt");
                 if(Util.CheckRoll(hitChance * report.damageInfo.procCoefficient, report.attackerMaster))
                 {
-                    DefNotSS2Log.Message("Roll passed");
+                    RRPMain.logger.LogMessage("Roll passed");
                     report.attackerBody.AddTimedBuffAuthority(RRPContent.Buffs.PredatoryRush.buffIndex, report.damageInfo.procCoefficient * (duration + (stackDuration * stack)));
                 }
             }
