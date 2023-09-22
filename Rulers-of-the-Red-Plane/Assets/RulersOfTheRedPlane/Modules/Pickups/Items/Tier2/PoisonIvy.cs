@@ -10,6 +10,7 @@ using BepInEx.Logging;
 
 namespace IEye.RRP.Items
 {
+    [DisabledContent]
     public class PoisonIvy : ItemBase
     {
 

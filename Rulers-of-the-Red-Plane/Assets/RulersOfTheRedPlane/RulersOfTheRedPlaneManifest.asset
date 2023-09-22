@@ -32,8 +32,8 @@ MonoBehaviour:
   - <ManifestPluginStaging>
   Author: IEye
   Name: Rulers_of_the_Red_Plane
-  Description: 0.1.0 - New Item Tier Update!(well it's 0.1.3 now but whatever)
-  Version: 0.1.3
+  Description: 0.1.5 Indev
+  Version: 0.1.5
   Dependencies:
   - {fileID: 11400000, guid: 5ceb1d8ed3af40d4d806e9756b403649, type: 2}
   - {fileID: 11400000, guid: 890a1759ee352a00d2367557b4d6225f, type: 2}
@@ -49,11 +49,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e3489f21cf727f06414f0494e9dce911, type: 2}
   - {fileID: 11400000, guid: 98480314448d120c05e373472456e52b, type: 2}
   - {fileID: 11400000, guid: 19f404b4f1d413a691a8b0edda7faba9, type: 2}
-  - {fileID: 11400000, guid: 484664494380feb55f0413b710f656ac, type: 2}
+  - {fileID: 11400000, guid: 7e223af718a9b1766e42836ea3d31194, type: 2}
   - {fileID: 11400000, guid: 890a1759ee352a00d2367557b4d6225f, type: 2}
   - {fileID: 11400000, guid: e8166746ca0c6d98ee8c97fe787f2b80, type: 2}
   - {fileID: 11400000, guid: 16c8e91a5b2bc2e4cd510a3c418d5c06, type: 2}
-  - {fileID: 11400000, guid: 7e223af718a9b1766e42836ea3d31194, type: 2}
 --- !u!114 &-6429385041958414480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,3 +167,6 @@ MonoBehaviour:
     assets:
     - {fileID: 102900000, guid: ddb18936a6dc2fe4180f603a614d4ded, type: 3}
     - {fileID: 4300000, guid: bd3a9a0faf1f9da498b3a5fa570e307d, type: 2}
+  - assetBundleName: rrpartifacts
+    assets:
+    - {fileID: 102900000, guid: 9fcc721724e06c34d86e0926aea656d9, type: 3}

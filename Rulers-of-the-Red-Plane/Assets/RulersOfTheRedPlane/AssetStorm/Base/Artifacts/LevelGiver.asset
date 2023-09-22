@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1284244208, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-  m_Name: SacrificialHelper
+  m_Name: LevelGiver
   m_EditorClassIdentifier: 
   deprecatedTier: 5
-  _itemTierDef: {fileID: 11400000, guid: 76146b10c4426a24192ea9ebaaf046c2, type: 2}
-  nameToken: RRP_SACRIFICE_NAME
-  pickupToken: RRP_SACRIFICE_PICKUP
-  descriptionToken: RRP_SACRIFICE_DESC
-  loreToken: RRP_SACRIFICE_LORE
+  _itemTierDef: {fileID: 0}
+  nameToken: RRP_LEVELGIVER_NAME
+  pickupToken: RRP_LEVELGIVER_PICKUP
+  descriptionToken: RRP_LEVELGIVER_DESC
+  loreToken: RRP_LEVELGIVER_LORE
   unlockableDef: {fileID: 0}
   pickupModelPrefab: {fileID: 0}
   pickupIconSprite: {fileID: 0}
   hidden: 1
   canRemove: 0
-  tags: 0c0000000d00000009000000
-  requiredExpansion: {fileID: 11400000, guid: 0d7ea78905bfc2c4c8636a77b83a5661, type: 2}
+  tags: 04000000090000000b0000000c0000000d000000
+  requiredExpansion: {fileID: 0}

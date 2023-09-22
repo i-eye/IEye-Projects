@@ -50,7 +50,8 @@
         "ZioRiskOfOptions.dll",
         "ZioConfigFile.dll",
         "R2API.Addressables.dll",
-        "R2API.Director.dll"
+        "R2API.Director.dll",
+        "R2API.ArtifactCode.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [],

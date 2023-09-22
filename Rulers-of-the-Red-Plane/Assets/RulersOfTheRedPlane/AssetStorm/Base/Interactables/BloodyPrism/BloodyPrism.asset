@@ -18,11 +18,11 @@ MonoBehaviour:
   nodeGraphType: 0
   requiredFlags: 0
   forbiddenFlags: 0
-  directorCreditCost: 30
-  occupyPosition: 0
+  directorCreditCost: 35
+  occupyPosition: 1
   eliteRules: 0
   orientToFloor: 1
-  slightlyRandomizeOrientation: 1
+  slightlyRandomizeOrientation: 0
   skipSpawnWhenSacrificeArtifactEnabled: 0
   weightScalarWhenSacrificeArtifactEnabled: 1
   maxSpawnsPerStage: -1
@@ -55,10 +55,13 @@ MonoBehaviour:
     forbiddenUnlockableDef: {fileID: 0}
   interactableCategory: 1
   customCategory: ImpStuff
-  customCategoryWeight: 2.6
+  customCategoryWeight: 2.8
   stages: 268358654
   customStages: []
-  requiredExpansionDefs: []
+  requiredExpansionDefs:
+  - _asset: {fileID: 11400000, guid: 0d7ea78905bfc2c4c8636a77b83a5661, type: 2}
+    _address: 
+    _useDirectReference: 1
   requiredExpansions:
   - address: 
     useDirectReference: 1

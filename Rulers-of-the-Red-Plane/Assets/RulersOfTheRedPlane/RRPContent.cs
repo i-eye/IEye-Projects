@@ -12,7 +12,7 @@ namespace IEye.RRP
     {
         public static class Artifacts
         {
-
+            public static ArtifactDef Loop;
         }
         public static class Items
         {
@@ -38,6 +38,8 @@ namespace IEye.RRP
 
             //hidden
             public static ItemDef SacrificialHelper;
+            public static ItemDef LevelGiver;
+            
         }
         public static class Buffs
         {
@@ -85,6 +87,10 @@ namespace IEye.RRP
             delegate
             {
                 new Modules.Interactables().Initialize();   
+            },
+            delegate
+            {
+                new Modules.Artifacts().Initialize();
             },
             delegate
             {

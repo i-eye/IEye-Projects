@@ -26,7 +26,18 @@ Nightshade for creating the logo
 
 # Changelog
 
-### 0 .1.3
+### 0.1.4
+- New Bloody Prism
+  - New shape, size, and particles
+  - See your loot before you summon a challengeing horde or enemies, which has 50% chance of being imps now
+  - Director Credit Cost -> 35
+  - ImpStuff Interactble Catagory Weight 1.9 -> 2.8
+  - Miniumum Stage Completion 0 -> 1
+- Sacrifice 
+  - Added UI effect for Transitions!
+- Introspective Insect Lore by ihazkirbro
+  
+### 0.1.3
 - Lowered selection weight for bloody prism from 3.2 to 1.9
 - Increased sacrificial kill coeffecient from 2.2 to 3.8
 - Fixed a typo

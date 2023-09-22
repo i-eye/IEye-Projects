@@ -8,6 +8,7 @@ using R2API.Networking;
 
 namespace IEye.RRP.Items
 {
+    [DisabledContent]
     public class BloodlustIvy : ItemBase
     {
 

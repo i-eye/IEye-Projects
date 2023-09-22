@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: -5114303073284197904}
   - component: {fileID: 605578408279087756}
   - component: {fileID: 618175808815801000}
+  - component: {fileID: 486688833571479362}
   m_Layer: 0
   m_Name: BloodyPrismGameObject
   m_TagString: Untagged
@@ -38,13 +39,13 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 3461092024747223359}
   - {fileID: 4173171564902147866}
+  - {fileID: 1284217226919004234}
   - {fileID: 3404565446518985901}
   - {fileID: 8012393706146414283}
   - {fileID: 1718492913882215098}
   - {fileID: 4724842631991429551}
-  - {fileID: 1284217226919004234}
-  - {fileID: 3461092024747223359}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -265,11 +266,26 @@ MonoBehaviour:
   pickupDisplay: {fileID: 6814705302924208370}
   dropTransform: {fileID: 1284217226919004234}
   dropTable: {fileID: 11400000, guid: ee40cde6f74fe3b4f83493e3c46ee1ee, type: 2}
-  dropVelocity: {x: 4, y: 0, z: 25}
+  dropVelocity: {x: 0, y: 20, z: 0}
   animator: {fileID: 0}
   itemTier: 10
   bannedItemTag: 0
   selfGeneratePickup: 1
+--- !u!114 &486688833571479362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800851431774492465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -226763392, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformPairs:
+  - name: FireworkOrigin
+    transform: {fileID: 1284217226919004234}
 --- !u!1 &981804718665715722
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +314,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 24455950974340491}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5079082075409482078
 GameObject:
@@ -329,7 +345,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 24455950974340491}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &9156339047859551127
 Light:
@@ -344,7 +360,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.9811321, g: 0.41189036, b: 0.41189036, a: 1}
   m_Intensity: 1
-  m_Range: 4
+  m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -402,6 +418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4173171564902147866}
   - component: {fileID: 6814705302924208370}
+  - component: {fileID: 8797060471074295197}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -417,11 +434,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6781087799712723173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.2, z: 0}
+  m_LocalPosition: {x: -0.016, y: 2.898, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 24455950974340491}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6814705302924208370
 MonoBehaviour:
@@ -436,8 +453,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verticalWave:
-    amplitude: 1
-    frequency: 0.5
+    amplitude: 0.2
+    frequency: 0.1
     cycleOffset: 0
   dontInstantiatePickupModel: 0
   spinSpeed: 75
@@ -449,7 +466,25 @@ MonoBehaviour:
   bossParticleEffect: {fileID: 0}
   voidParticleEffect: {fileID: 0}
   coloredParticleSystems: []
-  highlight: {fileID: 5608751038065223160}
+  highlight: {fileID: 8797060471074295197}
+--- !u!114 &8797060471074295197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6781087799712723173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 871971028, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupIndex:
+    value: 0
+  targetRenderer: {fileID: 0}
+  strength: 1
+  highlightColor: 1
+  isOn: 0
 --- !u!1001 &1574191430137800469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -465,7 +500,7 @@ PrefabInstance:
     - target: {fileID: 4244595368446571448, guid: 5e7749de6884e1845a2a5a2d2f02a45b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4244595368446571448, guid: 5e7749de6884e1845a2a5a2d2f02a45b,
         type: 3}
@@ -540,7 +575,12 @@ PrefabInstance:
     - target: {fileID: 4244595368446571448, guid: 5e7749de6884e1845a2a5a2d2f02a45b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244595368446571448, guid: 5e7749de6884e1845a2a5a2d2f02a45b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4244595368446571448, guid: 5e7749de6884e1845a2a5a2d2f02a45b,
         type: 3}
@@ -615,7 +655,12 @@ PrefabInstance:
     - target: {fileID: 4244595368446571448, guid: 5e7749de6884e1845a2a5a2d2f02a45b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244595368446571448, guid: 5e7749de6884e1845a2a5a2d2f02a45b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 4244595368446571448, guid: 5e7749de6884e1845a2a5a2d2f02a45b,
         type: 3}
@@ -690,7 +735,12 @@ PrefabInstance:
     - target: {fileID: 4244595368446571448, guid: 5e7749de6884e1845a2a5a2d2f02a45b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244595368446571448, guid: 5e7749de6884e1845a2a5a2d2f02a45b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4244595368446571448, guid: 5e7749de6884e1845a2a5a2d2f02a45b,
         type: 3}
