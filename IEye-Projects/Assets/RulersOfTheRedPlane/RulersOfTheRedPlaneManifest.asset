@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8118670267246136782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7e13dda513544419a89926bd12ad8a, type: 3}
+  m_Name: AssemblyDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <BuildPathPlugins>
+  definitions:
+  - {fileID: 5897886265953266890, guid: 54fdf68fba6b4594d8ed30cc6f427441, type: 3}
+--- !u!114 &-7158330158416092135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22bb7fd1d3b56a48bc52f8e407901d6, type: 3}
+  m_Name: ManifestIdentity
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestPluginStaging>
+  Author: IEye
+  Name: Rulers_of_the_Red_Plane
+  Description: 0.1.5 Indev
+  Version: 0.1.5
+  Dependencies:
+  - {fileID: 11400000, guid: 5ceb1d8ed3af40d4d806e9756b403649, type: 2}
+  - {fileID: 11400000, guid: 890a1759ee352a00d2367557b4d6225f, type: 2}
+  - {fileID: 11400000, guid: 484664494380feb55f0413b710f656ac, type: 2}
+  - {fileID: 11400000, guid: a644a53693d44639c70550096ce74b93, type: 2}
+  - {fileID: 11400000, guid: 1b5df2a4c826b6f799002dab33a6b684, type: 2}
+  - {fileID: 11400000, guid: 5674b391a71ca7b6c4189c6fd99a9f26, type: 2}
+  - {fileID: 11400000, guid: 96b1b0a099d0aa02c665488b89e05f9c, type: 2}
+  - {fileID: 11400000, guid: 1f1d261aeee91427ddd08b6378ec4e5a, type: 2}
+  - {fileID: 11400000, guid: cf53c440617523c88133e24838fdcb20, type: 2}
+  - {fileID: 11400000, guid: 184f0fdf3edcd6bad171410f4e0fd947, type: 2}
+  - {fileID: 11400000, guid: c4d029bdf5bc95fb2fff2155c8689ef3, type: 2}
+  - {fileID: 11400000, guid: e3489f21cf727f06414f0494e9dce911, type: 2}
+  - {fileID: 11400000, guid: 98480314448d120c05e373472456e52b, type: 2}
+  - {fileID: 11400000, guid: 19f404b4f1d413a691a8b0edda7faba9, type: 2}
+  - {fileID: 11400000, guid: 7e223af718a9b1766e42836ea3d31194, type: 2}
+  - {fileID: 11400000, guid: 890a1759ee352a00d2367557b4d6225f, type: 2}
+  - {fileID: 11400000, guid: e8166746ca0c6d98ee8c97fe787f2b80, type: 2}
+  - {fileID: 11400000, guid: 16c8e91a5b2bc2e4cd510a3c418d5c06, type: 2}
+--- !u!114 &-6429385041958414480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a82fec78ebc734d9ad1346cd40b5f9, type: 3}
+  m_Name: ThunderstoreData
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <BuildPath>
+  url: https://github.com/i-eye/Rulers-of-the-Red-Plane
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e563561e08b6a3642a487177f5cfbb37, type: 3}
+  m_Name: RulersOfTheRedPlaneManifest
+  m_EditorClassIdentifier: 
+  Data:
+  - {fileID: -7158330158416092135}
+  - {fileID: 3190296122889749491}
+  - {fileID: -8118670267246136782}
+  - {fileID: 2765314773197025085}
+  - {fileID: -6429385041958414480}
+  - {fileID: 2104117645144803766}
+  identity: {fileID: -7158330158416092135}
+  QuickAccess: 0
+--- !u!114 &2104117645144803766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b243ff405b33b94dbf5b6775dd9aa33, type: 3}
+  m_Name: Files
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <BuildPath>
+  files:
+  - {fileID: 2800000, guid: c1353823a843d1f489dc764c8145ccb6, type: 3}
+  - {fileID: 4900000, guid: c1831a92e9e58df4a99c8c7937d85c1b, type: 3}
+--- !u!114 &2765314773197025085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3230df44b431ebc49a958dde5afa4f88, type: 3}
+  m_Name: LanguageFolderTree
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <BuildPathPlugins>
+  rootFolderName: RRPLang
+  languageFolders:
+  - languageName: en
+    languageFiles:
+    - {fileID: 4900000, guid: 462f2db432fe83442bdaa463425af489, type: 3}
+    - {fileID: 4900000, guid: e0f3afdfda238a943903a588c1c20efc, type: 3}
+    - {fileID: 4900000, guid: cb07451ca47b64949bb883a0fd49c9f7, type: 3}
+    - {fileID: 4900000, guid: 767e98beaf79e5b4e8e049d9a31daa1a, type: 3}
+    - {fileID: 4900000, guid: ccddd241e438e8243a01a458a3e1b98b, type: 3}
+    - {fileID: 4900000, guid: 89a8672b4e202e349b1acb7c5dcfda85, type: 3}
+    - {fileID: 4900000, guid: 40feaf2a490314f47aaad9184413240c, type: 3}
+  - languageName: es-ES
+    languageFiles:
+    - {fileID: 4900000, guid: a2a81b2fc585c0d42b5e589793678f16, type: 3}
+    - {fileID: 4900000, guid: ee4e3400fc5c578499adbf3d7ee77150, type: 3}
+    - {fileID: 4900000, guid: 32ce9a08566b58d428a91e904bbf8295, type: 3}
+--- !u!114 &3190296122889749491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d1008b78cb6e846889b7778282fbef, type: 3}
+  m_Name: AssetBundleDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <BuildPathAssets>
+  assetBundles:
+  - assetBundleName: rrpmain
+    assets:
+    - {fileID: 11400000, guid: b7cc0fc1cd804a5458997f5e82d2f293, type: 2}
+    - {fileID: 2800000, guid: d81e27f129f7d054e8b370adaa949464, type: 3}
+    - {fileID: 2800000, guid: 1973417585079444ea976f56d0d6ddd5, type: 3}
+    - {fileID: 11400000, guid: 0d7ea78905bfc2c4c8636a77b83a5661, type: 2}
+    - {fileID: 2800000, guid: c1353823a843d1f489dc764c8145ccb6, type: 3}
+  - assetBundleName: rrpitems
+    assets:
+    - {fileID: 102900000, guid: 2a88a7292400ca04b9609e5a52630d07, type: 3}
+  - assetBundleName: rrpbase
+    assets:
+    - {fileID: 102900000, guid: 0dc73bf08c1ae6a46969a7687887d424, type: 3}
+  - assetBundleName: rrpinteractables
+    assets:
+    - {fileID: 102900000, guid: ddb18936a6dc2fe4180f603a614d4ded, type: 3}
+    - {fileID: 4300000, guid: bd3a9a0faf1f9da498b3a5fa570e307d, type: 2}
+  - assetBundleName: rrpartifacts
+    assets:
+    - {fileID: 102900000, guid: 9fcc721724e06c34d86e0926aea656d9, type: 3}

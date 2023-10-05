@@ -1,0 +1,94 @@
+ManifestFileVersion: 0
+CRC: 101697027
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 01220b9d7b1f06075fd363f86878fb6d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 688b8d41533c47f4da245f06b0a57d14
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 816898038, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f8258ea15b8f74c4889ce485d21cbbb1, type: 3}
+- Class: 114
+  Script: {fileID: -226763392, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -335047464, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 511512695, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -1161602148, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 802575700, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -1409057399, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -1620867292, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 871971028, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -1699741063, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -1247058517, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 288573216, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 370243918, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -565067572, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 451251496, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8577aced8c5464a488c5ef8182ea0b80, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/BloodyPrismGameObject.prefab
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/Material Base
+  Color.png
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/DistTex.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/PrismDroptable.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/MiniPrism.blend
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/PrismVFX.prefab
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/ExplosionMat.mat
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/BloodyPrism.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/Ramp.png
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/Main_Prism.blend
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/Prism Mat.mat
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/Red Shard.png
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/MiniPrism.prefab
+- Assets/RoR2/Pebble1Mesh.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/texShrineIconOutlined.png
+Dependencies:
+- D:/Creative/Unity Projects/RoR2/RulersOfTheRedPlane/Rulers-of-the-Red-Plane/Rulers-of-the-Red-Plane/ThunderKit/AssetBundleStaging/msuassets
+- D:/Creative/Unity Projects/RoR2/RulersOfTheRedPlane/Rulers-of-the-Red-Plane/Rulers-of-the-Red-Plane/ThunderKit/AssetBundleStaging/rrpmain

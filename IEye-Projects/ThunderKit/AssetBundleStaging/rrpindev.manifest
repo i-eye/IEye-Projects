@@ -1,0 +1,47 @@
+ManifestFileVersion: 0
+CRC: 4259744714
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 594666b733c83804a96a812238bbae54
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4852754edc280d5a74124ee50ed026b1
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 802575700, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -1409057399, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -1284244208, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 1006468269, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8577aced8c5464a488c5ef8182ea0b80, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/BloodyPrism/BloodyPrismGameObject.prefab
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/BloodyPrism/PrismDroptable.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Items/BloodFrenzy/BloodFrenzy.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/BloodyPrism/Blood Prism.blend
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/BloodyPrism/BloodyPrism.asset
+Dependencies:
+- D:/Creative Stuff/Unity Projects/RoR2 Stuff/First/RulersOfTheRedPlane/Rulers-of-the-Red-Plane/Rulers-of-the-Red-Plane/ThunderKit/AssetBundleStaging/rrpbase
+- D:/Creative Stuff/Unity Projects/RoR2 Stuff/First/RulersOfTheRedPlane/Rulers-of-the-Red-Plane/Rulers-of-the-Red-Plane/ThunderKit/AssetBundleStaging/rrpmain

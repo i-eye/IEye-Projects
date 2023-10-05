@@ -1,0 +1,8 @@
+{
+  "strings": {
+    "RRP_ITEM_DOUBLESWORD_NAME": "Espalda de dos lados",
+    "RRP_ITEM_DOUBLESWORD_PICKUP": "SE CAUSAR HEMORRAGIA AL MUNDO<style=cDeath>...incluso tú</style>",
+    "RRP_ITEM_DOUBLESWORD_DESC": "Cuándo tomas daño, <style=cIsDamage>causar hemorragia</style> todo en <style=cIsDamage>{0}m</style> de tú por <style=cIsDamage>{2}s</style> por <style=cIsDamage>{1}% daño base</style> <style=cStack>(+{1}% base daño por accumulación)</style>.\nDaño es <style=cIsDamage>{3}x</style> efectivo en ti.",
+    "RRP_ITEM_DOUBLESWORD_LORE": "Sangre.\n\nTodo hemorragia. La plaga tú proteges, los golems, el gente de dunas, creaciónes de alma, toda criatura indefensoa muerta simplemente sobre perde bastante sangre. Hay no desvío. Hasta mis creaciónes sangran. Tú también.\n\nLos diablillos fueron de inspiración. Sus anti-coagulantes natural los hacen letal a las plagas elegas proteger. Llamaste la atención de este a mi. Tengo que dar gracias a tu obsesión cazarlos. Puedas haber pensado que ellos fueron demasiados débil a ser más que un enfado. Los fueron hecho orgánicamente, y en cantidad baja también. Ellos requeren contacto físico. Los más fuertes encontraron un manera causar este a un alcance; sin embargo, estilos primitivos son usando. Pero el potencial es más que esperaste.\n\nO tal vez tú solomente olvidas. Veo todo que haces. Y los reciben estos. Lo sé.\n\nO tal vez solomente ignoras. Solo sabes que fallarás. Tus atentados cobardes mantener mi a raya son inefectivos. Fallarás."
+  }
+}

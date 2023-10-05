@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 1199770430
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 68a2b66f048cdb882e9e657c64fdb72f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cc24ee3122ce8ac7f240b91a742b7028
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 1006468269, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/ItemTiers/Sacrificial/Sacrificial.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/ItemTiers/Sacrificial/Background.png
+Dependencies: []

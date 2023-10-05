@@ -1,0 +1,8 @@
+{
+  "strings": {
+	"RRP_ARTIFACT_LOOP_NAME": "Artifact of Loop",
+	"RRP_ARTIFACT_LOOP_DESC": "Start on Loop One",
+    "RRP_ACHIEVEMENT_LOOPART_NAME": "Challenge of the Loop",
+    "RRP_ACHIEVEMENT_LOOPART_DESC":  "Complete the Challenge of the Loop"
+  }
+}

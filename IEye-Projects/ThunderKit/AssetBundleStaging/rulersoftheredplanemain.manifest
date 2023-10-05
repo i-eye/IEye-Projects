@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 265247078
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cb891c90503ed751baf072aa9f07ab1d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5f54cd6137eb5e6a78c6d51483b579aa
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 870831823, guid: 6640684985c93709256019488ea570c0, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/RulersOfTheRedPlane/AssetStorm/ContentPack.asset
+Dependencies: []

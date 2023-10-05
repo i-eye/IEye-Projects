@@ -1,0 +1,52 @@
+ManifestFileVersion: 0
+CRC: 1293906337
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8cf4561c64f53a932b49dfd96c3ef296
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2b5fa412deae52dbc91aeb834819b95b
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 1070810522, guid: 92ed9db9612f88c0f7257087a5a8d084, type: 3}
+- Class: 114
+  Script: {fileID: 1032072274, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 802575700, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7d2dc8cbdb9720c418fcff8f84588cab, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/Loop Artifact.png
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/Loop.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/Loop Artifact Disabled.png
+- Packages/riskofthunder-ror2editorkit/Assets/Materials/RoR2EK_matNull.mat
+- Packages/riskofthunder-ror2editorkit/Assets/Prefabs/NullModel.prefab
+- Packages/riskofthunder-ror2editorkit/Assets/Meshes/RoR2EK_meshNull.mesh
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/rrp.artifact.loop.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/Loop Artifact Achievement.png
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/LoopCode.asset
+Dependencies:
+- D:/Creative/Unity Projects/RoR2/RulersOfTheRedPlane/Rulers-of-the-Red-Plane/Rulers-of-the-Red-Plane/ThunderKit/AssetBundleStaging/rrpmain

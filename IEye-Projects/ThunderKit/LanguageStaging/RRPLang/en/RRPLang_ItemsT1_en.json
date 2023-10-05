@@ -1,0 +1,8 @@
+{
+  "strings": {
+    "RRP_ITEM_FOURDIMENSIONALDAGGER_NAME": "Four dimensional dagger",
+    "RRP_ITEM_FOURDIMENSIONALDAGGER_DESC": "<style=cIsDamage>{0}%</style> <style=cStack>(+{0}% per stack)</style> chance on hit to bleed an enemy within <style=cIsDamage>{1}m</style> <style=cStack>(+{2}m per stack)</style> for <style=cIsDamage>240% base damage</style>.",
+    "RRP_ITEM_FOURDIMENSIONALDAGGER_PICKUP": "Chance to bleed nearby enemies on hit.",
+    "RRP_ITEM_FOURDIMENSIONALDAGGER_LORE": "Recent advances in technology have allowed for reach into the fourth dimension. The first application of this was in scalpels, allowing for surgery without the skin having to be cut. This reduced the amount of incisions needed and blood loss. But this dangerous invention didn't last long. The blood of those carelessly massacred in the vicinity spoke for itself."
+  }
+}

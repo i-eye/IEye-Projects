@@ -1,0 +1,157 @@
+ManifestFileVersion: 0
+CRC: 3610443177
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3aa03a10abcaa615efc2a2faff8d6a33
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 89f432b13a820084f5f5efa747934f9d
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 649313124, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f8258ea15b8f74c4889ce485d21cbbb1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 25691571cb7e6154fba2b46ef9402c18, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0ae41182b6efbc14ab17f86d84b8b528, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 462267d798a056b4ab94d737b7da67f6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0361a1980df246f4b9c782ef4f442b98, type: 3}
+- Class: 114
+  Script: {fileID: 870831823, guid: 6640684985c93709256019488ea570c0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e98f718981210a343a10825d2d88abfb, type: 3}
+- Class: 114
+  Script: {fileID: -830614127, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 89795172, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 1297580292, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 733712478, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 1918207524, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -946661946, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b3ad08bf3e7b6da4591a89d01c422e04, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+- Class: 225
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/CalmWater/CalmWater
+  - DoubleSided.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/CalmWater/CalmWater
+  - DX11.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/FX/HGCloudRemap.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsGildedCoast.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/LeTai'sAsset/EfficientBlur.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/Simulacrum/edcsCommencementSimulacrum.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/Decalicious/DecaliciousDeferredDecal.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/Decalicious/DecaliciousUnlitDecal.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/CalmWater/ProjectorCaustics.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/FX/HGForwardPlanet.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsVoidLocus.asset
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/curveLinear.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/PsychoseNGGS/NGSS_Directional.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/Nature/HGSpeedTreeCustom.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/UI/HGUIIgnoreZ.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/Simulacrum/edcsRallypointDeltaSimulacrum.asset
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsAbandonedAqueduct.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/Decalicious/DecaliciousGameObjectID.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/Simulacrum/edcsAphelianSanctuarySimulacrum.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/UI/HGUIBarRemap.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/CalmWater/CalmWater
+  - DX11 - DoubleSided.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/FX/HGDistortion.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/MSUSCP.asset
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsWetlandAspect.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/FX/HGVertexOnly.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/Simulacrum/edcsAbyssalDepthsSimulacrum.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/Deferred/HGSnowTopped.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/FX/HGSolidParallax.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsArtifactReliquary.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/skymeadow/Fill-Linear.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsSiphonedForest.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/CustomPostProcess/RampFog.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsThePlanetarium.asset
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsVoidcell.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/PostProcess/HGScopeShader.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/PsychoseNGGS/NGSS_ContactShadows.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/Simulacrum/edcsAbandonedAqueductSimulacrum.asset
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/EntityStates.Events.DummyEventState.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/Deferred/HGStandardWithDistortion.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/DummyEventCard.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/Environment/HGWaterfall.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsDistantRoost.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/Environment/HGGrass.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/PostProcess/HGScreenDamage.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/Deferred/HGTriplanarTerrainBlend.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/FX/HGDamageNumber.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsScorchedAcres.asset
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsSulphurPools.asset
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsAbyssalDepths.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/CalmWater/UnderWaterFog.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/UI/HGUIAnimateAlpha.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/icon.png
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsSkyMeadow.asset
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsSirensCall.asset
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsTitanicPlains.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/FX/HGIntersectionCloudRemap.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/UI/HGUICustomBlend.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/CustomPostProcess/SobelOutline.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsAphelianSanctuary.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/PostProcess/HGVisionLimit.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/PsychoseNGGS/NGSS_FrustumShadows.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/Simulacrum/edcsSkyMeadowsSimulacrum.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/PostProcess/HGOutlineHighlight.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsSunderedGrove.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/UI/HGUIBlur.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/FX/HGOpaqueCloudRemap.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/MeshesForMaterialTester/meshPlane.mesh
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/Nature/HGSpeedTreeBillboard.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/LeTai'sAsset/FillCrop.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/PostProcess/HGSobelBuffer.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/MeshesForMaterialTester/meshQuad.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/Deferred/HGStandard.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/Deferred/HGWavyCloth.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/StubbedShaderRoot.txt
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/Simulacrum/edcsTitanicPlainsSimulacrum.asset
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsRallypointDelta.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/CustomPostProcess/SobelRain.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/LeTai'sAsset/TranslucentImage.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/UI/HGUIOverbrighten.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/CustomPostProcess/HopooSSR.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/Prefabs/EventAnnouncer.prefab
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/Prefabs/MSUEventDirector.prefab
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/Environment/HGDistantWater.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/AddressableMaterialShader.shader
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/VanillaEventCategories/edcsCommencement.asset
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/RoR2/MobileBlur.shader
+- Packages/teammoonstorm-moonstormsharedutils/Editor/Assets/StubbedShaders/CalmWater/CalmWater
+  - SingleSided.shader
+Dependencies: []
