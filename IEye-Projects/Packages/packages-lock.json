@@ -112,6 +112,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "nebby-varianceapi": {
+      "version": "file:VarianceAPI",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "riskofrain2": {
       "version": "file:Risk of Rain 2",
       "depth": 0,
