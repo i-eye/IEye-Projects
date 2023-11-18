@@ -1,0 +1,11 @@
+ManifestFileVersion: 0
+CRC: 1452226913
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: msuassets
+      Dependencies: {}
+    Info_1:
+      Name: vapiassets
+      Dependencies:
+        Dependency_0: msuassets

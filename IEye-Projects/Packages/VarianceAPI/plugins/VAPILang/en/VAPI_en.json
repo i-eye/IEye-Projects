@@ -1,0 +1,63 @@
+{
+    "strings" : {
+        "VAPI_EXPANSION_NAME": "VarianceAPI",
+        "VAPI_EXPANSION_DESC": "Enables Variants to spawn in-game.",
+
+        "VAPI_ARTIFACT_VARIANCE_NAME" : "Artifact of Variance",
+        "VAPI_ARTIFACT_VARIANCE_DESC" : "Variant spawn rate is multiplied by {0}",
+
+        "VAPI_ITEM_EXTRAPRIMARY_NAME" : "Extra Primary Skill",
+        "VAPI_ITEM_EXTRAPRIMARY_PICKUP" : "Gain an additional stack of your primary skill.",
+        "VAPI_ITEM_EXTRAPRIMARY_DESC" : "Gain an additional stack of your primary skill.",
+
+        "VAPI_ITEM_EXTRASECONDARY_NAME" : "Extra secondary Skill",
+        "VAPI_ITEM_EXTRASECONDARY_PICKUP" : "Gain an additional stack of your secondary skill.",
+        "VAPI_ITEM_EXTRASECONDARY_DESC" : "Gain an additional stack of your secondary skill.",
+
+        "VAPI_ITEM_EXTRAUTILITY_NAME" : "Extra utility Skill",
+        "VAPI_ITEM_EXTRAUTILITY_PICKUP" : "Gain an additional stack of your utility skill.",
+        "VAPI_ITEM_EXTRAUTILITY_DESC" : "Gain an additional stack of your utility skill.",
+
+        "VAPI_ITEM_EXTRASPECIAL_NAME" : "Extra special Skill",
+        "VAPI_ITEM_EXTRASPECIAL_PICKUP" : "Gain an additional stack of your special skill.",
+        "VAPI_ITEM_EXTRASPECIAL_DESC" : "Gain an additional stack of your special skill.",
+
+        "VAPI_ITEM_GLOBALCDR_NAME" : "Global Cooldown Reduction",
+        "VAPI_ITEM_GLOBALCDR_PICKUP" : "Reduces the cooldowns of ALL your skills by 1%.",
+        "VAPI_ITEM_GLOBALCDR_DESC" : "Reduces the cooldowns of ALL your skills by 1%.",
+
+        "VAPI_ITEM_PRIMARYCDR_NAME" : "Primary Cooldown Reduction",
+        "VAPI_ITEM_PRIMARYCDR_PICKUP" : "Reduces the cooldown of your primary skill by 1%.",
+        "VAPI_ITEM_PRIMARYCDR_DESC" : "Reduces the cooldown of your primary skill by 1%.",
+
+        "VAPI_ITEM_SECONDARYCDR_NAME" : "Secondary Cooldown Reduction",
+        "VAPI_ITEM_SECONDARYCDR_PICKUP" : "Reduces the cooldown of your secondary skill by 1%.",
+        "VAPI_ITEM_SECONDARYCDR_DESC" : "Reduces the cooldown of your secondary skill by 1%.",
+
+        "VAPI_ITEM_UTILITYCDR_NAME" : "Utility Cooldown Reduction",
+        "VAPI_ITEM_UTILITYCDR_PICKUP" : "Reduces the cooldown of your utility skill by 1%.",
+        "VAPI_ITEM_UTILITYCDR_DESC" : "Reduces the cooldown of your utility skill by 1%.",
+
+        "VAPI_ITEM_SPECIALCDR_NAME" : "Special Cooldown Reduction",
+        "VAPI_ITEM_SPECIALCDR_PICKUP" : "Reduces the cooldown of your special skill by 1%.",
+        "VAPI_ITEM_SPECIALCDR_DESC" : "Reduces the cooldown of your special skill by 1%.",
+    
+        "VAPI_ITEM_PLUS1CRIT_NAME" : "+1 Crit",
+        "VAPI_ITEM_PLUS1CRIT_PICKUP" : "Increases your critical strike chance by 1%.",
+        "VAPI_ITEM_PLUS1CRIT_DESC" : "Increases your critical strike chance by 1%.",
+
+        "VAPI_ITEM_GREENHEALTHBAR_NAME" : "Green Healthbar",
+        "VAPI_ITEM_GREENHEALTHBAR_PICKUP" : "Your Healthbar is green.",
+        "VAPI_ITEM_GREENHEALTHBAR_DESC" : "Your Healthbar is green.",
+
+        "VAPI_GENERIC_ARRIVAL": "A {0} with unique properties has appeared!",
+
+        "VAPI_RULE_HEADER_VARIANTPACKS": "Variant Packs",
+        "VAPI_RULE_HEADER_VARIANTPACKS_SUBTITLE": "Variant Packs are custom Packages of Variants that will provide custom and unique variants to enemies in the game, Each pack can be enabled or disabled.",
+        
+        "VAPI_RULE_HEADER_VARIANTS": "Individual Variants",
+        "VAPI_RULE_HEADER_VARIANTS_SUBTITLE": "Individual Variants that can spawn in this Run. Each variant may cause you misfortune, fun, or a gruesome death.",
+        "VAPI_RULE_VARIANT_ON_DESCRIPTION": "This variant will be able to spawn in this Run.",
+        "VAPI_RULE_VARIANT_OFF_DESCRIPTION": "This variant cannot spawn in this Run."
+    }
+}

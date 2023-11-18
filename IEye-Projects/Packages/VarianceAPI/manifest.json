@@ -1,0 +1,11 @@
+{
+    "name": "VarianceAPI",
+    "author": "Nebby",
+    "version_number": "2.1.3",
+    "website_url": "https://github.com/Nebby1999/VarianceAPI",
+    "description": "VarianceAPI allows you to create Variants for CharacterBodies, Variants can have different textures, lights, skills, and more.",
+    "dependencies": [
+        "TeamMoonstorm-MoonstormSharedUtils-1.3.0",
+        "RiskofThunder-R2API_Rulebook-1.0.0"
+    ]
+}

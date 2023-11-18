@@ -1,0 +1,63 @@
+{
+    "strings" : {
+        "VAPI_EXPANSION_NAME": "VarianceAPI",
+        "VAPI_EXPANSION_DESC": "Permite que los variantes aparezcan en la partida.",
+
+        "VAPI_ARTIFACT_VARIANCE_NAME" : "Artefacto de Varianza",
+        "VAPI_ARTIFACT_VARIANCE_DESC" : "Se aumenta la tasa de aparición de variantes por {0}",
+
+        "VAPI_ITEM_EXTRAPRIMARY_NAME" : "Habilidad Primaria +1",
+        "VAPI_ITEM_EXTRAPRIMARY_PICKUP" : "Añade una carga extra a tu habilidad primaria.",
+        "VAPI_ITEM_EXTRAPRIMARY_DESC" : "Añade una carga extra a tu habilidad primaria.",
+
+        "VAPI_ITEM_EXTRASECONDARY_NAME" : "Habilidad Secundaria +1",
+        "VAPI_ITEM_EXTRASECONDARY_PICKUP" : "Añade una carga extra a tu habilidad secundaria.",
+        "VAPI_ITEM_EXTRASECONDARY_DESC" : "Añade una carga extra a tu habilidad secundaria.",
+
+        "VAPI_ITEM_EXTRAUTILITY_NAME" : "Habilidad de Utilidad +1",
+        "VAPI_ITEM_EXTRAUTILITY_PICKUP" : "Añade una carga extra a tu habilidad de utilidad.",
+        "VAPI_ITEM_EXTRAUTILITY_DESC" : "Añade una carga extra a tu habilidad de utilidad.",
+
+        "VAPI_ITEM_EXTRASPECIAL_NAME" : "Habilidad Especial +1",
+        "VAPI_ITEM_EXTRASPECIAL_PICKUP" : "Añade una carga extra a tu habilidad especial.",
+        "VAPI_ITEM_EXTRASPECIAL_DESC" : "Añade una carga extra a tu habilidad especial.",
+
+        "VAPI_ITEM_GLOBALCDR_NAME" : "Reducción Tiempo de Recarga Global",
+        "VAPI_ITEM_GLOBALCDR_PICKUP" : "Reduce el tiempo de recarga de TODAS tus habiliades por 1%.",
+        "VAPI_ITEM_GLOBALCDR_DESC" : "Reduce el tiempo de recarga de TODAS tus habiliades por 1%.",
+
+        "VAPI_ITEM_PRIMARYCDR_NAME" : "Reducción Tiempo de Recarga Primaria",
+        "VAPI_ITEM_PRIMARYCDR_PICKUP" : "Reduce el tiempo de recarga de tu habilidad primaria por 1%.",
+        "VAPI_ITEM_PRIMARYCDR_DESC" : "Reduce el tiempo de recarga de tu habilidad primaria por 1%.",
+
+        "VAPI_ITEM_SECONDARYCDR_NAME" : "Reducción Tiempo de Recarga Secundaria",
+        "VAPI_ITEM_SECONDARYCDR_PICKUP" : "Reduce el tiempo de recarga de tu habilidad secundaria por 1%.",
+        "VAPI_ITEM_SECONDARYCDR_DESC" : "Reduce el tiempo de recarga de tu habilidad secundaria por 1%.",
+
+        "VAPI_ITEM_UTILITYCDR_NAME" : "Reducción Tiempo de Recarga de Utilidad",
+        "VAPI_ITEM_UTILITYCDR_PICKUP" : "Reduce el tiempo de recarga de tu habilidad de utilidad por 1%.",
+        "VAPI_ITEM_UTILITYCDR_DESC" : "Reduce el tiempo de recarga de tu habilidad de utilidad por 1%.",
+
+        "VAPI_ITEM_SPECIALCDR_NAME" : "Reducción Tiempo de Recarga Especial",
+        "VAPI_ITEM_SPECIALCDR_PICKUP" : "Reduce el tiempo de recarga de tu habilidad especial por 1%.",
+        "VAPI_ITEM_SPECIALCDR_DESC" : "Reduce el tiempo de recarga de tu habilidad especial por 1%.",
+    
+        "VAPI_ITEM_PLUS1CRIT_NAME" : "+1 Crit",
+        "VAPI_ITEM_PLUS1CRIT_PICKUP" : "Aumenta la probabilidad de golpes criticos en 1%",
+        "VAPI_ITEM_PLUS1CRIT_DESC" : "Aumenta la probabilidad de golpes criticos en 1%",
+
+        "VAPI_ITEM_GREENHEALTHBAR_NAME" : "Barra de Vida Verde",
+        "VAPI_ITEM_GREENHEALTHBAR_PICKUP" : "Tu Barra de Vida es Verde.",
+        "VAPI_ITEM_GREENHEALTHBAR_DESC" : "Tu Barra de Vida es Verde.",
+
+        "VAPI_GENERIC_ARRIVAL": "Un {0} con propiedades unicas a aparecido!",
+
+        "VAPI_RULE_HEADER_VARIANTPACKS": "Variant Packs",
+        "VAPI_RULE_HEADER_VARIANTPACKS_SUBTITLE": "Variant Packs son collecciones de Varientes que otorgaran Variantes nuevos al juego, cada collecion puede estar activado o desactivado.",
+        
+        "VAPI_RULE_HEADER_VARIANTS": "Variantes Individuales",
+        "VAPI_RULE_HEADER_VARIANTS_SUBTITLE": "Variantes Individuales que pueden aparecer en esta partida. Cada variante puede causar desgracia, diversion, o una muerte dolorosa.",
+        "VAPI_RULE_VARIANT_ON_DESCRIPTION": "Este Variante puede aparecer en la partida.",
+        "VAPI_RULE_VARIANT_OFF_DESCRIPTION": "Este Variante no puede aparecer en la partida."
+    }
+}
