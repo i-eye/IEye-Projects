@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 881704556
+CRC: 2840423277
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 96678e6998f4b783d976fd800b458d0d
+    Hash: 8cc53141728ac4fd3357849768fda7d6
   TypeTreeHash:
     serializedVersion: 2
     Hash: ca0d7149c2d798047aa549f2d3318477
@@ -43,68 +43,71 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AdrenalineFrenzy/AdrFrenzyTex.mat
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AdrenalineFrenzy/AdrFrenzyTexture.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/PredatorySavagery/PredatoryTex.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/PoisonIvy/IvyBlight.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/FocusedHemorrhage/FocusHemmTex.mat
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/DoubleSidedSword/DoubleSidedSword.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AgressiveInsect/Insect Texty.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/IntrospectiveInsect/Insect Mesh.prefab
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/FocusedHemorrhage/FocusedHemorrhage.prefab
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/PredatorySavagery/Predatory.blend
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AdrenalineFrenzy/AdrFrenzy.blend
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AdrenalineFrenzy/AdrenalineOnGettingHit.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/FourDimensionalDagger/4D dagger
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AdrenalineFrenzy/Art/AdrFrenzyTex.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AdrenalineFrenzy/Art/AdrFrenzyTexture.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PredatorySavagery/Art/PredatoryTex.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PoisonIvy/IvyBlight.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FocusedHemorrhage/Art/FocusHemmTex.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/DoubleSidedSword/DoubleSidedSword.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AgressiveInsect/Art/Insect Texty.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/IntrospectiveInsect/Insect Mesh.prefab
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FocusedHemorrhage/FocusedHemorrhage.prefab
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FocusedHemorrhage/Art/FocusedHemorrhage.fbx
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AdrenalineFrenzy/AdrenalineOnGettingHit.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FourDimensionalDagger/Art/4D dagger
   Sprite.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/PredatorySavagery/PredatoryMat.mat
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/FourDimensionalDagger/FourDimensionalDagger.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/PredatorySavagery/Predatory.prefab
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/PoisonIvy/PoisonIvy.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/PredatorySavagery/PredatoryRush.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/IntrospectiveInsect/InsectMat.mat
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AgressiveInsect/InsectBloody.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/DoubleSidedSword/Double Sided
-  Sword.blend
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/SacrificialHelper/SacrificialHelper.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/IntrospectiveInsect/Insect Texty.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/IntrospectiveInsect/IntrospectiveInsect.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/FourDimensionalDagger/4D dagger
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PredatorySavagery/Art/PredatoryMat.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AgressiveInsect/Art/AgroInsect.fbx
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FourDimensionalDagger/FourDimensionalDagger.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PredatorySavagery/Predatory.prefab
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PoisonIvy/PoisonIvy.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PredatorySavagery/PredatoryRush.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/IntrospectiveInsect/Art/InsectMat.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AgressiveInsect/InsectBloody.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/SacrificialHelper/SacrificialHelper.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/DoubleSidedSword/Art/Double Sided
+  Sword.fbx
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/IntrospectiveInsect/Art/Insect
+  Texty.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/IntrospectiveInsect/Art/IntrospectiveInsect.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FourDimensionalDagger/4D dagger
   new.prefab
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AdrenalineFrenzy/AdrFrenzyIcon.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AdrenalineFrenzy/TinySpeedBoost.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AgressiveInsect/Ansect.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AgressiveInsect/AgroInsect.prefab
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/FourDimensionalDagger/4D Dagger
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AdrenalineFrenzy/Art/AdrFrenzyIcon.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AgressiveInsect/Art/AgressiveShader.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AdrenalineFrenzy/Art/TinySpeedBoost.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AgressiveInsect/Art/Ansect.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PredatorySavagery/Art/Predatory.fbx
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AgressiveInsect/AgroInsect.prefab
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FourDimensionalDagger/Art/4D Dagger
   Texture New.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/PoisonIvy/IvyPower.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/FocusedHemorrhage/Focused.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/IntrospectiveInsect/InsectPoison.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/IntrospectiveInsect/IntrospectiveInsect.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/DoubleSidedSword/Cylinder Metallic.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/PredatorySavagery/PredatorySavagery.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/Blood Ivy/BloodlustIvy.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AdrenalineFrenzy/AdrFrenzy.prefab
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/DoubleSidedSword/Material.001
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FourDimensionalDagger/Art/4D dagger
+  new.fbx
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PoisonIvy/IvyPower.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FocusedHemorrhage/Art/Focused.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/IntrospectiveInsect/InsectPoison.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/IntrospectiveInsect/IntrospectiveInsect.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/DoubleSidedSword/Art/Cylinder
+  Metallic.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PredatorySavagery/PredatorySavagery.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/Blood Ivy/BloodlustIvy.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AdrenalineFrenzy/AdrFrenzy.prefab
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/DoubleSidedSword/Art/Material.001
   Base Color.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/FourDimensionalDagger/4d_dagger_new_mat.mat
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/InnerPiece/InnerPiece.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/FocusedHemorrhage/FocusedHemorrhage.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AgressiveInsect/AgroInsect.blend
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/FocusedHemorrhage/FocusedHemorrhage.blend
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/DoubleSidedSword/PickupSword.prefab
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AdrenalineFrenzy/AdrenalineOnKill.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/DoubleSidedSword/DoubleSwordSprite.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/FourDimensionalDagger/4D dagger
-  new.blend
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AdrenalineFrenzy/AdrenalineFrenzy.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/PredatorySavagery/PredatoryPic.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AdrenalineFrenzy/MediumSpeedBoost.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/DoubleSidedSword/Sword_Mat.mat
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/FocusedHemorrhage/FocusedHemmTex.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/IntrospectiveInsect/Insect.blend
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Items/AgressiveInsect/AgressiveInsect.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FourDimensionalDagger/Art/4d_dagger_new_mat.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/InnerPiece/InnerPiece.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FocusedHemorrhage/FocusedHemorrhage.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/DoubleSidedSword/PickupSword.prefab
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AdrenalineFrenzy/AdrenalineOnKill.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/DoubleSidedSword/Art/DoubleSwordSprite.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/IntrospectiveInsect/Art/Insect.fbx
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AdrenalineFrenzy/AdrenalineFrenzy.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PredatorySavagery/Art/PredatoryPic.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AdrenalineFrenzy/Art/MediumSpeedBoost.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/DoubleSidedSword/Art/Sword_Mat.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AdrenalineFrenzy/Art/AdrFrenzy.fbx
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FocusedHemorrhage/Art/FocusedHemmTex.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AgressiveInsect/AgressiveInsect.asset
 Dependencies:
-- D:/Creative/Unity Projects/RoR2/RulersOfTheRedPlane/Rulers-of-the-Red-Plane/Rulers-of-the-Red-Plane/ThunderKit/AssetBundleStaging/msuassets
-- D:/Creative/Unity Projects/RoR2/RulersOfTheRedPlane/Rulers-of-the-Red-Plane/Rulers-of-the-Red-Plane/ThunderKit/AssetBundleStaging/rrpbase
-- D:/Creative/Unity Projects/RoR2/RulersOfTheRedPlane/Rulers-of-the-Red-Plane/Rulers-of-the-Red-Plane/ThunderKit/AssetBundleStaging/rrpmain
+- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/msuassets
+- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpbase
+- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain

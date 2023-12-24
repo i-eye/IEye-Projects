@@ -47,12 +47,12 @@ namespace IEye.RRP.Interactables
         public int weight = 15;
         [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Director cost(default 30).")]
         public int directorCost = 30;
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Stages needed to complete before encountering(default 2).")]
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Scenes needed to complete before encountering(default 2).")]
         public int minimumStages = 2;
         */
         public override void Initialize()
         {
-            InteractableDirectorCards.Add(RRPAssets.LoadAsset<MSInteractableDirectorCard>("BloodyPrism", RRPBundle.Interactables));
+            InteractableDirectorCards.Add(RRPAssets.LoadAsset<MSInteractableDirectorCard>("iscBloodyPrism", RRPBundle.Interactables));
             //impStuffCredits.SetUseStepSlider(true);
             //DefNotSS2Log.Message("InitializePrism");
             var interactableToken = Interactable.AddComponent<PrismInteractableToken>();

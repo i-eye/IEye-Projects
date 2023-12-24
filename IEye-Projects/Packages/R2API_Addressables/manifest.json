@@ -2,7 +2,7 @@
   "namespace": "RiskofThunder",
   "name": "R2API_Addressables",
   "description": "R2API Submodule for implementing Addressables functionality",
-  "version_number": "1.0.0",
+  "version_number": "1.0.3",
   "dependencies": [
     "bbepis-BepInExPack-5.4.2109",
     "RiskofThunder-HookGenPatcher-1.2.3",

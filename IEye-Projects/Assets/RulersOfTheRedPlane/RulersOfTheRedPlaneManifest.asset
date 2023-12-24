@@ -171,3 +171,9 @@ MonoBehaviour:
   - assetBundleName: rrpartifacts
     assets:
     - {fileID: 102900000, guid: 9fcc721724e06c34d86e0926aea656d9, type: 3}
+  - assetBundleName: rrpstages
+    assets:
+    - {fileID: 102900000, guid: 5ff414e2fe89d0141a39fb61de5d10bf, type: 3}
+  - assetBundleName: rrpindev
+    assets:
+    - {fileID: 102900000, guid: b630b15a2a455634489caa782b5a830a, type: 3}

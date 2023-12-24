@@ -26,6 +26,7 @@ namespace IEye.RRP
         Items,
         Events,
         Vanilla,
+        Scenes,
         Indev,
         Shared
     }
@@ -39,11 +40,12 @@ namespace IEye.RRP
         private const string INTERACTS = "rrpinteractables";
         private const string ITEMS = "rrpitems";
         private const string VANILLA = "rrpvanilla";
-        private const string DEV = "rrpdev";
+        private const string STAGES = "rrpstages";
+        private const string INDEV = "rrpindev";
         private const string SHARED = "rrpshared";
 
         private static Dictionary<RRPBundle, AssetBundle> assetBundles = new Dictionary<RRPBundle, AssetBundle>();
-
+        private static AssetBundle[] streamedSceneBundles = Array.Empty<AssetBundle>();
         public new static TAsset LoadAsset<TAsset>(string name) where TAsset : UnityEngine.Object
         {
 #if DEBUG
@@ -97,6 +99,7 @@ namespace IEye.RRP
             var bundlePaths = GetAssetBundlePaths();
             foreach (string path in bundlePaths)
             {
+                
                 var fileName = Path.GetFileName(path);
                 switch (fileName)
                 {
@@ -107,9 +110,33 @@ namespace IEye.RRP
                     case INTERACTS: LoadBundle(path, RRPBundle.Interactables); break;
                     case ITEMS: LoadBundle(path, RRPBundle.Items); break;
                     case VANILLA: LoadBundle(path, RRPBundle.Vanilla); break;
-                    case DEV: LoadBundle(path, RRPBundle.Indev); break;
+                    case INDEV: LoadBundle(path, RRPBundle.Indev); break;
                     case SHARED: LoadBundle(path, RRPBundle.Shared); break;
-                    default: RRPMain.logger.LogWarning($"Invalid or Unexpected file in the AssetBundles folder (File name: {fileName}, Path: {path})"); break;
+                    default:
+                        {
+                            try
+                            {
+                                var ab = AssetBundle.LoadFromFile(path);
+                                if (!ab)
+                                {
+                                    throw new FileLoadException($"AssetBundle.LoadFromFile did not return an asset bundle. (Path:{path} FileName:{fileName})");
+                                }
+                                if (!ab.isStreamedSceneAssetBundle)
+                                {
+                                    throw new Exception($"AssetBundle is not a streamed scene bundle, but it's file name was not found on the Switch statement. (Path:{path} FileName:{fileName})");
+                                }
+                                else
+                                {
+                                    HG.ArrayUtils.ArrayAppend(ref streamedSceneBundles, ab);
+                                }
+                                RRPMain.logger.LogWarning($"Invalid or Unexpected file in the AssetBundles folder (File name: {fileName}, Path: {path})");
+                            }
+                            catch (Exception e)
+                            {
+                                RRPMain.logger.LogError($"Default statement on bundle loading method hit, Exception thrown.\n{e}");
+                            }
+                            break;
+                        }
                 }
             }
 

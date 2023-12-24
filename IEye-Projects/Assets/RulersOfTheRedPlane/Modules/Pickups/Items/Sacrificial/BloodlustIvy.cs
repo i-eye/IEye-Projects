@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using R2API.Networking;
 
 namespace IEye.RRP.Items
-{
+{ 
     [DisabledContent]
     public class BloodlustIvy : ItemBase
     {
@@ -16,7 +16,7 @@ namespace IEye.RRP.Items
         public static float percentHealthCoef = 15;
 
         public static float distanceNeeded = 15f;
-        public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("BloodlustIvy", RRPBundle.Items);
+        public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("BloodlustIvy", RRPBundle.Items);
 
         public sealed class Behavior : BaseItemBodyBehavior, IOnDamageInflictedServerReceiver
         {

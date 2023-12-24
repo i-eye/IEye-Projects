@@ -38,8 +38,11 @@ namespace IEye.RRP
 
             //hidden
             public static ItemDef SacrificialHelper;
-            public static ItemDef LevelGiver;
             
+        }
+        public static class Scenes
+        {
+            public static SceneDef ProvidenceGarden;
         }
         public static class Buffs
         {
@@ -98,29 +101,34 @@ namespace IEye.RRP
             },
             delegate
             {
+                new Modules.Scenes().Initialize();
+            },
+            delegate
+            {
                 RRPMain.logger.LogInfo($"Populating entity state array");
                 GetType().Assembly.GetTypes()
                                       .Where(type => typeof(EntityStates.EntityState).IsAssignableFrom(type))
                                       .ToList()
                                       .ForEach(state => HG.ArrayUtils.ArrayAppend(ref SerializableContentPack.entityStateTypes, new EntityStates.SerializableEntityStateType(state)));
             },
-            delegate{
-                    RRPMain.logger.LogInfo($"Populating effect prefabs");
-                    SerializableContentPack.effectPrefabs = SerializableContentPack.effectPrefabs.Concat(RRPAssets.LoadAllAssetsOfType<GameObject>(RRPBundle.All)
-                    .Where(go => go.GetComponent<EffectComponent>()))
-                    .ToArray();
-            },
+            
             delegate
-                {
+            {
                     RRPMain.logger.LogInfo($"Populating EntityStateConfigurations");
                     SerializableContentPack.entityStateConfigurations = RRPAssets.LoadAllAssetsOfType<EntityStateConfiguration>(RRPBundle.All);
-                },
-                delegate
-                {
-                    RRPMain.logger.LogInfo($"Swapping material shaders");
-                    RRPAssets.Instance.SwapMaterialShaders();
-                    RRPAssets.Instance.FinalizeCopiedMaterials();
-                }
+            },
+            delegate{
+                RRPMain.logger.LogInfo($"Populating effect prefabs");
+                SerializableContentPack.effectPrefabs = SerializableContentPack.effectPrefabs.Concat(RRPAssets.LoadAllAssetsOfType<GameObject>(RRPBundle.All)
+                .Where(go => go.GetComponent<EffectComponent>()))
+                .ToArray();
+            },
+            delegate
+            {
+                RRPMain.logger.LogInfo($"Swapping material shaders");
+                RRPAssets.Instance.SwapMaterialShaders();
+                RRPAssets.Instance.FinalizeCopiedMaterials();
+            }
             };
             PopulateFieldsDispatchers = new Action[]
             {
@@ -139,6 +147,10 @@ namespace IEye.RRP
                 delegate
                 {
                     PopulateTypeFields(typeof(ItemTierDefs), ContentPack.itemTierDefs);
+                },
+                delegate
+                {
+                    PopulateTypeFields(typeof(Scenes), ContentPack.sceneDefs);
                 }
             };
         }

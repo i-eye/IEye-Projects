@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 4259744714
+CRC: 26118848
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 594666b733c83804a96a812238bbae54
+    Hash: 41d596bf3801dc6587fb2f0549c3e5c7
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 4852754edc280d5a74124ee50ed026b1
+    Hash: 23102522d591d818950bc6b47810e16d
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -24,24 +24,45 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: 802575700, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  Script: {fileID: 2014855634, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
-  Script: {fileID: -1409057399, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  Script: {fileID: -104859921, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 802575700, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: -1284244208, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: 1006468269, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -609359282, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -794597441, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 495100722, guid: 45feadaaa90b2d2217207fb8b533753e, type: 3}
+- Class: 114
+  Script: {fileID: 2099981080, guid: 45feadaaa90b2d2217207fb8b533753e, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 8577aced8c5464a488c5ef8182ea0b80, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/BloodyPrism/BloodyPrismGameObject.prefab
-- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/BloodyPrism/PrismDroptable.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Items/BloodFrenzy/BloodFrenzy.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/BloodyPrism/Blood Prism.blend
-- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/BloodyPrism/BloodyPrism.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/dccsGardenMonstersBase.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/rrp_ProvidenceGarden.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/dccsthrowaway.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Meshes/Main
+  Land.fbx
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/dpGardenMonsters.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/GardenAirNodes.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Materials/Blend.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Items/BloodFrenzy/BloodFrenzy.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/dpHolderGardenInteractables.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/dpGardenInteractables.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/GardenGroundNodes.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/dpHolderGardenMonsters.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/dccsGardenInteractablesBase.asset
 Dependencies:
-- D:/Creative Stuff/Unity Projects/RoR2 Stuff/First/RulersOfTheRedPlane/Rulers-of-the-Red-Plane/Rulers-of-the-Red-Plane/ThunderKit/AssetBundleStaging/rrpbase
-- D:/Creative Stuff/Unity Projects/RoR2 Stuff/First/RulersOfTheRedPlane/Rulers-of-the-Red-Plane/Rulers-of-the-Red-Plane/ThunderKit/AssetBundleStaging/rrpmain
+- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/msuassets
+- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpbase
+- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpinteractables
+- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain

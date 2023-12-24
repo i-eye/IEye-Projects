@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1293906337
+CRC: 965215868
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8cf4561c64f53a932b49dfd96c3ef296
+    Hash: 5d06eefc68c2fac7a6ba35148b496eef
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2b5fa412deae52dbc91aeb834819b95b
@@ -39,14 +39,14 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/Loop Artifact.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/Loop.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/Loop Artifact Disabled.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/Loop Artifact.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/Loop.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/Loop Artifact Disabled.png
 - Packages/riskofthunder-ror2editorkit/Assets/Materials/RoR2EK_matNull.mat
 - Packages/riskofthunder-ror2editorkit/Assets/Prefabs/NullModel.prefab
 - Packages/riskofthunder-ror2editorkit/Assets/Meshes/RoR2EK_meshNull.mesh
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/rrp.artifact.loop.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/Loop Artifact Achievement.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/LoopCode.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/rrp.artifact.loop.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/Loop Artifact Achievement.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/LoopCode.asset
 Dependencies:
-- D:/Creative/Unity Projects/RoR2/RulersOfTheRedPlane/Rulers-of-the-Red-Plane/Rulers-of-the-Red-Plane/ThunderKit/AssetBundleStaging/rrpmain
+- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 101697027
+CRC: 283866958
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 01220b9d7b1f06075fd363f86878fb6d
+    Hash: b10a988b2300e72983d62e0091f0a0d7
   TypeTreeHash:
     serializedVersion: 2
     Hash: 688b8d41533c47f4da245f06b0a57d14
@@ -73,22 +73,23 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/BloodyPrismGameObject.prefab
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/Material Base
-  Color.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/DistTex.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/PrismDroptable.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/MiniPrism.blend
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/PrismVFX.prefab
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/ExplosionMat.mat
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/BloodyPrism.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/Ramp.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/Main_Prism.blend
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/Prism Mat.mat
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/Red Shard.png
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/MiniPrism.prefab
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/BloodyPrismGameObject.prefab
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/Material
+  Base Color.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/MiniPrism.fbx
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/DistTex.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/PrismDroptable.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/PrismVFX.prefab
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/ExplosionMat.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/iscBloodyPrism.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/Ramp.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/Prism
+  Mat.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/Red Shard.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/MiniPrism.prefab
 - Assets/RoR2/Pebble1Mesh.asset
-- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/texShrineIconOutlined.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/texShrineIconOutlined.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/Main_Prism.fbx
 Dependencies:
-- D:/Creative/Unity Projects/RoR2/RulersOfTheRedPlane/Rulers-of-the-Red-Plane/Rulers-of-the-Red-Plane/ThunderKit/AssetBundleStaging/msuassets
-- D:/Creative/Unity Projects/RoR2/RulersOfTheRedPlane/Rulers-of-the-Red-Plane/Rulers-of-the-Red-Plane/ThunderKit/AssetBundleStaging/rrpmain
+- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/msuassets
+- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain

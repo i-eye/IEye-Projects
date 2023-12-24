@@ -24,6 +24,7 @@ namespace IEye.RRP.Modules
 
         protected override IEnumerable<ItemBase> GetItemBases()
         {
+            RRPMain.logger.LogInfo("Getting Item Bases");
             base.GetItemBases()
                 .ToList()
                 .ForEach(item => AddItem(item));
