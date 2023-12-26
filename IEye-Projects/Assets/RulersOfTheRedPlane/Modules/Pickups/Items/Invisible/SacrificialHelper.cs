@@ -42,7 +42,7 @@ namespace IEye.RRP.Items
             [ItemDefAssociation]
             private static ItemDef GetItemDef() => RRPContent.Items.SacrificialHelper;
 
-            public static GameObject SacrificalAnnouncer = RRPAssets.LoadAsset<GameObject>("SacrifcialAnnouncer", RRPBundle.Base);
+            //public static GameObject SacrificalAnnouncer = RRPAssets.LoadAsset<GameObject>("SacrifcialAnnouncer", RRPBundle.Base);
            
 
             // Introspective Insect
@@ -79,7 +79,7 @@ namespace IEye.RRP.Items
 
             private void Start()
             {
-                SacrificalAnnouncer = RRPAssets.LoadAsset<GameObject>("SacrifcialAnnouncer", RRPBundle.Base);
+                //SacrificalAnnouncer = RRPAssets.LoadAsset<GameObject>("SacrifcialAnnouncer", RRPBundle.Base);
                 body.onInventoryChanged += CheckForSacrifice;
                 CheckForSacrifice();
                 if (num1 > 0 && num1Bloody > 0)

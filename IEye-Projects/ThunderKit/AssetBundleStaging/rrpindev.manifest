@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 26118848
+CRC: 2299887941
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 41d596bf3801dc6587fb2f0549c3e5c7
+    Hash: e8d95de7aef315cdac79a245e828038a
   TypeTreeHash:
     serializedVersion: 2
     Hash: 23102522d591d818950bc6b47810e16d
@@ -47,20 +47,23 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/dccsGardenMonstersBase.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/adccsGardenMonsters.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/dccsGardenMonsters.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/rrp_ProvidenceGarden.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/dccsthrowaway.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/dccsGardenInteractables.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Meshes/Main
   Land.fbx
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/dpGardenMonsters.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/adpGardenMonsters.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/GardenAirNodes.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Materials/Blend.mat
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Items/BloodFrenzy/BloodFrenzy.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/dpHolderGardenInteractables.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/dpGardenInteractables.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/dpGardenInteractables.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Meshes/Main
+  Land 0.2.2.fbx
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/adpGardenInteractables.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/GardenGroundNodes.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/dpHolderGardenMonsters.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/dccsGardenInteractablesBase.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/dpGardenMonsters.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/adccsGardenInteractables.asset
 Dependencies:
 - D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/msuassets
 - D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpbase

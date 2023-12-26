@@ -20,21 +20,38 @@ namespace IEye.RRP.Items
         //[TokenModifier(token, StatTypes.Default, 0)]
         //public static float healCoef = 1.5f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the insect posion(default 10s)")]
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the insect posion per stack(default 10s)")]
         [TokenModifier(token, StatTypes.Default, 0)]
         public static int duration = 10;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percentage of damage taken away from insect poison target(default 20%)")]
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percentage of attack speed slow(default 65%)")]
         [TokenModifier(token, StatTypes.Default, 1)]
-        public static float insectDamageCripple = 20f;
+        public static float insectAttackSpeed = 65f;
+
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percentage of movement speed slow(default 50%)")]
+        [TokenModifier(token, StatTypes.Default, 2)]
+        public static float insectMoveSpeed = 50f;
+
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Life steal on hitting poisoned enemies")]
+        [TokenModifier(token, StatTypes.Default, 2)]
+        public static float insectHealAmount = 2f;
 
         public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("IntrospectiveInsect", RRPBundle.Items);
 
-        public sealed class Behavior: BaseItemBodyBehavior, IOnTakeDamageServerReceiver, IOnKilledOtherServerReceiver
+        public sealed class Behavior: BaseItemBodyBehavior, IOnTakeDamageServerReceiver, IOnDamageDealtServerReceiver
         {
             [ItemDefAssociation]
 
             private static ItemDef GetItemDef() => RRPContent.Items.IntrospectiveInsect;
+
+            
+            public void OnDamageDealtServer(DamageReport damageReport)
+            {
+                if (damageReport.victimBody.GetBuffCount(RRPContent.Buffs.InsectPoison ) > 0)
+                {
+                    body.healthComponent.Heal(insectHealAmount, new ProcChainMask());
+                }
+            }
 
             public void OnTakeDamageServer(DamageReport report)
             {
@@ -46,18 +63,7 @@ namespace IEye.RRP.Items
                 }
             }
 
-            public void OnKilledOtherServer(DamageReport damageReport)
-            {
-                var attacker = damageReport.attackerBody;
-                var victim = damageReport.victim;
-                var cbVictim = victim.GetComponent<CharacterBody>();
-
-                if (cbVictim.activeBuffsList.Contains(RRPContent.Buffs.InsectPoison.buffIndex))
-                {
-                    float healthValueCoef = 3 - (3f / (1.1f + (.1f * stack)));
-                    attacker.healthComponent.Heal(healthValueCoef * cbVictim.damage, damageReport.damageInfo.procChainMask);
-                }
-            }
+            
 
             private void applyPoision(CharacterBody cb)
             {

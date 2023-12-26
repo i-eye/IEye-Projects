@@ -317,7 +317,7 @@
       "dependencies": {}
     },
     "teammoonstorm-moonstormsharedutils": {
-      "version": "https://github.com/TeamMoonstorm/MoonstormSharedUtils.git",
+      "version": "https://github.com/TeamMoonstorm/MoonstormSharedUtils.git#1.6.2",
       "depth": 0,
       "source": "git",
       "dependencies": {},

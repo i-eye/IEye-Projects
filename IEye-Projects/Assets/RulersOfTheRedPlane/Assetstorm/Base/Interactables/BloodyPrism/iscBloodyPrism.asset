@@ -34,7 +34,7 @@ MonoBehaviour:
     selectionWeight: 5
     spawnDistance: 0
     preventOverhead: 0
-    minimumStageCompletions: 1
+    minimumStageCompletions: 0
     requiredUnlockableDef:
       _asset: {fileID: 0}
       _address: 
@@ -55,9 +55,10 @@ MonoBehaviour:
     forbiddenUnlockableDef: {fileID: 0}
   interactableCategory: 1
   customCategory: ImpStuff
-  customCategoryWeight: 2.8
+  customCategoryWeight: 2.7
   stages: 268358654
-  customStages: []
+  customStages:
+  - 
   requiredExpansionDefs:
   - _asset: {fileID: 11400000, guid: 0d7ea78905bfc2c4c8636a77b83a5661, type: 2}
     _address: 

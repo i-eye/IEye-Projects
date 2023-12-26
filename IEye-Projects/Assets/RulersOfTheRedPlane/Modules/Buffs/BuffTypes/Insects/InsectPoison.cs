@@ -18,7 +18,8 @@ namespace IEye.RRP.Buffs
             
             public void ModifyStatArguments(RecalculateStatsAPI.StatHookEventArgs args)
             {
-                args.damageMultAdd -= IntrospectiveInsect.insectDamageCripple / 100;
+                args.attackSpeedReductionMultAdd += IntrospectiveInsect.insectAttackSpeed / 100;
+                args.moveSpeedReductionMultAdd += IntrospectiveInsect.insectMoveSpeed / 100;
             }
         }
     }
