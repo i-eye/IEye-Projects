@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2299887941
+CRC: 2251982213
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e8d95de7aef315cdac79a245e828038a
+    Hash: 1101729091180c47449547bd4aa97c23
   TypeTreeHash:
     serializedVersion: 2
     Hash: 23102522d591d818950bc6b47810e16d
@@ -58,8 +58,6 @@ Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Materials/Blend.mat
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Items/BloodFrenzy/BloodFrenzy.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/dpGardenInteractables.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Meshes/Main
-  Land 0.2.2.fbx
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/adpGardenInteractables.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/GardenGroundNodes.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/dpGardenMonsters.asset

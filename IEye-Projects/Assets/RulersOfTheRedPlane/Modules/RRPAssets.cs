@@ -166,6 +166,7 @@ namespace IEye.RRP
 
         private TAsset LoadAssetInternal<TAsset>(string name, RRPBundle bundle) where TAsset : UnityEngine.Object
         {
+
             TAsset asset = null;
             if (bundle == RRPBundle.All)
             {

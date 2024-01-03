@@ -22,14 +22,17 @@ namespace IEye.RRP
             //green
             public static ItemDef IntrospectiveInsect;
             public static ItemDef PoisonIvy;
-            
+
             //red
+            public static ItemDef Strawberry;
             //public static ItemDef InnerPiece;
 
             //lunar
             public static ItemDef DoubleSidedSword;
 
             //bloody
+            public static ItemDef Leech;
+
             public static ItemDef AgressiveInsect;
             public static ItemDef AdrenalineFrenzy;
             public static ItemDef FocusedHemorrhage;

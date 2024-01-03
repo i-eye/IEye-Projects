@@ -20,13 +20,15 @@ namespace IEye.RRP.Items
         public const string token = "RRP_ITEM_AGROINSECT_DESC";
         public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("AgressiveInsect", RRPBundle.Items);
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the insect blood debuff per stack(default 3s)")]
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the insect blood debuff(default 8s)")]
         [TokenModifier(token, StatTypes.Default, 0)]
-        public static float duration = 10f;
+        public static float duration = 8f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Armor taken away from the insect blood debuff victim(default 20)")]
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Armor taken away from the insect blood debuff victim(default 50)")]
         [TokenModifier(token, StatTypes.Default, 1)]
-        public static int bloodyInsectExtraDamage = 25;
+        public static int bloodyInsectExtraDamage = 50;
+
+        readonly static ProcType basedProc = (ProcType)382143;
 
         public sealed class Behavior : BaseItemBodyBehavior, IOnDamageDealtServerReceiver, IOnIncomingDamageServerReceiver
         {
@@ -35,6 +37,7 @@ namespace IEye.RRP.Items
             
             private void Start()
             {
+                
                 if(body.inventory.GetItemCount(RRPContent.Items.SacrificialHelper) == 0)
                 {
                     body.inventory.GiveItem(RRPContent.Items.SacrificialHelper);
@@ -43,7 +46,7 @@ namespace IEye.RRP.Items
             
             public void OnDamageDealtServer(DamageReport damageReport)
             {
-                if (damageReport.victimBody.GetBuffCount(RRPContent.Buffs.InsectBloody) > 0)
+                if (damageReport.victimBody.GetBuffCount(RRPContent.Buffs.InsectBloody) > 0 && !damageReport.damageInfo.procChainMask.HasProc(basedProc))
                 {
                     SpawnMissile(damageReport);
                 }
@@ -53,22 +56,23 @@ namespace IEye.RRP.Items
 
             private void SpawnMissile(DamageReport damageReport)
             {
+                float damageCoef = bloodyInsectExtraDamage * stack / 100f;
                 DamageInfo damageInfo = damageReport.damageInfo;
-                var missileVoidOrb = new MissileVoidOrb();
-                missileVoidOrb.origin = body.aimOrigin;
-                missileVoidOrb.damageValue = damageReport.damageDealt * .25f;
-                missileVoidOrb.isCrit = damageInfo.crit;
-                missileVoidOrb.teamIndex = damageReport.attackerTeamIndex;
-                missileVoidOrb.attacker = damageInfo.attacker;
-                missileVoidOrb.procChainMask = damageInfo.procChainMask;
-                missileVoidOrb.procChainMask.AddProc(ProcType.Missile);
-                missileVoidOrb.procCoefficient = 0.2f;
-                missileVoidOrb.damageColorIndex = DamageColorIndex.Void;
+                var insectOrb = new Orbs.AgressiveInsectMissileOrb();
+                insectOrb.origin = body.aimOrigin;
+                insectOrb.damageValue = Util.OnHitProcDamage(damageInfo.damage, damageReport.attackerBody.damage, damageCoef);
+                insectOrb.isCrit = damageInfo.crit;
+                insectOrb.teamIndex = damageReport.attackerTeamIndex;
+                insectOrb.attacker = damageInfo.attacker;
+                insectOrb.procChainMask = damageInfo.procChainMask;
+                insectOrb.procChainMask.AddProc(basedProc);
+                insectOrb.procCoefficient = 0.2f;
+                insectOrb.damageColorIndex = DamageColorIndex.Bleed;
                 HurtBox mainHurtBox = damageReport.victimBody.mainHurtBox;
                 if ((bool)mainHurtBox)
                 {
-                    missileVoidOrb.target = mainHurtBox;
-                    OrbManager.instance.AddOrb(missileVoidOrb);
+                    insectOrb.target = mainHurtBox;
+                    OrbManager.instance.AddOrb(insectOrb);
                 }
             }
 

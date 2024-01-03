@@ -4,6 +4,7 @@ using UnityEngine;
 using Moonstorm;
 using RoR2;
 using RoR2.Items;
+using RoR2.Orbs;
 using IEye.RRP.Buffs;
 using R2API;
 using Mono.Cecil;
@@ -20,9 +21,9 @@ namespace IEye.RRP.Items
         //[TokenModifier(token, StatTypes.Default, 0)]
         //public static float healCoef = 1.5f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the insect posion per stack(default 10s)")]
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the insect posion per stack(default 8s)")]
         [TokenModifier(token, StatTypes.Default, 0)]
-        public static int duration = 10;
+        public static int duration = 8;
 
         [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percentage of attack speed slow(default 65%)")]
         [TokenModifier(token, StatTypes.Default, 1)]
@@ -32,9 +33,13 @@ namespace IEye.RRP.Items
         [TokenModifier(token, StatTypes.Default, 2)]
         public static float insectMoveSpeed = 50f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Life steal on hitting poisoned enemies")]
-        [TokenModifier(token, StatTypes.Default, 2)]
-        public static float insectHealAmount = 2f;
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percent life restored on hitting enemies per stack(default 2%)")]
+        [TokenModifier(token, StatTypes.Default, 3)]
+        public static float insectHealAmount = 5f;
+
+        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Hits needed to heal(default 4)")]
+        [TokenModifier(token, StatTypes.Default, 4)]
+        public static int hitsNeeded = 5;
 
         public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("IntrospectiveInsect", RRPBundle.Items);
 
@@ -47,9 +52,38 @@ namespace IEye.RRP.Items
             
             public void OnDamageDealtServer(DamageReport damageReport)
             {
-                if (damageReport.victimBody.GetBuffCount(RRPContent.Buffs.InsectPoison ) > 0)
+                var victimBody = damageReport.victimBody;
+                
+                if (victimBody)
                 {
-                    body.healthComponent.Heal(insectHealAmount, new ProcChainMask());
+                    GameObject gameObject = victimBody.gameObject;
+                    HitCounter component;
+                    if (victimBody.GetBuffCount(RRPContent.Buffs.InsectPoison) > 0)
+                    {
+                        if (!gameObject.TryGetComponent<HitCounter>(out component))
+                        {
+                            component = gameObject.AddComponent<HitCounter>();
+                        }
+                        component.AddHit();
+                        if (component.CheckForHit())
+                        {
+                            victimBody.RemoveBuff(RRPContent.Buffs.InsectPoison);
+                            SpawnOrb(damageReport, victimBody);
+                        }
+                    }
+                }
+            }
+
+            private static void SpawnOrb(DamageReport damageReport, CharacterBody victimBody)
+            {
+                HealOrb orb = new HealOrb();
+                orb.origin = victimBody.aimOrigin;
+                orb.healValue = damageReport.attackerBody.maxHealth * (insectHealAmount / 100);
+                HurtBox targetHurtBox = damageReport.attackerBody.mainHurtBox;
+                if (targetHurtBox)
+                {
+                    orb.target = targetHurtBox;
+                    OrbManager.instance.AddOrb(orb);
                 }
             }
 
@@ -76,10 +110,22 @@ namespace IEye.RRP.Items
                 cb.AddTimedBuffAuthority(RRPContent.Buffs.InsectPoison.buffIndex, duration);
             }
 
-            
-            
+        }
+        public class HitCounter: MonoBehaviour
+        {
+            private int hitNumber = 0;
 
-
+            public void AddHit() { hitNumber++; }
+            public void ResetHit() { hitNumber = 0; }
+            public bool CheckForHit()
+            {
+                if(hitNumber == hitsNeeded) 
+                {
+                    ResetHit();
+                    return true; 
+                }
+                return false;
+            }
         }
     }
 }

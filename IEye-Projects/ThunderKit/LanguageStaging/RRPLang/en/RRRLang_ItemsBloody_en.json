@@ -6,8 +6,8 @@
 	
 	
 	"RRP_ITEM_AGROINSECT_NAME" : "Aggresive Insect",
-	"RRP_ITEM_AGROINSECT_PICKUP" : "Cripple armor on hit...<style=cDeath>however, activate lifesteal on hit as well</style>",
-	"RRP_ITEM_AGROINSECT_DESC" : "On hit, inflict a debuff that causes <style=cIsDamage>{1}% damage loss</style> and <style=cIsUtility>takes {2} armor</style> for {0} seconds <style=cStack>(+{0} seconds per stack)</style>; <style=cDeath>however, it also gives 10% lifesteal. Sacrifices Introspective Insect.</style>",
+	"RRP_ITEM_AGROINSECT_PICKUP" : "Don't let it get mad.",
+	"RRP_ITEM_AGROINSECT_DESC" : "After getting hurt, inflict a debuff for {0} seconds that causes your insect to spit at enemies for<style=cIsDamage> {1}% total damage</style><style=cStack> (+{1}% total damage per stack)</style>; <style=cDeath>Sacrifices Introspective Insect.</style>",
 	
 	
 	"RRP_ITEM_FHEMORRHAGE_NAME": "Focused Hemorrhage",

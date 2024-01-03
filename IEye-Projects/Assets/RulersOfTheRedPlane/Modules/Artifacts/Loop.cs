@@ -58,7 +58,7 @@ namespace IEye.RRP.Artifacts
         {
             
             run.stageClearCount += 5;
-            RRPMain.logger.LogMessage("Stage Increased");
+            RRPMain.logger.LogDebug("Stage Increased");
             float randTime = Random.Range(2100f, 2520f);
             //run.difficultyCoefficient += Random.Range(8.8f,10f);
             run.time = randTime;
@@ -76,7 +76,7 @@ namespace IEye.RRP.Artifacts
                 {
                     if (instance != null)
                     {
-                        instance.master.inventory.GiveRandomItems(Random.Range(34, 42), false, false);
+                        instance.master.inventory.GiveRandomItems(Random.Range(35, 45), false, false);
                         instance.master.inventory.GiveRandomEquipment();
                         instance.master.onBodyStart += AddExperience;
                         
@@ -97,7 +97,7 @@ namespace IEye.RRP.Artifacts
         {
             RRPMain.logger.LogMessage("Adding Experience");
             RRPMain.logger.LogMessage("Body" + body);
-            body.master.GiveExperience((ulong)Random.Range(100000, 150000));
+            body.master.GiveExperience((ulong)Random.Range(110000, 160000));
             body.master.onBodyStart -= AddExperience;
         }
 
