@@ -15,7 +15,7 @@ namespace IEye.RRP.Items
     public class Strawberry : ItemBase
     {
         CharacterSpawnCard gupSpawnCard;
-        public static CharacterSpawnCard friendlyGupSpawnCard;
+        public static CharacterSpawnCard friendlyGupSpawnCard = new CharacterSpawnCard();
         public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("Strawberry", RRPBundle.Items);
         public override void Initialize()
         {
@@ -71,10 +71,17 @@ namespace IEye.RRP.Items
                         CharacterMaster component = spawnedInstance.GetComponent<CharacterMaster>();
                         if ((bool)component)
                         {
+                            Inventory inventory = component.inventory;
+                            if (inventory)
+                            {
+
+                            }
                             component.teamIndex = TeamIndex.Player;
                             //component.inventory.GiveItem(RoR2Content.Items.BoostDamage, 30);
                             //component.inventory.GiveItem(RoR2Content.Items.BoostHp, 10);
-                            component.inventory.GiveItem(RoR2Content.Items.HealthDecay, 30);
+                            component.inventory.GiveItem(RoR2Content.Items.HealthDecay, 17);
+                            component.inventory.GiveItem(RRPContent.Items.Kamikaze, 1);
+                            RRPMain.logger.LogDebug("Index is" + RRPContent.Items.Kamikaze.itemIndex);
                             Deployable component2 = component.GetComponent<Deployable>();
                             if ((bool)component2)
                             {

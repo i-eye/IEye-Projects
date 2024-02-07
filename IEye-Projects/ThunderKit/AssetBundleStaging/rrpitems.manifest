@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 625695717
+CRC: 1518669347
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0938ab0012caa8c19474a32be66cf52d
+    Hash: 73aaab443f139a624c141bcacbd2f3df
   TypeTreeHash:
     serializedVersion: 2
     Hash: e1e7210faae1a7579649a95f50051c39
@@ -72,6 +72,7 @@ Assets:
   Sprite.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PredatorySavagery/Art/PredatoryMat.mat
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AgressiveInsect/Art/AgroInsect.fbx
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/SacrificialLeech/Leech.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FourDimensionalDagger/FourDimensionalDagger.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PredatorySavagery/Predatory.prefab
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PoisonIvy/PoisonIvy.asset
@@ -115,6 +116,7 @@ Assets:
   Base Color.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FourDimensionalDagger/Art/4d_dagger_new_mat.mat
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/InnerPiece/InnerPiece.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/Strawberry/Strawberry.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FocusedHemorrhage/FocusedHemorrhage.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AgressiveInsect/VFX/Textures/texGlowPaintMask.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/DoubleSidedSword/PickupSword.prefab
@@ -125,6 +127,7 @@ Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AdrenalineFrenzy/AdrenalineFrenzy.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PredatorySavagery/Art/PredatoryPic.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AdrenalineFrenzy/Art/MediumSpeedBoost.png
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/Kamikaze/Kamikaze.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/DoubleSidedSword/Art/Sword_Mat.mat
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AdrenalineFrenzy/Art/AdrFrenzy.fbx
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FocusedHemorrhage/Art/FocusedHemmTex.png

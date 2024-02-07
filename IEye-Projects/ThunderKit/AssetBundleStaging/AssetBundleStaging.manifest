@@ -1,28 +1,28 @@
 ManifestFileVersion: 0
-CRC: 1185642554
+CRC: 268645385
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: rrpmain
+      Name: msuassets
       Dependencies: {}
     Info_1:
+      Name: rrpmain
+      Dependencies: {}
+    Info_2:
       Name: rrpitems
       Dependencies:
-        Dependency_0: rrpmain
-        Dependency_1: rrpbase
-        Dependency_2: msuassets
-    Info_2:
+        Dependency_0: msuassets
+        Dependency_1: rrpmain
+        Dependency_2: rrpbase
+    Info_3:
       Name: rrpbase
       Dependencies:
         Dependency_0: rrpitems
-    Info_3:
+    Info_4:
       Name: rrpinteractables
       Dependencies:
-        Dependency_0: rrpmain
-        Dependency_1: msuassets
-    Info_4:
-      Name: msuassets
-      Dependencies: {}
+        Dependency_0: msuassets
+        Dependency_1: rrpmain
     Info_5:
       Name: rrpartifacts
       Dependencies:
@@ -34,7 +34,7 @@ AssetBundleManifest:
     Info_7:
       Name: rrpindev
       Dependencies:
-        Dependency_0: rrpmain
-        Dependency_1: rrpbase
-        Dependency_2: rrpinteractables
-        Dependency_3: msuassets
+        Dependency_0: msuassets
+        Dependency_1: rrpmain
+        Dependency_2: rrpbase
+        Dependency_3: rrpinteractables

@@ -215,7 +215,11 @@ namespace IEye.RRP
 		private static void UpdateMasterItemBehaviorStacks(CharacterMaster master)
 		{
 			ref BaseItemMasterBehavior.NetworkContextSet networkContext = ref BaseItemMasterBehavior.GetNetworkContext();
-			BaseItemMasterBehavior[] array = BaseItemMasterBehavior.masterToItemBehaviors[master];
+            BaseItemMasterBehavior[] array;
+			if(!masterToItemBehaviors.TryGetValue(master, out array))
+			{
+				return;
+			}
 			BaseItemBodyBehavior.ItemTypePair[] itemTypePairs = networkContext.itemTypePairs;
 			Inventory inventory = master.inventory;
 			if (inventory)

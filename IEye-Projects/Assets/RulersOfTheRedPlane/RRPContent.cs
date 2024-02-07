@@ -3,6 +3,7 @@ using R2API.ScriptableObjects;
 using RoR2;
 using RoR2.ContentManagement;
 using System;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using UnityEngine;
 
@@ -41,6 +42,7 @@ namespace IEye.RRP
 
             //hidden
             public static ItemDef SacrificialHelper;
+            public static ItemDef Kamikaze;
             
         }
         public static class Scenes
