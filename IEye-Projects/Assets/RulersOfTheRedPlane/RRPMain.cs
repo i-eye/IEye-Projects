@@ -12,7 +12,7 @@ using R2API.ContentManagement;
 using UnityEngine;
 using Moonstorm;
 using IEye.RRP.Items;
-
+using R2API.AddressReferencedAssets;
 namespace IEye.RRP
 {
     #region R2API
@@ -54,5 +54,9 @@ namespace IEye.RRP
             ConfigSystem.AddMod(this);
             
 		}	
+        private void Start()
+        {
+            SoundBankManager.Init();
+        }
 	}
 }

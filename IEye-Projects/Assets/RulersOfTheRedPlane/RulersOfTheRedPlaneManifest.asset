@@ -87,6 +87,7 @@ MonoBehaviour:
   - {fileID: 2765314773197025085}
   - {fileID: -6429385041958414480}
   - {fileID: 2104117645144803766}
+  - {fileID: 6470806212539767103}
   identity: {fileID: -7158330158416092135}
   QuickAccess: 0
 --- !u!114 &2104117645144803766
@@ -103,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StagingPaths:
   - <BuildPath>
+  includeMetaFiles: 0
   files:
   - {fileID: 2800000, guid: c1353823a843d1f489dc764c8145ccb6, type: 3}
   - {fileID: 4900000, guid: c1831a92e9e58df4a99c8c7937d85c1b, type: 3}
@@ -177,3 +179,20 @@ MonoBehaviour:
   - assetBundleName: rrpindev
     assets:
     - {fileID: 102900000, guid: b630b15a2a455634489caa782b5a830a, type: 3}
+--- !u!114 &6470806212539767103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b243ff405b33b94dbf5b6775dd9aa33, type: 3}
+  m_Name: Files
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <BuildPathSoundbanks>
+  includeMetaFiles: 0
+  files:
+  - {fileID: 102900000, guid: 03e8b7c8d90030f488a59574e3121fcf, type: 3}

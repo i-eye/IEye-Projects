@@ -21,9 +21,9 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/RulersOfTheRedPlane/AssetStorm/ContentPack.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/ContentPack.asset
 - Assets/RulersOfTheRedPlane/Expansion.png
 - Assets/RulersOfTheRedPlane/icon.png
 - Assets/RulersOfTheRedPlane/Expansion_Invert.png
-- Assets/RulersOfTheRedPlane/AssetStorm/RRPExpansionDef.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/RRPExpansionDef.asset
 Dependencies: []

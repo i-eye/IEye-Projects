@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 106307267
+CRC: 3497749236
 Hashes:
   AssetFileHash:
     serializedVersion: 2
@@ -64,7 +64,7 @@ Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/dpGardenMonsters.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/adccsGardenInteractables.asset
 Dependencies:
-- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/msuassets
-- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpbase
-- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpinteractables
-- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain
+- D:/Creative/Unity Projects/RoR2/WEEwise/WEEwise/Weewise/ThunderKit/AssetBundleStaging/msuassets
+- D:/Creative/Unity Projects/RoR2/WEEwise/WEEwise/Weewise/ThunderKit/AssetBundleStaging/rrpbase
+- D:/Creative/Unity Projects/RoR2/WEEwise/WEEwise/Weewise/ThunderKit/AssetBundleStaging/rrpinteractables
+- D:/Creative/Unity Projects/RoR2/WEEwise/WEEwise/Weewise/ThunderKit/AssetBundleStaging/rrpmain

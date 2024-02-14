@@ -17,7 +17,7 @@ namespace IEye.RRP.Modules
         {
             b.Section = "Enable All Interactables";
             b.Key = "Enable All Interactables";
-            b.Description = "Enable Interactables BOOM";
+            b.Description = "Enable Interactables";
             b.ConfigFile = RRPConfig.ConfigMain;
             b.CheckBoxConfig = new CheckBoxConfig
             {

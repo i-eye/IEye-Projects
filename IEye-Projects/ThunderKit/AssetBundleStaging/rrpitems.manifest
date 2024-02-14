@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1518669347
+CRC: 1032809431
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 73aaab443f139a624c141bcacbd2f3df
+    Hash: 310fcf2b9f3f13330d8fd730842e4129
   TypeTreeHash:
     serializedVersion: 2
     Hash: e1e7210faae1a7579649a95f50051c39
@@ -133,6 +133,6 @@ Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FocusedHemorrhage/Art/FocusedHemmTex.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AgressiveInsect/AgressiveInsect.asset
 Dependencies:
-- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/msuassets
-- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpbase
-- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain
+- D:/Creative/Unity Projects/RoR2/WEEwise/WEEwise/Weewise/ThunderKit/AssetBundleStaging/msuassets
+- D:/Creative/Unity Projects/RoR2/WEEwise/WEEwise/Weewise/ThunderKit/AssetBundleStaging/rrpbase
+- D:/Creative/Unity Projects/RoR2/WEEwise/WEEwise/Weewise/ThunderKit/AssetBundleStaging/rrpmain

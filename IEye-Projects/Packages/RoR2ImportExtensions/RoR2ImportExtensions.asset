@@ -19,7 +19,7 @@ MonoBehaviour:
   Author: RiskofThunder
   Name: RoR2ImportExtensions
   Description: Import extensions for ThunderKit to stabilize and complete the RoR2 import process
-  Version: 1.3.5
+  Version: 1.4.0
   Dependencies: []
 --- !u!114 &11400000
 MonoBehaviour:

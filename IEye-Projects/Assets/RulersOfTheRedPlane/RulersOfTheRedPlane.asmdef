@@ -3,7 +3,8 @@
     "references": [
         "Unity.Postprocessing.Runtime",
         "com.unity.multiplayer-hlapi.Runtime",
-        "MoonstormSharedUtils"
+        "MoonstormSharedUtils",
+        "Wwise"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

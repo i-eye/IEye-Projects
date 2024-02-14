@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1724494197
+CRC: 2978762425
 Hashes:
   AssetFileHash:
     serializedVersion: 2
     Hash: f1a00d31af7ab30a477df8670f9766c9
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 97d557b9053a496c2bb577fe04648847
+    Hash: a7ce925006e24088a969a033ed0b10de
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -26,8 +26,6 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 - Class: 64
-  Script: {instanceID: 0}
-- Class: 89
   Script: {instanceID: 0}
 - Class: 104
   Script: {instanceID: 0}
@@ -63,14 +61,26 @@ ClassTypes:
   Script: {fileID: 1052602003, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 46a93c0ca3a197045b411cfbac8204c9, type: 3}
+- Class: 114
+  Script: {fileID: -3738588393363837375, guid: 00000000000000000000000000000000, type: 0}
+- Class: 114
+  Script: {fileID: 876334664012338899, guid: 00000000000000000000000000000000, type: 0}
+- Class: 114
+  Script: {fileID: 5676793243003057461, guid: 00000000000000000000000000000000, type: 0}
+- Class: 114
+  Script: {fileID: 6109959668158463127, guid: 00000000000000000000000000000000, type: 0}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 157
   Script: {instanceID: 0}
 - Class: 196
   Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/RulersOfTheRedPlane/Scenes/rrp_ProvidenceGarden.unity
 Dependencies:
-- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpindev
+- D:/Creative/Unity Projects/RoR2/WEEwise/WEEwise/Weewise/ThunderKit/AssetBundleStaging/rrpindev

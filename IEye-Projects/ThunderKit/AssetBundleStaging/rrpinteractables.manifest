@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 237493249
+CRC: 1513521129
 Hashes:
   AssetFileHash:
     serializedVersion: 2
@@ -93,5 +93,5 @@ Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/texShrineIconOutlined.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/Main_Prism.fbx
 Dependencies:
-- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/msuassets
-- D:/Creative/Unity Projects/RoR2/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain
+- D:/Creative/Unity Projects/RoR2/WEEwise/WEEwise/Weewise/ThunderKit/AssetBundleStaging/msuassets
+- D:/Creative/Unity Projects/RoR2/WEEwise/WEEwise/Weewise/ThunderKit/AssetBundleStaging/rrpmain

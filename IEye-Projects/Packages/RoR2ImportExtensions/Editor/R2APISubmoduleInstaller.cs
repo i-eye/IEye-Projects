@@ -100,27 +100,31 @@ namespace RiskOfThunder.RoR2Importer
 
         public sealed override bool Execute()
         {
-            transientStore = GetThunderstoreSource();
-            if (transientStore.Packages == null || transientStore.Packages.Count == 0)
+            var store = GetThunderstoreSource();
+            if (store.Packages == null || store.Packages.Count == 0)
             {
                 Debug.LogWarning($"PackageSource at \"{THUNDERSTORE_ADDRESS}\" has no packages");
                 return false;
             }
 
-            List<(PackageGroup package, string version)> tupleList = new List<(PackageGroup package, string version)>();
-            foreach(SubmoduleInstallationData installationData in r2apiSubmodules)
+            List<PackageGroup> packageList = new List<PackageGroup>();
+            foreach(SubmoduleInstallationData data in r2apiSubmodules)
             {
-                if(installationData.shouldInstall && GetPackageGroup(installationData, out var pkg, out var pkgVersion))
+                if(data.shouldInstall && GetPackageGroup(data, out var pkg, out _))
                 {
-                    tupleList.Add((pkg, pkgVersion));
+                    packageList.Add(pkg);
                 }
             }
 
-            var task = transientStore.InstallPackages(tupleList);
+            var task = store.InstallPackages(packageList, true);
             while (!task.IsCompleted)
             {
-                Debug.Log("Waiting for Completion...");
+                Debug.Log("Waiting for Submodule Installation...");
             }
+            
+            if (serializeSelectionIntoJson)
+                SerializeSelection();
+
             return true;
         }
 
@@ -142,18 +146,19 @@ namespace RiskOfThunder.RoR2Importer
 
         private ThunderstoreSource GetThunderstoreSource()
         {
+            if (transientStore)
+            {
+                return transientStore;
+            }
+
             var packageSource = PackageSourceSettings.PackageSources.OfType<ThunderstoreSource>().FirstOrDefault(src => src.Url == THUNDERSTORE_ADDRESS);
             if (!packageSource)
             {
-                if (transientStore)
-                {
-                    packageSource = transientStore;
-                    return packageSource;
-                }
                 packageSource = CreateInstance<ThunderstoreSource>();
                 packageSource.Url = THUNDERSTORE_ADDRESS;
                 packageSource.name = TRANSIENT_STORE_NAME;
                 packageSource.ReloadPages(false);
+                transientStore = packageSource;
                 return packageSource;
             }
             else if (packageSource.Packages == null || packageSource.Packages.Count == 0)
@@ -169,15 +174,15 @@ namespace RiskOfThunder.RoR2Importer
 
         private async void UpdateDependencies(bool forced)
         {
-            transientStore = GetThunderstoreSource();
+            var store = GetThunderstoreSource();
 
-            while(transientStore.Packages == null || transientStore.Packages.Count == 0)
+            while(store.Packages == null || store.Packages.Count == 0)
             {
-                transientStore.ReloadPages(true);
+                store.ReloadPages(true);
                 await Task.Delay(1000);
             }
 
-            if (transientStore.Packages == null || transientStore.Packages.Count == 0)
+            if (store.Packages == null || store.Packages.Count == 0)
             {
                 Debug.LogWarning($"PackageSource at \"{THUNDERSTORE_ADDRESS}\" has no packages");
                 Cleanup();
@@ -190,11 +195,11 @@ namespace RiskOfThunder.RoR2Importer
                 if(serializedSelection)
                 {
                     SerializedR2APIDependencies serializedDependencies = JsonUtility.FromJson<SerializedR2APIDependencies>(serializedSelection.text);
-                    hardDependencies = serializedDependencies.GetDependencies(transientStore);
+                    hardDependencies = serializedDependencies.GetDependencies(store);
                 }
             }
 
-            var riskOfThunderPackages = transientStore.Packages.Where(pkg => pkg.Author == AUTHOR_NAME && pkg.PackageName.StartsWith(SUBMODULE_STARTING_WORDS)).ToList();
+            var riskOfThunderPackages = store.Packages.Where(pkg => pkg.Author == AUTHOR_NAME && pkg.PackageName.StartsWith(SUBMODULE_STARTING_WORDS)).ToList();
 
             if(riskOfThunderPackages == null || riskOfThunderPackages.Count == 0)
             {
@@ -205,7 +210,6 @@ namespace RiskOfThunder.RoR2Importer
 
             if(!forced && riskOfThunderPackages.Count == r2apiSubmodules.Count)
             {
-                Debug.Log("Not updating Dependencies for R2APISubmoduleInstaller as there is no difference between the current amount of Submodules and the cached count.");
                 Cleanup();
                 return;
             }
@@ -314,6 +318,12 @@ namespace RiskOfThunder.RoR2Importer
         }
         public override void Cleanup()
         {
+            var fullPath = Path.GetFullPath(Constants.Paths.OldMMHookPath);
+            if(Directory.Exists(fullPath))
+            {
+                File.Delete(Path.Combine(fullPath, "MMHOOK_Assembly-CSharp.dll"));
+            }
+
             if(transientStore)
             {
                 DestroyImmediate(transientStore);

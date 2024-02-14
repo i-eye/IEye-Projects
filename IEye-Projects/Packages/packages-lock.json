@@ -19,13 +19,13 @@
       "dependencies": {}
     },
     "com.passivepicasso.thunderkit": {
-      "version": "https://github.com/PassivePicasso/ThunderKit.git",
+      "version": "https://github.com/PassivePicasso/ThunderKit.git#8.0.6",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.16.1"
       },
-      "hash": "7ea752a2390306be73860a590d7639b995d9ca28"
+      "hash": "c63a5c279e98d1e888bad5f3038db94a4140c39d"
     },
     "com.unity.collab-proxy": {
       "version": "1.2.16",
@@ -41,17 +41,17 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.unity.ide.visualstudio": {
-      "version": "2.0.18",
+    "com.unity.ide.rider": {
+      "version": "1.2.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.test-framework": "1.1.9"
+        "com.unity.test-framework": "1.1.1"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.vscode": {
-      "version": "1.2.5",
+      "version": "1.2.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -100,26 +100,26 @@
       },
       "url": "https://packages.unity.com"
     },
-    "iharbhd-debugtoolkit": {
-      "version": "file:DebugToolkit",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
     "mmhook-assemblies": {
       "version": "file:mmhook-assemblies",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
     },
-    "nebby-varianceapi": {
-      "version": "file:VarianceAPI",
+    "riskofrain2": {
+      "version": "file:Risk of Rain 2",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
     },
-    "riskofrain2": {
-      "version": "file:Risk of Rain 2",
+    "riskofthunder-bepinex_gui": {
+      "version": "file:BepInEx_GUI",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "riskofthunder-fixplugintypesserialization": {
+      "version": "file:FixPluginTypesSerialization",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
@@ -294,6 +294,12 @@
     },
     "riskofthunder-r2api_unlockable": {
       "version": "file:R2API_Unlockable",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "riskofthunder-ror2bepinexpack": {
+      "version": "file:RoR2BepInExPack",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}

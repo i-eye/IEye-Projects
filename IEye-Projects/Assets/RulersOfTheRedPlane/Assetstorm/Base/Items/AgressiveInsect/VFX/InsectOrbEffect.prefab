@@ -4960,7 +4960,7 @@ MonoBehaviour:
   positionAtReferencedTransform: 0
   parentToReferencedTransform: 0
   applyScale: 0
-  soundName: 
+  soundName: insect_spit
   disregardZScale: 0
 --- !u!114 &5755795970106864741
 MonoBehaviour:

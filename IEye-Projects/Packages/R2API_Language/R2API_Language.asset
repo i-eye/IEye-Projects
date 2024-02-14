@@ -19,7 +19,7 @@ MonoBehaviour:
   Author: RiskofThunder
   Name: R2API_Language
   Description: API for modifying the language localisation of the game
-  Version: 1.0.0
+  Version: 1.0.1
   Dependencies: 
   - {fileID: 11400000, guid: 2d4d09ec817c24698d35dc9bf0704fdc, type: 2}
   - {fileID: 11400000, guid: bff73382628f698c89c1d9ae43c8f350, type: 2}
