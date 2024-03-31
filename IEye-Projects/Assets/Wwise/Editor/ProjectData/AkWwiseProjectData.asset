@@ -80,8 +80,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\insect_spit
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.711111
+      minDuration: 0.711111
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

@@ -253,7 +253,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{inproject}: {inproject}: {inproject}: {inproject}: '
+  AndroidKeystoreName: '{inproject}: {inproject}: {inproject}: {inproject}: {inproject}:
+    {inproject}: {inproject}: {inproject}: {inproject}: '
   AndroidKeyaliasName: 
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
@@ -625,14 +626,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Weewise
+  metroPackageName: IEye-Projects
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Weewise
+  metroApplicationDescription: IEye-Projects
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0

@@ -128,6 +128,7 @@ namespace IEye.RRP
                                 else
                                 {
                                     HG.ArrayUtils.ArrayAppend(ref streamedSceneBundles, ab);
+                                    RRPMain.logger.LogMessage($"streamed scene assetbundle loaded");
                                 }
                                 RRPMain.logger.LogWarning($"Invalid or Unexpected file in the AssetBundles folder (File name: {fileName}, Path: {path})");
                             }
