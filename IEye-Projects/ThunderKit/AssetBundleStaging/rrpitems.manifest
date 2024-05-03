@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1032809431
+CRC: 97684190
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 310fcf2b9f3f13330d8fd730842e4129
+    Hash: a3b209ebfa9c19e5f4924531d2b39e5a
   TypeTreeHash:
     serializedVersion: 2
-    Hash: e1e7210faae1a7579649a95f50051c39
+    Hash: 6e709702c122e201650a607b5d9e51f6
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -35,6 +35,8 @@ ClassTypes:
   Script: {fileID: 816898038, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: 1245112779, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3c9c430476270cb42ae82672a367a0e1, type: 3}
 - Class: 114
   Script: {fileID: -1783169300, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
@@ -66,6 +68,7 @@ Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AgressiveInsect/Art/Insect Texty.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/IntrospectiveInsect/Insect Mesh.prefab
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FocusedHemorrhage/FocusedHemorrhage.prefab
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FourDimensionalDagger/idd4dDagger.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FocusedHemorrhage/Art/FocusedHemorrhage.fbx
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AdrenalineFrenzy/AdrenalineOnGettingHit.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FourDimensionalDagger/Art/4D dagger
@@ -133,6 +136,6 @@ Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FocusedHemorrhage/Art/FocusedHemmTex.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AgressiveInsect/AgressiveInsect.asset
 Dependencies:
-- D:/Creative/Unity Projects/RoR2/WEEwise/WEEwise/Weewise/ThunderKit/AssetBundleStaging/msuassets
-- D:/Creative/Unity Projects/RoR2/WEEwise/WEEwise/Weewise/ThunderKit/AssetBundleStaging/rrpbase
-- D:/Creative/Unity Projects/RoR2/WEEwise/WEEwise/Weewise/ThunderKit/AssetBundleStaging/rrpmain
+- C:/Users/Admin/Documents/Creative/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/msuassets
+- C:/Users/Admin/Documents/Creative/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpbase
+- C:/Users/Admin/Documents/Creative/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain

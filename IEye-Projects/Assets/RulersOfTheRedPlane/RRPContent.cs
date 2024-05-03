@@ -90,6 +90,10 @@ namespace IEye.RRP
             },
             delegate
             {
+                new Modules.Characters().Initialize();
+            },
+            delegate
+            {
                 new Modules.ItemTiers().Initialize();
             },
             delegate

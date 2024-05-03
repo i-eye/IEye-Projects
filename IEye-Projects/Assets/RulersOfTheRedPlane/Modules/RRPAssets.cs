@@ -24,6 +24,7 @@ namespace IEye.RRP
         Equipments,
         Interactables,
         Items,
+        Monsters,
         Events,
         Vanilla,
         Scenes,
@@ -39,6 +40,7 @@ namespace IEye.RRP
         private const string EQUIPS = "rrpequipments";
         private const string INTERACTS = "rrpinteractables";
         private const string ITEMS = "rrpitems";
+        private const string MONSTERS = "rrpmonsters";
         private const string VANILLA = "rrpvanilla";
         private const string STAGES = "rrpstages";
         private const string INDEV = "rrpindev";
@@ -109,6 +111,7 @@ namespace IEye.RRP
                     case EQUIPS: LoadBundle(path, RRPBundle.Equipments); break;
                     case INTERACTS: LoadBundle(path, RRPBundle.Interactables); break;
                     case ITEMS: LoadBundle(path, RRPBundle.Items); break;
+                    case MONSTERS: LoadBundle(path,RRPBundle.Monsters); break;
                     case VANILLA: LoadBundle(path, RRPBundle.Vanilla); break;
                     case INDEV: LoadBundle(path, RRPBundle.Indev); break;
                     case SHARED: LoadBundle(path, RRPBundle.Shared); break;
