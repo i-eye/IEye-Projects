@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3305180546
+CRC: 1415097881
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 37c160f56a4ec0416b74240912d6cdde
+    Hash: 7c93ec8db36830bef7af66af361cfc99
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 0e82734c3a5fdcbc036f8bb6534af7ec
+    Hash: de5b3a29e6820bfae24ab92218b310f3
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -40,6 +40,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
 - Class: 114
+  Script: {fileID: 1392865457, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
   Script: {fileID: -1811796171, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: 1357070253, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
@@ -63,6 +65,8 @@ ClassTypes:
   Script: {fileID: -578974823, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: -104859921, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 89795172, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: 1297580292, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
@@ -123,6 +127,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 137
   Script: {instanceID: 0}
+- Class: 319
+  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/adccsGardenMonsters.asset
@@ -135,6 +141,7 @@ Assets:
   Land.fbx
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/adpGardenMonsters.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/RedWormEye.png
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Skills/escLaser.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/GardenAirNodes.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Materials/matGardenCave.mat
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Skills/sdWlurm1.asset
@@ -143,6 +150,8 @@ Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/matWormBody.mat
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Items/BloodFrenzy/BloodFrenzy.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/dpGardenInteractables.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/AvatarMask(for a
+  worm).mask
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/matWormTooth.mat
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/adpGardenInteractables.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Skills/sfWlurm1.asset

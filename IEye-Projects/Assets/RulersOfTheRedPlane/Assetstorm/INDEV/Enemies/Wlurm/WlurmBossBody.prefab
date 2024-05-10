@@ -483,14 +483,10 @@ GameObject:
   - component: {fileID: 4459404469847787021}
   - component: {fileID: 4396376894645060698}
   - component: {fileID: 8132303372394078449}
-  - component: {fileID: 7983139810823473084}
-  - component: {fileID: 2614020054642615716}
-  - component: {fileID: 3692480320827827062}
   - component: {fileID: 7145668348767145009}
   - component: {fileID: 7687350501609267856}
   - component: {fileID: 7192625348151885792}
   - component: {fileID: 7134180439920650304}
-  - component: {fileID: 1888697651173886826}
   - component: {fileID: 4102458334933914979}
   - component: {fileID: 2327460328353442314}
   - component: {fileID: 8891027136455645668}
@@ -499,11 +495,13 @@ GameObject:
   - component: {fileID: 2678340703526483186}
   - component: {fileID: 4739752105618622297}
   - component: {fileID: 2418726988813046615}
-  - component: {fileID: 7274975350342324776}
   - component: {fileID: 8174931300424287449}
-  - component: {fileID: 6677221755183315361}
-  - component: {fileID: 5517300407717886956}
-  - component: {fileID: 2814436672619429199}
+  - component: {fileID: 403579210935824301}
+  - component: {fileID: 3112568231135745145}
+  - component: {fileID: 7855515015363478758}
+  - component: {fileID: 1136675256694885730}
+  - component: {fileID: 7918161227794625670}
+  - component: {fileID: 6305566090151636145}
   m_Layer: 0
   m_Name: WlurmBossBody
   m_TagString: Untagged
@@ -653,8 +651,8 @@ MonoBehaviour:
   m_Script: {fileID: -1699741063, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _modelTransform: {fileID: 0}
-  modelBaseTransform: {fileID: 0}
+  _modelTransform: {fileID: 3585253219863551776}
+  modelBaseTransform: {fileID: 4549195520958260768}
   autoUpdateModelTransform: 1
   dontDetatchFromParent: 0
   noCorpse: 0
@@ -677,6 +675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateMachines:
   - {fileID: 123539090569750926}
+  - {fileID: 4459404469847787021}
 --- !u!114 &123539090569750926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,9 +690,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customName: Body
   initialStateType:
-    _typeName: EntityStates.Idle, RoR2, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _typeName: EntityStates.GenericCharacterMain, RoR2, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   mainStateType:
-    _typeName: EntityStates.FlyState, RoR2, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _typeName: EntityStates.GenericCharacterMain, RoR2, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &4459404469847787021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -723,7 +724,7 @@ MonoBehaviour:
   m_Script: {fileID: 306635731, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primary: {fileID: 0}
+  primary: {fileID: 8132303372394078449}
   secondary: {fileID: 0}
   utility: {fileID: 0}
   special: {fileID: 0}
@@ -749,56 +750,8 @@ MonoBehaviour:
   m_Script: {fileID: 298587437, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _skillFamily: {fileID: 0}
-  skillName: 
-  hideInCharacterSelect: 0
-  hasExecutedSuccessfully: 0
---- !u!114 &7983139810823473084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985943252020054491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 298587437, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _skillFamily: {fileID: 0}
-  skillName: 
-  hideInCharacterSelect: 0
-  hasExecutedSuccessfully: 0
---- !u!114 &2614020054642615716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985943252020054491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 298587437, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _skillFamily: {fileID: 0}
-  skillName: 
-  hideInCharacterSelect: 0
-  hasExecutedSuccessfully: 0
---- !u!114 &3692480320827827062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985943252020054491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 298587437, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _skillFamily: {fileID: 0}
-  skillName: 
+  _skillFamily: {fileID: 11400000, guid: 2c3b7ac8dbf1b40418e64a6075400adc, type: 2}
+  skillName: Laser
   hideInCharacterSelect: 0
   hasExecutedSuccessfully: 0
 --- !u!114 &7145668348767145009
@@ -835,7 +788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideAllyCardDisplay: 0
-  _teamIndex: -1
+  _teamIndex: 2
 --- !u!114 &7192625348151885792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -866,26 +819,6 @@ MonoBehaviour:
   fovOverride: 0
   recoil: {x: 0, y: 0}
   dontRaycastToPivot: 0
---- !u!114 &1888697651173886826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985943252020054491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1077198318, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveVector: {x: 0, y: 0, z: 0}
-  targetTransform: {fileID: 4549195520958260768}
-  overrideAnimatorForwardTransform: {fileID: 0}
-  rootMotionAccumulator: {fileID: 0}
-  modelAnimator: {fileID: 0}
-  driveFromRootRotation: 0
-  turnSpeed: 90
-  turnSoundName: 
 --- !u!114 &4102458334933914979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1003,31 +936,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredExpansion: {fileID: 11400000, guid: 0d7ea78905bfc2c4c8636a77b83a5661, type: 2}
   requireEntitlementIfPlayerControlled: 1
---- !u!114 &7274975350342324776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985943252020054491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1530905962, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeedPenaltyCoefficient: 1
-  characterDirection: {fileID: 1888697651173886826}
-  muteWalkMotion: 0
-  mass: 50
-  airControl: 1
-  disableAirControlUntilCollision: 0
-  generateParametersOnAwake: 1
-  _gravityParameters:
-    environmentalAntiGravityGranterCount: 0
-    antiGravityNeutralizerCount: 0
-    channeledAntiGravityGranterCount: 0
-  _flightParameters:
-    channeledFlightGranterCount: 0
 --- !u!114 &8174931300424287449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1045,21 +953,7 @@ MonoBehaviour:
   interpolationFactor: 3
   debugDuplicatePositions: 0
   debugSnapshotReceived: 0
---- !u!136 &6677221755183315361
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985943252020054491}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &5517300407717886956
+--- !u!54 &403579210935824301
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1075,7 +969,41 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2814436672619429199
+--- !u!114 &3112568231135745145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985943252020054491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1077198318, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveVector: {x: 0, y: 0, z: 0}
+  targetTransform: {fileID: 3552089143713730587}
+  overrideAnimatorForwardTransform: {fileID: 0}
+  rootMotionAccumulator: {fileID: 0}
+  modelAnimator: {fileID: 4659387335647089669}
+  driveFromRootRotation: 0
+  turnSpeed: 360
+  turnSoundName: 
+--- !u!136 &7855515015363478758
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985943252020054491}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 3
+  m_Height: 75
+  m_Direction: 2
+  m_Center: {x: 0, y: 4, z: -5}
+--- !u!114 &1136675256694885730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1087,29 +1015,73 @@ MonoBehaviour:
   m_Script: {fileID: -1568778350, guid: 050936fea8909af15a3fd3b64da1ff83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterController: {fileID: 7274975350342324776}
-  Capsule: {fileID: 6677221755183315361}
-  Rigidbody: {fileID: 5517300407717886956}
-  CapsuleRadius: 1
-  CapsuleHeight: 2
-  CapsuleYOffset: 0
+  CharacterController: {fileID: 7918161227794625670}
+  Capsule: {fileID: 7855515015363478758}
+  Rigidbody: {fileID: 403579210935824301}
+  CapsuleRadius: 3
+  CapsuleHeight: 75
+  CapsuleYOffset: 4
   CapsulePhysicsMaterial: {fileID: 0}
   DetectDiscreteCollisions: 0
   GroundDetectionExtraDistance: 0
-  MaxStepHeight: 1
+  MaxStepHeight: 0.5
   MinRequiredStepDepth: 0.1
   MaxStableSlopeAngle: 55
   MaxStableDistanceFromLedge: 0.5
   PreventSnappingOnLedges: 0
   MaxStableDenivelationAngle: 55
   RigidbodyInteractionType: 0
-  PreserveAttachedRigidbodyMomentum: 1
+  PreserveAttachedRigidbodyMomentum: 0
   HasPlanarConstraint: 0
   PlanarConstraintAxis: {x: 0, y: 0, z: 1}
   StepHandling: 1
   LedgeHandling: 1
   InteractiveRigidbodyHandling: 1
   SafeMovement: 0
+--- !u!114 &7918161227794625670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985943252020054491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1530905962, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeedPenaltyCoefficient: 1
+  characterDirection: {fileID: 3112568231135745145}
+  muteWalkMotion: 0
+  mass: 500
+  airControl: 1
+  disableAirControlUntilCollision: 0
+  generateParametersOnAwake: 1
+  _gravityParameters:
+    environmentalAntiGravityGranterCount: 0
+    antiGravityNeutralizerCount: 0
+    channeledAntiGravityGranterCount: 0
+  _flightParameters:
+    channeledFlightGranterCount: 0
+--- !u!114 &6305566090151636145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985943252020054491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1297580292, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customName: GrantFlight
+  initialStateType:
+    _typeName: EntityStates.FlyingVermin.Mode.GrantFlight, RoR2, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  mainStateType:
+    _typeName: EntityStates.FlyingVermin.Mode.GrantFlight, RoR2, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1011227104913592727
 GameObject:
   m_ObjectHideFlags: 0
@@ -3178,6 +3150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3585253219863551776}
   - component: {fileID: 4659387335647089669}
+  - component: {fileID: 3065590114124993172}
   m_Layer: 0
   m_Name: RedWorm
   m_TagString: Untagged
@@ -3222,6 +3195,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3065590114124993172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4218377937239049626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392865457, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputBank: {fileID: 7192625348151885792}
+  directionComponent: {fileID: 3112568231135745145}
+  pitchRangeMin: -90
+  pitchRangeMax: 90
+  yawRangeMin: -90
+  yawRangeMax: 90
+  pitchGiveupRange: 200
+  yawGiveupRange: 200
+  giveupDuration: 2
+  raisedApproachSpeed: 180
+  loweredApproachSpeed: 180
+  smoothTime: 0.3
+  fullYaw: 0
+  aimType: 0
+  enableAimWeight: 0
+  UseTransformedAimVector: 0
 --- !u!1 &4218643508587021804
 GameObject:
   m_ObjectHideFlags: 0

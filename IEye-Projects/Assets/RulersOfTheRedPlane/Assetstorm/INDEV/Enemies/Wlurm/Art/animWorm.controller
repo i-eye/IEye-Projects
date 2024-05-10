@@ -283,7 +283,7 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: AimPitch
     m_StateMachine: {fileID: -9004409188162268787}
-    m_Mask: {fileID: 0}
+    m_Mask: {fileID: 31900000, guid: 4fba7908c62dbd442952a13c19d396f0, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 1
@@ -295,7 +295,7 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: AimYaw
     m_StateMachine: {fileID: 4940338022436546767}
-    m_Mask: {fileID: 0}
+    m_Mask: {fileID: 31900000, guid: 4fba7908c62dbd442952a13c19d396f0, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 1
@@ -383,7 +383,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ArmatureImpWorm|HeadYaw
+  m_Name: YawControl
   m_Speed: 0
   m_CycleOffset: 0
   m_Transitions:
@@ -572,7 +572,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ArmatureImpWorm|HeadPitch
+  m_Name: PitchControl
   m_Speed: 0
   m_CycleOffset: 0
   m_Transitions:

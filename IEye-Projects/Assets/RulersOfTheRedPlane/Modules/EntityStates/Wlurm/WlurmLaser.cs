@@ -34,6 +34,7 @@ namespace EntityStates.Wlurm
             if (timer >= timeBetweenShots)
             {
                 Transform location = tentacleEnds[(int) Random.Range(0, tentacleAmount)].transform;
+                FireProjectile(location);
             }
             base.FixedUpdate();
         }
