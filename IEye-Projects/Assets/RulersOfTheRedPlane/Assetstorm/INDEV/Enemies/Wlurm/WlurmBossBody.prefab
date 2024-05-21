@@ -481,6 +481,7 @@ GameObject:
   - component: {fileID: 2453456779132395174}
   - component: {fileID: 123539090569750926}
   - component: {fileID: 4459404469847787021}
+  - component: {fileID: 6305566090151636145}
   - component: {fileID: 4396376894645060698}
   - component: {fileID: 8132303372394078449}
   - component: {fileID: 7145668348767145009}
@@ -501,7 +502,6 @@ GameObject:
   - component: {fileID: 7855515015363478758}
   - component: {fileID: 1136675256694885730}
   - component: {fileID: 7918161227794625670}
-  - component: {fileID: 6305566090151636145}
   m_Layer: 0
   m_Name: WlurmBossBody
   m_TagString: Untagged
@@ -676,6 +676,7 @@ MonoBehaviour:
   stateMachines:
   - {fileID: 123539090569750926}
   - {fileID: 4459404469847787021}
+  - {fileID: 6305566090151636145}
 --- !u!114 &123539090569750926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,6 +713,25 @@ MonoBehaviour:
     _typeName: EntityStates.Idle, RoR2, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   mainStateType:
     _typeName: EntityStates.Idle, RoR2, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &6305566090151636145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985943252020054491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1297580292, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customName: GrantFlight
+  initialStateType:
+    _typeName: EntityStates.FlyingVermin.Mode.GrantFlight, RoR2, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  mainStateType:
+    _typeName: EntityStates.FlyingVermin.Mode.GrantFlight, RoR2, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &4396376894645060698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -987,7 +1007,7 @@ MonoBehaviour:
   rootMotionAccumulator: {fileID: 0}
   modelAnimator: {fileID: 4659387335647089669}
   driveFromRootRotation: 0
-  turnSpeed: 360
+  turnSpeed: 45
   turnSoundName: 
 --- !u!136 &7855515015363478758
 CapsuleCollider:
@@ -1063,25 +1083,6 @@ MonoBehaviour:
     channeledAntiGravityGranterCount: 0
   _flightParameters:
     channeledFlightGranterCount: 0
---- !u!114 &6305566090151636145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985943252020054491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1297580292, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customName: GrantFlight
-  initialStateType:
-    _typeName: EntityStates.FlyingVermin.Mode.GrantFlight, RoR2, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  mainStateType:
-    _typeName: EntityStates.FlyingVermin.Mode.GrantFlight, RoR2, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1011227104913592727
 GameObject:
   m_ObjectHideFlags: 0
