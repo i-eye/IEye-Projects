@@ -409,7 +409,7 @@ MonoBehaviour:
   - {fileID: 122033136514570096}
   - {fileID: 3753885588463434877}
   - {fileID: 3748508285117755575}
-  configurationIndex: 23
+  configurationIndex: -1
   totalImportExtensionCount: 23
 --- !u!114 &122033136514570096
 MonoBehaviour:
