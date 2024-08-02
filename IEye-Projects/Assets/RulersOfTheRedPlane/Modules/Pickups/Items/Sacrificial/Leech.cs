@@ -32,7 +32,7 @@ namespace IEye.RRP.Items
             return orig(self, amount, procChainMask, nonRegen);
         }
 
-        public sealed class Behavior : BaseItemBodyBehavior, IOnTakeDamageServerReceiver
+        public sealed class Behavior : BaseItemBodyBehavior, IOnTakeDamageServerReceiver, IOnKilledOtherServerReceiver
         {
             [ItemDefAssociation]
             private static ItemDef GetItemDef() => RRPContent.Items.Leech;
@@ -50,10 +50,20 @@ namespace IEye.RRP.Items
                         dotIndex = DotController.DotIndex.Bleed,
                         duration = 2f * report.damageInfo.procCoefficient,
                         damageMultiplier = 1f,
-                        totalDamage = report.damageDealt / 5
+                        totalDamage = report.damageDealt / 6
                     };
                     DotController.InflictDot(ref dotinfo);
                 }
+                
+            }
+
+            public void OnKilledOtherServer(DamageReport report)
+            {
+                if( Random.Range(0f, 100f) < 10f)
+                {
+                    body.inventory.RemoveItem(RRPContent.Items.Leech,1);
+                }
+                    
                 
             }
         }

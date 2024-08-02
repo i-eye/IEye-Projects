@@ -58,5 +58,6 @@ namespace IEye.RRP
         {
             SoundBankManager.Init();
         }
-	}
+
+    }
 }

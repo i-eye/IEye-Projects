@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1851822388
+CRC: 167902709
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 5d06eefc68c2fac7a6ba35148b496eef
+    Hash: f78e951a5cb3cbfcb291c20f5836f2da
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2b5fa412deae52dbc91aeb834819b95b
@@ -49,4 +49,4 @@ Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/Loop Artifact Achievement.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/LoopCode.asset
 Dependencies:
-- D:/Creative/Unity Projects/RoR2/WEEwise/WEEwise/Weewise/ThunderKit/AssetBundleStaging/rrpmain
+- C:/Users/Admin/Documents/Creative/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain

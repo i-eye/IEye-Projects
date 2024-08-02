@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3960180867
+CRC: 1412320378
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4f68dd4ede12657209621ee79621729e
+    Hash: a966ca79753586f927ed14d9a36e7e6d
   TypeTreeHash:
     serializedVersion: 2
-    Hash: de5b3a29e6820bfae24ab92218b310f3
+    Hash: f8c6d8186e7d5fea2f993758cdffdb9b
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -29,6 +29,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 74
   Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
 - Class: 91
   Script: {instanceID: 0}
 - Class: 95
@@ -37,6 +39,8 @@ ClassTypes:
   Script: {fileID: 161585894, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: f8258ea15b8f74c4889ce485d21cbbb1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 525d8c10cfcd850448d08e73281d60e8, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
 - Class: 114
@@ -80,6 +84,10 @@ ClassTypes:
 - Class: 114
   Script: {fileID: -365436499, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
+  Script: {fileID: -202159943, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -1792105662, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
   Script: {fileID: -1549848242, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: -359660931, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
@@ -100,6 +108,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: -609359282, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
+  Script: {fileID: -520400677, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
   Script: {fileID: -794597441, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: 952828898, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
@@ -118,8 +128,6 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 0777505d690470442828b06f82250916, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 8577aced8c5464a488c5ef8182ea0b80, type: 3}
-- Class: 114
   Script: {fileID: -1568778350, guid: 050936fea8909af15a3fd3b64da1ff83, type: 3}
 - Class: 115
   Script: {instanceID: 0}
@@ -131,6 +139,7 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/RoR2/Normals/texRockyNormalsFlattened.png
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/adccsGardenMonsters.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/dccsGardenMonsters.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/animWorm.controller
@@ -153,6 +162,7 @@ Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/AvatarMask(for a
   worm).mask
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/matWormTooth.mat
+- Assets/RoR2/Textures/texDCGravelDiffuse.png
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/adpGardenInteractables.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Skills/sfWlurm1.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/WlurmBossBody.prefab
@@ -162,14 +172,17 @@ Assets:
   Profile.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/GardenGroundNodes.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/RedWorm.fbx
+- Assets/RoR2/Textures/texDCGrass.png
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/dpGardenMonsters.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/adccsGardenInteractables.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/WlurmMaster.prefab
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/WormMesh_Base_color.png
+- Assets/RoR2/Textures/texDCRockSide.png
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/matWormEye.mat
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/RedWormEyeEmmsive.png
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Materials/TheMaterial.mat
 Dependencies:
-- C:/Users/Admin/Documents/Creative/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/msuassets
-- C:/Users/Admin/Documents/Creative/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpbase
-- C:/Users/Admin/Documents/Creative/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpinteractables
-- C:/Users/Admin/Documents/Creative/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain
+- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/msuassets
+- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpbase
+- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpinteractables
+- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain

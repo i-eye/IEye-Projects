@@ -151,8 +151,7 @@ namespace IEye.RRP
             //var particleSys = pickup.prefabOverride.GetComponent<ParticleSystem>();
             //particleSys.
 
-            pickup.pickupIndex = pickupIndex;
-            PickupDropletController.CreatePickupDroplet(pickup, position, velocity);
+            PickupDropletController.CreatePickupDroplet(pickupIndex, position, velocity);
 
             //PickupDropletController.CreatePickupDroplet(pickupIndex, position, velocity);
             EffectManager.SpawnEffect(RRPAssets.LoadAsset<GameObject>(vfxPrefab, RRPBundle.All), new EffectData

@@ -7,5 +7,321 @@ AvatarMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AvatarMask(for a worm)
-  m_Mask: 00000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_Elements: []
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye1.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye1.L/Eye1.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye1.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye1.R/Eye1.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye2.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye2.L/Eye2.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye2.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye2.R/Eye2.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye3.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye3.L/Eye3.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye3.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye3.R/Eye3.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye4.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye4.L/Eye4.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye4.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye4.R/Eye4.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye5.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye5.L/Eye5.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye5.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye5.R/Eye5.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye6.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye6.L/Eye6.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye6.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye6.R/Eye6.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye7.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye7.L/Eye7.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye7.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Eye7.R/Eye7.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Nose
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Head/Nose/Nose_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.L/Eye8.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.L/Eye8.L/Eye8.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.L/Jaw2.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.L/Jaw2.L/Jaw3.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.L/Jaw2.L/Jaw3.L/Jaw3.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.L/Jaw2.L/Tentacle1.1.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.L/Jaw2.L/Tentacle1.1.L/Tentacle1.2.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.L/Jaw2.L/Tentacle1.1.L/Tentacle1.2.L/Tentacle1.2.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.L/Tentacle2.1.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.L/Tentacle2.1.L/Tentacle2.2.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.L/Tentacle2.1.L/Tentacle2.2.L/Tentacle2.2.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.R/Eye8.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.R/Eye8.R/Eye8.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.R/Jaw2.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.R/Jaw2.R/Jaw3.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.R/Jaw2.R/Jaw3.R/Jaw3.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.R/Jaw2.R/Tentacle1.1.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.R/Jaw2.R/Tentacle1.1.R/Tentacle1.2.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.R/Jaw2.R/Tentacle1.1.R/Tentacle1.2.R/Tentacle1.2.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.R/Tentacle2.1.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.R/Tentacle2.1.R/Tentacle2.2.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/Jaw1.R/Tentacle2.1.R/Tentacle2.2.R/Tentacle2.2.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/MouthStretch.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/MouthStretch.L/MouthStretch.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/MouthStretch.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/MouthStretch.R/MouthStretch.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/TinyJawLo
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/TinyJawLo/TinyJawLo_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/TinyJawUp
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Neck/TinyJawUp/TinyJawUp_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Index1
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Index1/Index2
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Index1/Index2/Index3
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Index1/Index2/Index3/Index3_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Middle1
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Middle1/Middle2
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Middle1/Middle2/Middle3
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Middle1/Middle2/Middle3/Middle3_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Pinky1
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Pinky1/Pinky2
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Pinky1/Pinky2/Pinky3
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Pinky1/Pinky2/Pinky3/Pinky3_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Ring1
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Ring1/Ring2
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Ring1/Ring2/Ring3
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Spine10/Spine11/Ring1/Ring2/Ring3/Ring3_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Tentacle12.1.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Tentacle12.1.L/Tentacle12.2.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Tentacle12.1.L/Tentacle12.2.L/Tentacle12.2.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Tentacle12.1.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Tentacle12.1.R/Tentacle12.2.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Spine8/Spine9/Tentacle12.1.R/Tentacle12.2.R/Tentacle12.2.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Tentacle11.1.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Tentacle11.1.L/Tentacle11.2.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Tentacle11.1.L/Tentacle11.2.L/Tentacle11.2.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Tentacle11.1.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Tentacle11.1.R/Tentacle11.2.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Spine7/Tentacle11.1.R/Tentacle11.2.R/Tentacle11.2.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Tentacle10.1.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Tentacle10.1.L/Tentacle10.2.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Tentacle10.1.L/Tentacle10.2.L/Tentacle10.2.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Tentacle10.1.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Tentacle10.1.R/Tentacle10.2.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Spine6/Tentacle10.1.R/Tentacle10.2.R/Tentacle10.2.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Tentacle8.1.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Tentacle8.1.L/Tentacle8.2.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Tentacle8.1.L/Tentacle8.2.L/Tentacle8.2.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Tentacle8.1.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Tentacle8.1.R/Tentacle8.2.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Tentacle8.1.R/Tentacle8.2.R/Tentacle8.2.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Tentacle9.1.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Tentacle9.1.L/Tentacle9.2.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Tentacle9.1.L/Tentacle9.2.L/Tentacle9.2.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Tentacle9.1.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Tentacle9.1.R/Tentacle9.2.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Spine5/Tentacle9.1.R/Tentacle9.2.R/Tentacle9.2.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Tentacle7.1.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Tentacle7.1.L/Tentacle7.2.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Tentacle7.1.L/Tentacle7.2.L/Tentacle7.2.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Tentacle7.1.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Tentacle7.1.R/Tentacle7.2.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Spine4/Tentacle7.1.R/Tentacle7.2.R/Tentacle7.2.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Tentacle6.1.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Tentacle6.1.L/Tentacle6.2.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Tentacle6.1.L/Tentacle6.2.L/Tentacle6.2.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Tentacle6.1.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Tentacle6.1.R/Tentacle6.2.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Spine3/Tentacle6.1.R/Tentacle6.2.R/Tentacle6.2.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Tentacle4.1.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Tentacle4.1.L/Tentacle4.2.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Tentacle4.1.L/Tentacle4.2.L/Tentacle4.2.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Tentacle4.1.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Tentacle4.1.R/Tentacle4.2.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Tentacle4.1.R/Tentacle4.2.R/Tentacle4.2.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Tentacle5.1.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Tentacle5.1.L/Tentacle5.2.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Tentacle5.1.L/Tentacle5.2.L/Tentacle5.2.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Tentacle5.1.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Tentacle5.1.R/Tentacle5.2.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Spine2/Tentacle5.1.R/Tentacle5.2.R/Tentacle5.2.R_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Tentacle3.1.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Tentacle3.1.L/Tentacle3.2.L
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Tentacle3.1.L/Tentacle3.2.L/Tentacle3.2.L_end
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Tentacle3.1.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Tentacle3.1.R/Tentacle3.2.R
+    m_Weight: 1
+  - m_Path: ArmatureImpWorm/Root/Base/Spine1/Tentacle3.1.R/Tentacle3.2.R/Tentacle3.2.R_end
+    m_Weight: 1
+  - m_Path: MeshImpWormBody
+    m_Weight: 1
+  - m_Path: MeshImpWormEyes
+    m_Weight: 1
+  - m_Path: MeshImpWormTeeth
+    m_Weight: 1

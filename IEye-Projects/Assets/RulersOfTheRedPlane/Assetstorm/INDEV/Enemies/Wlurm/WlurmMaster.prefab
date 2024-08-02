@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullVision: 1
   neverRetaliateFriendlies: 0
-  enemyAttentionDuration: 5
+  enemyAttentionDuration: 15
   desiredSpawnNodeGraphType: 1
   stateMachine: {fileID: 178760590156231240}
   scanState:
@@ -141,8 +141,8 @@ MonoBehaviour:
       PublicKeyToken=null
   isHealer: 0
   enemyAttention: 0
-  aimVectorDampTime: 0.2
-  aimVectorMaxSpeed: 150
+  aimVectorDampTime: 0.1
+  aimVectorMaxSpeed: 180
   selectedSkilldriverName: 
   debugEnemyHurtBox: {fileID: 0}
 --- !u!114 &178760590156231240

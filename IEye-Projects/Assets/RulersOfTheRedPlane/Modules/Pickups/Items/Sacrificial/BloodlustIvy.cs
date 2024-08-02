@@ -15,7 +15,7 @@ namespace IEye.RRP.Items
         private const string token = "RRP_ITEM_BLOODIVY_DESC";
         public static float percentHealthCoef = 15;
 
-        public static float distanceNeeded = 15f;
+        public static float distanceNeeded = 20f;
         public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("BloodlustIvy", RRPBundle.Items);
 
         public sealed class Behavior : BaseItemBodyBehavior, IOnDamageInflictedServerReceiver
@@ -35,13 +35,13 @@ namespace IEye.RRP.Items
                 {
                     healthComponent.ApplyDot(body.gameObject, DotController.DotIndex.Poison, 10f, 1.5f);
                 }
-                damageNeeded = body.healthComponent.fullCombinedHealth * percentHealthCoef;
+                damageNeeded = body.healthComponent.fullCombinedHealth * (percentHealthCoef/100);
             }
 
             public void OnDamageInflictedServer(DamageReport damageReport)
             {
                 float distance = Vector3.Distance(damageReport.victimBody.transform.position, body.transform.position);
-                if (distance >= distanceNeeded)
+                if (distance <= distanceNeeded)
                 {
                     healthTracker += damageReport.damageDealt;
                 }
