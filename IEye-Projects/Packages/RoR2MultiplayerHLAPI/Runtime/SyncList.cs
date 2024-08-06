@@ -333,7 +333,7 @@ namespace UnityEngine.Networking
     {
         /// <summary>
         /// A delegate that can be populated to recieve callbacks when the list changes.
-        /// <para>For example this function is called when the m_ints list changes:</para>
+        /// <para>For RRP this function is called when the m_ints list changes:</para>
         /// <code>
         /// using UnityEngine;
         /// using UnityEngine.Networking;

@@ -185,7 +185,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class Example : MonoBehaviour
+        /// public class RRP : MonoBehaviour
         /// {
         ///    void DoConnect()
         ///    {
@@ -216,7 +216,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class Example : MonoBehaviour
+        /// public class RRP : MonoBehaviour
         /// {
         ///    void DoConnect()
         ///    {

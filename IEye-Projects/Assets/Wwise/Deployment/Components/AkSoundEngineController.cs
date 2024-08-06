@@ -152,7 +152,7 @@ public class AkSoundEngineController
 		AkRoomManager.Terminate();
 	}
 
-	// In the Editor, the sound needs to keep playing when switching windows (remote debugging in Wwise, for example).
+	// In the Editor, the sound needs to keep playing when switching windows (remote debugging in Wwise, for RRP).
 	// On iOS, application interruptions are handled in the sound engine already.
 #if UNITY_EDITOR || UNITY_IOS
 	public void OnApplicationPause(bool pauseStatus)

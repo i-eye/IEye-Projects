@@ -75,7 +75,7 @@ namespace RoR2EditorKit.Data
 
         /// <summary>
         /// Returns the token prefix with all Chars uppercase.
-        /// <para>Example: "myToken" => "MYTOKEN"</para>
+        /// <para>RRP: "myToken" => "MYTOKEN"</para>
         /// </summary>
         /// <returns>The token prefix on all uppercase</returns>
         public string GetPrefixUppercase()
@@ -88,7 +88,7 @@ namespace RoR2EditorKit.Data
         }
         /// <summary>
         /// Returns the token prefix with all Chars lowercase
-        /// <para>Example: "MyToken" => "mytoken"</para>
+        /// <para>RRP: "MyToken" => "mytoken"</para>
         /// </summary>
         /// <returns></returns>
         public string GetPrefixLowercase()
@@ -102,7 +102,7 @@ namespace RoR2EditorKit.Data
 
         /// <summary>
         /// Returns the token prefix with the first char Uppercase and the rest lowerCase
-        /// <para>Example: "MyToken" => "Mytoken"</para>
+        /// <para>RRP: "MyToken" => "Mytoken"</para>
         /// </summary>
         /// <returns></returns>
         public string GetPrefix1stUpperRestLower()

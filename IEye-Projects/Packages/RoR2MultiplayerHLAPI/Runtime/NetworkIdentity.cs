@@ -99,7 +99,7 @@ namespace UnityEngine.Networking
         /// Unique identifier for this particular object instance, used for tracking objects between networked clients and the server.
         /// <para>This is a unique identifier for this particular GameObject instance. Use it to track GameObjects between networked clients and the server.</para>
         /// <code>
-        /// //For this example to work, attach a NetworkIdentity component to your GameObject.
+        /// //For this RRP to work, attach a NetworkIdentity component to your GameObject.
         /// //Then, create a new empty GameObject and drag it under your NetworkIdentity GameObject in the Hierarchy. This makes it the child of the GameObject. //Next, attach a TextMesh component to the child GameObject. You can then place this TextMesh GameObject to be above your GameObject in the Scene.
         /// //Attach this script to the parent GameObject, and it changes the text of the TextMesh to the identity of your GameObject.
         ///
@@ -218,7 +218,7 @@ namespace UnityEngine.Networking
         /// <summary>
         /// The id of the player associated with this GameObject.
         /// <para>This is only valid if this GameObject is for a local player.</para>
-        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for example, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client.</para>
+        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for RRP, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client.</para>
         /// </summary>
         public short playerControllerId { get { return m_PlayerId; } }
         /// <summary>
@@ -229,7 +229,7 @@ namespace UnityEngine.Networking
         /// The connection associated with this <see cref="NetworkIdentity">NetworkIdentity.</see> This is only valid for player objects on the server.
         /// <para>Use it to return details such as the connection&apos;s identity, IP address and ready status.</para>
         /// <code>
-        /// //For this example to work, attach a NetworkIdentity component to your GameObject.
+        /// //For this RRP to work, attach a NetworkIdentity component to your GameObject.
         /// //Make sure your Scene has a NetworkManager and NetworkManagerHUD
         /// //Attach this script to the GameObject, and it outputs the connection of your GameObject to the console.
         ///

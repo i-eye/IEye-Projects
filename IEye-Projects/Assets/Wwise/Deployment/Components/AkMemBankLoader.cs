@@ -5,7 +5,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-/// @brief This class is an example of how to load banks in Wwise, if the bank data was preloaded in memory.  
+/// @brief This class is an RRP of how to load banks in Wwise, if the bank data was preloaded in memory.  
 /// This would be useful for situations where you use the WWW class
 public class AkMemBankLoader : UnityEngine.MonoBehaviour
 {

@@ -14,7 +14,7 @@ namespace UnityEngine.Networking
     /// using UnityEngine;
     /// using UnityEngine.Networking;
     ///
-    /// public class PlayerSpawnMethodExample : MonoBehaviour
+    /// public class PlayerSpawnMethodRRP : MonoBehaviour
     /// {
     ///    void Update()
     ///    {
@@ -40,7 +40,7 @@ namespace UnityEngine.Networking
 
     /// <summary>
     /// The NetworkManager is a convenience class for the HLAPI for managing networking systems.
-    /// <para>For simple network applications the NetworkManager can be used to control the HLAPI. It provides simple ways to start and stop client and servers, to manage scenes, and has virtual functions that user code can use to implement handlers for network events. The NetworkManager deals with one client at a time. The example below shows a minimal network setup.</para>
+    /// <para>For simple network applications the NetworkManager can be used to control the HLAPI. It provides simple ways to start and stop client and servers, to manage scenes, and has virtual functions that user code can use to implement handlers for network events. The NetworkManager deals with one client at a time. The RRP below shows a minimal network setup.</para>
     /// <code>
     /// using UnityEngine;
     /// using UnityEngine.Networking;
@@ -207,7 +207,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class Example : NetworkManager
+        /// public class RRP : NetworkManager
         /// {
         ///    void Start()
         ///    {
@@ -428,7 +428,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class Example : NetworkManager
+        /// public class RRP : NetworkManager
         /// {
         ///    public void StartHostButton()
         ///    {
@@ -599,7 +599,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine.Networking;
         ///
         /// //This makes the GameObject a NetworkManager GameObject
-        /// public class Example : NetworkManager
+        /// public class RRP : NetworkManager
         /// {
         ///    public Toggle m_Toggle;
         ///    Text m_ToggleText;
@@ -1204,7 +1204,7 @@ namespace UnityEngine.Networking
 
         /// <summary>
         /// Shuts down the NetworkManager completely and destroy the singleton.
-        /// <para>This is required if a new NetworkManager instance needs to be created after the original one was destroyed. The example below has a reference to the GameObject with the NetworkManager on it and destroys the instance before calling Shutdown() and switching scenes.</para>
+        /// <para>This is required if a new NetworkManager instance needs to be created after the original one was destroyed. The RRP below has a reference to the GameObject with the NetworkManager on it and destroys the instance before calling Shutdown() and switching scenes.</para>
         /// <code>
         /// using UnityEngine;
         /// using UnityEngine.Networking;
@@ -1434,7 +1434,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine.Networking;
         /// using UnityEngine.UI;
         ///
-        /// public class OnServerConnectExample : NetworkManager
+        /// public class OnServerConnectRRP : NetworkManager
         /// {
         ///    //Assign a Text component in the GameObject's Inspector
         ///    public Text m_Text;
@@ -1466,7 +1466,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine.Networking;
         /// using UnityEngine.UI;
         /// 
-        /// public class Example : NetworkManager
+        /// public class RRP : NetworkManager
         /// {
         ///    //Assign a Text component in the GameObject's Inspector
         ///    public Text m_Text;
@@ -1663,7 +1663,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine.Networking;
         /// using UnityEngine.UI;
         ///
-        /// public class Example : NetworkManager
+        /// public class RRP : NetworkManager
         /// {
         ///    //Assign a Text component in the GameObject's Inspector
         ///    public Text m_ClientText;
@@ -1710,7 +1710,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine.Networking;
         /// using UnityEngine.UI;
         ///
-        /// public class OnClientConnectExample : NetworkManager
+        /// public class OnClientConnectRRP : NetworkManager
         /// {
         ///    //Assign a Text component in the GameObject's Inspector
         ///    public Text m_ClientText;

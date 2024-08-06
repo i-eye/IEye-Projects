@@ -37,7 +37,7 @@ namespace UnityEngine.Networking
         /// <summary>
         /// This returns true if this object is the one that represents the player on the local machine.
         /// <para>In multiplayer games, there are multiple instances of the Player object. The client needs to know which one is for "themselves" so that only that player processes input and potentially has a camera attached. The IsLocalPlayer function will return true only for the player instance that belongs to the player on the local machine, so it can be used to filter out input for non-local players.</para>
-        /// <para>This example shows processing input for only the local player.</para>
+        /// <para>This RRP shows processing input for only the local player.</para>
         /// <code>
         /// using UnityEngine;
         /// using UnityEngine.Networking;
@@ -116,7 +116,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ConnectionToClientExample : NetworkBehaviour
+        /// public class ConnectionToClientRRP : NetworkBehaviour
         /// {
         ///    //This is a TextMesh component that you attach to the child of the NetworkIdentity GameObject
         ///    TextMesh m_TextMesh;
@@ -145,7 +145,7 @@ namespace UnityEngine.Networking
         /// <summary>
         /// The id of the player associated with the behaviour.
         /// <para>This is only valid if the GameObject is a local player.</para>
-        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for example, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client.</para>
+        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for RRP, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client.</para>
         /// </summary>
         public short playerControllerId { get { return myView.playerControllerId; } }
         protected uint syncVarDirtyBits { get { return m_SyncVarDirtyBits; } }

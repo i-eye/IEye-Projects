@@ -170,7 +170,7 @@ namespace UnityEngine.Networking
 
         /// <summary>
         /// This adds a player GameObject for this client. This causes an AddPlayer message to be sent to the server, and NetworkManager.OnServerAddPlayer is called. If an extra message was passed to AddPlayer, then OnServerAddPlayer will be called with a NetworkReader that contains the contents of the message.
-        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for example, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client. This is not the global player number.</para>
+        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for RRP, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client. This is not the global player number.</para>
         /// </summary>
         /// <param name="playerControllerId">The local player ID number.</param>
         /// <returns>True if player was added.</returns>
@@ -182,7 +182,7 @@ namespace UnityEngine.Networking
 
         /// <summary>
         /// This adds a player GameObject for this client. This causes an AddPlayer message to be sent to the server, and NetworkManager.OnServerAddPlayer is called. If an extra message was passed to AddPlayer, then OnServerAddPlayer will be called with a NetworkReader that contains the contents of the message.
-        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for example, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client. This is not the global player number.</para>
+        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for RRP, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client. This is not the global player number.</para>
         /// </summary>
         /// <param name="readyConn">The connection to become ready for this client.</param>
         /// <param name="playerControllerId">The local player ID number.</param>
@@ -195,7 +195,7 @@ namespace UnityEngine.Networking
 
         /// <summary>
         /// This adds a player GameObject for this client. This causes an AddPlayer message to be sent to the server, and NetworkManager.OnServerAddPlayer is called. If an extra message was passed to AddPlayer, then OnServerAddPlayer will be called with a NetworkReader that contains the contents of the message.
-        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for example, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client. This is not the global player number.</para>
+        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for RRP, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client. This is not the global player number.</para>
         /// </summary>
         /// <param name="readyConn">The connection to become ready for this client.</param>
         /// <param name="playerControllerId">The local player ID number.</param>
@@ -274,7 +274,7 @@ namespace UnityEngine.Networking
 
         /// <summary>
         /// Send a reconnect message to the new host, used during host migration.
-        /// <para>An example usage might be that if you decide to spawn your own player and not use the built in "Auto Create Player" property in the NetworkManager together with HostMigration, you would need to send a reconnect message when your client reconnects. The code below illustrates such an example were we OnClientConnect check if we where disconnected from the host and in that case we send the reconnect message.</para>
+        /// <para>An RRP usage might be that if you decide to spawn your own player and not use the built in "Auto Create Player" property in the NetworkManager together with HostMigration, you would need to send a reconnect message when your client reconnects. The code below illustrates such an RRP were we OnClientConnect check if we where disconnected from the host and in that case we send the reconnect message.</para>
         /// <code>
         /// using UnityEngine;
         /// using UnityEngine.Networking;
@@ -348,7 +348,7 @@ namespace UnityEngine.Networking
         /// <summary>
         /// Removes the specified player ID from the game.
         /// <para>Both the client and the server destroy the player GameObject and remove it from the player list. The playerControllerId is scoped to this client, not global to all players or clients.</para>
-        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for example, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client.</para>
+        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for RRP, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client.</para>
         /// </summary>
         /// <param name="playerControllerId">The local playerControllerId number to be removed.</param>
         /// <returns>Returns true if the player was successfully destoyed and removed.</returns>
@@ -375,14 +375,14 @@ namespace UnityEngine.Networking
 
         /// <summary>
         /// Signal that the client connection is ready to enter the game.
-        /// <para>This could be for example when a client enters an ongoing game and has finished loading the current scene. The server should respond to the SYSTEM_READY event with an appropriate handler which instantiates the players object for example.</para>
+        /// <para>This could be for RRP when a client enters an ongoing game and has finished loading the current scene. The server should respond to the SYSTEM_READY event with an appropriate handler which instantiates the players object for RRP.</para>
         /// <code>
         /// using UnityEngine;
         /// using UnityEngine.UI;
         /// using UnityEngine.Networking;
         ///
         /// //This makes the GameObject a NetworkManager GameObject
-        /// public class Example : NetworkManager
+        /// public class RRP : NetworkManager
         /// {
         ///    public bool m_ServerStarted, m_ClientStarted;
         ///    public Button m_ClientButton;
@@ -396,7 +396,7 @@ namespace UnityEngine.Networking
         ///        m_ClientStarted = true;
         ///        //Output text to show the connection on the client side
         ///        Debug.Log("Client Side : Client " + connection.connectionId + " Connected!");
-        ///        //Register and receive the message on the Client's side (NetworkConnection.Send Example)
+        ///        //Register and receive the message on the Client's side (NetworkConnection.Send RRP)
         ///        client.RegisterHandler(MsgType.Ready, ReadyMessage);
         ///    }
         ///

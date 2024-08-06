@@ -10,7 +10,7 @@ using R2API.Utils;
 using R2API.Networking;
 using R2API.ContentManagement;
 using UnityEngine;
-using Moonstorm;
+using MSU;
 using IEye.RRP.Items;
 using R2API.AddressReferencedAssets;
 namespace IEye.RRP
@@ -35,23 +35,20 @@ namespace IEye.RRP
 		public const string MODNAME = "Rulers of the Red Plane";
 		public const string VERSION = "0.0.5";
 
-        public static RRPMain Instance;
+        public static RRPMain instance;
         public static PluginInfo pluginInfo;
-        public static DefNotSS2Log logger;
         
 
 		private void Awake()
 		{
-			Instance = this;
+			instance = this;
             pluginInfo = Info;
-            logger = new DefNotSS2Log(Logger);
+            new RRPLog(Logger);
+            new RRPConfig(this);
+            new RRPContent();
 
-            new RRPAssets().Init();
-            new RRPConfig().Init();
-            new RRPContent().Init();
-            new RRPLanguage().Init();
-            //ConfigurableFieldManager.AddMod(this);
-            ConfigSystem.AddMod(this);
+
+            LanguageFileLoader.AddLanguageFilesFromMod(this, "Language");
             
 		}	
         private void Start()

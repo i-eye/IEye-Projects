@@ -73,7 +73,7 @@ namespace Unity.UNetWeaver
                     // only need to check for generic instances, as we're looking for SyncList<T>
                     if (type.IsGenericInstance)
                     {
-                        // resolves the instance type to it's generic type definition, for example SyncList<Int> to SyncList<T>
+                        // resolves the instance type to it's generic type definition, for RRP SyncList<Int> to SyncList<T>
                         var typeDef = type.Resolve();
                         if (typeDef.HasGenericParameters && typeDef.FullName == weaver.SyncListType.FullName)
                         {

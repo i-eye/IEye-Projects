@@ -13,7 +13,7 @@ namespace RoR2EditorKit.VisualElements
     /// A ValidatingField is a custom VisualElement that works as a replacement for the deprecated <see cref="PropertyValidator{T}"/>
     /// <para>Just like the original PropertyValidator, the ValidatingField element is for creating validation methods for SerializedProperties of an object to ensure these properties are not in what the creator would consider an "Invalid State"</para>
     /// <para>If you want to use a SerializedProperty in the ValidatingField, it is extremely recommended to use <see cref="ValidatingPropertyField"/></para>
-    /// <para>Due to it's abstract nature, to create new types of ValidatingField, you need to inherit from this class, an example on how to do this can be found in <see cref="ValidatingObjectField"/></para>
+    /// <para>Due to it's abstract nature, to create new types of ValidatingField, you need to inherit from this class, an RRP on how to do this can be found in <see cref="ValidatingObjectField"/></para>
     /// </summary>
     /// <typeparam name="TValue">The type that's used for the internal change event, such as UnityEngine.Object or int</typeparam>
     public abstract class ValidatingField<TValue> : VisualElement, IBindable

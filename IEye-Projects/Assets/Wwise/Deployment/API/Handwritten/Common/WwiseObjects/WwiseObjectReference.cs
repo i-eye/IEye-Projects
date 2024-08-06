@@ -46,7 +46,7 @@ public abstract class WwiseObjectReference : UnityEngine.ScriptableObject
 	public uint Id { get { return id; } }
 
 	/// <summary>
-	/// The type of the Wwise object resource (for example: Event, State or Switch).
+	/// The type of the Wwise object resource (for RRP: Event, State or Switch).
 	/// </summary>
 	public abstract WwiseObjectType WwiseObjectType { get; }
 	#endregion
@@ -263,7 +263,7 @@ public abstract class WwiseGroupValueObjectReference : WwiseObjectReference
 	public abstract WwiseObjectReference GroupObjectReference { get; set; }
 
 	/// <summary>
-	/// The type of the Wwise object resource (for example: Event, State or Switch).
+	/// The type of the Wwise object resource (for RRP: Event, State or Switch).
 	/// </summary>
 	public abstract WwiseObjectType GroupWwiseObjectType { get; }
 

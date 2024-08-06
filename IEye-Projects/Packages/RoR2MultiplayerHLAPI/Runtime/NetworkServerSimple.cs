@@ -622,7 +622,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public abstract class ExampleScript : NetworkManager
+        /// public abstract class RRPScript : NetworkManager
         /// {
         ///    public virtual void OnConnected(NetworkConnection conn)
         ///    {
@@ -644,7 +644,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public abstract class ExampleScript : <see cref="NetworkManager">NetworkManager</see>
+        /// public abstract class RRPScript : <see cref="NetworkManager">NetworkManager</see>
         /// {
         ///    public virtual void OnDisconnected(<see cref="NetworkConnection">NetworkConnection</see> conn)
         ///    {
@@ -666,7 +666,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public abstract class ExampleScript : <see cref="NetworkManager">NetworkManager</see>
+        /// public abstract class RRPScript : <see cref="NetworkManager">NetworkManager</see>
         /// {
         ///    byte[] msgBuffer = new byte[1024];
         ///

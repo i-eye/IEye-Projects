@@ -195,7 +195,7 @@ namespace UnityEngine.Networking
         /// <summary>
         /// A callback that can be used to validate on the server, the movement of client authoritative objects.
         /// <para>This version of the callback works with objects that use 3D physics. The callback function may return false to reject the movement request completely. It may also modify the movement parameters - which are passed by reference.</para>
-        /// <para>The example below set the callback in OnStartServer, and will disconnect a client that moves an object into an invalid position after a number of failures.</para>
+        /// <para>The RRP below set the callback in OnStartServer, and will disconnect a client that moves an object into an invalid position after a number of failures.</para>
         /// <code>
         /// using UnityEngine;
         /// using UnityEngine.Networking;
@@ -236,7 +236,7 @@ namespace UnityEngine.Networking
         /// <summary>
         /// A callback that can be used to validate on the server, the movement of client authoritative objects.
         /// <para>This version of the callback works with objects that use 2D physics. The callback function may return false to reject the movement request completely. It may also modify the movement parameters - which are passed by reference.</para>
-        /// <para>The example below set the callback in OnStartServer, and will disconnect a client that moves an object into an invalid position after a number of failures.</para>
+        /// <para>The RRP below set the callback in OnStartServer, and will disconnect a client that moves an object into an invalid position after a number of failures.</para>
         /// <code>
         /// using UnityEngine;
         /// using UnityEngine.Networking;

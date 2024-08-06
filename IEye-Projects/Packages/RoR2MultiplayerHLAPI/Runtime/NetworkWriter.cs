@@ -12,7 +12,7 @@ namespace UnityEngine.Networking
     /// using UnityEngine;
     /// using UnityEngine.Networking;
     /// 
-    /// public class ExampleScript : MonoBehaviour
+    /// public class RRPScript : MonoBehaviour
     /// {
     ///    // Writing data to a NetworkWriter and then
     ///    // Converting this to a NetworkReader.
@@ -104,13 +104,13 @@ namespace UnityEngine.Networking
 
         /// <summary>
         /// The current position of the internal buffer.
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for a code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for a code RRP.</para>
         /// </summary>
         public short Position { get { return (short)m_Buffer.Position; } }
 
         /// <summary>
         /// Returns a copy of internal array of bytes the writer is using, it copies only the bytes used.
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for a code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for a code RRP.</para>
         /// </summary>
         /// <returns>Copy of data used by the writer.</returns>
         public byte[] ToArray()
@@ -271,7 +271,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -283,7 +283,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(NetworkInstanceId value)
@@ -297,7 +297,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -309,7 +309,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(NetworkSceneId value)
@@ -323,7 +323,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -335,7 +335,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(char value)
@@ -349,7 +349,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -361,7 +361,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(byte value)
@@ -375,7 +375,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -387,7 +387,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(sbyte value)
@@ -401,7 +401,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -413,7 +413,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(short value)
@@ -427,7 +427,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -439,7 +439,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(ushort value)
@@ -453,7 +453,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -465,7 +465,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(int value)
@@ -484,7 +484,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -496,7 +496,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(uint value)
@@ -514,7 +514,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -526,7 +526,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(long value)
@@ -548,7 +548,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -560,7 +560,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(ulong value)
@@ -584,7 +584,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -596,7 +596,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(float value)
@@ -611,7 +611,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -623,7 +623,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(double value)
@@ -638,7 +638,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -650,7 +650,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(decimal value)
@@ -668,7 +668,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -680,7 +680,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(string value)
@@ -709,7 +709,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -721,7 +721,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(bool value)
@@ -738,7 +738,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -750,7 +750,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="buffer">The byte buffer to write.</param>
         /// <param name="count">The number of bytes in the byte buffer to write.</param>
@@ -770,7 +770,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -782,7 +782,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="buffer">The byte buffer to write.</param>
         /// <param name="offset">The byte buffer array element to start writing from.</param>
@@ -848,7 +848,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -860,7 +860,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(Vector2 value)
@@ -875,7 +875,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -887,7 +887,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(Vector3 value)
@@ -903,7 +903,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -915,7 +915,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(Vector4 value)
@@ -932,7 +932,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -944,7 +944,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(Color value)
@@ -961,7 +961,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -973,7 +973,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(Color32 value)
@@ -990,7 +990,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -1002,7 +1002,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(Quaternion value)
@@ -1019,7 +1019,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -1031,7 +1031,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(Rect value)
@@ -1048,7 +1048,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -1060,7 +1060,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>s
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>s
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(Plane value)
@@ -1075,7 +1075,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -1087,7 +1087,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(Ray value)
@@ -1102,7 +1102,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -1114,7 +1114,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(Matrix4x4 value)
@@ -1143,7 +1143,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -1155,7 +1155,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(NetworkHash128 value)
@@ -1184,7 +1184,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -1196,7 +1196,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(NetworkIdentity value)
@@ -1215,7 +1215,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -1227,7 +1227,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(Transform value)
@@ -1255,7 +1255,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -1267,7 +1267,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="value">The object to write.</param>
         public void Write(GameObject value)
@@ -1295,7 +1295,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -1307,7 +1307,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="msg">The network message to write.</param>
         public void Write(MessageBase msg)
@@ -1329,7 +1329,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         /// 
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -1341,7 +1341,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         /// <param name="msgType">Message type.</param>
         public void StartMessage(short msgType)
@@ -1361,7 +1361,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         /// 
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    void Start()
         ///    {
@@ -1373,7 +1373,7 @@ namespace UnityEngine.Networking
         ///    }
         /// }
         /// </code>
-        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code example.</para>
+        /// <para>See <see cref="NetworkWriter">NetworkWriter</see> for another code RRP.</para>
         /// </summary>
         public void FinishMessage()
         {

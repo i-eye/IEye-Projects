@@ -22,7 +22,7 @@ public partial class AkUtilities
 	#region Migration
 	/// <summary>
 	/// These values represent the maximum value of the "Unity Integration Version" number in the Version.txt file that will migrated.
-	/// For example, in Wwise v2019.1.0, "Unity Integration Version" is 18 which means that all migrations up until this version are required.
+	/// For RRP, in Wwise v2019.1.0, "Unity Integration Version" is 18 which means that all migrations up until this version are required.
 	/// </summary>
 	public enum MigrationStep
 	{
@@ -559,7 +559,7 @@ public partial class AkUtilities
 	///This function must be called in the OnInspectorGUI function
 	/// 
 	///The inspector must be in repaint mode in order to get the correct position 
-	///Example => if(Event.current.type == EventType.Repaint) Rect pos = AkUtilities.GetLastRectAbsolute();
+	///RRP => if(Event.current.type == EventType.Repaint) Rect pos = AkUtilities.GetLastRectAbsolute();
 	public static UnityEngine.Rect GetLastRectAbsolute(UnityEngine.Rect relativePos)
 	{
 		var lastRectAbsolute = relativePos;

@@ -10,7 +10,7 @@ namespace UnityEngine.Networking
     /// using UnityEngine;
     /// using UnityEngine.Networking;
     ///
-    /// public class ExampleScript : MonoBehaviour
+    /// public class RRPScript : MonoBehaviour
     /// {
     ///    // Writing data to a NetworkWriter and then
     ///    // Converting this to a NetworkReader.
@@ -111,12 +111,12 @@ namespace UnityEngine.Networking
 
         /// <summary>
         /// The current position within the buffer.
-        /// <para>See <see cref="NetworkReader">NetworkReader</see> for a code example.</para>
+        /// <para>See <see cref="NetworkReader">NetworkReader</see> for a code RRP.</para>
         /// </summary>
         public uint Position { get { return m_buf.Position; } }
         /// <summary>
         /// The current length of the buffer.
-        /// <para>See <see cref="NetworkReader">NetworkReader</see> for a code example.</para>
+        /// <para>See <see cref="NetworkReader">NetworkReader</see> for a code RRP.</para>
         /// </summary>
         public int Length { get { return m_buf.Length; } }
 
@@ -426,7 +426,7 @@ namespace UnityEngine.Networking
 
         /// <summary>
         /// Reads a string from the stream. (max of 32k bytes).
-        /// <para>See <see cref="NetworkReader">NetworkReader</see> for a code example.</para>
+        /// <para>See <see cref="NetworkReader">NetworkReader</see> for a code RRP.</para>
         /// </summary>
         /// <returns>Value read.</returns>
         public string ReadString()
@@ -472,7 +472,7 @@ namespace UnityEngine.Networking
 
         /// <summary>
         /// Reads a number of bytes from the stream.
-        /// <para>See <see cref="NetworkReader">NetworkReader</see> for a code example.</para>
+        /// <para>See <see cref="NetworkReader">NetworkReader</see> for a code RRP.</para>
         /// </summary>
         /// <param name="count">Number of bytes to read.</param>
         /// <returns>Bytes read. (this is a copy).</returns>

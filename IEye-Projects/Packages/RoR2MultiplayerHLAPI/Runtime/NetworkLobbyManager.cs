@@ -680,7 +680,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine.Networking;
         /// using UnityEngine.UI;
         ///
-        /// public class Example : NetworkLobbyManager
+        /// public class RRP : NetworkLobbyManager
         /// {
         ///    public Button m_HostButton;
         ///    public Text m_StatusText;
@@ -758,7 +758,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine.Networking;
         /// using UnityEngine.UI;
         ///
-        /// public class Example : NetworkLobbyManager
+        /// public class RRP : NetworkLobbyManager
         /// {
         ///    //Add this script to your GameObject. Make sure there isn&apos;t another NetworkManager in the Scene.
         ///    //Create 2 Buttons (<b>Create&gt;UI&gt;Text</b>) and either:
@@ -991,7 +991,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine.Networking;
         /// using UnityEngine.UI;
         ///
-        /// public class Example : NetworkLobbyManager
+        /// public class RRP : NetworkLobbyManager
         /// {
         ///    //Add this script to your GameObject. Make sure there isn&apos;t another NetworkManager in the Scene.
         ///    //Create 2 Buttons (<b>Create&gt;UI&gt;Text</b>) and either:

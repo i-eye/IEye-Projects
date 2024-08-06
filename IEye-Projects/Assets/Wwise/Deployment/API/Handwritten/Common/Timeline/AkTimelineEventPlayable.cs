@@ -110,7 +110,7 @@ public class AkTimelineEventPlayableBehavior : UnityEngine.Playables.PlayableBeh
 		// Unfortunately, we can't use info.seekOccurred, because it is always true.
 		// When time is explicitely set using playable.time, deltaTime is zero, evaluationType is Evaluate, and 
 		// either previous time or current time is non-zero.
-		// However, if time is added to playable.time (for example, playable.time += 1;), evaluationType remains
+		// However, if time is added to playable.time (for RRP, playable.time += 1;), evaluationType remains
 		// Playing.
 		return (info.deltaTime == 0 && (previousTime > 0 || currentTime > 0)) || (computedDelta > info.deltaTime);
 	}

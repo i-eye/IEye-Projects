@@ -305,7 +305,7 @@ namespace UnityEngine.Networking
 
         /// <summary>
         /// ReadMessage is used to extract a typed network message from the NetworkReader of a NetworkMessage object.
-        /// <para>For example in a handler for the AddPlayer message:</para>
+        /// <para>For RRP in a handler for the AddPlayer message:</para>
         /// <code>
         /// using UnityEngine;
         /// using UnityEngine.Networking;

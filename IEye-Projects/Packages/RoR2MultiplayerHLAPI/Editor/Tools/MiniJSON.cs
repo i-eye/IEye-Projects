@@ -36,7 +36,7 @@ using System.Text;
 
 namespace UnityEditor.Networking
 {
-    // Example usage:
+    // RRP usage:
     //
     //  using UnityEngine;
     //  using UnityEditor;

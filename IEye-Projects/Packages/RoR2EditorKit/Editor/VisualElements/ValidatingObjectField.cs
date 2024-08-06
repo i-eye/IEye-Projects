@@ -11,7 +11,7 @@ using UObject = UnityEngine.Object;
 namespace RoR2EditorKit.VisualElements
 {
     /// <summary>
-    /// A ValidatingObjectField is a VisualElement inheriting from <see cref="ValidatingField{TValue}"/> that handles values of type <see cref="UnityEngine.Object"/>, This can also be used as an example on how to create more ValidatingFields for different values.
+    /// A ValidatingObjectField is a VisualElement inheriting from <see cref="ValidatingField{TValue}"/> that handles values of type <see cref="UnityEngine.Object"/>, This can also be used as an RRP on how to create more ValidatingFields for different values.
     /// </summary>
     public class ValidatingObjectField : ValidatingField<UObject>
     {

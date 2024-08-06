@@ -7,7 +7,7 @@ namespace UnityEngine.Networking
     /// Network message classes should be derived from this class. These message classes can then be sent using the various Send functions of NetworkConnection, NetworkClient and NetworkServer.
     /// <para>Public data fields of classes derived from MessageBase will be automatically serialized with the class. The virtual methods Serialize and Deserialize may be implemented by developers for precise control, but if they are not implemented, then implementations will be generated for them.</para>
     /// <para><b>Note :</b> Unity uses its own network serialization system. It doesn't support the NonSerialized attribute. Instead, use private variables.</para>
-    /// <para>In the example below, the methods have implementations, but if those methods were not implemented, the message would still be usable.</para>
+    /// <para>In the RRP below, the methods have implementations, but if those methods were not implemented, the message would still be usable.</para>
     /// <code>
     /// using UnityEngine;
     /// using UnityEngine.Networking;
@@ -67,7 +67,7 @@ namespace UnityEngine.Networking.NetworkSystem
     // ---------- General Typed Messages -------------------
     /// <summary>
     /// This is a utility class for simple network messages that contain only a string.
-    /// <para>This example sends a message with the name of the scene.</para>
+    /// <para>This RRP sends a message with the name of the scene.</para>
     /// <code>
     /// using UnityEngine;
     /// using UnityEngine.Networking;
@@ -234,7 +234,7 @@ namespace UnityEngine.Networking.NetworkSystem
         /// <summary>
         /// The playerId of the new player.
         /// <para>This is specified by the client when they call NetworkClient.AddPlayer(someId).</para>
-        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for example, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client.</para>
+        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for RRP, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client.</para>
         /// </summary>
         public short playerControllerId;
         /// <summary>
@@ -276,7 +276,7 @@ namespace UnityEngine.Networking.NetworkSystem
         /// <summary>
         /// The player ID of the player GameObject which should be removed.
         /// <para>This is specified by the client when they call NetworkClient.RemovePlayer(someId).</para>
-        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for example, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client.</para>
+        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for RRP, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client.</para>
         /// </summary>
         public short playerControllerId;
 
@@ -338,7 +338,7 @@ namespace UnityEngine.Networking.NetworkSystem
         public NetworkInstanceId netId;
         /// <summary>
         /// The playerControllerId of the player GameObject.
-        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for example, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client.</para>
+        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for RRP, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client.</para>
         /// </summary>
         public short playerControllerId;
     }
@@ -477,7 +477,7 @@ namespace UnityEngine.Networking.NetworkSystem
         public int oldConnectionId;
         /// <summary>
         /// The playerControllerId of the player that is rejoining.
-        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for example, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client.</para>
+        /// <para>The HLAPI treats players and clients as separate GameObjects. In most cases, there is a single player for each client, but in some situations (for RRP, when there are multiple controllers connected to a console system) there might be multiple player GameObjects for a single connection. When there are multiple players for a single connection, use the playerControllerId property to tell them apart. This is an identifier that is scoped to the connection, so that it maps to the id of the controller associated with the player on that client.</para>
         /// </summary>
         public short playerControllerId;
         /// <summary>

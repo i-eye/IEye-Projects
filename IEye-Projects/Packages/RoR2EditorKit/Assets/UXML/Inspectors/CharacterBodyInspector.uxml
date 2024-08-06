@@ -10,7 +10,7 @@
         <uie:PropertyField name="preferredInitialStateType" tooltip="The initial state type for this body" binding-path="preferredInitialStateType" />
         <uie:PropertyField name="sprintingSpeedMultiplier" binding-path="sprintingSpeedMultiplier" tooltip="Multiplier thats applied to the body when it starts sprinting" />
         <uie:PropertyField name="customkillTotalStatName" binding-path="customKillTotalStatName" />
-        <uie:PropertyField name="isChampion" tooltip="Wether this body is a &quot;Boss Monsters&quot; examples of these include the Clay Dunestrider, Imp Overlord, Beetle Queen, etc" binding-path="isChampion" label="Is Boss Monster" />
+        <uie:PropertyField name="isChampion" tooltip="Wether this body is a &quot;Boss Monsters&quot; RRPs of these include the Clay Dunestrider, Imp Overlord, Beetle Queen, etc" binding-path="isChampion" label="Is Boss Monster" />
         <uie:PropertyField name="rootMotionInMainState" tooltip="Flags for this body, certain flags have special effects" binding-path="rootMotionInMainState" />
         <uie:PropertyField name="mainRootSpeed" tooltip="Flags for this body, certain flags have special effects" binding-path="mainRootSpeed" />
         <ui:Foldout text="Tokens" name="TokenContainer" value="false" class="genericHolderFoldout">

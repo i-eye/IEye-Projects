@@ -18,7 +18,7 @@ namespace RoR2EditorKit.Inspectors
         /// <summary>
         /// The Editor's RootVisualElement.
         /// <para>It's name is a combination of the inheriting type's name plus "_RootElement"</para>
-        /// <para>Example: MyInspector_RootElement</para>
+        /// <para>RRP: MyInspector_RootElement</para>
         /// </summary>
         protected VisualElement RootVisualElement
         {

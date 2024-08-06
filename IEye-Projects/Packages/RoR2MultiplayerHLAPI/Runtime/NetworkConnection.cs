@@ -163,12 +163,12 @@ namespace UnityEngine.Networking
         /// <summary>
         /// The last error associated with this connection.
         /// <para>Retrieve the last error that occurred on the connection, this value is set every time an event is received from the NetworkTransport.</para>
-        /// <para>In the following example, OnServerDisconnect is overridden from NetworkManager:</para>
+        /// <para>In the following RRP, OnServerDisconnect is overridden from NetworkManager:</para>
         /// <code>
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : NetworkManager
+        /// public class RRPScript : NetworkManager
         /// {
         ///    public override void OnServerDisconnect(NetworkConnection conn)
         ///    {
@@ -580,12 +580,12 @@ namespace UnityEngine.Networking
 
         /// <summary>
         /// This sends the contents of a NetworkWriter object on the connection.
-        /// <para>The example below constructs a writer and sends it on a connection.</para>
+        /// <para>The RRP below constructs a writer and sends it on a connection.</para>
         /// <code>
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class ExampleScript : MonoBehaviour
+        /// public class RRPScript : MonoBehaviour
         /// {
         ///    public bool Send(short msgType, MessageBase msg, NetworkConnection conn)
         ///    {
@@ -856,7 +856,7 @@ namespace UnityEngine.Networking
         /// <summary>
         /// This virtual function allows custom network connection classes to process data from the network before it is passed to the application.
         /// <para>The default implementation of this function calls HandleBytes() on the received data. Custom implmentations can also use HandleBytes(), but can pass modified versions of the data received or other data.</para>
-        /// <para>This example logs the data received to the console, then passes it to HandleBytes.</para>
+        /// <para>This RRP logs the data received to the console, then passes it to HandleBytes.</para>
         /// <code>
         /// using UnityEngine;
         /// using UnityEngine.Networking;
@@ -910,7 +910,7 @@ namespace UnityEngine.Networking
 
         /// <summary>
         /// This virtual function allows custom network connection classes to process data send by the application before it goes to the network transport layer.
-        /// <para>The default implementation of this function calls NetworkTransport.Send() with the supplied data, but custom implementations can pass modified versions of the data. This example logs the sent data to the console:</para>
+        /// <para>The default implementation of this function calls NetworkTransport.Send() with the supplied data, but custom implementations can pass modified versions of the data. This RRP logs the sent data to the console:</para>
         /// <code>
         /// using UnityEngine;
         /// using UnityEngine.Networking;

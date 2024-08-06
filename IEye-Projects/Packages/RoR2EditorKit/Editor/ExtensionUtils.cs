@@ -30,7 +30,7 @@ namespace RoR2EditorKit
         #region KeyValuePair Extensions
         /// <summary>
         /// Extension to allow tuple style deconstruction of keys and values when enumerating a dictionary.
-        /// Example: foreach(var (key, value) in myDictionary)
+        /// RRP: foreach(var (key, value) in myDictionary)
         /// </summary>
         /// <typeparam name="TKey"></typeparam>
         /// <typeparam name="TValue"></typeparam>

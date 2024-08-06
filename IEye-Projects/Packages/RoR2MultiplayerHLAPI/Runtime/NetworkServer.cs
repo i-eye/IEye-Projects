@@ -164,7 +164,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class Example : MonoBehaviour
+        /// public class RRP : MonoBehaviour
         /// {
         ///    void StartServer()
         ///    {
@@ -192,7 +192,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class Example : MonoBehaviour
+        /// public class RRP : MonoBehaviour
         /// {
         ///    void StartServer()
         ///    {
@@ -978,7 +978,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class Example : MonoBehaviour
+        /// public class RRP : MonoBehaviour
         /// {
         ///    enum GameState
         ///    {
@@ -1359,7 +1359,7 @@ namespace UnityEngine.Networking
         ///    public string m_Comment;
         /// }
         ///
-        /// public class Example : NetworkManager
+        /// public class RRP : NetworkManager
         /// {
         ///    RegisterHostMessage m_Message;
         ///    //This is the Message Type you want to send to the Client. User messages must be above the Highest Message Type.
@@ -2108,7 +2108,7 @@ namespace UnityEngine.Networking
         /// using UnityEngine;
         /// using UnityEngine.Networking;
         ///
-        /// public class Example : NetworkBehaviour
+        /// public class RRP : NetworkBehaviour
         /// {
         ///    //Assign the prefab in the Inspector
         ///    public GameObject m_MyGameObject;

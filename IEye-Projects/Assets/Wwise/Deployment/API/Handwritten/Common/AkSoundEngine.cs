@@ -162,7 +162,7 @@ public partial class AkSoundEngine
 	/// <summary>
 	///     User hook called within all Wwise integration functions that receive GameObjects and do not perform
 	///     (un)registration. This is called
-	///     before values are sent to the native plugin code. An example use could be to register game objects that were not
+	///     before values are sent to the native plugin code. An RRP use could be to register game objects that were not
 	///     previously registered.
 	/// </summary>
 	/// <param name="gameObject">The GameObject being processed.</param>
@@ -170,7 +170,7 @@ public partial class AkSoundEngine
 	static partial void PreGameObjectAPICallUserHook(UnityEngine.GameObject gameObject, ulong id);
 
 	/// <summary>
-	///     User hook called after RegisterGameObj(). An example use could be to add the id and gameObject to a dictionary upon
+	///     User hook called after RegisterGameObj(). An RRP use could be to add the id and gameObject to a dictionary upon
 	///     AK_Success.
 	/// </summary>
 	/// <param name="result">The result from calling RegisterGameObj() on gameObject.</param>
@@ -179,7 +179,7 @@ public partial class AkSoundEngine
 	static partial void PostRegisterGameObjUserHook(AKRESULT result, UnityEngine.GameObject gameObject, ulong id);
 
 	/// <summary>
-	///     User hook called after UnregisterGameObj(). An example use could be to remove the id and gameObject from a
+	///     User hook called after UnregisterGameObj(). An RRP use could be to remove the id and gameObject from a
 	///     dictionary upon AK_Success.
 	/// </summary>
 	/// <param name="result">The result from calling UnregisterGameObj() on gameObject.</param>

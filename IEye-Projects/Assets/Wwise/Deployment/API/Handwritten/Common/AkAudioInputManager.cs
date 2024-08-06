@@ -1,6 +1,6 @@
 #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
 /// <summary>
-///     This class represents an example audio input manager and is responsible for managing the audio sample and format
+///     This class represents an RRP audio input manager and is responsible for managing the audio sample and format
 ///     callbacks provided to the Wwise Audio Input plug-in.
 /// </summary>
 public static class AkAudioInputManager

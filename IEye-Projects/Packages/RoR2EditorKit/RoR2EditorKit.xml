@@ -289,21 +289,21 @@
         <member name="M:RoR2EditorKit.Data.RoR2EditorKitSettings.GetPrefixUppercase">
             <summary>
             Returns the token prefix with all Chars uppercase.
-            <para>Example: "myToken" => "MYTOKEN"</para>
+            <para>RRP: "myToken" => "MYTOKEN"</para>
             </summary>
             <returns>The token prefix on all uppercase</returns>
         </member>
         <member name="M:RoR2EditorKit.Data.RoR2EditorKitSettings.GetPrefixLowercase">
             <summary>
             Returns the token prefix with all Chars lowercase
-            <para>Example: "MyToken" => "mytoken"</para>
+            <para>RRP: "MyToken" => "mytoken"</para>
             </summary>
             <returns></returns>
         </member>
         <member name="M:RoR2EditorKit.Data.RoR2EditorKitSettings.GetPrefix1stUpperRestLower">
             <summary>
             Returns the token prefix with the first char Uppercase and the rest lowerCase
-            <para>Example: "MyToken" => "Mytoken"</para>
+            <para>RRP: "MyToken" => "Mytoken"</para>
             </summary>
             <returns></returns>
         </member>
@@ -349,7 +349,7 @@
         <member name="M:RoR2EditorKit.ExtensionUtils.Deconstruct``2(System.Collections.Generic.KeyValuePair{``0,``1},``0@,``1@)">
             <summary>
             Extension to allow tuple style deconstruction of keys and values when enumerating a dictionary.
-            Example: foreach(var (key, value) in myDictionary)
+            RRP: foreach(var (key, value) in myDictionary)
             </summary>
             <typeparam name="TKey"></typeparam>
             <typeparam name="TValue"></typeparam>
@@ -761,7 +761,7 @@
             <summary>
             The Editor's RootVisualElement.
             <para>It's name is a combination of the inheriting type's name plus "_RootElement"</para>
-            <para>Example: MyInspector_RootElement</para>
+            <para>RRP: MyInspector_RootElement</para>
             </summary>
         </member>
         <member name="P:RoR2EditorKit.Inspectors.IMGUIToVisualElementInspector`1.TargetType">
@@ -1524,7 +1524,7 @@
             A ValidatingField is a custom VisualElement that works as a replacement for the deprecated <see cref="T:RoR2EditorKit.PropertyValidator`1"/>
             <para>Just like the original PropertyValidator, the ValidatingField element is for creating validation methods for SerializedProperties of an object to ensure these properties are not in what the creator would consider an "Invalid State"</para>
             <para>If you want to use a SerializedProperty in the ValidatingField, it is extremely recommended to use <see cref="T:RoR2EditorKit.VisualElements.ValidatingPropertyField"/></para>
-            <para>Due to it's abstract nature, to create new types of ValidatingField, you need to inherit from this class, an example on how to do this can be found in <see cref="T:RoR2EditorKit.VisualElements.ValidatingObjectField"/></para>
+            <para>Due to it's abstract nature, to create new types of ValidatingField, you need to inherit from this class, an RRP on how to do this can be found in <see cref="T:RoR2EditorKit.VisualElements.ValidatingObjectField"/></para>
             </summary>
             <typeparam name="TValue">The type that's used for the internal change event, such as UnityEngine.Object or int</typeparam>
         </member>
@@ -1593,7 +1593,7 @@
         </member>
         <member name="T:RoR2EditorKit.VisualElements.ValidatingObjectField">
             <summary>
-            A ValidatingObjectField is a VisualElement inheriting from <see cref="T:RoR2EditorKit.VisualElements.ValidatingField`1"/> that handles values of type <see cref="T:UnityEngine.Object"/>, This can also be used as an example on how to create more ValidatingFields for different values.
+            A ValidatingObjectField is a VisualElement inheriting from <see cref="T:RoR2EditorKit.VisualElements.ValidatingField`1"/> that handles values of type <see cref="T:UnityEngine.Object"/>, This can also be used as an RRP on how to create more ValidatingFields for different values.
             </summary>
         </member>
         <member name="P:RoR2EditorKit.VisualElements.ValidatingObjectField.allowSceneObjects">
