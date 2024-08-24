@@ -11,12 +11,12 @@ using UnityEngine;
 using RoR2.ContentManagement;
 using IEye.RRP;
 
-namespace ExampleMod
+namespace IEye.RRP
 {
     /// <summary>
     /// <inheritdoc cref="IMonsterContentPiece"/>
     /// </summary>
-    public abstract class ExampleModMonster : IMonsterContentPiece, IContentPackModifier
+    public abstract class RRPMonster : IMonsterContentPiece, IContentPackModifier
     {
         public NullableRef<MonsterCardProvider> CardProvider { get; protected set; }
         public NullableRef<DirectorAPI.DirectorCardHolder> DissonanceCard { get; protected set; }

@@ -19,10 +19,10 @@ namespace IEye.RRP
 
         public void Update()
         {
-            RRPMain.logger.LogMessage("aimYawCycle is " + animator.GetFloat("aimYawCycle"));
-            RRPMain.logger.LogMessage("aimPitchCycle is " + animator.GetFloat("aimPitchCycle"));
-            RRPMain.logger.LogMessage("aimYawCycle State is " + animator.GetCurrentAnimatorStateInfo(yawIndex).shortNameHash);
-            RRPMain.logger.LogMessage("real aimYawCycle is " + Animator.StringToHash("YawControl"));
+            RRPLog.Message("aimYawCycle is " + animator.GetFloat("aimYawCycle"));
+            RRPLog.Message("aimPitchCycle is " + animator.GetFloat("aimPitchCycle"));
+            RRPLog.Message("aimYawCycle State is " + animator.GetCurrentAnimatorStateInfo(yawIndex).shortNameHash);
+            RRPLog.Message("real aimYawCycle is " + Animator.StringToHash("YawControl"));
         }
     }
 }

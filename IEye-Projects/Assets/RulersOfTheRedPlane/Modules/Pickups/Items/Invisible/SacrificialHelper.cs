@@ -169,7 +169,7 @@ namespace IEye.RRP.Items
             {
                 
                 int numSacrifice = calcSacrifices();
-                RRPMain.logger.LogMessage("Starting Sacrifice, int = "+num+" and kills needed = "+numSacrifice);
+                RRPLog.Message("Starting Sacrifice, int = "+num+" and kills needed = "+numSacrifice);
                 switch (num){
                     case 1:
                         

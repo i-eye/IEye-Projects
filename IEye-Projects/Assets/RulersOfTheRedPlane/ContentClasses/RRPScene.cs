@@ -6,9 +6,9 @@ using RoR2.ContentManagement;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
-namespace ExampleMod
+namespace IEye.RRP
 {
-    public abstract class ExampleModScene : ISceneContentPiece, IContentPackModifier
+    public abstract class RRPScene : ISceneContentPiece, IContentPackModifier
     {
         public SceneAssetCollection AssetCollection { get; private set; }
         public abstract void Initialize();

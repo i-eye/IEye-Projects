@@ -16,7 +16,7 @@ namespace IEye.RRP
     /// <summary>
     /// <inheritdoc cref="IItemTierContentPiece"/>
     /// </summary>
-    public abstract class ExampleModItemTier : IItemTierContentPiece, IContentPackModifier
+    public abstract class RRPItemTier : IItemTierContentPiece, IContentPackModifier
     {
         public ItemTierAssetCollection AssetCollection { get; private set; }
         public NullableRef<SerializableColorCatalogEntry> ColorIndex { get; protected set; }

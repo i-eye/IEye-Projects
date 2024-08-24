@@ -15,7 +15,7 @@ namespace IEye.RRP
     /// <summary>
     /// <inheritdoc cref="IArtifactContentPiece"/>
     /// </summary>
-    public abstract class ExampleModArtifact : IArtifactContentPiece, IContentPackModifier
+    public abstract class RRPArtifact : IArtifactContentPiece, IContentPackModifier
     {
         /// <summary>
         /// The ArtifactAssetCollection for this Artifact. Populated when the Artifact gets it's assets loaded, can be null.

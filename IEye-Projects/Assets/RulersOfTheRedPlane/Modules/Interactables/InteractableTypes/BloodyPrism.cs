@@ -1,6 +1,4 @@
 ﻿using RoR2;
-using Moonstorm;
-using Moonstorm.AddressableAssets;
 using R2API;
 using IEye.RRP;
 using System.Collections;
@@ -14,30 +12,31 @@ using System.Linq;
 using Mono.Cecil;
 using RiskOfOptions;
 using BepInEx.Configuration;
-using Moonstorm.Config;
+using MSU;
 using RoR2.Hologram;
 using EntityStates.Headstompers;
 using EntityStates.BeetleQueenMonster;
 using UnityEngine.AddressableAssets;
+using RoR2.ContentManagement;
 
 namespace IEye.RRP.Interactables
 {
     //[DisabledContent]
     
-    public class BloodyPrism : InteractableBase
+    public class BloodyPrism : RRPInteractable
     {
-        public override GameObject Interactable { get; } = RRPAssets.LoadAsset<GameObject>("BloodyPrismGameObject", RRPBundle.Interactables);
-
-        public override List<MSInteractableDirectorCard> InteractableDirectorCards { get; } = new List<MSInteractableDirectorCard>();
+        public override RRPAssetRequest<InteractableAssetCollection> AssetRequest => RRPAssets.LoadAssetAsync<InteractableAssetCollection>("acBloodyPrism", RRPBundle.Interactables);
 
         /*
         [RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Credits for the Imp Stuff interactable catagory(default 3.2)")]
         public static ConfigurableFloat impStuffCredits = new ConfigurableFloat(3.2f);
         */
 
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return true;
+        }
 
-        [RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Credits multiplied by difficulty for prism combat director on use(default 100)")]
-        public static int creditsCoef = 100;
 
         //[RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Chance for for spawning(1.9 is default, 3 is void catagory(Probably requires restart)(may not work)")]
         //public static float catagoryWeight = 1.9f;
@@ -52,9 +51,11 @@ namespace IEye.RRP.Interactables
         */
         public override void Initialize()
         {
-            InteractableDirectorCards.Add(RRPAssets.LoadAsset<MSInteractableDirectorCard>("iscBloodyPrism", RRPBundle.Interactables));
             //impStuffCredits.SetUseStepSlider(true);
             //DefNotSS2Log.Message("InitializePrism");
+
+            GameObject Interactable = AssetCollection.FindAsset<GameObject>("BloodyPrismGameObject");
+
             var interactableToken = Interactable.AddComponent<PrismInteractableToken>();
             interactableToken.combatDirector = Interactable.AddComponent<CombatDirector>();
             interactableToken.combatSquad = Interactable.AddComponent<CombatSquad>();
@@ -162,10 +163,10 @@ namespace IEye.RRP.Interactables
                 }
                 dropTable.Regenerate(Run.instance);
 
-                RRPMain.logger.LogMessage("About to generate pickups");
+                RRPLog.Message("About to generate pickups");
                 behavior.GenerateNewPickupServer();
                 behavior.UpdatePickupDisplayAndAnimations();
-                RRPMain.logger.LogMessage("PickupIndex is:" + behavior.pickupIndex);
+                RRPLog.Message("PickupIndex is:" + behavior.pickupIndex);
 
                 
                 
@@ -188,10 +189,10 @@ namespace IEye.RRP.Interactables
                     
                     if (destroyVFX)
                     {
-                        RRPMain.logger.LogMessage("Bloody VFX about to instantiate");
+                        RRPLog.Message("Bloody VFX about to instantiate");
                         EffectManager.SimpleEffect(destroyVFX, dropTransform.position, dropTransform.rotation, true);
 
-                        RRPMain.logger.LogMessage("Bloody VFX instantiated");
+                        RRPLog.Message("Bloody VFX instantiated");
                     }
                     
                     Destroy(this.gameObject.transform.GetChild(0).gameObject);
@@ -209,7 +210,7 @@ namespace IEye.RRP.Interactables
                 if (!interactor) { return; }
                 Interaction.SetAvailable(false);
 
-                float monsterCredit = (float)(Run.instance.difficultyCoefficient * creditsCoef);
+                float monsterCredit = (float)(Run.instance.difficultyCoefficient * 50);
 
                 if(NetworkServer.active)
                 {
@@ -217,7 +218,7 @@ namespace IEye.RRP.Interactables
                     float rand = UnityEngine.Random.Range(0f, 1f);
                     if (rand > .5f)
                     {
-                        RRPMain.logger.LogMessage("Imp Selected");
+                        RRPLog.Message("Imp Selected");
                         card = impCard;
                     } 
                     if (monsterCredit > 800 && rand > .77f)

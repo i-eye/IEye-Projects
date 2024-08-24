@@ -18,13 +18,13 @@ namespace IEye.RRP.Modules
         {
             Instance = this;
             base.Initialize();
-            RRPMain.logger.LogInfo($"Initializing Items...");
+            RRPLog.Info($"Initializing Items...");
             GetItemBases();
         }
 
         protected override IEnumerable<ItemBase> GetItemBases()
         {
-            RRPMain.logger.LogInfo("Getting Item Bases");
+            RRPLog.Info("Getting Item Bases");
             base.GetItemBases()
                 .ToList()
                 .ForEach(item => AddItem(item));

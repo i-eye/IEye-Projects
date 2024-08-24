@@ -18,7 +18,7 @@ namespace IEye.RRP
     /// <summary>
     /// <inheritdoc cref="IInteractableContentPiece"/>
     /// </summary>
-    public abstract class ExampleModInteractable : IInteractableContentPiece, IContentPackModifier
+    public abstract class RRPInteractable : IInteractableContentPiece, IContentPackModifier
     {
         public InteractableAssetCollection AssetCollection { get; private set; }
         public InteractableCardProvider CardProvider { get; protected set; }

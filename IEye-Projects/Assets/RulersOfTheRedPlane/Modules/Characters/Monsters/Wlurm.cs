@@ -3,29 +3,25 @@ using System;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using static RoR2.ExplicitPickupDropTable;
-using Moonstorm;
+using MSU;
+using RoR2.ContentManagement;
 
 namespace IEye.RRP.Monsters
 {
     //[DisabledContent]
-    public sealed class LampBoss : MonsterBase
+    public sealed class Wlurm : RRPMonster
     {
-        public override GameObject BodyPrefab { get; } = RRPAssets.LoadAsset<GameObject>("WlurmBossBody", RRPBundle.Indev);
-        public override GameObject MasterPrefab { get; } = RRPAssets.LoadAsset<GameObject>("WlurmMaster", RRPBundle.Indev);
-        //public override MSMonsterDirectorCardHolder directorCards { get; set; } = Assets.Instance.MainAssetBundle.LoadAsset<MSMonsterDirectorCardHolder>("WayfarerCardHolder");
-        //public override MSMonsterDirectorCard MonsterDirectorCard { get; } = SS2Assets.LoadAsset<MSMonsterDirectorCard>("msmdcLampBoss", SS2Bundle.Indev);
+        public override RRPAssetRequest<MonsterAssetCollection> AssetRequest => RRPAssets.LoadAssetAsync<MonsterAssetCollection>("acWlurm", RRPBundle.Monsters);
 
-        private MSMonsterDirectorCard defaultCard = RRPAssets.LoadAsset<MSMonsterDirectorCard>("msmdcWlurm", RRPBundle.Indev);
-
-        internal static GameObject wayfarerBuffWardPrefab;
-
+        public static GameObject _masterPrefab;
         public override void Initialize()
         {
-            base.Initialize();
-            MonsterDirectorCards.Add(defaultCard);
-
-
+            _masterPrefab = AssetCollection.FindAsset<GameObject>("WlurmMaster");
             
+        }
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return true;
         }
     }
 }

@@ -81,7 +81,7 @@ namespace IEye.RRP.Items
                             //component.inventory.GiveItem(RoR2Content.Items.BoostHp, 10);
                             component.inventory.GiveItem(RoR2Content.Items.HealthDecay, 17);
                             component.inventory.GiveItem(RRPContent.Items.Kamikaze, 1);
-                            RRPMain.logger.LogDebug("Index is" + RRPContent.Items.Kamikaze.itemIndex);
+                            RRPLog.Debug("Index is" + RRPContent.Items.Kamikaze.itemIndex);
                             Deployable component2 = component.GetComponent<Deployable>();
                             if ((bool)component2)
                             {

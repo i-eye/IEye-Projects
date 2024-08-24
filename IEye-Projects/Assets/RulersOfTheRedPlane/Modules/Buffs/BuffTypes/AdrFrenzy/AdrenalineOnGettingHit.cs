@@ -1,15 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Moonstorm;
 using RoR2;
 using R2API;
-using Moonstorm.Components;
 using IEye.RRP.Items;
 
 namespace IEye.RRP.Buffs
 {
-    public class AdrenalineOnGettingHit : BuffBase
+    public class AdrenalineOnGettingHit :  
     {
         public override BuffDef BuffDef { get; } = RRPAssets.LoadAsset<BuffDef>("AdrenalineOnGettinghit", RRPBundle.Items);
 

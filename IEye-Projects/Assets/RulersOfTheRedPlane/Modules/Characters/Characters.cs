@@ -1,4 +1,5 @@
-﻿using Moonstorm.Config;
+﻿/*
+using Moonstorm.Config;
 using R2API.ScriptableObjects;
 using RiskOfOptions.OptionConfigs;
 using System.Collections.Generic;
@@ -37,12 +38,12 @@ namespace IEye.RRP.Modules
                 restartRequired = true,
             };
         }).DoConfigure();
-        */
+        
         public override void Initialize()
         {
             Instance = this;
             base.Initialize();
-            RRPMain.logger.LogInfo($"Initializing Bodies.");
+            RRPLog.Info($"Initializing Bodies.");
             GetCharacterBases();
         }
 
@@ -52,7 +53,7 @@ namespace IEye.RRP.Modules
             base.GetCharacterBases()
             .Where(character =>
             {
-                /*
+                
                 if (character is SurvivorBase survivor)
                 {
                     string name = MSUtil.NicifyString(character.BodyPrefab.name);
@@ -79,7 +80,7 @@ namespace IEye.RRP.Modules
                             restartRequired = true
                         };
                     }).DoConfigure();
-                } */
+                } 
                 if (character is MonsterBase monster)
                 {
                     string name = MSUtil.NicifyString(character.BodyPrefab.name);
@@ -110,7 +111,7 @@ namespace IEye.RRP.Modules
                 }
                 else
                 {
-                    RRPMain.logger.LogInfo("Character " + character + " was not a survivor or monster.");
+                    RRPLog.Info("Character " + character + " was not a survivor or monster.");
                     return false;
                 }
             })
@@ -142,3 +143,4 @@ namespace IEye.RRP.Modules
         }
     }
 }
+*/

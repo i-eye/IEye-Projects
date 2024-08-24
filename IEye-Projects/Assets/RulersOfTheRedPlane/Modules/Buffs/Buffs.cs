@@ -14,7 +14,7 @@ namespace IEye.RRP.Modules
         {
             Instance = this;
             base.Initialize();
-            RRPMain.logger.LogInfo($"Initializing Buffs.");
+            RRPLog.Info($"Initializing Buffs.");
             GetBuffBases();
         }
         protected override IEnumerable<BuffBase> GetBuffBases()

@@ -67,7 +67,7 @@ namespace IEye.RRP.Items {
                             duration = report.damageInfo.procCoefficient * duration,
                             damageMultiplier = 1f,
                         };
-                        RRPMain.logger.LogMessage("Before inflict");
+                        RRPLog.Message("Before inflict");
                         DotController.InflictDot(ref dotInfo);
                         //DefNotSS2Log.Message("I hope an enemy nearby has an effect lol");
 

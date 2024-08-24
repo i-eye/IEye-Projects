@@ -17,7 +17,7 @@ namespace IEye.RRP.Modules
         {
             Instance = this;
             base.Initialize();
-            RRPMain.logger.LogInfo($"Initializing Stages.");
+            RRPLog.Info($"Initializing Stages.");
             GetSceneBases();
         }
         public override IEnumerable<SceneBase> GetSceneBases()
