@@ -1,35 +1,47 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Moonstorm;
+using MSU;
+using MSU.Config;
 using RoR2;
 using RoR2.Items;
+using RoR2.ContentManagement;
 
 namespace IEye.RRP.Items
 {
-    public class DoubleSidedSword : ItemBase
+    public class DoubleSidedSword : RRPItem
     {
 
         private const string token = "RRP_ITEM_DOUBLESWORD_DESC";
-        public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("DoubleSidedSword", RRPBundle.Items);
+        //public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("DoubleSidedSword", RRPBundle.Items);
 
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base radius for bleed effect(default 50m).")]
-        [TokenModifier(token, StatTypes.Default, 0)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base radius for bleed effect(default 50m).")]
+        [FormatToken(token, opType:default, 0)]
         public static int radiusBase = 50;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Damage Coefficient for bleed damage(default 2).")]
-        [TokenModifier(token, StatTypes.MultiplyByN, 1, "240")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Damage Coefficient for bleed damage(default 2).")]
+        [FormatToken(token, opType:FormatTokenAttribute.OperationTypeEnum.MultiplyByN, 1, 240)]
         public static float damage = 2f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of bleed(default 3).")]
-        [TokenModifier(token, StatTypes.Default, 2)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Duration of bleed(default 3).")]
+        [FormatToken(token, opType:default, 2)]
         public static float duration = 3f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percentage of base damage done to the player(default 20%).")]
-        [TokenModifier(token, StatTypes.Default, 3)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Percentage of base damage done to the player(default 20%).")]
+        [FormatToken(token, opType:default, 3)]
         public static float playerCoef = (.2f * 100);
 
-       
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acDoubleSword", RRPBundle.Items);
+
+        public override void Initialize()
+        {
+            
+        }
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return true;
+        }
 
         public sealed class Behavior : BaseItemBodyBehavior, IOnTakeDamageServerReceiver
         {

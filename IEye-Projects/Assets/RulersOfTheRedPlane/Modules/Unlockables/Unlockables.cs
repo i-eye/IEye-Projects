@@ -5,8 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UObject = UnityEngine.Object;
-using Moonstorm;
+using MSU;
 
+/*
 namespace IEye.RRP.Modules
 {
     public sealed class Unlockables : UnlockablesModuleBase
@@ -32,7 +33,7 @@ namespace IEye.RRP.Modules
                 RemoveAllNonSkinUnlocks();
                 allUnlocks = allUnlocks.Where(unlock => unlock.UnlockableDef.cachedName.Contains("skin"));
             }
-            */
+            */ /*
             allUnlocks.ToList().ForEach(unlock => AddUnlockable(unlock));
 
             return null;
@@ -75,3 +76,4 @@ namespace IEye.RRP.Modules
         }
     }
 }
+*/

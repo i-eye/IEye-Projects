@@ -1,4 +1,5 @@
-﻿using Moonstorm;
+﻿using MSU;
+using MSU.Config;
 using RoR2;
 using RoR2.Items;
 using R2API;
@@ -6,34 +7,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using R2API.Networking;
+using RoR2.ContentManagement;
 
 namespace IEye.RRP.Items
 {
-    public class FocusedHemorrhage : ItemBase
+    public class FocusedHemorrhage : RRPItem
     {
         public const string token = "RRP_ITEM_FHEMORRHAGE_DESC";
-        public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("FocusedHemorrhage", RRPBundle.Items);
+        //public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("FocusedHemorrhage", RRPBundle.Items);
 
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acFocusHemorrhage", RRPBundle.Items);
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Chance on hit to apply Hemorrhage(default 10%).")]
-        [TokenModifier(token, StatTypes.Default, 0)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Chance on hit to apply Hemorrhage(default 10%).")]
+        [FormatToken(token, opType:default, 0)]
         public static float percentChance = 10f;
 
-        /*[RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Should there be reduced damage on the first stack?(default true).")]
+        /*[RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Should there be reduced damage on the first stack?(default true).")]
         public static bool damageReduceOnOneStack = true;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percent of damage on the first stack(if enabled)(default 40%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Percent of damage on the first stack(if enabled)(default 40%).")]
         public static float percentDamageReduceOnOneStack = 40f;
         */
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Added to damage multiplier(default 35%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Added to damage multiplier(default 35%).")]
         
         public static float percentDamageOver = 35f;
 
-        [TokenModifier(token, StatTypes.Default, 1)]
+        [FormatToken(token, opType:default, 1)]
         public static float percentDamage = 100f + percentDamageOver;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of Hemorrhage(default 15s).")]
-        [TokenModifier(token, StatTypes.Default, 2)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Duration of Hemorrhage(default 15s).")]
+        [FormatToken(token, opType:default, 2)]
         public static float duration = 15f;
 
 
@@ -84,8 +87,14 @@ namespace IEye.RRP.Items
             
         }
 
+        public override void Initialize()
+        {
 
+        }
 
-
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return true;
+        }
     }
 }

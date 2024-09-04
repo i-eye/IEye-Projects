@@ -1,26 +1,31 @@
 ﻿using UnityEngine;
-using Moonstorm;
+using MSU;
 using RoR2;
 using RoR2.Items;
-using IEye.RRP.Buffs;
+//using IEye.RRP.Buffs;
 using R2API;
+using MSU;
+using MSU.Config;
 using Mono.Cecil;
 using System.Linq;
+using RoR2.ContentManagement;
 
 namespace IEye.RRP.Items
 {
-    [DisabledContent]
+    //[DisabledContent]
     
-    public class InnerPiece : ItemBase
+    public class InnerPiece : RRPItem
     {
         
         public const string token = "RRP_ITEM_INNERPIECE_DESC";
-        public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("InnerPiece", RRPBundle.Items);
+        //public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("InnerPiece", RRPBundle.Items);
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Added speed(default 75%).")]
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acInnerPiece", RRPBundle.Items);
+
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Added speed(default 75%).")]
         public static float speed = 75f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Added sprint speed(default 30%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Added sprint speed(default 30%).")]
         public static float SprintSpeed = 30f;
 
         public sealed class Behavior : BaseItemBodyBehavior, IBodyStatArgModifier
@@ -28,7 +33,7 @@ namespace IEye.RRP.Items
             //[ItemDefAssociation]
             //private static ItemDef GetItemDef() => RRPContent.Items.InnerPiece;
 
-            private bool isGood = true;
+            private bool isGood = true; // beautiful variable name
             int numDebuff;
             public void Update()
             {
@@ -74,6 +79,16 @@ namespace IEye.RRP.Items
                 }
 
             }
+        }
+
+        public override void Initialize()
+        {
+
+        }
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return false;
         }
     }
 }

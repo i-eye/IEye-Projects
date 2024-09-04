@@ -4,7 +4,7 @@ using R2API.ScriptableObjects;
 using RiskOfOptions.OptionConfigs;
 using System.Collections.Generic;
 using System.Linq;
-using Moonstorm;
+using MSU;
 
 namespace IEye.RRP.Modules
 {

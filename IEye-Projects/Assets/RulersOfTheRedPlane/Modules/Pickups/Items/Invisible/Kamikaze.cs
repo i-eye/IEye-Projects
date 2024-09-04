@@ -1,5 +1,6 @@
-﻿using Moonstorm;
+﻿using MSU;
 using RoR2;
+using RoR2.ContentManagement;
 using RoR2.Items;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,14 +9,22 @@ using UnityEngine.AddressableAssets;
 
 namespace IEye.RRP.Items
 {
-    public class Kamikaze : ItemBase
+    public class Kamikaze : RRPItem
     {
-        public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("Kamikaze", RRPBundle.Items);
+        //public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("Kamikaze", RRPBundle.Items);
+
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acKamikaze", RRPBundle.Items);
 
         public override void Initialize()
         {
-            base.Initialize();
+            
         }
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return true;
+        }
+
         public sealed class Behavior : BaseItemBodyBehavior, IOnKilledServerReceiver
         {
             private GameObject explodeOnDeathPrefab = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/ExplodeOnDeath/WilloWispDelay.prefab").WaitForCompletion();

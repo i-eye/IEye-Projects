@@ -1,8 +1,8 @@
 ﻿using R2API.ScriptableObjects;
 using System.Collections.Generic;
 using System.Linq;
-using Moonstorm;
-
+using MSU;
+/*
 namespace IEye.RRP.Modules
 {
     public sealed class Buffs : BuffModuleBase
@@ -26,3 +26,4 @@ namespace IEye.RRP.Modules
         }
     }
 }
+*/

@@ -1,47 +1,62 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Moonstorm;
+using MSU;
+using MSU.Config;
 using RoR2;
 using RoR2.Items;
 using RoR2.Orbs;
-using IEye.RRP.Buffs;
+//using IEye.RRP.Buffs;
 using R2API;
 using Mono.Cecil;
 using System.Linq;
+using RoR2.ContentManagement;
+using static MSU.BaseBuffBehaviour;
 
 namespace IEye.RRP.Items
 {
     //[DisabledContent]
-    public class IntrospectiveInsect : ItemBase
+    public class IntrospectiveInsect : RRPItem
     {
 
         public const string token = "RRP_ITEM_INTROINSECT_DESC";
 
-        //[TokenModifier(token, StatTypes.Default, 0)]
+        //[FormatToken(token, opType:default, 0)]
         //public static float healCoef = 1.5f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the insect posion per stack(default 8s)")]
-        [TokenModifier(token, StatTypes.Default, 0)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Duration of the insect posion per stack(default 8s)")]
+        [FormatToken(token, opType:default, 0)]
         public static int duration = 8;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percentage of attack speed slow(default 65%)")]
-        [TokenModifier(token, StatTypes.Default, 1)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Percentage of attack speed slow(default 65%)")]
+        [FormatToken(token, opType:default, 1)]
         public static float insectAttackSpeed = 65f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percentage of movement speed slow(default 50%)")]
-        [TokenModifier(token, StatTypes.Default, 2)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Percentage of movement speed slow(default 50%)")]
+        [FormatToken(token, opType:default, 2)]
         public static float insectMoveSpeed = 50f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percent life restored on hitting enemies per stack(default 2%)")]
-        [TokenModifier(token, StatTypes.Default, 3)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Percent life restored on hitting enemies per stack(default 2%)")]
+        [FormatToken(token, opType:default, 3)]
         public static float insectHealAmount = 5f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Hits needed to heal(default 4)")]
-        [TokenModifier(token, StatTypes.Default, 4)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Hits needed to heal(default 4)")]
+        [FormatToken(token, opType:default, 4)]
         public static int hitsNeeded = 5;
 
-        public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("IntrospectiveInsect", RRPBundle.Items);
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acIInsect", RRPBundle.Items);
+
+        public override void Initialize()
+        {
+            
+        }
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return true;
+        }
+
+        //public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("IntrospectiveInsect", RRPBundle.Items);
 
         public sealed class Behavior: BaseItemBodyBehavior, IOnTakeDamageServerReceiver, IOnDamageDealtServerReceiver
         {
@@ -127,5 +142,22 @@ namespace IEye.RRP.Items
                 return false;
             }
         }
+        public sealed class BuffBehavior : BaseBuffBehaviour, IBodyStatArgModifier
+        {
+            [BuffDefAssociation]
+            private static BuffDef GetBuffDef() => RRPContent.Buffs.InsectPoison;
+
+            public void ModifyStatArguments(RecalculateStatsAPI.StatHookEventArgs args)
+            {
+                if (HasAnyStacks)
+                {
+                    args.attackSpeedReductionMultAdd += IntrospectiveInsect.insectAttackSpeed / 100;
+                    args.moveSpeedReductionMultAdd += IntrospectiveInsect.insectMoveSpeed / 100;
+                }
+                
+            }
+        }
+
     }
+    
 }

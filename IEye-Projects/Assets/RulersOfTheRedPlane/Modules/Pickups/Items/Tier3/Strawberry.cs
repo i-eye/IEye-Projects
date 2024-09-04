@@ -1,6 +1,7 @@
 ﻿using IL.RoR2.DispatachableEffects;
-using Moonstorm;
+using MSU;
 using RoR2;
+using RoR2.ContentManagement;
 using RoR2.Items;
 using System;
 using System.Collections.Generic;
@@ -12,14 +13,16 @@ using UnityEngine.AddressableAssets;
 
 namespace IEye.RRP.Items
 {
-    public class Strawberry : ItemBase
+    public class Strawberry : RRPItem
     {
         CharacterSpawnCard gupSpawnCard;
         public static CharacterSpawnCard friendlyGupSpawnCard = new CharacterSpawnCard();
-        public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("Strawberry", RRPBundle.Items);
+        //public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("Strawberry", RRPBundle.Items);
+
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acStrawberry", RRPBundle.Items);
+
         public override void Initialize()
         {
-            base.Initialize();
             //ItemDef.requiredExpansion = 
             gupSpawnCard = Addressables.LoadAssetAsync<CharacterSpawnCard>("RoR2/DLC1/Gup/cscGupBody.asset").WaitForCompletion();
             friendlyGupSpawnCard.directorCreditCost = 0;
@@ -33,6 +36,12 @@ namespace IEye.RRP.Items
             
 
         }
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return true;
+        }
+
         public sealed class Behavior : BaseItemBodyBehavior
         {
             [ItemDefAssociation]

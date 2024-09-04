@@ -28,7 +28,7 @@ namespace IEye.RRP.Interactables
         public override RRPAssetRequest<InteractableAssetCollection> AssetRequest => RRPAssets.LoadAssetAsync<InteractableAssetCollection>("acBloodyPrism", RRPBundle.Interactables);
 
         /*
-        [RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Credits for the Imp Stuff interactable catagory(default 3.2)")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDInteractable, ConfigDescOverride = "Credits for the Imp Stuff interactable catagory(default 3.2)")]
         public static ConfigurableFloat impStuffCredits = new ConfigurableFloat(3.2f);
         */
 
@@ -38,15 +38,15 @@ namespace IEye.RRP.Interactables
         }
 
 
-        //[RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Chance for for spawning(1.9 is default, 3 is void catagory(Probably requires restart)(may not work)")]
+        //[RiskOfOptionsConfigureField(RRPConfig.IDInteractable, ConfigDescOverride = "Chance for for spawning(1.9 is default, 3 is void catagory(Probably requires restart)(may not work)")]
         //public static float catagoryWeight = 1.9f;
 
         /*
-        [RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Weight of bloody prism(default 15).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDInteractable, ConfigDescOverride = "Weight of bloody prism(default 15).")]
         public int weight = 15;
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Director cost(default 30).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Director cost(default 30).")]
         public int directorCost = 30;
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Scenes needed to complete before encountering(default 2).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Scenes needed to complete before encountering(default 2).")]
         public int minimumStages = 2;
         */
         public override void Initialize()

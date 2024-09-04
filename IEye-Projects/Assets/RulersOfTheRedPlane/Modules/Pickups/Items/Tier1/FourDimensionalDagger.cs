@@ -1,34 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Moonstorm;
+using MSU;
+using MSU.Config;
 using RoR2;
 using RoR2.Items;
 using R2API;
 using System.Linq;
+using RoR2.ContentManagement;
 
 namespace IEye.RRP.Items {
-    public class FourDimensionalDagger : ItemBase
+    public class FourDimensionalDagger : RRPItem
     {
         
         private const string token = "RRP_ITEM_FOURDIMENSIONALDAGGER_DESC";
-        public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("FourDimensionalDagger", RRPBundle.Items);
+        //public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("FourDimensionalDagger", RRPBundle.Items);
 
-        
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("ac4DDagger", RRPBundle.Items);
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Chance for this item to proc per stack(default 15%).")]
-        [TokenModifier(token, StatTypes.Default, 0)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Chance for this item to proc per stack(default 15%).")]
+        //[FormatToken(token, opType:default, 0)]
         public static float percentChance = 15f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base search radius(default 25m).")]
-        [TokenModifier(token, StatTypes.Default, 1)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base search radius(default 25m).")]
+        //[FormatToken(token, opType:default, 1)]
         public static int radiusBase = 25;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Added search radius per stack past 1(default 5m).")]
-        [TokenModifier(token, StatTypes.Default, 2)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Added search radius per stack past 1(default 5m).")]
+        //[FormatToken(token, opType:default, 2)]
         public static int radiusIncrease = 5;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the bleed in second(default 3s).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Duration of the bleed in second(default 3s).")]
         public static float duration = 3f;
 
 
@@ -132,6 +134,16 @@ namespace IEye.RRP.Items {
             private SphereSearch search;
             private HealthComponent selected;
             public float baseRange = radiusBase;
+        }
+
+        public override void Initialize()
+        {
+            
+        }
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return true;
         }
     }
 }

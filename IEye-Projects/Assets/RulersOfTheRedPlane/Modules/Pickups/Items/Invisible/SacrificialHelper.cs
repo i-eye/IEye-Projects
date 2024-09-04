@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Moonstorm;
+using MSU;
 using RoR2;
 using RoR2.Items;
 using RoR2.UI;
@@ -11,12 +11,13 @@ using System.Runtime.CompilerServices;
 using System;
 using HG.Coroutines;
 using IEye.RRP.ItemTiers;
+using RoR2.ContentManagement;
 
 namespace IEye.RRP.Items
 {
 
     
-    public class SacrificialHelper : ItemBase
+    public class SacrificialHelper : RRPItem
     {
         /*
         private static HUD hudInstance;
@@ -35,7 +36,19 @@ namespace IEye.RRP.Items
         }
         */
 
-        public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("SacrificialHelper", RRPBundle.Items);
+        //public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("SacrificialHelper", RRPBundle.Items);
+
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acHelper", RRPBundle.Items);
+
+        public override void Initialize()
+        {
+            
+        }
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return true;
+        }
 
         public sealed class Behavior: BaseItemBodyBehavior, IOnKilledOtherServerReceiver
         {

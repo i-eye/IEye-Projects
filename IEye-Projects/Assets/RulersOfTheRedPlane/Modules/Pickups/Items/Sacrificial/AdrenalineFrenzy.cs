@@ -1,4 +1,5 @@
-﻿using Moonstorm;
+﻿using MSU;
+using MSU.Config;
 using RoR2;
 using RoR2.Items;
 using R2API;
@@ -6,37 +7,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using R2API.Networking;
+using RoR2.ContentManagement;
+using static MSU.BaseBuffBehaviour;
 
 namespace IEye.RRP.Items
 {
-    public class AdrenalineFrenzy : ItemBase
+    public class AdrenalineFrenzy : RRPItem
     {
         public const string token = "RRP_ITEM_ADRFRENZY_DESC";
-        public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("AdrenalineFrenzy", RRPBundle.Items);
+        //public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("AdrenalineFrenzy", RRPBundle.Items);
 
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acFrenzy", RRPBundle.Items);
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base percentage speed added on kill(default 6%).")]
-        [TokenModifier(token, StatTypes.Default, 0)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base percentage speed added on kill(default 6%).")]
+        [FormatToken(token, opType:default, 0)]
         public static float killSpeed = 6f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base percentage speed added on kill per stack(default 4%).")]
-        [TokenModifier(token, StatTypes.Default, 1)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base percentage speed added on kill per stack(default 4%).")]
+        [FormatToken(token, opType:default, 1)]
         public static float killSpeedStack = 4f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base time for on kill speed boost(default 10s).")]
-        [TokenModifier(token, StatTypes.Default, 2)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base time for on kill speed boost(default 10s).")]
+        [FormatToken(token, opType:default, 2)]
         public static float killSpeedDuration = 10f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base percentage speed added on getting hit(default 12%).")]
-        [TokenModifier(token, StatTypes.Default, 3)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base percentage speed added on getting hit(default 12%).")]
+        [FormatToken(token, opType:default, 3)]
         public static float onHitSpeed = 12f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base percentage speed added on getting hit per stack(default(7%).")]
-        [TokenModifier(token, StatTypes.Default, 4)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base percentage speed added on getting hit per stack(default(7%).")]
+        [FormatToken(token, opType:default, 4)]
         public static float onHitSpeedStack = 7f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base time for on getting hit speed boost(default 8s).")]
-        [TokenModifier(token, StatTypes.Default, 5)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base time for on getting hit speed boost(default 8s).")]
+        [FormatToken(token, opType:default, 5)]
         public static float onHitSpeedDuration = 8f;
 
         public sealed class Behavior : BaseItemBodyBehavior, IOnTakeDamageServerReceiver, IOnKilledOtherServerReceiver
@@ -71,8 +75,46 @@ namespace IEye.RRP.Items
             }
         }
 
+        public sealed class OnKillBehavior : BaseBuffBehaviour, IBodyStatArgModifier
+        {
+            [BuffDefAssociation]
+            private static BuffDef GetBuffDef() => RRPContent.Buffs.AdrenalineOnKill;
 
+            public void ModifyStatArguments(RecalculateStatsAPI.StatHookEventArgs args)
+            {
+                if (HasAnyStacks)
+                {
+                    int stack = CharacterBody.inventory.GetItemCount(RRPContent.Items.AdrenalineFrenzy);
+                    args.sprintSpeedAdd += (killSpeed / 100 + (killSpeedStack / 100 * (stack - 1))) * BuffCount;
+                }
+                
+            }
+        }
 
+        public sealed class OnHitBehavior : BaseBuffBehaviour, IBodyStatArgModifier
+        {
+            [BuffDefAssociation]
+            private static BuffDef GetBuffDef() => RRPContent.Buffs.AdrenalineOnGettingHit;
 
+            public void ModifyStatArguments(RecalculateStatsAPI.StatHookEventArgs args)
+            {
+                if (HasAnyStacks)
+                {
+                    int stack = CharacterBody.inventory.GetItemCount(RRPContent.Items.AdrenalineFrenzy);
+                    args.moveSpeedMultAdd += (onHitSpeed / 100 + (onHitSpeedStack / 100 * (stack - 1))) * BuffCount;
+                }
+                
+            }
+        }
+
+        public override void Initialize()
+        {
+            
+        }
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return true;
+        }
     }
 }

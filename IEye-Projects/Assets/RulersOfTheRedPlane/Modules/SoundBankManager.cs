@@ -10,7 +10,7 @@ namespace IEye.RRP
         {
             get
             {
-                return Path.Combine(RRPAssets.Instance.AssemblyDir, "soundbanks");
+                return Path.Combine(Path.GetDirectoryName(RRPMain.instance.Info.Location), "soundbanks");
             }
         }
 
