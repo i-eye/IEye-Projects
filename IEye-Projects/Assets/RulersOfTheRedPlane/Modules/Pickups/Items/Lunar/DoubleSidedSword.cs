@@ -49,9 +49,9 @@ namespace IEye.RRP.Items
             private static ItemDef GetItemDef() => RRPContent.Items.DoubleSidedSword;
             public void OnTakeDamageServer(DamageReport report)
             {
-                //DefNotSS2Log.Message("dotIndex is: " + report.damageInfo.dotIndex);
-                //DefNotSS2Log.Message("profCoef is: " + report.damageInfo.procCoefficient);
-                //DefNotSS2Log.Message("damgageType is: " + ((int)report.damageInfo.damageType));
+                //DefNotRRPLog.Message("dotIndex is: " + report.damageInfo.dotIndex);
+                //DefNotRRPLog.Message("profCoef is: " + report.damageInfo.procCoefficient);
+                //DefNotRRPLog.Message("damgageType is: " + ((int)report.damageInfo.damageType));
                 if ((report.damageInfo.procCoefficient > 0) && (report.damageInfo.dotIndex.Equals(DotController.DotIndex.None)) && ((int)report.damageInfo.damageType) != 66)
                 {
                     var victim = report.victim;
@@ -123,7 +123,7 @@ namespace IEye.RRP.Items
                 }
                 if (healthComponents.Length == 0 || healthComponents == null)
                 {
-                    //DefNotSS2Log.Message("Search is null");
+                    //DefNotRRPLog.Message("Search is null");
                     return null;
                 }
                 return healthComponents;

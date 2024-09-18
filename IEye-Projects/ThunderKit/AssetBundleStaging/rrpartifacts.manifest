@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 167902709
+CRC: 1074663853
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f78e951a5cb3cbfcb291c20f5836f2da
+    Hash: 1919e06fca933efd1fe8bd3ad784e8e3
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 2b5fa412deae52dbc91aeb834819b95b
+    Hash: 7692d01878fd312ec7135dc41b05e6c7
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -32,6 +32,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 802575700, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 182e1f7b5df3a874f85eb35b6ee52241, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 7d2dc8cbdb9720c418fcff8f84588cab, type: 3}
 - Class: 115
   Script: {instanceID: 0}
@@ -48,5 +50,6 @@ Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/rrp.artifact.loop.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/Loop Artifact Achievement.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/LoopCode.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/acLoop.asset
 Dependencies:
-- C:/Users/Admin/Documents/Creative/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain
+- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain

@@ -5,7 +5,7 @@ using MSU;
 
 namespace IEye.RRP
 {
-    [CreateAssetMenu(fileName = "InteractableAssetCollection", menuName = "RRPMod/AssetCollections/InteractableAssetCollection")]
+    [CreateAssetMenu(fileName = "InteractableAssetCollection", menuName = "RRP/AssetCollections/InteractableAssetCollection")]
     public class InteractableAssetCollection : ExtendedAssetCollection
     {
         public GameObject interactablePrefab;

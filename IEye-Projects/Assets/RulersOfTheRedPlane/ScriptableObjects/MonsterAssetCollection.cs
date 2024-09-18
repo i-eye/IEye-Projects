@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using IEye.RRP;
 namespace IEye.RRP
 {
-    [CreateAssetMenu(fileName = "MonsterAssetCollection", menuName = "RRPMod/AssetCollections/MonsterAssetCollection")]
+    [CreateAssetMenu(fileName = "MonsterAssetCollection", menuName = "RRP/AssetCollections/MonsterAssetCollection")]
     public class MonsterAssetCollection : BodyAssetCollection
     {
         public MonsterCardProvider monsterCardProvider;

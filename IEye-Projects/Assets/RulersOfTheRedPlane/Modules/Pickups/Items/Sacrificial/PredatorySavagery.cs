@@ -67,7 +67,7 @@ namespace IEye.RRP.Items
 
             public void OnDamageDealtServer(DamageReport report)
             {
-                //DefNotSS2Log.Message("Damage Dealt");
+                //DefNotRRPLog.Message("Damage Dealt");
                 if(Util.CheckRoll(hitChance * report.damageInfo.procCoefficient, report.attackerMaster))
                 {
                     RRPLog.Message("Roll passed");

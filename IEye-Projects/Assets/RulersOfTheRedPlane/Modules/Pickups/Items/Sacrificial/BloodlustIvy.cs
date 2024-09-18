@@ -100,7 +100,7 @@ namespace IEye.RRP.Items
 
                 if (healthComponents.Count == 0)
                 {
-                    //DefNotSS2Log.Message("Search is null");
+                    //DefNotRRPLog.Message("Search is null");
                     return null;
                 }
 

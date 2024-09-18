@@ -11,7 +11,7 @@ namespace IEye.RRP.Monsters
     //[DisabledContent]
     public sealed class Wlurm : RRPMonster
     {
-        public override RRPAssetRequest<MonsterAssetCollection> AssetRequest => RRPAssets.LoadAssetAsync<MonsterAssetCollection>("acWlurm", RRPBundle.Monsters);
+        public override RRPAssetRequest<MonsterAssetCollection> AssetRequest => RRPAssets.LoadAssetAsync<MonsterAssetCollection>("acWlurm", RRPBundle.Indev);
 
         public static GameObject _masterPrefab;
         public override void Initialize()

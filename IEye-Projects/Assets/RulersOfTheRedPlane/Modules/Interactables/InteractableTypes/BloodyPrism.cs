@@ -52,8 +52,9 @@ namespace IEye.RRP.Interactables
         public override void Initialize()
         {
             //impStuffCredits.SetUseStepSlider(true);
-            //DefNotSS2Log.Message("InitializePrism");
+            //DefNotRRPLog.Message("InitializePrism");
 
+            RRPLog.Message("Prism Init Started");
             GameObject Interactable = AssetCollection.FindAsset<GameObject>("BloodyPrismGameObject");
 
             var interactableToken = Interactable.AddComponent<PrismInteractableToken>();
@@ -63,8 +64,9 @@ namespace IEye.RRP.Interactables
             interactableToken.dropTransform = Interactable.GetComponent<Transform>();
             interactableToken.symbolTranform = null;
             interactableToken.behavior = Interactable.GetComponent<ShopTerminalBehavior>();
-            
-            
+            interactableToken.destroyVFX = AssetCollection.FindAsset<GameObject>("PrismVFX");
+
+            RRPLog.Message("Prism Init Finished");
 
             /*
             InteractableDirectorCard.directorCard.selectionWeight = weight;
@@ -96,22 +98,21 @@ namespace IEye.RRP.Interactables
             DirectorCard impCard;
             DirectorCard impBoss;
 
-            public ExplicitPickupDropTable dropTable { get; } = RRPAssets.LoadAsset<ExplicitPickupDropTable>("PrismDroptable", RRPBundle.Interactables);
+            public ExplicitPickupDropTable dropTable { get; set; }
 
             public static event Action<PrismInteractableToken> onDefeatedServer;
             
             public void Start()
             {
 
-                destroyVFX = RRPAssets.LoadAsset<GameObject>("PrismVFX", RRPBundle.Interactables);
-                
+                dropTable = new ExplicitPickupDropTable();
                 if (NetworkServer.active && Run.instance)
                 {
                     Interaction.SetAvailableTrue();
                 }
-                //DefNotSS2Log.Message("Getting Combat Squad");
+                //DefNotRRPLog.Message("Getting Combat Squad");
                 combatDirector.combatSquad = combatSquad;
-                //DefNotSS2Log.Message("Got Combat Squad");
+                //DefNotRRPLog.Message("Got Combat Squad");
                 combatSquad.onDefeatedServer += OnDefeatedServer;
                 GetComponent<Highlight>().enabled = true;
                 Interaction.onPurchase.AddListener(PrismInteractAttempt);
@@ -121,8 +122,8 @@ namespace IEye.RRP.Interactables
 
                 List<ItemDef> items = ItemTiers.Sacrificial.ItemDefsWithTier();
                 Array.Resize(ref dropTable.pickupEntries, items.Count);
-                //DefNotSS2Log.Message(dropTable.pickupEntries.IsFixedSize);
-                //DefNotSS2Log.Message(dropTable.pickupEntries.Length);
+                //DefNotRRPLog.Message(dropTable.pickupEntries.IsFixedSize);
+                //DefNotRRPLog.Message(dropTable.pickupEntries.Length);
 
                 impCard = new DirectorCard()
                 {
@@ -159,18 +160,20 @@ namespace IEye.RRP.Interactables
                     }
                     
                     dropTable.pickupEntries[i] = entry;
-                    //DefNotSS2Log.Message(dropTable.pickupEntries[i].pickupDef);
+                    //DefNotRRPLog.Message(dropTable.pickupEntries[i].pickupDef);
                 }
                 dropTable.Regenerate(Run.instance);
-
+                behavior.dropTable = dropTable;
                 RRPLog.Message("About to generate pickups");
-                behavior.GenerateNewPickupServer();
+
+                behavior.SetPickupIndex(dropTable.GenerateDrop(rng));
                 behavior.UpdatePickupDisplayAndAnimations();
+
                 RRPLog.Message("PickupIndex is:" + behavior.pickupIndex);
 
                 
                 
-                //DefNotSS2Log.Message(dropTable.pickupEntries);
+                //DefNotRRPLog.Message(dropTable.pickupEntries);
 
             }
 
@@ -179,8 +182,8 @@ namespace IEye.RRP.Interactables
                 if (hasActivated)
                 {
 
-                    //DefNotSS2Log.Message(index);
-                    //DefNotSS2Log.Message(index.pickupDef.itemIndex);
+                    //DefNotRRPLog.Message(index);
+                    //DefNotRRPLog.Message(index.pickupDef.itemIndex);
                     behavior.DropPickup();
 
                     Chat.SimpleChatMessage message = new Chat.SimpleChatMessage();
@@ -206,7 +209,7 @@ namespace IEye.RRP.Interactables
             public void PrismInteractAttempt(Interactor interactor)
             {
 
-                //DefNotSS2Log.Message("Attempting Interaction");
+                //DefNotRRPLog.Message("Attempting Interaction");
                 if (!interactor) { return; }
                 Interaction.SetAvailable(false);
 

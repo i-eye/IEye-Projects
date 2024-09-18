@@ -22,7 +22,7 @@ namespace IEye.RRP
     [BepInDependency("com.bepis.r2api.difficulty")]
     [BepInDependency("com.rune580.riskofoptions")]
     #endregion
-    [BepInDependency("com.TeamMoonstorm.MoonstormSharedUtils", BepInDependency.DependencyFlags.HardDependency)]
+    [BepInDependency("com.TeamMoonstorm.MoonstormSharedUtils", BepInDependency.DependencyFlags.SoftDependency)]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.EveryoneNeedSameModVersion)]
     [R2APISubmoduleDependency(
         nameof(DotAPI),
@@ -46,9 +46,9 @@ namespace IEye.RRP
             new RRPLog(Logger);
             new RRPConfig(this);
             new RRPContent();
+            Logger.LogInfo("RRP loading for MSU 2.0");
 
-
-            LanguageFileLoader.AddLanguageFilesFromMod(this, "Language");
+            LanguageFileLoader.AddLanguageFilesFromMod(this, "RRPLang");
             
 		}	
         private void Start()

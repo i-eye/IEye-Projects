@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1002406299
+CRC: 4285968957
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ec192b42e87c0561f3c55be87d29d7b4
+    Hash: 1048c6286ed3ac92033f78d41296c49a
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 2fbb051b6e38702881e88aa012e3d943
+    Hash: e3d9bddb8746cbe90b3c89c15de650ec
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -34,6 +34,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: f8258ea15b8f74c4889ce485d21cbbb1, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 59d64183cbf51584d983f414184f1d36, type: 3}
+- Class: 114
   Script: {fileID: -226763392, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: -335047464, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
@@ -52,6 +54,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 871971028, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
+  Script: {fileID: 1063210218, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
   Script: {fileID: -1699741063, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: -1247058517, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
@@ -63,6 +67,8 @@ ClassTypes:
   Script: {fileID: -565067572, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: 451251496, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d10af29dc523c7243a6e6e3d787aa1d6, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 8577aced8c5464a488c5ef8182ea0b80, type: 3}
 - Class: 115
@@ -79,11 +85,14 @@ Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/Material
   Base Color.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/MiniPrism.fbx
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/acBloodyPrism.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/DistTex.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/iscBloodyPrism.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/PrismDroptable.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/PrismVFX.prefab
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/ExplosionMat.mat
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/iscBloodyPrism.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/msiscBloodyPrism.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/icpPrism.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/Ramp.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/Prism
   Mat.mat
@@ -93,5 +102,5 @@ Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/texShrineIconOutlined.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/Main_Prism.fbx
 Dependencies:
-- C:/Users/Admin/Documents/Creative/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/msuassets
-- C:/Users/Admin/Documents/Creative/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain
+- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain
+- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/runtimemsuassetbundle

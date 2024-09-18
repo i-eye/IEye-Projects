@@ -51,6 +51,8 @@ namespace IEye.RRP.ItemTiers
         {
             return true;
         }
+
+
         public static List<ItemDef> ItemDefsWithTier()
         {
             List<ItemDef> items = new List<ItemDef>();

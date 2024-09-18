@@ -15,7 +15,7 @@ namespace IEye.RRP.Artifacts
 {
     public sealed class Loop : RRPArtifact
     {
-        public override RRPAssetRequest LoadAssetRequest() => RRPAssets.LoadAssetAsync<ArtifactAssetCollection>("hello", RRPBundle.Artifacts);
+        public override RRPAssetRequest LoadAssetRequest() => RRPAssets.LoadAssetAsync<ArtifactAssetCollection>("acLoop", RRPBundle.Artifacts);
 
         public override bool IsAvailable(ContentPack contentPack)
         {

@@ -13,12 +13,13 @@ using System.IO;
 using Path = System.IO.Path;
 using UnityEngine.Networking;
 using System.Linq;
-
+/*
 namespace IEye.RRP.Editor
 {
     [CustomEditor(typeof(ExtendedAssetCollection), true)]
     public class AssetCollectionEditor : UnityEditor.Editor
     {
+
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
@@ -160,3 +161,4 @@ namespace IEye.RRP.Editor
         }
     }
 }
+*/

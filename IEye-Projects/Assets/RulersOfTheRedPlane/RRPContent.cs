@@ -1,7 +1,9 @@
-﻿using MSU;
+﻿using IL.RoR2.ExpansionManagement;
+using MSU;
 using R2API.ScriptableObjects;
 using RoR2;
 using RoR2.ContentManagement;
+using RoR2.ExpansionManagement;
 using System;
 using System.Collections;
 using System.Diagnostics.Contracts;
@@ -70,12 +72,40 @@ namespace IEye.RRP
 
         private static IEnumerator LoadFromAssetBundles()
         {
-            yield break;
+            RRPLog.Info($"Populating EntityStateTypes array...");
+            RRPContentPack.entityStateTypes.Clear();
+            RRPContentPack.entityStateTypes.Add(typeof(RRPContent).Assembly.GetTypes().Where(type => typeof(EntityStates.EntityState).IsAssignableFrom(type)).ToArray());
+
+            RRPLog.Info("Populating EntityStateConfiguration array...");
+            RRPAssetRequest<EntityStateConfiguration> escRequest = new RRPAssetRequest<EntityStateConfiguration>(RRPBundle.All);
+            escRequest.StartLoad();
+            while (!escRequest.isComplete) yield return null;
+            RRPContentPack.entityStateConfigurations.Clear();
+            RRPContentPack.entityStateConfigurations.Add(escRequest.assets.ToArray());
+
+            RRPLog.Info($"Populating EffectDefs array...");
+            RRPAssetRequest<GameObject> gameObjectRequest = new RRPAssetRequest<GameObject>(RRPBundle.All);
+            gameObjectRequest.StartLoad();
+            while (!gameObjectRequest.isComplete) yield return null;
+            RRPContentPack.effectDefs.Clear();
+            RRPContentPack.effectDefs.Add(gameObjectRequest.assets.Where(go => go.GetComponent<EffectComponent>()).Select(go => new EffectDef(go)).ToArray());
+
+            RRPLog.Info($"Calling AsyncAssetLoad Attribute Methods...");
+            ParallelMultiStartCoroutine asyncAssetLoadCoroutines = AsyncAssetLoadAttribute.CreateCoroutineForMod(RRPMain.instance);
+            asyncAssetLoadCoroutines.Start();
+            while (!asyncAssetLoadCoroutines.IsDone)
+                yield return null;
         }
 
         private IEnumerator AddRRPExpansionDef()
         {
-            yield break;
+            var expansionRequest = RRPAssets.LoadAssetAsync<RoR2.ExpansionManagement.ExpansionDef>("RRPExpansionDef", RRPBundle.Main);
+            expansionRequest.StartLoad();
+
+            while (!expansionRequest.isComplete)
+                yield return null;
+
+        RRPContentPack.expansionDefs.AddSingle(expansionRequest.asset);
         }
 
         internal RRPContent()
@@ -98,23 +128,28 @@ namespace IEye.RRP
                 },
                 () =>
                 {
-                    EquipmentModule.AddProvider(main, ContentUtil.CreateContentPieceProvider<EquipmentDef>(main, RRPContentPack));
+                    ItemTierModule.AddProvider(main, ContentUtil.CreateContentPieceProvider<ItemTierDef>(main, RRPContentPack));
                     return ItemTierModule.InitializeTiers(main);
                 },
                 () =>
                 {
-                    EquipmentModule.AddProvider(main, ContentUtil.CreateContentPieceProvider<EquipmentDef>(main, RRPContentPack));
+                    CharacterModule.AddProvider(main, ContentUtil.CreateGameObjectContentPieceProvider<CharacterBody>(main, RRPContentPack));
                     return CharacterModule.InitializeCharacters(main);
                 },
                 () =>
                 {
-                    EquipmentModule.AddProvider(main, ContentUtil.CreateContentPieceProvider<EquipmentDef>(main, RRPContentPack));
+                    ArtifactModule.AddProvider(main, ContentUtil.CreateContentPieceProvider<ArtifactDef>(main, RRPContentPack));
                     return ArtifactModule.InitializeArtifacts(main);
                 },
                 () =>
                 {
-                    EquipmentModule.AddProvider(main, ContentUtil.CreateContentPieceProvider<EquipmentDef>(main, RRPContentPack));
+                    SceneModule.AddProvider(main, ContentUtil.CreateContentPieceProvider<SceneDef>(main, RRPContentPack));
                     return SceneModule.InitializeScenes(main);
+                },
+                () =>
+                {
+                    InteractableModule.AddProvider(main, ContentUtil.CreateGameObjectContentPieceProvider<IInteractable>(main, RRPContentPack));
+                    return InteractableModule.InitializeInteractables(main);
                 },
                 LoadFromAssetBundles
             };
@@ -125,8 +160,8 @@ namespace IEye.RRP
                 () => ContentUtil.PopulateTypeFields(typeof(ItemTierDefs), RRPContentPack.itemTierDefs),
                 () => ContentUtil.PopulateTypeFields(typeof(Artifacts), RRPContentPack.artifactDefs),
                 () => ContentUtil.PopulateTypeFields(typeof(Buffs), RRPContentPack.buffDefs),
-                () => ContentUtil.PopulateTypeFields(typeof(Scenes), RRPContentPack.sceneDefs)
-            };
+                () => ContentUtil.PopulateTypeFields(typeof(Scenes), RRPContentPack.sceneDefs),
+        };
         }
 
 

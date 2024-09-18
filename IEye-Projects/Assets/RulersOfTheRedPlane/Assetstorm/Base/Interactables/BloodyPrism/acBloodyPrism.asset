@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d64183cbf51584d983f414184f1d36, type: 3}
+  m_Name: acBloodyPrism
+  m_EditorClassIdentifier: 
+  assets:
+  - {fileID: 11400000, guid: 2f07d53de498c674d93ad73954184dfb, type: 2}
+  - {fileID: 800851431774492465, guid: 023f7c40dfd464549b8c91ef8fd5c41c, type: 3}
+  - {fileID: 4542810337048220155, guid: da7703d7e8f890641b302e841a82189b, type: 3}
+  interactablePrefab: {fileID: 800851431774492465, guid: 023f7c40dfd464549b8c91ef8fd5c41c,
+    type: 3}
+  interactableCardProvider: {fileID: 11400000, guid: 2f07d53de498c674d93ad73954184dfb,
+    type: 2}

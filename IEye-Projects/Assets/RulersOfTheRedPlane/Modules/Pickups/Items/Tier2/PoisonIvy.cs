@@ -34,12 +34,12 @@ namespace IEye.RRP.Items
 
         public override void Initialize()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public override bool IsAvailable(ContentPack contentPack)
         {
-            throw new System.NotImplementedException();
+            return true;
         }
 
         public sealed class Behavior : BaseItemBodyBehavior
@@ -130,7 +130,7 @@ namespace IEye.RRP.Items
 
                 if (healthComponents.Count == 0)
                 {
-                    //DefNotSS2Log.Message("Search is null");
+                    //DefNotRRPLog.Message("Search is null");
                     return null;
                 }
 

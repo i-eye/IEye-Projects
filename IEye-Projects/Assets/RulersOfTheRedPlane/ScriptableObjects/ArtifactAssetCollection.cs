@@ -6,7 +6,7 @@ using R2API.ScriptableObjects;
 
 namespace IEye.RRP
 {
-    [CreateAssetMenu(fileName = "ArtifactAssetCollection", menuName = "RRPMod/AssetCollections/ArtifactAssetCollection")]
+    [CreateAssetMenu(fileName = "ArtifactAssetCollection", menuName = "RRP/AssetCollections/ArtifactAssetCollection")]
     public class ArtifactAssetCollection : ExtendedAssetCollection
     {
         public ArtifactCode artifactCode;

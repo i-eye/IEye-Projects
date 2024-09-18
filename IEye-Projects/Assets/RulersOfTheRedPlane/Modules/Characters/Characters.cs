@@ -32,7 +32,7 @@ namespace IEye.RRP.Modules
             b.Section = "Enable Survivors";
             b.Key = "Enable Survivors";
             b.Description = "Enables Starstorm 2's survivors. Set to false to disable survivors.";
-            b.ConfigFile = SS2Config.ConfigMain;
+            b.ConfigFile = RRPConfig.ConfigMain;
             b.CheckBoxConfig = new CheckBoxConfig
             {
                 restartRequired = true,
@@ -73,7 +73,7 @@ namespace IEye.RRP.Modules
                         b.Section = "Survivors";
                         b.Key = name;
                         b.Description = "Enable/Disable this Survivor";
-                        b.ConfigFile = SS2Config.ConfigMain;
+                        b.ConfigFile = RRPConfig.ConfigMain;
                         b.CheckBoxConfig = new CheckBoxConfig
                         {
                             checkIfDisabled = () => !EnableSurvivors,
@@ -123,12 +123,12 @@ namespace IEye.RRP.Modules
             //base.GetCharacterBases()
             //    .Where(character =>
             //    {
-            //        return SS2Config.MakeConfigurableBool(true, (b) =>
+            //        return RRPConfig.MakeConfigurableBool(true, (b) =>
             //        {
             //            b.Section = "Bodies";
             //            b.Key = MSUtil.NicifyString(character.BodyPrefab.name);
             //            b.Description = "Enable/Disable this Body";
-            //            b.ConfigFile = SS2Config.ConfigMain;
+            //            b.ConfigFile = RRPConfig.ConfigMain;
             //            b.CheckBoxConfig = new CheckBoxConfig
             //            {
             //                checkIfDisabled = () => !EnableMonsters,

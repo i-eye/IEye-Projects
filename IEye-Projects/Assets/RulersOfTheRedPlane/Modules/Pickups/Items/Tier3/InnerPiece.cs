@@ -57,7 +57,7 @@ namespace IEye.RRP.Items
                         }
                     }
                 }
-                //DefNotSS2Log.Message(numDebuff);
+                //DefNotRRPLog.Message(numDebuff);
                 if(body.healthComponent.isHealthLow || numDebuff > 1)
                 {
                     isGood = false;
@@ -71,7 +71,7 @@ namespace IEye.RRP.Items
 
             public void ModifyStatArguments(RecalculateStatsAPI.StatHookEventArgs args)
             {
-                //DefNotSS2Log.Message("isgood = " + isGood);
+                //DefNotRRPLog.Message("isgood = " + isGood);
                 if (isGood)
                 {
                     args.moveSpeedMultAdd += speed * stack / 100;

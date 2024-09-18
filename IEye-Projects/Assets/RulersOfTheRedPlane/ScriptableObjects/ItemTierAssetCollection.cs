@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace IEye.RRP
 { 
-    [CreateAssetMenu(fileName = "ItemTierAssetCollection", menuName = "RRPMod/AssetCollections/ItemTierAssetCollection")]
+    [CreateAssetMenu(fileName = "ItemTierAssetCollection", menuName = "RRP/AssetCollections/ItemTierAssetCollection")]
     public class ItemTierAssetCollection : ExtendedAssetCollection
     {
         public SerializableColorCatalogEntry colorIndex;

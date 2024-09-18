@@ -27,7 +27,7 @@ namespace IEye.RRP.Items
         {
             
             On.RoR2.UI.HUD.Awake += GetHUD;
-            DefNotSS2Log.Info("BOOOOOOOOOOM SYSTEMINIT");
+            DefNotRRPLog.Info("BOOOOOOOOOOM SYSTEMINIT");
         }
         private static void GetHUD(On.RoR2.UI.HUD.orig_Awake orig, HUD self)
         {
@@ -121,10 +121,10 @@ namespace IEye.RRP.Items
 
                 num1 = body.inventory.GetItemCount(RRPContent.Items.IntrospectiveInsect);
                 num1Bloody = body.inventory.GetItemCount(RRPContent.Items.AgressiveInsect);
-                //DefNotSS2Log.Message("num1: " + num1 + " num1Bloody: " + num1Bloody);
+                //DefNotRRPLog.Message("num1: " + num1 + " num1Bloody: " + num1Bloody);
                 num2 = body.inventory.GetItemCount(RoR2Content.Items.SprintBonus);
                 num2Bloody = body.inventory.GetItemCount(RRPContent.Items.AdrenalineFrenzy);
-                //DefNotSS2Log.Message("num2: " + num2 + " num2Bloody: " + num2Bloody);
+                //DefNotRRPLog.Message("num2: " + num2 + " num2Bloody: " + num2Bloody);
                 num3one = body.inventory.GetItemCount(RoR2Content.Items.BleedOnHit);
                 num3two = body.inventory.GetItemCount(RRPContent.Items.FourDimensionalDagger);
                 num3Bloody = body.inventory.GetItemCount(RRPContent.Items.FocusedHemorrhage);
@@ -240,7 +240,7 @@ namespace IEye.RRP.Items
             {
                 
                 float i = Run.instance.difficultyCoefficient;
-                //DefNotSS2Log.Message(i + " is difficulty");
+                //DefNotRRPLog.Message(i + " is difficulty");
                 int needed = (int)(Sacrificial.multiplier * i);
                 if (needed > Sacrificial.cap)
                 {
@@ -277,14 +277,14 @@ namespace IEye.RRP.Items
             /*
             private IEnumerator RunSacrificialAnnouncer(ItemDef item1, ItemDef item2)
             {
-                DefNotSS2Log.Message("Instatizating Announcer");
+                DefNotRRPLog.Message("Instatizating Announcer");
                 
-                //DefNotSS2Log.Message(hudInstance.mainContainer.transform);
-                DefNotSS2Log.Message(SacrificalAnnouncer);
+                //DefNotRRPLog.Message(hudInstance.mainContainer.transform);
+                DefNotRRPLog.Message(SacrificalAnnouncer);
                 GameObject announcer = Instantiate(SacrificalAnnouncer, hudInstance.mainContainer.transform, false);
-                DefNotSS2Log.Message("Getting SpriteRenderers");
+                DefNotRRPLog.Message("Getting SpriteRenderers");
                 SpriteRenderer[] renderers = announcer.GetComponentsInChildren<SpriteRenderer>();
-                DefNotSS2Log.Message("Foreach loop");
+                DefNotRRPLog.Message("Foreach loop");
                 foreach(SpriteRenderer renderer in renderers)
                 {
                     if(renderer.name == "Normal")

@@ -60,7 +60,7 @@ namespace IEye.RRP.Items {
                         {
                             return;
                         }
-                        //DefNotSS2Log.Message("Victim:" + victim.gameObject.name);
+                        //DefNotRRPLog.Message("Victim:" + victim.gameObject.name);
                         var dotInfo = new InflictDotInfo()
                         {
                             attackerObject = attacker,
@@ -71,7 +71,7 @@ namespace IEye.RRP.Items {
                         };
                         RRPLog.Message("Before inflict");
                         DotController.InflictDot(ref dotInfo);
-                        //DefNotSS2Log.Message("I hope an enemy nearby has an effect lol");
+                        //DefNotRRPLog.Message("I hope an enemy nearby has an effect lol");
 
                     }
                 }
@@ -117,12 +117,12 @@ namespace IEye.RRP.Items {
                 }
                 if (healthComponents.Count != 0)
                 {
-                    //DefNotSS2Log.Message("Found healthcomponent array(length): " + healthComponents.Length);
+                    //DefNotRRPLog.Message("Found healthcomponent array(length): " + healthComponents.Length);
                     selected = healthComponents[Random.Range(0, healthComponents.Count)];
                 }
                 else
                 {
-                    //DefNotSS2Log.Message("Search is null");
+                    //DefNotRRPLog.Message("Search is null");
                     return null;
                 }
 

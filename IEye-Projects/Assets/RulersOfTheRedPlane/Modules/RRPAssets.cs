@@ -24,15 +24,15 @@ namespace IEye.RRP
         Main,
         Base,
         Artifacts,
-        Equipments,
+        //Equipments,
         Interactables,
         Items,
-        Monsters,
-        Events,
-        Vanilla,
+        //Monsters,
+        //Events,
+        //Vanilla,
         StreamedScene,
         Indev,
-        Shared
+        //Shared
     }
     public class RRPAssets
     {
@@ -244,8 +244,9 @@ namespace IEye.RRP
                 case BASE: rrpbundle = RRPBundle.Base; break;
                 case ARTIFACTS: rrpbundle = RRPBundle.Artifacts; break;
                 case INTERACTS: rrpbundle = RRPBundle.Interactables; break;
-                case MONSTERS: rrpbundle = RRPBundle.Monsters; break;
+                //case MONSTERS: rrpbundle = RRPBundle.Monsters; break;
                 case INDEV: rrpbundle = RRPBundle.Indev; break;
+                case STAGES: rrpbundle = RRPBundle.StreamedScene; break;
                 //case ARTIFACTS: RRPBundle = RRPBundle.Artifacts; break;
 
                 //This path does not match any of the non scene bundles, could be a scene, we will mark these on only this ocassion as "StreamedScene".
@@ -570,8 +571,8 @@ namespace IEye.RRP
                 {
                     if (enumVal == RRPBundle.All || enumVal == RRPBundle.Invalid || enumVal == RRPBundle.StreamedScene)
                         continue;
-
-                    request = RRPAssets.GetAssetBundle(targetBundle).LoadAllAssetsAsync<TAsset>();
+                    RRPLog.Message(targetBundle);
+                    request = RRPAssets.GetAssetBundle(enumVal).LoadAllAssetsAsync<TAsset>();
                     while (!request.isDone)
                         yield return null;
 

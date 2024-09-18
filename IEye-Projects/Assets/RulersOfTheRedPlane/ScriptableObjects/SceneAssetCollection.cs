@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace IEye.RRP
 {
-    [CreateAssetMenu(fileName = "SceneAssetCollection", menuName = "RRPMod/AssetCollections/SceneAssetCollection")]
+    [CreateAssetMenu(fileName = "SceneAssetCollection", menuName = "RRP/AssetCollections/SceneAssetCollection")]
     public class SceneAssetCollection : ExtendedAssetCollection
     {
         public SceneDef sceneDef;
