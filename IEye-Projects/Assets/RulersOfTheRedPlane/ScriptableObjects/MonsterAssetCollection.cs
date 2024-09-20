@@ -9,6 +9,6 @@ namespace IEye.RRP
     public class MonsterAssetCollection : BodyAssetCollection
     {
         public MonsterCardProvider monsterCardProvider;
-        public R2API.DirectorAPI.DirectorCardHolder dissonanceCardHolder;
+        public DirectorCardHolderExtended dissonanceCardHolder;
     }
 }

@@ -22,10 +22,10 @@ namespace IEye.RRP.Items
 
         public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acInnerPiece", RRPBundle.Items);
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Added speed(default 75%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Added speed(default 75%).")]
         public static float speed = 75f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Added sprint speed(default 30%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Added sprint speed(default 30%).")]
         public static float SprintSpeed = 30f;
 
         public sealed class Behavior : BaseItemBodyBehavior, IBodyStatArgModifier

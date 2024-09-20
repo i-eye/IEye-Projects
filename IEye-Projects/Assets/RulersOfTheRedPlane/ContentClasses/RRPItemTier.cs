@@ -19,12 +19,12 @@ namespace IEye.RRP
     public abstract class RRPItemTier : IItemTierContentPiece, IContentPackModifier
     {
         public ItemTierAssetCollection AssetCollection { get; private set; }
-        public NullableRef<SerializableColorCatalogEntry> ColorIndex { get; protected set; }
-        public NullableRef<SerializableColorCatalogEntry> DarkColorIndex { get; protected set; }
-        public GameObject PickupDisplayVFX { get; protected set; }
-        public List<ItemIndex> ItemsWithThisTier { get; set; } = new List<ItemIndex>();
-        public List<PickupIndex> AvailableTierDropList { get; set; } = new List<PickupIndex>();
-        ItemTierDef IContentPiece<ItemTierDef>.Asset => ItemTierDef;
+        public NullableRef<SerializableColorCatalogEntry> colorIndex { get; protected set; }
+        public NullableRef<SerializableColorCatalogEntry> darkColorIndex { get; protected set; }
+        public GameObject pickupDisplayVFX { get; protected set; }
+        public List<ItemIndex> itemsWithThisTier { get; set; } = new List<ItemIndex>();
+        public List<PickupIndex> availableTierDropList { get; set; } = new List<PickupIndex>();
+        ItemTierDef IContentPiece<ItemTierDef>.asset => ItemTierDef;
         public ItemTierDef ItemTierDef { get; protected set; }
 
         public abstract RRPAssetRequest<ItemTierAssetCollection> AssetRequest { get; }
@@ -43,11 +43,11 @@ namespace IEye.RRP
             ItemTierDef = AssetCollection.itemTierDef;
 
             if (AssetCollection.colorIndex)
-                ColorIndex = AssetCollection.colorIndex;
+                colorIndex = AssetCollection.colorIndex;
             if (AssetCollection.darkColorIndex)
-                DarkColorIndex = AssetCollection.darkColorIndex;
+                darkColorIndex = AssetCollection.darkColorIndex;
 
-            PickupDisplayVFX = AssetCollection.pickupDisplayVFX;
+            pickupDisplayVFX = AssetCollection.pickupDisplayVFX;
         }
 
         public void ModifyContentPack(ContentPack contentPack)

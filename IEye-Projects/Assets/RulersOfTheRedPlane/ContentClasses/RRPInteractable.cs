@@ -22,13 +22,13 @@ namespace IEye.RRP
     {
         public InteractableAssetCollection AssetCollection { get; private set; }
         public InteractableCardProvider CardProvider { get; protected set; }
-        IInteractable IGameObjectContentPiece<IInteractable>.Component => InteractablePrefab.GetComponent<IInteractable>();
-        GameObject IContentPiece<GameObject>.Asset => InteractablePrefab;
+        IInteractable IGameObjectContentPiece<IInteractable>.component => InteractablePrefab.GetComponent<IInteractable>();
+        GameObject IContentPiece<GameObject>.asset => InteractablePrefab;
         public GameObject InteractablePrefab { get; protected set; }
 
         public abstract RRPAssetRequest<InteractableAssetCollection> AssetRequest { get; }
 
-        NullableRef<InteractableCardProvider> IInteractableContentPiece.CardProvider => CardProvider;
+        NullableRef<InteractableCardProvider> IInteractableContentPiece.cardProvider => CardProvider;
 
         public abstract void Initialize();
         public abstract bool IsAvailable(ContentPack contentPack);

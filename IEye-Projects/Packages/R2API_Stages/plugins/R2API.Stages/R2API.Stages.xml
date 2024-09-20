@@ -18,12 +18,12 @@
         </member>
         <member name="M:R2API.StageRegistration.PrintSceneCollections">
             <summary>
-            A debug util to print each SceneDef in a loop and their respective Weights. All variants of a locale should add up to 1.
+            A debug util to print each SceneDef in a loop and their respective Weights.
             </summary>
         </member>
         <member name="M:R2API.StageRegistration.PrintSceneCollections(System.Int32)">
             <summary>
-            A debug util to print each SceneDef in a loop and their respective Weights. All variants of a locale should add up to 1.
+            A debug util to print each SceneDef in a loop and their respective Weights.
             </summary>
             <param name="stageNumber">The stages in that stage position</param>
         </member>
@@ -35,31 +35,18 @@
         </member>
         <member name="M:R2API.StageRegistration.RegisterSceneDefToLoop(RoR2.SceneDef)">
             <summary>
-            Registers the SceneDef into the loop. Any SceneDef registered with the same baseSceneName as another SceneDef will be counted as a variant.
-            Variants will have their weights split equally amongst each other. Don't use this method for scenes that aren't part of the loop (Stages 1-5).
+            Registers the SceneDef into the loop. This method doesn't support extra parameters, use RegisterSceneDefToNormalProgression instead.
             </summary>
             <param name="sceneDef">The SceneDef being registered</param>
         </member>
-        <member name="M:R2API.StageRegistration.BlacklistSceneDef(RoR2.SceneDef,BepInEx.PluginInfo)">
+        <member name="M:R2API.StageRegistration.RegisterSceneDefToNormalProgression(RoR2.SceneDef,System.Single,System.Boolean,System.Boolean)">
             <summary>
-            Blacklists SceneDefs from entering the loop. If the Scene is already in the loop it removes it.
+            Registers the SceneDef into the normal stage progression (not Path of the Colossus). Any SceneDef registered with the same baseSceneName as another SceneDef will be counted as a variant.
             </summary>
-            <param name="sceneDef">The SceneDef being blacklisted</param>
-            <param name="plugin">Your mod plugin. Your mod will be printed to prevent malicious blacklisting.</param>
-        </member>
-        <member name="M:R2API.StageRegistration.BlacklistSceneDef(System.String,BepInEx.PluginInfo)">
-            <summary>
-            Blacklists SceneDefs from entering the loop. If the Scene is already in the loop it removes it.
-            </summary>
-            <param name="address">The address of the SceneDef being blacklisted</param>
-            <param name="plugin">Your mod plugin. Your mod will be printed to prevent malicious blacklisting.</param>
-        </member>
-        <member name="M:R2API.StageRegistration.InBlackList(RoR2.SceneDef)">
-            <summary>
-            Returns true if the SceneDef is in the blacklist.
-            </summary>
-            <param name="sceneDef">The SceneDef in question</param>
-            <returns></returns>
+            <param name="sceneDef">The SceneDef being registered</param>
+            <param name="weight">The weight of the SceneDef being rolled in the SceneCollection</param>
+            <param name="preLoop">If the stage will roll pre-loop: if the current stage is between 1-5 </param>
+            <param name="postLoop">If the stage will roll post-loop: if the current stage is greater than 5 </param>
         </member>
         <member name="M:R2API.StageRegistration.MakeBazaarSeerMaterial(UnityEngine.Texture2D)">
             <summary>

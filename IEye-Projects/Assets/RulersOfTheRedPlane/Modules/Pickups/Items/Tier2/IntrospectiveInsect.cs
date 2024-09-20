@@ -24,23 +24,23 @@ namespace IEye.RRP.Items
         //[FormatToken(token, opType:default, 0)]
         //public static float healCoef = 1.5f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Duration of the insect posion per stack(default 8s)")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Duration of the insect posion per stack(default 8s)")]
         [FormatToken(token, opType:default, 0)]
         public static int duration = 8;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Percentage of attack speed slow(default 65%)")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percentage of attack speed slow(default 65%)")]
         [FormatToken(token, opType:default, 1)]
         public static float insectAttackSpeed = 65f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Percentage of movement speed slow(default 50%)")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percentage of movement speed slow(default 50%)")]
         [FormatToken(token, opType:default, 2)]
         public static float insectMoveSpeed = 50f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Percent life restored on hitting enemies per stack(default 2%)")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percent life restored on hitting enemies per stack(default 2%)")]
         [FormatToken(token, opType:default, 3)]
         public static float insectHealAmount = 5f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Hits needed to heal(default 4)")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Hits needed to heal(default 4)")]
         [FormatToken(token, opType:default, 4)]
         public static int hitsNeeded = 5;
 
@@ -149,7 +149,7 @@ namespace IEye.RRP.Items
 
             public void ModifyStatArguments(RecalculateStatsAPI.StatHookEventArgs args)
             {
-                if (HasAnyStacks)
+                if (hasAnyStacks)
                 {
                     args.attackSpeedReductionMultAdd += IntrospectiveInsect.insectAttackSpeed / 100;
                     args.moveSpeedReductionMultAdd += IntrospectiveInsect.insectMoveSpeed / 100;

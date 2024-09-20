@@ -15,19 +15,19 @@ namespace IEye.RRP.Items
         //public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("DoubleSidedSword", RRPBundle.Items);
 
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base radius for bleed effect(default 50m).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base radius for bleed effect(default 50m).")]
         [FormatToken(token, opType:default, 0)]
         public static int radiusBase = 50;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Damage Coefficient for bleed damage(default 2).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Damage Coefficient for bleed damage(default 2).")]
         [FormatToken(token, opType:FormatTokenAttribute.OperationTypeEnum.MultiplyByN, 1, 240)]
         public static float damage = 2f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Duration of bleed(default 3).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Duration of bleed(default 3).")]
         [FormatToken(token, opType:default, 2)]
         public static float duration = 3f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Percentage of base damage done to the player(default 20%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percentage of base damage done to the player(default 20%).")]
         [FormatToken(token, opType:default, 3)]
         public static float playerCoef = (.2f * 100);
 
@@ -52,7 +52,7 @@ namespace IEye.RRP.Items
                 //DefNotRRPLog.Message("dotIndex is: " + report.damageInfo.dotIndex);
                 //DefNotRRPLog.Message("profCoef is: " + report.damageInfo.procCoefficient);
                 //DefNotRRPLog.Message("damgageType is: " + ((int)report.damageInfo.damageType));
-                if ((report.damageInfo.procCoefficient > 0) && (report.damageInfo.dotIndex.Equals(DotController.DotIndex.None)) && ((int)report.damageInfo.damageType) != 66)
+                if ((report.damageInfo.procCoefficient > 0) && (report.damageInfo.dotIndex.Equals(DotController.DotIndex.None)) && ((int)report.damageInfo.damageType.damageType) != 66)
                 {
                     var victim = report.victim;
                     

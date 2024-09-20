@@ -19,43 +19,43 @@ namespace IEye.RRP.Items
 
         public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acSavagery", RRPBundle.Items);
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Armor with rush per stack(default 15).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Armor with rush per stack(default 15).")]
         [FormatToken(token, opType:default, 0)]
         public static int armor = 15;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Percent damage increase per stack(default 15%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percent damage increase per stack(default 15%).")]
         [FormatToken(token, opType:default, 1)]
         public static float damage = 15f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Pecent global cooldown reduction per stack(default 5%)(caps at 50%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Pecent global cooldown reduction per stack(default 5%)(caps at 50%).")]
         [FormatToken(token, opType:default, 2)]
         public static float cooldownReduction = 5f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Added percentage jump force(regardless of stack)(default 35%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Added percentage jump force(regardless of stack)(default 35%).")]
         [FormatToken(token, opType:default, 3)]
         public static float jumpMult = 35f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Added crit damage per stack(default 10%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Added crit damage per stack(default 10%).")]
         [FormatToken(token, opType:default, 4)]
         public static float critDamage = 10f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Added crit chance(regardless of stack)(default 6%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Added crit chance(regardless of stack)(default 6%).")]
         [FormatToken(token, opType:default, 5)]
         public static float critChance = 6f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base duration of the rush(default 10s).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base duration of the rush(default 10s).")]
         [FormatToken(token, opType:default, 6)]
         public static float duration = 10f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Duration added on stack(default 3s).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Duration added on stack(default 3s).")]
         [FormatToken(token, opType:default, 7)]
         public static float stackDuration = 3f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Percent chance of rush on hit(default 2%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percent chance of rush on hit(default 2%).")]
         [FormatToken(token, opType:default, 8)]
         public static float hitChance = 2f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Percent chance of rush on kill(default 8%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percent chance of rush on kill(default 8%).")]
         [FormatToken(token, opType:default, 9)]
         public static float killChance = 8f;
 
@@ -99,9 +99,9 @@ namespace IEye.RRP.Items
 
             public void ModifyStatArguments(RecalculateStatsAPI.StatHookEventArgs args)
             {
-                if (HasAnyStacks)
+                if (hasAnyStacks)
                 {
-                    int stack = CharacterBody.inventory.GetItemCount(RRPContent.Items.PredatorySavagery);
+                    int stack = characterBody.inventory.GetItemCount(RRPContent.Items.PredatorySavagery);
                     args.damageMultAdd += PredatorySavagery.damage / 100 * stack;
                     if ((PredatorySavagery.cooldownReduction * stack) < 50)
                     {

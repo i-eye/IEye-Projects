@@ -18,19 +18,19 @@ namespace IEye.RRP.Items {
 
         public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("ac4DDagger", RRPBundle.Items);
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Chance for this item to proc per stack(default 15%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Chance for this item to proc per stack(default 15%).")]
         //[FormatToken(token, opType:default, 0)]
         public static float percentChance = 15f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base search radius(default 25m).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base search radius(default 25m).")]
         //[FormatToken(token, opType:default, 1)]
         public static int radiusBase = 25;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Added search radius per stack past 1(default 5m).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Added search radius per stack past 1(default 5m).")]
         //[FormatToken(token, opType:default, 2)]
         public static int radiusIncrease = 5;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Duration of the bleed in second(default 3s).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Duration of the bleed in second(default 3s).")]
         public static float duration = 3f;
 
 

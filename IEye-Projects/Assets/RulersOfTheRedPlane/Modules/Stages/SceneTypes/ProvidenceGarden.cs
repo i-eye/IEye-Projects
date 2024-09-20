@@ -15,20 +15,20 @@ namespace IEye.RRP.Scenes
     //[DisabledContent]
     public sealed class ProvidenceGarden: RRPScene
     {
-        public override RRPAssetRequest<SceneAssetCollection> AssetRequest => RRPAssets.LoadAssetAsync<SceneAssetCollection>("acProvidenceGarden", RRPBundle.Indev);
+        public override RRPAssetRequest<SceneAssetCollection> assetRequest => RRPAssets.LoadAssetAsync<SceneAssetCollection>("acProvidenceGarden", RRPBundle.Indev);
         
         public static MusicTrackDef musicBoss { get; } = Addressables.LoadAssetAsync<MusicTrackDef>("RoR2/Base/Common/muSong23.asset").WaitForCompletion();
         public static MusicTrackDef musicReg { get; } = Addressables.LoadAssetAsync<MusicTrackDef>("RoR2/Base/Common/muFULLSong19.asset").WaitForCompletion();
         public override void Initialize()
         {
-            Asset.mainTrack = musicReg;
-            Asset.bossTrack = musicBoss;
+            sceneDef.mainTrack = musicReg;
+            sceneDef.bossTrack = musicBoss;
             Stage.onStageStartGlobal += Stage_onStageStartGlobal;
         }
 
         private void Stage_onStageStartGlobal(Stage obj)
         {
-            if (obj.sceneDef == Asset)
+            if (obj.sceneDef == sceneDef)
             {
                 SceneDirector.onPostPopulateSceneServer += SceneDirector_onPostPopulateSceneServer;
             }

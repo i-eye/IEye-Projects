@@ -19,7 +19,7 @@ namespace IEye.RRP.Items
 
         public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acLeech", RRPBundle.Items);
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Chance for this item to proc per stack(default 15%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Chance for this item to proc per stack(default 15%).")]
         [FormatToken(token, opType:default, 0)]
         public static float percentChance = 15f;
         public override void Initialize()
@@ -49,7 +49,7 @@ namespace IEye.RRP.Items
             public void OnTakeDamageServer(DamageReport report)
             {
                 
-                if((report.damageInfo.procCoefficient > 0) && (report.damageInfo.dotIndex.Equals(DotController.DotIndex.None)) && ((int)report.damageInfo.damageType) != 66)
+                if((report.damageInfo.procCoefficient > 0) && (report.damageInfo.dotIndex.Equals(DotController.DotIndex.None)) && ((int)report.damageInfo.damageType.damageType) != 66)
                 {
                     var dotinfo = new InflictDotInfo
                     {

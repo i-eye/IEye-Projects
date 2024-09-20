@@ -16,8 +16,8 @@ namespace IEye.RRP
         public NullableRef<List<GameObject>> ItemDisplayPrefabs { get; protected set; } = new List<GameObject>();
         public ItemDef ItemDef { get; protected set; }
 
-        ItemDef IContentPiece<ItemDef>.Asset => ItemDef;
-        NullableRef<List<GameObject>> IItemContentPiece.ItemDisplayPrefabs => ItemDisplayPrefabs;
+        ItemDef IContentPiece<ItemDef>.asset => ItemDef;
+        NullableRef<List<GameObject>> IItemContentPiece.itemDisplayPrefabs => ItemDisplayPrefabs;
 
         public abstract RRPAssetRequest AssetRequest { get; }
 

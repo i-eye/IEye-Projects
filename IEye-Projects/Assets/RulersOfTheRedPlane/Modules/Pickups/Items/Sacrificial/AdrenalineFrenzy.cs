@@ -19,27 +19,27 @@ namespace IEye.RRP.Items
 
         public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acFrenzy", RRPBundle.Items);
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base percentage speed added on kill(default 6%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base percentage speed added on kill(default 6%).")]
         [FormatToken(token, opType:default, 0)]
         public static float killSpeed = 6f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base percentage speed added on kill per stack(default 4%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base percentage speed added on kill per stack(default 4%).")]
         [FormatToken(token, opType:default, 1)]
         public static float killSpeedStack = 4f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base time for on kill speed boost(default 10s).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base time for on kill speed boost(default 10s).")]
         [FormatToken(token, opType:default, 2)]
         public static float killSpeedDuration = 10f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base percentage speed added on getting hit(default 12%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base percentage speed added on getting hit(default 12%).")]
         [FormatToken(token, opType:default, 3)]
         public static float onHitSpeed = 12f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base percentage speed added on getting hit per stack(default(7%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base percentage speed added on getting hit per stack(default(7%).")]
         [FormatToken(token, opType:default, 4)]
         public static float onHitSpeedStack = 7f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Base time for on getting hit speed boost(default 8s).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base time for on getting hit speed boost(default 8s).")]
         [FormatToken(token, opType:default, 5)]
         public static float onHitSpeedDuration = 8f;
 
@@ -59,7 +59,7 @@ namespace IEye.RRP.Items
             public void OnKilledOtherServer(DamageReport report)
             {
                 
-                if ((report.damageInfo.procCoefficient > 0) && (report.damageInfo.dotIndex.Equals(DotController.DotIndex.None)) && ((int)report.damageInfo.damageType) != 66)
+                if ((report.damageInfo.procCoefficient > 0) && (report.damageInfo.dotIndex.Equals(DotController.DotIndex.None)) && ((int)report.damageInfo.damageType.damageType) != 66)
                 {
                     var cb = report.attacker.GetComponent<CharacterBody>();
                     cb.AddTimedBuffAuthority(RRPContent.Buffs.AdrenalineOnKill.buffIndex, killSpeedDuration);
@@ -68,7 +68,7 @@ namespace IEye.RRP.Items
 
             public void OnTakeDamageServer(DamageReport report)
             {
-                if ((report.damageInfo.procCoefficient > 0) && (report.damageInfo.dotIndex.Equals(DotController.DotIndex.None)) && ((int)report.damageInfo.damageType) != 66){
+                if ((report.damageInfo.procCoefficient > 0) && (report.damageInfo.dotIndex.Equals(DotController.DotIndex.None)) && ((int)report.damageInfo.damageType.damageType) != 66){
                     var cb = report.victim.GetComponent<CharacterBody>();
                     cb.AddTimedBuffAuthority(RRPContent.Buffs.AdrenalineOnGettingHit.buffIndex, onHitSpeedDuration);
                 }
@@ -82,10 +82,10 @@ namespace IEye.RRP.Items
 
             public void ModifyStatArguments(RecalculateStatsAPI.StatHookEventArgs args)
             {
-                if (HasAnyStacks)
+                if (hasAnyStacks)
                 {
-                    int stack = CharacterBody.inventory.GetItemCount(RRPContent.Items.AdrenalineFrenzy);
-                    args.sprintSpeedAdd += (killSpeed / 100 + (killSpeedStack / 100 * (stack - 1))) * BuffCount;
+                    int stack = characterBody.inventory.GetItemCount(RRPContent.Items.AdrenalineFrenzy);
+                    args.sprintSpeedAdd += (killSpeed / 100 + (killSpeedStack / 100 * (stack - 1))) * buffCount;
                 }
                 
             }
@@ -98,10 +98,10 @@ namespace IEye.RRP.Items
 
             public void ModifyStatArguments(RecalculateStatsAPI.StatHookEventArgs args)
             {
-                if (HasAnyStacks)
+                if (hasAnyStacks)
                 {
-                    int stack = CharacterBody.inventory.GetItemCount(RRPContent.Items.AdrenalineFrenzy);
-                    args.moveSpeedMultAdd += (onHitSpeed / 100 + (onHitSpeedStack / 100 * (stack - 1))) * BuffCount;
+                    int stack = characterBody.inventory.GetItemCount(RRPContent.Items.AdrenalineFrenzy);
+                    args.moveSpeedMultAdd += (onHitSpeed / 100 + (onHitSpeedStack / 100 * (stack - 1))) * buffCount;
                 }
                 
             }

@@ -4,6 +4,24 @@
         <name>R2API.Skins</name>
     </assembly>
     <members>
+        <member name="T:R2API.SkinLightReplacement">
+            <summary>
+            Static class utilized for implementing Light Replacements for a Model
+            </summary>
+        </member>
+        <member name="M:R2API.SkinLightReplacement.AddLightReplacement(RoR2.SkinDef,R2API.LightReplacement[])">
+            <summary>
+            Adds new LightReplacements that will be applied to a SkinDef
+            </summary>
+            <param name="targetSkinDef">The skin def which will apply the light replacements.</param>
+            <param name="lightReplacements">The light replacements for the skin.</param>
+            <returns>true if the light replacement was added succesfully, false otherwise.</returns>
+        </member>
+        <member name="T:R2API.LightReplacement">
+            <summary>
+            Struct that represents a LightReplacement for a Skin
+            </summary>
+        </member>
         <member name="T:R2API.SkinDefInfo">
             <summary>
             A container struct for all SkinDef parameters.
@@ -23,6 +41,15 @@
             <param name="skinDef"></param>
             <param name="ruleSet"></param>
             <returns>True if added succesfully, false otherwise</returns>
+        </member>
+        <member name="M:R2API.SkinIDRS.AddGroupOverride(RoR2.SkinDef,UnityEngine.Object,RoR2.DisplayRuleGroup)">
+            <summary>
+            Adds a displayRuleGroup override for ItemDef/EquipmentDef. If there was no IDRS for the skin, a clone of the IDRS from CharacterModel from a body prefab will be taken as base.
+            </summary>
+            <param name="skinDef"></param>
+            <param name="keyAsset">ItemDef/EquipmentDef</param>
+            <param name="displayRuleGroup"></param>
+            <returns></returns>
         </member>
         <member name="M:R2API.Skins.CreateSkinIcon(UnityEngine.Color,UnityEngine.Color,UnityEngine.Color,UnityEngine.Color)">
             <summary>

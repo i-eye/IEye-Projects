@@ -84,6 +84,13 @@
             <param name="dotStack"></param>
             <param name="moddedDamageType"></param>
         </member>
+        <member name="M:R2API.DamageAPI.AddModdedDamageType(RoR2.CrocoDamageTypeController,R2API.DamageAPI.ModdedDamageType)">
+            <summary>
+            Adding ModdedDamageType to CrocoDamageTypeController instance. You can add more than one damage type to one CrocoDamageTypeController
+            </summary>
+            <param name="croco"></param>
+            <param name="moddedDamageType"></param>
+        </member>
         <member name="M:R2API.DamageAPI.RemoveModdedDamageType(RoR2.DamageInfo,R2API.DamageAPI.ModdedDamageType)">
             <summary>
             Removing ModdedDamageType from DamageInfo instance.
@@ -138,6 +145,13 @@
             Removing ModdedDamageType from DotController.DotStack instance.
             </summary>
             <param name="dotStack"></param>
+            <param name="moddedDamageType"></param>
+        </member>
+        <member name="M:R2API.DamageAPI.RemoveModdedDamageType(RoR2.CrocoDamageTypeController,R2API.DamageAPI.ModdedDamageType)">
+            <summary>
+            Removing ModdedDamageType from CrocoDamageTypeController instance.
+            </summary>
+            <param name="croco"></param>
             <param name="moddedDamageType"></param>
         </member>
         <member name="M:R2API.DamageAPI.HasModdedDamageType(RoR2.DamageInfo,R2API.DamageAPI.ModdedDamageType)">
@@ -204,6 +218,14 @@
             <param name="moddedDamageType"></param>
             <returns></returns>
         </member>
+        <member name="M:R2API.DamageAPI.HasModdedDamageType(RoR2.CrocoDamageTypeController,R2API.DamageAPI.ModdedDamageType)">
+            <summary>
+            Checks if CrocoDamageTypeController instance has ModdedDamageType assigned. One CrocoDamageTypeController can have more than one damage type.
+            </summary>
+            <param name="croco"></param>
+            <param name="moddedDamageType"></param>
+            <returns></returns>
+        </member>
         <member name="M:R2API.DamageAPI.GetModdedDamageTypeHolder(RoR2.DamageInfo)">
             <summary>
             Returns ModdedDamageTypeHolder for DamageInfo instance.
@@ -260,6 +282,13 @@
             <param name="dotStack"></param>
             <returns></returns>
         </member>
+        <member name="M:R2API.DamageAPI.GetModdedDamageTypeHolder(RoR2.CrocoDamageTypeController)">
+            <summary>
+            Returns ModdedDamageTypeHolder for CrocoDamageTypeController instance.
+            </summary>
+            <param name="croco"></param>
+            <returns></returns>
+        </member>
         <member name="T:R2API.DamageAPI.ModdedDamageTypeHolder">
             <summary>
             Holds flag values of ModdedDamageType.
@@ -271,11 +300,24 @@
             </summary>
             <param name="moddedDamageType"></param>
         </member>
+        <member name="M:R2API.DamageAPI.ModdedDamageTypeHolder.Add(R2API.DamageAPI.ModdedDamageTypeHolder)">
+            <summary>
+            Enable ModdedDamageTypes from argument for this instance
+            </summary>
+            <param name="moddedDamageTypeHolder"></param>
+        </member>
         <member name="M:R2API.DamageAPI.ModdedDamageTypeHolder.Remove(R2API.DamageAPI.ModdedDamageType)">
             <summary>
             Disable ModdedDamageType for this instance
             </summary>
             <param name="moddedDamageType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:R2API.DamageAPI.ModdedDamageTypeHolder.Remove(R2API.DamageAPI.ModdedDamageTypeHolder)">
+            <summary>
+            Disable ModdedDamageTypes from argument for this instance
+            </summary>
+            <param name="moddedDamageTypeHolder"></param>
             <returns></returns>
         </member>
         <member name="M:R2API.DamageAPI.ModdedDamageTypeHolder.Has(R2API.DamageAPI.ModdedDamageType)">
@@ -333,6 +375,12 @@
             </summary>
             <param name="dotStack"></param>
         </member>
+        <member name="M:R2API.DamageAPI.ModdedDamageTypeHolder.CopyTo(RoR2.CrocoDamageTypeController)">
+            <summary>
+            Copies enabled ModdedDamageTypes to the CrocoDamageTypeController instance (completely replacing already set values)
+            </summary>
+            <param name="croco"></param>
+        </member>
         <member name="M:R2API.DamageAPI.ModdedDamageTypeHolder.MakeCopy">
             <summary>
             Makes a copy of this instance
@@ -367,11 +415,24 @@
             </summary>
             <param name="moddedDamageType"></param>
         </member>
+        <member name="M:R2API.DamageAPI.ModdedDamageTypeHolderComponent.Add(R2API.DamageAPI.ModdedDamageTypeHolder)">
+            <summary>
+            Enable ModdedDamageTypes from argument for this instance
+            </summary>
+            <param name="moddedDamageTypeHolder"></param>
+        </member>
         <member name="M:R2API.DamageAPI.ModdedDamageTypeHolderComponent.Remove(R2API.DamageAPI.ModdedDamageType)">
             <summary>
             Disable ModdedDamageType for this instance
             </summary>
             <param name="moddedDamageType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:R2API.DamageAPI.ModdedDamageTypeHolderComponent.Remove(R2API.DamageAPI.ModdedDamageTypeHolder)">
+            <summary>
+            Disable ModdedDamageTypes from argument for this instance
+            </summary>
+            <param name="moddedDamageTypeHolder"></param>
             <returns></returns>
         </member>
         <member name="M:R2API.DamageAPI.ModdedDamageTypeHolderComponent.Has(R2API.DamageAPI.ModdedDamageType)">
@@ -428,6 +489,12 @@
             Copies enabled ModdedDamageTypes to the DotController.DotStack instance (completely replacing already set values)
             </summary>
             <param name="dotStack"></param>
+        </member>
+        <member name="M:R2API.DamageAPI.ModdedDamageTypeHolderComponent.CopyTo(RoR2.CrocoDamageTypeController)">
+            <summary>
+            Copies enabled ModdedDamageTypes to the CrocoDamageTypeController instance (completely replacing already set values)
+            </summary>
+            <param name="croco"></param>
         </member>
         <member name="M:R2API.DamageAPI.ModdedDamageTypeHolderComponent.MakeHolder">
             <summary>

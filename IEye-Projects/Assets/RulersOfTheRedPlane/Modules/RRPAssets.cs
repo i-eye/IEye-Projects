@@ -192,7 +192,7 @@ namespace IEye.RRP
             multiStartCoroutine.Add(SwapShaders);
             multiStartCoroutine.Add(SwapAddressableShaders);
 
-            while (!multiStartCoroutine.IsDone) yield return null;
+            while (!multiStartCoroutine.IsDone()) yield return null;
 
             //Asset bundles have been loaded and shaders have been swapped, invoke method.
             _onRRPAssetsInitialized?.Invoke();

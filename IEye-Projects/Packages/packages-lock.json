@@ -6,30 +6,25 @@
       "source": "embedded",
       "dependencies": {}
     },
-    "bubbet-zioconfigfile": {
-      "version": "file:ZioConfigFile",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
-    "bubbet-zioriskofoptions": {
-      "version": "file:ZioRiskOfOptions",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
     "com.passivepicasso.thunderkit": {
-      "version": "https://github.com/PassivePicasso/ThunderKit.git#8.0.6",
+      "version": "https://github.com/PassivePicasso/ThunderKit.git",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.16.1"
       },
-      "hash": "c63a5c279e98d1e888bad5f3038db94a4140c39d"
+      "hash": "2f048021a13d98a8600898a6f4203cfe18554f36"
     },
     "com.unity.collab-proxy": {
-      "version": "1.14.13",
+      "version": "2.2.0",
       "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.editorcoroutines": {
+      "version": "1.0.0",
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -42,11 +37,20 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
-      "version": "1.2.1",
+      "version": "3.0.26",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.test-framework": "1.1.1"
+        "com.unity.ext.nunit": "1.0.6"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.ide.visualstudio": {
+      "version": "2.0.22",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.9"
       },
       "url": "https://packages.unity.com"
     },
@@ -58,10 +62,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.multiplayer-hlapi": {
-      "version": "file:RoR2MultiplayerHLAPI",
+      "version": "https://github.com/risk-of-thunder/UnityMultiplayerHLAPI.git#1.1.1",
       "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "faf93100110c30bfeec46d5367928c18f73a6ce1"
     },
     "com.unity.postprocessing": {
       "version": "2.3.0",
@@ -71,14 +76,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.scriptablebuildpipeline": {
-      "version": "1.16.1",
+      "version": "1.20.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
-      "version": "1.1.31",
+      "version": "1.1.33",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -88,8 +93,17 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.textmeshpro": {
+      "version": "3.0.6",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.timeline": {
-      "version": "1.2.18",
+      "version": "1.6.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -97,6 +111,25 @@
         "com.unity.modules.director": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.ugui": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.ui": "1.0.0",
+        "com.unity.modules.imgui": "1.0.0"
+      }
+    },
+    "com.unity.visualscripting": {
+      "version": "1.9.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -305,17 +338,20 @@
       "dependencies": {}
     },
     "riskofthunder-ror2editorkit": {
-      "version": "https://github.com/risk-of-thunder/RoR2EditorKit.git",
+      "version": "https://github.com/risk-of-thunder/RoR2EditorKit.git#5.2.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.editorcoroutines": "1.0.0"
+      },
+      "hash": "88d3b2ec4317d7fc9c6e2364405197d41b42e505"
+    },
+    "riskofthunder-ror2importextensions": {
+      "version": "https://github.com/risk-of-thunder/RoR2ImportExtensions.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "1f026446ee48832fc8f81f64d2e5a1fc65ad6889"
-    },
-    "riskofthunder-ror2importextensions": {
-      "version": "file:RoR2ImportExtensions",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
+      "hash": "d101e5d64337681ec17093f88fb1ea01d07a55f4"
     },
     "rune580-risk_of_options": {
       "version": "file:Risk_Of_Options",
@@ -330,11 +366,11 @@
       "dependencies": {}
     },
     "teammoonstorm-moonstormsharedutils": {
-      "version": "https://github.com/TeamMoonstorm/MoonstormSharedUtils.git#2.0Dev",
+      "version": "https://github.com/TeamMoonstorm/MoonstormSharedUtils.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "6dba7912af36ce17a88b4035fc5b529e7798d679"
+      "hash": "91437e6cf1f09f1bae5338dd844ac5071724f4a5"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
@@ -469,6 +505,18 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
+        "com.unity.modules.ui": "1.0.0",
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.uielementsnative": "1.0.0"
+      }
+    },
+    "com.unity.modules.uielementsnative": {
+      "version": "1.0.0",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       }

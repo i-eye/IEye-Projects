@@ -151,9 +151,9 @@ namespace IEye.RRP.Items
 
             public void OnDamageDealtServer(DamageReport damageReport)
             {
-                if (HasAnyStacks && Util.CheckRoll(15f, CharacterBody.master))
+                if (hasAnyStacks && Util.CheckRoll(15f, characterBody.master))
                 {
-                    damageReport.victim.ApplyDot(CharacterBody.gameObject, DotController.DotIndex.Blight, 4f, .75f);
+                    damageReport.victim.ApplyDot(characterBody.gameObject, DotController.DotIndex.Blight, 4f, .75f);
                 }
             }
         }
@@ -165,7 +165,7 @@ namespace IEye.RRP.Items
 
             public void ModifyStatArguments(RecalculateStatsAPI.StatHookEventArgs args)
             {
-                if (HasAnyStacks)
+                if (hasAnyStacks)
                 {
                     args.damageMultAdd += 20f;
                     args.critDamageMultAdd += 25f;

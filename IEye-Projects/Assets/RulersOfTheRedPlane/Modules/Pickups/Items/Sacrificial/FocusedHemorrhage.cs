@@ -18,24 +18,24 @@ namespace IEye.RRP.Items
 
         public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acFocusHemorrhage", RRPBundle.Items);
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Chance on hit to apply Hemorrhage(default 10%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Chance on hit to apply Hemorrhage(default 10%).")]
         [FormatToken(token, opType:default, 0)]
         public static float percentChance = 10f;
 
-        /*[RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Should there be reduced damage on the first stack?(default true).")]
+        /*[RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Should there be reduced damage on the first stack?(default true).")]
         public static bool damageReduceOnOneStack = true;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Percent of damage on the first stack(if enabled)(default 40%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percent of damage on the first stack(if enabled)(default 40%).")]
         public static float percentDamageReduceOnOneStack = 40f;
         */
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Added to damage multiplier(default 35%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Added to damage multiplier(default 35%).")]
         
         public static float percentDamageOver = 35f;
 
         [FormatToken(token, opType:default, 1)]
         public static float percentDamage = 100f + percentDamageOver;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, ConfigDescOverride = "Duration of Hemorrhage(default 15s).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Duration of Hemorrhage(default 15s).")]
         [FormatToken(token, opType:default, 2)]
         public static float duration = 15f;
 

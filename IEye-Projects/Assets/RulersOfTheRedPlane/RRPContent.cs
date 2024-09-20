@@ -43,7 +43,7 @@ namespace IEye.RRP
             }
 
             _parallelPostLoadDispatchers.Start();
-            while (!_parallelPostLoadDispatchers.IsDone) yield return null;
+            while (!_parallelPostLoadDispatchers.IsDone()) yield return null;
 
             for (int i = 0; i < _fieldAssignDispatchers.Length; i++)
             {
@@ -93,7 +93,7 @@ namespace IEye.RRP
             RRPLog.Info($"Calling AsyncAssetLoad Attribute Methods...");
             ParallelMultiStartCoroutine asyncAssetLoadCoroutines = AsyncAssetLoadAttribute.CreateCoroutineForMod(RRPMain.instance);
             asyncAssetLoadCoroutines.Start();
-            while (!asyncAssetLoadCoroutines.IsDone)
+            while (!asyncAssetLoadCoroutines.IsDone())
                 yield return null;
         }
 
@@ -123,32 +123,32 @@ namespace IEye.RRP
             {
                 () =>
                 {
-                    ItemModule.AddProvider(main, ContentUtil.CreateContentPieceProvider<ItemDef>(main, RRPContentPack));
+                    ItemModule.AddProvider(main, ContentUtil.CreateGenericContentPieceProvider<ItemDef>(main, RRPContentPack));
                     return ItemModule.InitializeItems(main);
                 },
                 () =>
                 {
-                    ItemTierModule.AddProvider(main, ContentUtil.CreateContentPieceProvider<ItemTierDef>(main, RRPContentPack));
+                    ItemTierModule.AddProvider(main, ContentUtil.CreateGenericContentPieceProvider<ItemTierDef>(main, RRPContentPack));
                     return ItemTierModule.InitializeTiers(main);
                 },
                 () =>
                 {
-                    CharacterModule.AddProvider(main, ContentUtil.CreateGameObjectContentPieceProvider<CharacterBody>(main, RRPContentPack));
+                    CharacterModule.AddProvider(main, ContentUtil.CreateGameObjectGenericContentPieceProvider<CharacterBody>(main, RRPContentPack));
                     return CharacterModule.InitializeCharacters(main);
                 },
                 () =>
                 {
-                    ArtifactModule.AddProvider(main, ContentUtil.CreateContentPieceProvider<ArtifactDef>(main, RRPContentPack));
+                    ArtifactModule.AddProvider(main, ContentUtil.CreateGenericContentPieceProvider<ArtifactDef>(main, RRPContentPack));
                     return ArtifactModule.InitializeArtifacts(main);
                 },
                 () =>
                 {
-                    SceneModule.AddProvider(main, ContentUtil.CreateContentPieceProvider<SceneDef>(main, RRPContentPack));
+                    SceneModule.AddProvider(main, ContentUtil.CreateGenericContentPieceProvider<SceneDef>(main, RRPContentPack));
                     return SceneModule.InitializeScenes(main);
                 },
                 () =>
                 {
-                    InteractableModule.AddProvider(main, ContentUtil.CreateGameObjectContentPieceProvider<IInteractable>(main, RRPContentPack));
+                    InteractableModule.AddProvider(main, ContentUtil.CreateGameObjectGenericContentPieceProvider<IInteractable>(main, RRPContentPack));
                     return InteractableModule.InitializeInteractables(main);
                 },
                 LoadFromAssetBundles
