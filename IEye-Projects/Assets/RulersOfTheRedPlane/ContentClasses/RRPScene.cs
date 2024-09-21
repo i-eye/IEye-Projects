@@ -46,8 +46,8 @@ namespace IEye.RRP
             assetCollection = request.asset;
 
             sceneDef = assetCollection.sceneDef;
-            mainTrack = assetCollection.mainTrack;
-            bossTrack = assetCollection.bossTrack;
+            if(mainTrack) mainTrack = assetCollection.mainTrack;
+            if(bossTrack) bossTrack = assetCollection.bossTrack;
 
             weightRelativeToSiblings = assetCollection.stageWeightRelativeToSiblings;
             preLoop = assetCollection.appearsPreLoop;

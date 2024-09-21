@@ -15,3 +15,10 @@ MonoBehaviour:
   assets:
   - {fileID: 11400000, guid: 96d988d1f6f30f5439056d20009f2ff7, type: 2}
   sceneDef: {fileID: 11400000, guid: 96d988d1f6f30f5439056d20009f2ff7, type: 2}
+  mainTrack:
+    _value: {fileID: 0}
+  bossTrack:
+    _value: {fileID: 0}
+  stageWeightRelativeToSiblings: 1
+  appearsPreLoop: 1
+  appearsPostLoop: 1

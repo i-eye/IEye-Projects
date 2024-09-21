@@ -1,83 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ValidationCache Version="1" SchemaVersion="97">
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Weewise_WwiseProject.wproj" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\States\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Queries\Factory Queries.wwu" DateLow="1698011738" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1698011738" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Presets\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Events\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Effects\Factory Effects.wwu" DateLow="1698011738" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1698011738" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise_WwiseIntegrationTemp\Weewise_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Weewise_WwiseProject.wproj" DateLow="1707187176" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Weewise_WwiseProject.Admin.wsettings" DateLow="1707189367" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\States\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1707189367" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Queries\Factory Queries.wwu" DateLow="1698011738" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1698011738" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Presets\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Events\Default Work Unit.wwu" DateLow="1707189367" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Effects\Factory Effects.wwu" DateLow="1698011738" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1698011738" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1707189367" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1707189367" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Weewise_WwiseProject.wproj" DateLow="1707875416" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Weewise_WwiseProject.Admin.wsettings" DateLow="1707875416" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\States\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1707875416" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Queries\Factory Queries.wwu" DateLow="1698011738" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1698011738" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Presets\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Events\Default Work Unit.wwu" DateLow="1707875416" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Effects\Factory Effects.wwu" DateLow="1698011738" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1698011738" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1707189367" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1707187157" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\IEye-Project\Weewise_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1707875416" DateHigh="0"/>
+<ValidationCache Version="1" SchemaVersion="119">
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Weewise_WwiseProject.wproj" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Weewise_WwiseProject.Admin.wsettings" DateLow="1726802229" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\States\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Queries\Factory Queries.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Presets\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Metadata\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Events\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Effects\Factory Effects.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1726802220" DateHigh="0"/>
 </ValidationCache>

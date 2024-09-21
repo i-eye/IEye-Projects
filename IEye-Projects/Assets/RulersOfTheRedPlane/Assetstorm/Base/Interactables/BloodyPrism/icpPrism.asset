@@ -12,17 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10af29dc523c7243a6e6e3d787aa1d6, type: 3}
   m_Name: icpPrism
   m_EditorClassIdentifier: 
-  _serializedCardPairs:
-  - stageEnum: 268321790
+  serializedCardPairs:
+  - stage:
+      Value: -1
     customStageNames: []
     interactableCategory: 1
     customCategoryWeight: 2.7
     customCategoryName: ImpStuff
+    requiredExpansions:
+    - _asset: {fileID: 11400000, guid: 0d7ea78905bfc2c4c8636a77b83a5661, type: 2}
+      _address: 
+      _useDirectReference: 1
     card:
       spawnCard:
         _asset: {fileID: 11400000, guid: 57ced426bad016f41be81edb721607a9, type: 2}
         _address: 
-        _useDirectReference: 0
+        _useDirectReference: 1
       selectionWeight: 5
       spawnDistance: 0
       preventOverhead: 0

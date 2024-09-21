@@ -20,43 +20,43 @@ namespace IEye.RRP.Items
         public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acSavagery", RRPBundle.Items);
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Armor with rush per stack(default 15).")]
-        [FormatToken(token, opType:default, 0)]
+        [FormatToken(token, 0)]
         public static int armor = 15;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percent damage increase per stack(default 15%).")]
-        [FormatToken(token, opType:default, 1)]
+        [FormatToken(token, 1)]
         public static float damage = 15f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Pecent global cooldown reduction per stack(default 5%)(caps at 50%).")]
-        [FormatToken(token, opType:default, 2)]
+        [FormatToken(token, 2)]
         public static float cooldownReduction = 5f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Added percentage jump force(regardless of stack)(default 35%).")]
-        [FormatToken(token, opType:default, 3)]
+        [FormatToken(token, 3)]
         public static float jumpMult = 35f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Added crit damage per stack(default 10%).")]
-        [FormatToken(token, opType:default, 4)]
+        [FormatToken(token, 4)]
         public static float critDamage = 10f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Added crit chance(regardless of stack)(default 6%).")]
-        [FormatToken(token, opType:default, 5)]
+        [FormatToken(token, 5)]
         public static float critChance = 6f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base duration of the rush(default 10s).")]
-        [FormatToken(token, opType:default, 6)]
+        [FormatToken(token, 6)]
         public static float duration = 10f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Duration added on stack(default 3s).")]
-        [FormatToken(token, opType:default, 7)]
+        [FormatToken(token, 7)]
         public static float stackDuration = 3f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percent chance of rush on hit(default 2%).")]
-        [FormatToken(token, opType:default, 8)]
+        [FormatToken(token, 8)]
         public static float hitChance = 2f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percent chance of rush on kill(default 8%).")]
-        [FormatToken(token, opType:default, 9)]
+        [FormatToken(token, 9)]
         public static float killChance = 8f;
 
 

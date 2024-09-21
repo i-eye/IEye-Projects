@@ -12,18 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b43d1b0b7e3074e9c105a44212585b, type: 3}
   m_Name: mspWlurm
   m_EditorClassIdentifier: 
-  _serializedCardPairs:
-  - stageEnum: -1
+  serializedCardPairs:
+  - stage:
+      Value: -1
     customStageNames: []
     monsterCategory: 4
     customCategoryWeight: 0
     customCategoryName: 
+    requiredExpansions:
+    - _asset: {fileID: 11400000, guid: 0d7ea78905bfc2c4c8636a77b83a5661, type: 2}
+      _address: 
+      _useDirectReference: 1
     card:
       spawnCard:
-        _asset: {fileID: 0}
+        _asset: {fileID: 11400000, guid: c40959586afa74345af963770b380b37, type: 2}
         _address: 
-        _useDirectReference: 0
-      selectionWeight: 0
+        _useDirectReference: 1
+      selectionWeight: 10
       spawnDistance: 0
       preventOverhead: 0
       minimumStageCompletions: 0

@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3363020621
+CRC: 3292418756
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -34,6 +34,6 @@ AssetBundleManifest:
     Info_7:
       Name: rrpindev
       Dependencies:
-        Dependency_0: rrpmain
-        Dependency_1: rrpbase
-        Dependency_2: rrpinteractables
+        Dependency_0: runtimemsuassetbundle
+        Dependency_1: rrpmain
+        Dependency_2: rrpbase

@@ -44,7 +44,10 @@ namespace IEye.RRP
 			instance = this;
             pluginInfo = Info;
             new RRPLog(Logger);
+            Logger.LogInfo("Logger created");
+
             new RRPConfig(this);
+            Logger.LogInfo("About to do content");
             new RRPContent();
             Logger.LogInfo("RRP loading for MSU 2.0");
 

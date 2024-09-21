@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	4225817642	insect_spit			\Default Work Unit\insect_spit	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	526262474	insect_spit(magnum_melee_two)	D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\.cache\Windows\SFX\magnum_melee_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\insect_spit(magnum_melee_two)		125504
+	526262474	insect_spit(magnum_melee_two)	C:\Users\Admin\Documents\Priority-Projects\RRP\IEyeProject\IEye-Projects\Weewise_WwiseProject\.cache\Windows\SFX\magnum_melee_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\insect_spit(magnum_melee_two)		125536
 

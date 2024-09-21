@@ -16,13 +16,13 @@ MonoBehaviour:
   PerManifest: 1
   ListType: 1
   Manifests:
-  - {fileID: 11400000, guid: 6c2fc48c95f626d478e9e75fb4356f84, type: 2}
+  - {fileID: 11400000, guid: 8b9388a5125e01f458f46c30a6a83ee8, type: 2}
   - {fileID: 11400000, guid: 5ceb1d8ed3af40d4d806e9756b403649, type: 2}
   ReplaceDirectory: 1
   Recursive: 1
   SourceRequired: 0
   EstablishDestination: 1
-  Source: <BuildPath>
+  Source: <MSUBuildPath>
   Destination: <IEyePath>
 --- !u!114 &-1079154737808341837
 MonoBehaviour:
@@ -55,7 +55,7 @@ MonoBehaviour:
   - {fileID: 612974993965716875}
   - {fileID: -1258053680613901902}
   QuickAccess: 0
-  manifest: {fileID: 11400000, guid: 6c2fc48c95f626d478e9e75fb4356f84, type: 2}
+  manifest: {fileID: 11400000, guid: 8b9388a5125e01f458f46c30a6a83ee8, type: 2}
 --- !u!114 &612974993965716875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,4 +70,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Active: 1
   OverrideManifest: 1
-  targetpipeline: {fileID: 11400000, guid: 4e0ada562e823934dad284255704129a, type: 2}
+  targetpipeline: {fileID: 11400000, guid: c00ca7d5a71d1ac43b1a79a5d6a062c5, type: 2}
