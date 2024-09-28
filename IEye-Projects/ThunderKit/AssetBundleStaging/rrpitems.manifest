@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1825125932
+CRC: 1666692579
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3a52590ce5fd8f97787561d50930cf14
+    Hash: 3c7dbca5833ae9f66f6fa6ee7f4f056d
   TypeTreeHash:
     serializedVersion: 2
     Hash: fabc0b7015a88efb3008930eed83b33f
@@ -120,6 +120,7 @@ Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AdrenalineFrenzy/Art/TinySpeedBoost.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AgressiveInsect/Art/Insect Texty.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PredatorySavagery/Art/PredatoryMat.mat
+- Assets/RulersOfTheRedPlane/RealShaders/Shaders/Shader/Hopoo Games_FX_Cloud Remap.shader
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/FocusedHemorrhage/Art/Focused.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/PredatorySavagery/Art/PredatoryPic.png
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Items/AgressiveInsect/VFX/matInsectMissile.mat

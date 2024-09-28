@@ -16,19 +16,19 @@ namespace IEye.RRP.Items
 
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base radius for bleed effect(default 50m).")]
-        [FormatToken(token, opType:default, 0)]
+        [FormatToken(token, 0)]
         public static int radiusBase = 50;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Damage Coefficient for bleed damage(default 2).")]
-        [FormatToken(token, opType:FormatTokenAttribute.OperationTypeEnum.MultiplyByN, 1, 240)]
+        [FormatToken(token, opType:FormatTokenAttribute.OperationTypeEnum.MultiplyByN, 240, 1)]
         public static float damage = 2f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Duration of bleed(default 3).")]
-        [FormatToken(token, opType:default, 2)]
+        [FormatToken(token, 2)]
         public static float duration = 3f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percentage of base damage done to the player(default 20%).")]
-        [FormatToken(token, opType:default, 3)]
+        [FormatToken(token, 3)]
         public static float playerCoef = (.2f * 100);
 
         public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acDoubleSword", RRPBundle.Items);

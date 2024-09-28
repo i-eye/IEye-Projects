@@ -9,7 +9,7 @@ namespace IEye.RRP.Orbs {
     {
         public override void Begin()
         {
-            speed = 35f;
+            speed = 25f;
             base.Begin();
         }
 

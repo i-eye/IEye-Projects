@@ -22,18 +22,18 @@ namespace IEye.RRP
     [BepInDependency("com.bepis.r2api.difficulty")]
     [BepInDependency("com.rune580.riskofoptions")]
     #endregion
-    [BepInDependency("com.TeamMoonstorm.MoonstormSharedUtils", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency(MSU.MSUMain.GUID, BepInDependency.DependencyFlags.HardDependency)]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.EveryoneNeedSameModVersion)]
-    [R2APISubmoduleDependency(
-        nameof(DotAPI),
-        nameof(PrefabAPI),
-        nameof(NetworkingAPI))]
+    //[R2APISubmoduleDependency(
+    //    nameof(DotAPI),
+    //    nameof(PrefabAPI),
+    //    nameof(NetworkingAPI))]
     [BepInPlugin(GUID, MODNAME, VERSION)]
     public class RRPMain : BaseUnityPlugin
 	{
 		public const string GUID = "com.I_Eye.RulersOfTheRedPlane";
 		public const string MODNAME = "Rulers of the Red Plane";
-		public const string VERSION = "0.0.5";
+		public const string VERSION = "0.1.5";
 
         public static RRPMain instance;
         public static PluginInfo pluginInfo;
@@ -51,7 +51,7 @@ namespace IEye.RRP
             new RRPContent();
             Logger.LogInfo("RRP loading for MSU 2.0");
 
-            LanguageFileLoader.AddLanguageFilesFromMod(this, "RRPLang");
+            LanguageFileLoader.AddLanguageFilesFromMod(this, "languages");
             
 		}	
         private void Start()

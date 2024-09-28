@@ -19,7 +19,7 @@ namespace IEye.RRP.Items
         public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acFocusHemorrhage", RRPBundle.Items);
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Chance on hit to apply Hemorrhage(default 10%).")]
-        [FormatToken(token, opType:default, 0)]
+        [FormatToken(token, 0)]
         public static float percentChance = 10f;
 
         /*[RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Should there be reduced damage on the first stack?(default true).")]
@@ -32,12 +32,12 @@ namespace IEye.RRP.Items
         
         public static float percentDamageOver = 35f;
 
-        [FormatToken(token, opType:default, 1)]
+        [FormatToken(token, 1)]
         public static float percentDamage = 100f + percentDamageOver;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Duration of Hemorrhage(default 15s).")]
-        [FormatToken(token, opType:default, 2)]
-        public static float duration = 15f;
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Duration of Hemorrhage(default 10s).")]
+        [FormatToken(token, 2)]
+        public static float duration = 10f;
 
 
 

@@ -25,12 +25,12 @@ namespace IEye.RRP.Items
         public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acAInsect", RRPBundle.Items);
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Duration of the insect blood debuff(default 8s)")]
-        [FormatToken(token, opType:default, 0)]
+        [FormatToken(token, 0)]
         public static float duration = 8f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Armor taken away from the insect blood debuff victim(default 50)")]
-        [FormatToken(token, opType:default, 1)]
-        public static int bloodyInsectExtraDamage = 50;
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percent damage per orb per stack(default 25%)")]
+        [FormatToken(token, 1)]
+        public static int bloodyInsectExtraDamage = 25;
 
         readonly static ProcType basedProc = (ProcType)382143;
 

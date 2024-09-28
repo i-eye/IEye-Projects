@@ -20,7 +20,7 @@ namespace IEye.RRP.Items
         public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acLeech", RRPBundle.Items);
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Chance for this item to proc per stack(default 15%).")]
-        [FormatToken(token, opType:default, 0)]
+        [FormatToken(token, 0)]
         public static float percentChance = 15f;
         public override void Initialize()
         {
@@ -37,7 +37,11 @@ namespace IEye.RRP.Items
 
         public override bool IsAvailable(ContentPack contentPack)
         {
+#if DEBUG
             return true;
+#else
+            return false;
+#endif
         }
 
         public sealed class Behavior : BaseItemBodyBehavior, IOnTakeDamageServerReceiver, IOnKilledOtherServerReceiver

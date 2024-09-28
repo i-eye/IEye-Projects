@@ -187,14 +187,19 @@ namespace IEye.RRP
                 yield return null;
             }
 
+            RRPLog.Info($"Initializing Shader Swap...");
             //We can swap shaders in parallel
             ParallelMultiStartCoroutine multiStartCoroutine = new ParallelMultiStartCoroutine();
             multiStartCoroutine.Add(SwapShaders);
             multiStartCoroutine.Add(SwapAddressableShaders);
+            multiStartCoroutine.Start();
 
-            while (!multiStartCoroutine.IsDone()) yield return null;
-
+            while (!multiStartCoroutine.IsDone())
+            {
+                yield return null;
+            }
             //Asset bundles have been loaded and shaders have been swapped, invoke method.
+            RRPLog.Info($"Invoking onRRPAssetsInitialized...");
             _onRRPAssetsInitialized?.Invoke();
             yield break;
         }
@@ -296,6 +301,7 @@ namespace IEye.RRP
         //Utilize the built in "ShaderUtil" class from MSU to swap both kinds of shaders.
         private static IEnumerator SwapShaders()
         {
+            RRPLog.Info($"Swapping Stubbed Shaders");
             return ShaderUtil.SwapStubbedShadersAsync(_assetBundles.Values.ToArray());
         }
 
@@ -571,7 +577,7 @@ namespace IEye.RRP
                 {
                     if (enumVal == RRPBundle.All || enumVal == RRPBundle.Invalid || enumVal == RRPBundle.StreamedScene)
                         continue;
-                    RRPLog.Message(targetBundle);
+                    //RRPLog.Message(targetBundle);
                     request = RRPAssets.GetAssetBundle(enumVal).LoadAllAssetsAsync<TAsset>();
                     while (!request.isDone)
                         yield return null;

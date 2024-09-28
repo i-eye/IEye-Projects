@@ -5,6 +5,7 @@ using UnityEngine.AddressableAssets;
 using static RoR2.ExplicitPickupDropTable;
 using MSU;
 using RoR2.ContentManagement;
+using R2API;
 
 namespace IEye.RRP.Monsters
 {
@@ -21,7 +22,11 @@ namespace IEye.RRP.Monsters
         }
         public override bool IsAvailable(ContentPack contentPack)
         {
+#if DEBUG
             return true;
+#else
+            return false;
+#endif
         }
     }
 }

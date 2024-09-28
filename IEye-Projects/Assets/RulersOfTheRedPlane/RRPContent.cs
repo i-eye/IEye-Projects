@@ -105,7 +105,7 @@ namespace IEye.RRP
             while (!expansionRequest.isComplete)
                 yield return null;
 
-        RRPContentPack.expansionDefs.AddSingle(expansionRequest.asset);
+            RRPContentPack.expansionDefs.AddSingle(expansionRequest.asset);
         }
 
         internal RRPContent()

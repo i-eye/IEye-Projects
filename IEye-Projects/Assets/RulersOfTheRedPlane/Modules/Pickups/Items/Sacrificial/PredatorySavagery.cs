@@ -55,9 +55,9 @@ namespace IEye.RRP.Items
         [FormatToken(token, 8)]
         public static float hitChance = 2f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percent chance of rush on kill(default 8%).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percent chance of rush on kill(default 5%).")]
         [FormatToken(token, 9)]
-        public static float killChance = 8f;
+        public static float killChance = 5f;
 
 
         public sealed class Behavior : BaseItemBodyBehavior, IOnDamageDealtServerReceiver, IOnKilledOtherServerReceiver
@@ -80,7 +80,7 @@ namespace IEye.RRP.Items
             {
                 if (Util.CheckRoll(killChance, report.attackerMaster))
                 {
-                    report.attackerBody.AddTimedBuffAuthority(RRPContent.Buffs.PredatoryRush.buffIndex, duration + (stackDuration * stack));
+                    report.attackerBody.AddTimedBuffAuthority(RRPContent.Buffs.PredatoryRush.buffIndex, duration + (stackDuration * (stack-1)));
                 }
             }
 

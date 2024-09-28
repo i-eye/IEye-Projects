@@ -11,20 +11,40 @@ There's also one interactable related to Sacrificial items
 Put them on the github or contact me on the modcord or dm(i_eye on discord)
 OR just join the discord server: https://discord.gg/Shd63mp4fB    
 If you have any feedback on the content too, I'd love to hear it. I don't want too crazy of items. 
+ 
+I can't guarantee that multiplayer will work, as it hasn't been tested    
 
-Yes, there may be unneeded dependencies, cry about it   
-And I can't guarantee that multiplayer will work, as it hasn't been tested    
-
-Chat is used in place of actual announcements for item sacrifices sometimes since I couldn't get them working in the time I had. Eventually you'll see a cool animation thing.
+Sacrifical items are soon to be reworked
 # Translation
 If you'd like to translate, contact me(I'll do Spanish though)  
-- If my translation is bad and you have time, I'd love to hear feedback, I'm not a native Spanish speaker but I'm trying lol  
+- If my translation is bad and you have time, I'd love to hear feedback, I'm not a native Spanish speaker but estoy probando
+
 # Credits  
-Nebby and everyone on the Starstorm team for MSU and the scripts that I heavily referenced     
-ihazkirbro for the sacrificial item tier idea     
-Nightshade for creating the logo
+Nebby for creating MSU and dealing with my stupid questions  
+Everyone on the SS2 team for some great reference   
+ihazkirbro for the sacrificial item tier idea  
+F4UXX for helping with balance and creating some great stuff waiting to cross the in-between space  
+QBanCaptain for helping with concept art and balance  
+Buns and JestAnAnimator for help with some stuff preparing to cross from the Red Plane  
+Nyctophiliac for creating the logo 
 
 # Changelog
+
+### 0.1.5
+- Updated for SOTS
+  - MSU2.0 LET'S GO
+- Reworked Introspective Insect
+  - 50% decrease both speeds
+  - 5 hits
+  - 5% max Health
+  - 7 seconds (+7 seconds per stack)
+- Reworked Aggressive Insect
+  - 8 seconds
+  - 25% total damage (+25% per stack)
+  - .2 proc chance
+  - New VFX + SFX
+- Spoiler Artifact(It's a fun one)(code will be implemented in game at some point, don't worry)
+  - Code on wiki
 
 ### 0.1.4
 - New Bloody Prism
@@ -108,3 +128,5 @@ Unreleased(you don't want it)
 - Added Four Dimensional Dagger
 - 4D Dagger 30m radius
 - Mod actually is in game
+
+

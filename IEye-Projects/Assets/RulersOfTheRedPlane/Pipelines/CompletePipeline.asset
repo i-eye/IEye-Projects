@@ -30,10 +30,10 @@ MonoBehaviour:
   PerManifest: 1
   ListType: 1
   Manifests:
-  - {fileID: 11400000, guid: 6c2fc48c95f626d478e9e75fb4356f84, type: 2}
+  - {fileID: 11400000, guid: 8b9388a5125e01f458f46c30a6a83ee8, type: 2}
   ArchiveType: 1
-  Source: <BuildPath>
-  Output: <ReleasePath>.zip
+  Source: <MSUBuildPath>
+  Output: <MSUReleasePath>.zip
 --- !u!114 &-3731689241279216723
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ MonoBehaviour:
       Value: -1
     customStageNames: []
     interactableCategory: 1
-    customCategoryWeight: 2.7
+    customCategoryWeight: 2.8
     customCategoryName: ImpStuff
     requiredExpansions:
     - _asset: {fileID: 11400000, guid: 0d7ea78905bfc2c4c8636a77b83a5661, type: 2}

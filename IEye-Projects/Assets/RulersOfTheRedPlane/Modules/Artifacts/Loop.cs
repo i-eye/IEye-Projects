@@ -24,7 +24,7 @@ namespace IEye.RRP.Artifacts
 
         public override void Initialize()
         {
-            //ArtifactDef.pickupModelPrefab = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Teleporters/LunarTeleporter Variant.prefab").WaitForCompletion();
+            artifactDef.pickupModelPrefab = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Teleporters/LunarTeleporter Variant.prefab").WaitForCompletion();
         }
         public override void OnArtifactDisabled()
         {

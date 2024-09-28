@@ -146,7 +146,8 @@ MonoBehaviour:
   - <ManifestPluginStaging>
   Author: IEye
   Name: Rulers_of_the_Red_Plane
-  Description: 0.1.5 Indev
+  Description: The Red Plane conquers the storm. With new and improved insects and
+    artifacts
   Version: 0.1.5
   Dependencies:
   - {fileID: 11400000, guid: 5ceb1d8ed3af40d4d806e9756b403649, type: 2}
@@ -165,6 +166,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 19f404b4f1d413a691a8b0edda7faba9, type: 2}
   - {fileID: 11400000, guid: 890a1759ee352a00d2367557b4d6225f, type: 2}
   - {fileID: 11400000, guid: e8166746ca0c6d98ee8c97fe787f2b80, type: 2}
+  - {fileID: 11400000, guid: 48f050b3512173aba0a952f846a557fa, type: 2}
 --- !u!114 &6081829390213413100
 MonoBehaviour:
   m_ObjectHideFlags: 0

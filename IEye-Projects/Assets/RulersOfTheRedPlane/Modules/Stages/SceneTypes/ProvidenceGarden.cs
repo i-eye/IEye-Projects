@@ -41,7 +41,11 @@ namespace IEye.RRP.Scenes
 
         public override bool IsAvailable(ContentPack contentPack)
         {
+#if DEBUG
             return true;
+#else
+            return false;
+#endif
         }
     }
 }

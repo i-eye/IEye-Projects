@@ -2,7 +2,7 @@
   "strings": {
     "RRP_ITEM_INTROINSECT_NAME": "Introspective Insect",
 	"RRP_ITEM_INTROINSECT_PICKUP": "Weaken those who hurt you. Heal from weakened enemies.",
-    "RRP_ITEM_INTROINSECT_DESC": "After getting hurt, <style=cIsUtility>weaken</style> the enemy's <style=cIsUtility>attack speed by {1}%</style> and <style=cIsUtility>movement speed by {2}%</style> for <style=cIsUtility>{0} seconds</style> <style=cStack>(+{0} seconds per stack)</style>. Every <style=cIsDamage>{4} hits</style> on weakened enemies <style=cIsHealing>heals</style> you for <style=cIsHealing>{3}% your maximum health</style>.",
+    "RRP_ITEM_INTROINSECT_DESC": "After getting hurt, <style=cIsUtility>weaken</style> the enemy's <style=cIsUtility>attack speed by {1}%</style> and <style=cIsUtility>movement speed by {2}%</style> for <style=cIsUtility>{0} seconds</style> <style=cStack>(+{0} seconds per stack)</style>. After<style=cIsDamage>{4} hits</style> on weakened enemies, <style=cIsHealing>heals</style> for <style=cIsHealing>{3}% your maximum health</style> and remove the weakness.",
 	"RRP_ITEM_INTROINSECT_LORE": "<style=cSub>Order: Insect\nTracking Number: 70*****\nEstimated Delivery: 2/17/2057\nShipping Method: Special (Client insisted on slower than average delivery)\nShipping Address: Collectors Garden, Earth\nShipping Details:</style>\n\nA live, rare, large ladybug specimen, you sure you want them to ship this? yes? \nA- and you want them to \"Get it to you slower than usual to not hurt the bugs feelings\"?\nAlright then, we will acquire the items for its habitat on the list you wrote, and put them alongside the bug.\nHere's hoping it doesn't explode during lightspeed transit."
     
   }

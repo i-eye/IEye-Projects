@@ -20,27 +20,27 @@ namespace IEye.RRP.Items
         public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acFrenzy", RRPBundle.Items);
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base percentage speed added on kill(default 6%).")]
-        [FormatToken(token, opType:default, 0)]
+        [FormatToken(token, 0)]
         public static float killSpeed = 6f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base percentage speed added on kill per stack(default 4%).")]
-        [FormatToken(token, opType:default, 1)]
+        [FormatToken(token, 1)]
         public static float killSpeedStack = 4f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base time for on kill speed boost(default 10s).")]
-        [FormatToken(token, opType:default, 2)]
+        [FormatToken(token, 2)]
         public static float killSpeedDuration = 10f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base percentage speed added on getting hit(default 12%).")]
-        [FormatToken(token, opType:default, 3)]
+        [FormatToken(token, 3)]
         public static float onHitSpeed = 12f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base percentage speed added on getting hit per stack(default(7%).")]
-        [FormatToken(token, opType:default, 4)]
+        [FormatToken(token, 4)]
         public static float onHitSpeedStack = 7f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base time for on getting hit speed boost(default 8s).")]
-        [FormatToken(token, opType:default, 5)]
+        [FormatToken(token, 5)]
         public static float onHitSpeedDuration = 8f;
 
         public sealed class Behavior : BaseItemBodyBehavior, IOnTakeDamageServerReceiver, IOnKilledOtherServerReceiver
