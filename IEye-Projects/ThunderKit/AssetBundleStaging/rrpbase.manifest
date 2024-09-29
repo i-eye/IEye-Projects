@@ -1,16 +1,24 @@
 ManifestFileVersion: 0
-CRC: 1926172077
+CRC: 1364927750
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0e85783cf4e2615d81155bb7f3debf99
+    Hash: 423e96bc16ad8597350837762c7edaf7
   TypeTreeHash:
     serializedVersion: 2
-    Hash: a8bf191141c8f730d39b08c8ed1b8965
+    Hash: c5a912956200c152603f183e9a0dd58d
 HashAppended: 0
 ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
 - Class: 28
   Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 296141222, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: -1284244208, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
@@ -19,15 +27,21 @@ ClassTypes:
   Script: {fileID: 1542677001, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: 1006468269, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 03cb76f72e6659c4a9fdca894294205c, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
-SerializeReferenceClassIdentifiers: []
+SerializeReferenceClassIdentifiers:
+- AssemblyName: RoR2
+  ClassName: RoR2.ItemDef/Pair
 Assets:
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/ItemTiers/Sacrificial/SacrificialRelationshipType.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/ItemTiers/Sacrificial/SacrificialRelationshipProvider.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/ItemTiers/Sacrificial/SacrificialPickupVFX.prefab
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/ItemTiers/Sacrificial/Sacrificial.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/ItemTiers/Sacrificial/Background.png
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/ItemTiers/Sacrificial/SacrificialRelationshipProvider.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/ItemTiers/Sacrificial/SacrificialRelationshipType.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/ItemTiers/Sacrificial/acSacrificial.asset
 Dependencies:
-- D:/Creative/Unity Projects/RoR2/WEEwise/WEEwise/Weewise/ThunderKit/AssetBundleStaging/rrpitems
+- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpitems

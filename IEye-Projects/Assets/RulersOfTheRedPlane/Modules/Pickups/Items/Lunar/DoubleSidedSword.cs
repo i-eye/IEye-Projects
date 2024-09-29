@@ -1,35 +1,47 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Moonstorm;
+using MSU;
+using MSU.Config;
 using RoR2;
 using RoR2.Items;
+using RoR2.ContentManagement;
 
 namespace IEye.RRP.Items
 {
-    public class DoubleSidedSword : ItemBase
+    public class DoubleSidedSword : RRPItem
     {
 
         private const string token = "RRP_ITEM_DOUBLESWORD_DESC";
-        public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("DoubleSidedSword", RRPBundle.Items);
+        //public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("DoubleSidedSword", RRPBundle.Items);
 
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base radius for bleed effect(default 50m).")]
-        [TokenModifier(token, StatTypes.Default, 0)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base radius for bleed effect(default 50m).")]
+        [FormatToken(token, 0)]
         public static int radiusBase = 50;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Damage Coefficient for bleed damage(default 2).")]
-        [TokenModifier(token, StatTypes.MultiplyByN, 1, "240")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Damage Coefficient for bleed damage(default 2).")]
+        [FormatToken(token, opType:FormatTokenAttribute.OperationTypeEnum.MultiplyByN, 240, 1)]
         public static float damage = 2f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of bleed(default 3).")]
-        [TokenModifier(token, StatTypes.Default, 2)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Duration of bleed(default 3).")]
+        [FormatToken(token, 2)]
         public static float duration = 3f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Percentage of base damage done to the player(default 20%).")]
-        [TokenModifier(token, StatTypes.Default, 3)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percentage of base damage done to the player(default 20%).")]
+        [FormatToken(token, 3)]
         public static float playerCoef = (.2f * 100);
 
-       
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acDoubleSword", RRPBundle.Items);
+
+        public override void Initialize()
+        {
+            
+        }
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return true;
+        }
 
         public sealed class Behavior : BaseItemBodyBehavior, IOnTakeDamageServerReceiver
         {
@@ -37,10 +49,10 @@ namespace IEye.RRP.Items
             private static ItemDef GetItemDef() => RRPContent.Items.DoubleSidedSword;
             public void OnTakeDamageServer(DamageReport report)
             {
-                //DefNotSS2Log.Message("dotIndex is: " + report.damageInfo.dotIndex);
-                //DefNotSS2Log.Message("profCoef is: " + report.damageInfo.procCoefficient);
-                //DefNotSS2Log.Message("damgageType is: " + ((int)report.damageInfo.damageType));
-                if ((report.damageInfo.procCoefficient > 0) && (report.damageInfo.dotIndex.Equals(DotController.DotIndex.None)) && ((int)report.damageInfo.damageType) != 66)
+                //DefNotRRPLog.Message("dotIndex is: " + report.damageInfo.dotIndex);
+                //DefNotRRPLog.Message("profCoef is: " + report.damageInfo.procCoefficient);
+                //DefNotRRPLog.Message("damgageType is: " + ((int)report.damageInfo.damageType));
+                if ((report.damageInfo.procCoefficient > 0) && (report.damageInfo.dotIndex.Equals(DotController.DotIndex.None)) && ((int)report.damageInfo.damageType.damageType) != 66)
                 {
                     var victim = report.victim;
                     
@@ -111,7 +123,7 @@ namespace IEye.RRP.Items
                 }
                 if (healthComponents.Length == 0 || healthComponents == null)
                 {
-                    //DefNotSS2Log.Message("Search is null");
+                    //DefNotRRPLog.Message("Search is null");
                     return null;
                 }
                 return healthComponents;

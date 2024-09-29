@@ -1,26 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Moonstorm;
+using MSU;
+using MSU.Config;
 using RoR2;
 using RoR2.Items;
 using R2API;
 using EntityStates.AffixEarthHealer;
+using RoR2.ContentManagement;
 
 namespace IEye.RRP.Items
 {
 
-    public class Leech : ItemBase
+    public class Leech : RRPItem
     {
         private const string token = "RRP_ITEM_LEECH_DESC";
-        public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("Leech", RRPBundle.Items);
+        //public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("Leech", RRPBundle.Items);
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Chance for this item to proc per stack(default 15%).")]
-        [TokenModifier(token, StatTypes.Default, 0)]
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acLeech", RRPBundle.Items);
+
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Chance for this item to proc per stack(default 15%).")]
+        [FormatToken(token, 0)]
         public static float percentChance = 15f;
         public override void Initialize()
         {
-            base.Initialize();
             On.RoR2.HealthComponent.Heal += HealthComponent_Heal;
         }
         private float HealthComponent_Heal(On.RoR2.HealthComponent.orig_Heal orig, HealthComponent self, float amount, ProcChainMask procChainMask, bool nonRegen)
@@ -32,6 +35,15 @@ namespace IEye.RRP.Items
             return orig(self, amount, procChainMask, nonRegen);
         }
 
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+#if DEBUG
+            return true;
+#else
+            return false;
+#endif
+        }
+
         public sealed class Behavior : BaseItemBodyBehavior, IOnTakeDamageServerReceiver, IOnKilledOtherServerReceiver
         {
             [ItemDefAssociation]
@@ -41,7 +53,7 @@ namespace IEye.RRP.Items
             public void OnTakeDamageServer(DamageReport report)
             {
                 
-                if((report.damageInfo.procCoefficient > 0) && (report.damageInfo.dotIndex.Equals(DotController.DotIndex.None)) && ((int)report.damageInfo.damageType) != 66)
+                if((report.damageInfo.procCoefficient > 0) && (report.damageInfo.dotIndex.Equals(DotController.DotIndex.None)) && ((int)report.damageInfo.damageType.damageType) != 66)
                 {
                     var dotinfo = new InflictDotInfo
                     {

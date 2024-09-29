@@ -1,22 +1,39 @@
 ﻿using RoR2;
 using RoR2.Items;
-using Moonstorm;
+using MSU;
 using R2API;
 using UnityEngine;
 using System.Collections.Generic;
 using R2API.Networking;
+using RoR2.ContentManagement;
 
 namespace IEye.RRP.Items
 { 
-    [DisabledContent]
-    public class BloodlustIvy : ItemBase
+    //[DisabledContent]
+    public class BloodlustIvy : RRPItem
     {
 
         private const string token = "RRP_ITEM_BLOODIVY_DESC";
         public static float percentHealthCoef = 15;
 
         public static float distanceNeeded = 20f;
-        public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("BloodlustIvy", RRPBundle.Items);
+        //public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("BloodlustIvy", RRPBundle.Items);
+
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acBloodIvy", RRPBundle.Items);
+
+        public override void Initialize()
+        {
+ 
+        }
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+#if DEBUG
+            return true;
+#else
+            return false;
+#endif
+        }
 
         public sealed class Behavior : BaseItemBodyBehavior, IOnDamageInflictedServerReceiver
         {
@@ -87,7 +104,7 @@ namespace IEye.RRP.Items
 
                 if (healthComponents.Count == 0)
                 {
-                    //DefNotSS2Log.Message("Search is null");
+                    //DefNotRRPLog.Message("Search is null");
                     return null;
                 }
 

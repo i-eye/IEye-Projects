@@ -1,34 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Moonstorm;
+using MSU;
+using MSU.Config;
 using RoR2;
 using RoR2.Items;
 using R2API;
 using System.Linq;
+using RoR2.ContentManagement;
 
 namespace IEye.RRP.Items {
-    public class FourDimensionalDagger : ItemBase
+    public class FourDimensionalDagger : RRPItem
     {
         
         private const string token = "RRP_ITEM_FOURDIMENSIONALDAGGER_DESC";
-        public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("FourDimensionalDagger", RRPBundle.Items);
+        //public override ItemDef ItemDef { get; } = RRPAssets.LoadAsset<ItemDef>("FourDimensionalDagger", RRPBundle.Items);
 
-        
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("ac4DDagger", RRPBundle.Items);
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Chance for this item to proc per stack(default 15%).")]
-        [TokenModifier(token, StatTypes.Default, 0)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Chance for this item to proc per stack(default 15%).")]
+        [FormatToken(token, 0)]
         public static float percentChance = 15f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Base search radius(default 25m).")]
-        [TokenModifier(token, StatTypes.Default, 1)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Base search radius(default 25m).")]
+        [FormatToken(token, 1)]
         public static int radiusBase = 25;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Added search radius per stack past 1(default 5m).")]
-        [TokenModifier(token, StatTypes.Default, 2)]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Added search radius per stack past 1(default 5m).")]
+        [FormatToken(token, 2)]
         public static int radiusIncrease = 5;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the bleed in second(default 3s).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Duration of the bleed in second(default 3s).")]
         public static float duration = 3f;
 
 
@@ -58,7 +60,7 @@ namespace IEye.RRP.Items {
                         {
                             return;
                         }
-                        //DefNotSS2Log.Message("Victim:" + victim.gameObject.name);
+                        //DefNotRRPLog.Message("Victim:" + victim.gameObject.name);
                         var dotInfo = new InflictDotInfo()
                         {
                             attackerObject = attacker,
@@ -67,9 +69,9 @@ namespace IEye.RRP.Items {
                             duration = report.damageInfo.procCoefficient * duration,
                             damageMultiplier = 1f,
                         };
-                        RRPMain.logger.LogMessage("Before inflict");
+                        RRPLog.Message("Before inflict");
                         DotController.InflictDot(ref dotInfo);
-                        //DefNotSS2Log.Message("I hope an enemy nearby has an effect lol");
+                        //DefNotRRPLog.Message("I hope an enemy nearby has an effect lol");
 
                     }
                 }
@@ -115,12 +117,12 @@ namespace IEye.RRP.Items {
                 }
                 if (healthComponents.Count != 0)
                 {
-                    //DefNotSS2Log.Message("Found healthcomponent array(length): " + healthComponents.Length);
+                    //DefNotRRPLog.Message("Found healthcomponent array(length): " + healthComponents.Length);
                     selected = healthComponents[Random.Range(0, healthComponents.Count)];
                 }
                 else
                 {
-                    //DefNotSS2Log.Message("Search is null");
+                    //DefNotRRPLog.Message("Search is null");
                     return null;
                 }
 
@@ -132,6 +134,16 @@ namespace IEye.RRP.Items {
             private SphereSearch search;
             private HealthComponent selected;
             public float baseRange = radiusBase;
+        }
+
+        public override void Initialize()
+        {
+            
+        }
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return true;
         }
     }
 }

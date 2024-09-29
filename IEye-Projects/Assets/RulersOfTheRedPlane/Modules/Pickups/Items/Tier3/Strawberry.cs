@@ -1,6 +1,7 @@
-﻿using IL.RoR2.DispatachableEffects;
-using Moonstorm;
+﻿   using IL.RoR2.DispatachableEffects;
+using MSU;
 using RoR2;
+using RoR2.ContentManagement;
 using RoR2.Items;
 using System;
 using System.Collections.Generic;
@@ -12,14 +13,16 @@ using UnityEngine.AddressableAssets;
 
 namespace IEye.RRP.Items
 {
-    public class Strawberry : ItemBase
+    public class Strawberry : RRPItem
     {
         CharacterSpawnCard gupSpawnCard;
         public static CharacterSpawnCard friendlyGupSpawnCard = new CharacterSpawnCard();
-        public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("Strawberry", RRPBundle.Items);
+        //public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("Strawberry", RRPBundle.Items);
+
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acStrawberry", RRPBundle.Items);
+
         public override void Initialize()
         {
-            base.Initialize();
             //ItemDef.requiredExpansion = 
             gupSpawnCard = Addressables.LoadAssetAsync<CharacterSpawnCard>("RoR2/DLC1/Gup/cscGupBody.asset").WaitForCompletion();
             friendlyGupSpawnCard.directorCreditCost = 0;
@@ -33,6 +36,16 @@ namespace IEye.RRP.Items
             
 
         }
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+#if DEBUG
+            return true;
+#else
+            return false;
+#endif
+        }
+
         public sealed class Behavior : BaseItemBodyBehavior
         {
             [ItemDefAssociation]
@@ -81,7 +94,7 @@ namespace IEye.RRP.Items
                             //component.inventory.GiveItem(RoR2Content.Items.BoostHp, 10);
                             component.inventory.GiveItem(RoR2Content.Items.HealthDecay, 17);
                             component.inventory.GiveItem(RRPContent.Items.Kamikaze, 1);
-                            RRPMain.logger.LogDebug("Index is" + RRPContent.Items.Kamikaze.itemIndex);
+                            RRPLog.Debug("Index is" + RRPContent.Items.Kamikaze.itemIndex);
                             Deployable component2 = component.GetComponent<Deployable>();
                             if ((bool)component2)
                             {

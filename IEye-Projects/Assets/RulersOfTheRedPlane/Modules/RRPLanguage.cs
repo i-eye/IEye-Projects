@@ -1,5 +1,5 @@
-﻿using Moonstorm.Loaders;
-
+﻿
+/*
 namespace IEye.RRP
 {
     public class RRPLanguage : LanguageLoader<RRPLanguage>
@@ -16,3 +16,4 @@ namespace IEye.RRP
         }
     }
 }
+*/

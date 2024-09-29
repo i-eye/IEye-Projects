@@ -5,8 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UObject = UnityEngine.Object;
-using Moonstorm;
+using MSU;
 
+/*
 namespace IEye.RRP.Modules
 {
     public sealed class Unlockables : UnlockablesModuleBase
@@ -19,7 +20,7 @@ namespace IEye.RRP.Modules
         {
             Instance = this;
             base.Initialize();
-            RRPMain.logger.LogInfo($"Initializing Unlockables.");
+            RRPLog.Info($"Initializing Unlockables.");
             GetUnlockableBases();
         }
 
@@ -32,7 +33,7 @@ namespace IEye.RRP.Modules
                 RemoveAllNonSkinUnlocks();
                 allUnlocks = allUnlocks.Where(unlock => unlock.UnlockableDef.cachedName.Contains("skin"));
             }
-            */
+            */ /*
             allUnlocks.ToList().ForEach(unlock => AddUnlockable(unlock));
 
             return null;
@@ -41,7 +42,7 @@ namespace IEye.RRP.Modules
         private void RemoveAllNonSkinUnlocks()
         {
 #if DEBUG
-            RRPMain.logger.LogInfo("Unlock all is enabled, removing unlocks for everything except skins");
+            RRPLog.Info("Unlock all is enabled, removing unlocks for everything except skins");
 #endif
             //This should load all the assets we have that:
             //Are not skin defs
@@ -69,9 +70,10 @@ namespace IEye.RRP.Modules
                 }
 
 #if DEBUG
-                RRPMain.logger.LogInfo($"Removed {fieldsInAsset.Length} unlockableDef references from {asset}");
+                RRPLog.Info($"Removed {fieldsInAsset.Length} unlockableDef references from {asset}");
 #endif
             }
         }
     }
 }
+*/

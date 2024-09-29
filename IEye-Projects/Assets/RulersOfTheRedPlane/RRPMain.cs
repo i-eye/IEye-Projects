@@ -10,7 +10,7 @@ using R2API.Utils;
 using R2API.Networking;
 using R2API.ContentManagement;
 using UnityEngine;
-using Moonstorm;
+using MSU;
 using IEye.RRP.Items;
 using R2API.AddressReferencedAssets;
 namespace IEye.RRP
@@ -22,36 +22,36 @@ namespace IEye.RRP
     [BepInDependency("com.bepis.r2api.difficulty")]
     [BepInDependency("com.rune580.riskofoptions")]
     #endregion
-    [BepInDependency("com.TeamMoonstorm.MoonstormSharedUtils", BepInDependency.DependencyFlags.HardDependency)]
+    [BepInDependency(MSU.MSUMain.GUID, BepInDependency.DependencyFlags.HardDependency)]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.EveryoneNeedSameModVersion)]
-    [R2APISubmoduleDependency(
-        nameof(DotAPI),
-        nameof(PrefabAPI),
-        nameof(NetworkingAPI))]
+    //[R2APISubmoduleDependency(
+    //    nameof(DotAPI),
+    //    nameof(PrefabAPI),
+    //    nameof(NetworkingAPI))]
     [BepInPlugin(GUID, MODNAME, VERSION)]
     public class RRPMain : BaseUnityPlugin
 	{
 		public const string GUID = "com.I_Eye.RulersOfTheRedPlane";
 		public const string MODNAME = "Rulers of the Red Plane";
-		public const string VERSION = "0.0.5";
+		public const string VERSION = "0.1.5";
 
-        public static RRPMain Instance;
+        public static RRPMain instance;
         public static PluginInfo pluginInfo;
-        public static DefNotSS2Log logger;
         
 
 		private void Awake()
 		{
-			Instance = this;
+			instance = this;
             pluginInfo = Info;
-            logger = new DefNotSS2Log(Logger);
+            new RRPLog(Logger);
+            Logger.LogInfo("Logger created");
 
-            new RRPAssets().Init();
-            new RRPConfig().Init();
-            new RRPContent().Init();
-            new RRPLanguage().Init();
-            //ConfigurableFieldManager.AddMod(this);
-            ConfigSystem.AddMod(this);
+            new RRPConfig(this);
+            Logger.LogInfo("About to do content");
+            new RRPContent();
+            Logger.LogInfo("RRP loading for MSU 2.0");
+
+            LanguageFileLoader.AddLanguageFilesFromMod(this, "languages");
             
 		}	
         private void Start()

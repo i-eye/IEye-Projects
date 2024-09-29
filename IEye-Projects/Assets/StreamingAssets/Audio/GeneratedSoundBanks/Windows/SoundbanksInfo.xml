@@ -1,35 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<RootPaths>
-		<ProjectRoot>D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>../../../../../Weewise_WwiseProject</ProjectRoot>
+		<SourceFilesRoot>../../../../../Weewise_WwiseProject/.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Creative\Unity Projects\RoR2\WEEwise\WEEwise\Weewise\Weewise_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>../../../../../Weewise_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
-	<StreamedFiles/>
-	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="4204904655">
-			<ObjectPath>Init</ObjectPath>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6CBD692-12EC-CDBA-0932-48F63C40C91F}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
 		</SoundBank>
-		<SoundBank Id="4120943549" Language="SFX" Hash="1220976243">
-			<ObjectPath>\SoundBanks\Default Work Unit\RRP_Soundbank</ObjectPath>
+		<SoundBank Id="4120943549" Type="User" Language="SFX" Hash="{46C3973C-10C0-79B9-E353-D01B4BB781F3}">
 			<ShortName>RRP_Soundbank</ShortName>
 			<Path>RRP_Soundbank.bnk</Path>
-			<IncludedEvents>
-				<Event Id="4225817642" Name="insect_spit" ObjectPath="\Events\Default Work Unit\insect_spit" DurationType="OneShot" DurationMin="0.711111" DurationMax="0.711111">
-					<IncludedMemoryFiles>
-						<File Id="526262474" Language="SFX">
-							<ShortName>magnum_melee_2.wav</ShortName>
-							<Path>SFX\magnum_melee_2_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
+			<Media>
+				<File Id="526262474" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>magnum_melee_2.wav</ShortName>
+					<CachePath>SFX/magnum_melee_2_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="4225817642" Name="insect_spit" DurationType="OneShot" DurationMin="0.7111111" DurationMax="0.7111111">
+					<MediaRefs>
+						<MediaRef Id="526262474"/>
+					</MediaRefs>
 				</Event>
-			</IncludedEvents>
+			</Events>
 		</SoundBank>
 	</SoundBanks>
+	<FileHash>{1A930BE8-EAD4-A02A-D902-1874C88BADD0}</FileHash>
 </SoundBanksInfo>

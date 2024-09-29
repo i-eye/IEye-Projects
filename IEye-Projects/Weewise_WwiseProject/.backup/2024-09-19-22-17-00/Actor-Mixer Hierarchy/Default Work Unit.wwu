@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{51CEABF3-CC0E-44A9-B0D1-10A19DBA1DF2}" SchemaVersion="97">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{51CEABF3-CC0E-44A9-B0D1-10A19DBA1DF2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="insect_spit(magnum_melee_two)" ID="{050DCA92-756B-45EE-853B-598EF7D149FE}" ShortID="872736463">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6413A3E-13B4-40FA-835C-B018D81C5299}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{796DF88C-4F29-470E-8E09-38FD224452F3}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="magnum_melee_2" ID="{47D3FA15-62E9-4A09-938C-B8F746CB5361}">
+							<Language>SFX</Language>
+							<AudioFile>magnum_melee_2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="526262474"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="magnum_melee_2" ID="{47D3FA15-62E9-4A09-938C-B8F746CB5361}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

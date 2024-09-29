@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{52BA26E4-941B-4AA3-85E1-D69F0D6A8761}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{52BA26E4-941B-4AA3-85E1-D69F0D6A8761}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="insect_spit" ID="{9DE8C71E-2040-4208-A377-CAA9FF4FE11B}">
+					<ChildrenList>
+						<Action Name="" ID="{D647A036-40CD-4359-926E-4AEA864903EC}" ShortID="411165518">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="insect_spit(magnum_melee_two)" ID="{050DCA92-756B-45EE-853B-598EF7D149FE}" WorkUnitID="{51CEABF3-CC0E-44A9-B0D1-10A19DBA1DF2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

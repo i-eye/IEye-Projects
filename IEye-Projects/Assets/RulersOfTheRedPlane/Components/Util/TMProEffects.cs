@@ -1,7 +1,6 @@
 ﻿using System.Linq;
-using TMPro;
 using UnityEngine;
-
+/*
 namespace IEye.RRP
 {
     public class TMProEffects
@@ -15,25 +14,25 @@ namespace IEye.RRP
         public static void ChatBox_Start(On.RoR2.UI.ChatBox.orig_Start orig, RoR2.UI.ChatBox self)
         {
             orig(self);
-            var component = self.messagesText.textComponent.GetComponent<RRPTextEffectsNotSS2DefNot>();
+            var component = self.messagesText.textComponent.GetComponent<RRPTextEffectsNotRRPDefNot>();
             if (!component)
             {
-                component = self.messagesText.textComponent.GetComponent<RRPTextEffectsNotSS2DefNot>();
+                component = self.messagesText.textComponent.GetComponent<RRPTextEffectsNotRRPDefNot>();
             }
         }
 
         private static void HGTextMeshProUGUI_Awake(On.RoR2.UI.HGTextMeshProUGUI.orig_Awake orig, RoR2.UI.HGTextMeshProUGUI self)
         {
             orig(self);
-            var component = self.GetComponent<RRPTextEffectsNotSS2DefNot>();
+            var component = self.GetComponent<RRPTextEffectsNotRRPDefNot>();
             if (!component)
             {
-                component = self.gameObject.AddComponent<RRPTextEffectsNotSS2DefNot>();
+                component = self.gameObject.AddComponent<RRPTextEffectsNotRRPDefNot>();
                 component.textComponent = self;
             }
         }
     }
-    public class RRPTextEffectsNotSS2DefNot : MonoBehaviour
+    public class RRPTextEffectsNotRRPDefNot : MonoBehaviour
     {
         public TMP_Text textComponent;
         public bool textChanged;
@@ -152,3 +151,4 @@ namespace IEye.RRP
         }
     }
 }
+*/

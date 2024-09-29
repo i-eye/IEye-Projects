@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4026542832
+CRC: 3696098008
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: msuassets
+      Name: runtimemsuassetbundle
       Dependencies: {}
     Info_1:
       Name: rrpmain
@@ -11,7 +11,7 @@ AssetBundleManifest:
     Info_2:
       Name: rrpitems
       Dependencies:
-        Dependency_0: msuassets
+        Dependency_0: runtimemsuassetbundle
         Dependency_1: rrpmain
         Dependency_2: rrpbase
     Info_3:
@@ -21,7 +21,7 @@ AssetBundleManifest:
     Info_4:
       Name: rrpinteractables
       Dependencies:
-        Dependency_0: msuassets
+        Dependency_0: runtimemsuassetbundle
         Dependency_1: rrpmain
     Info_5:
       Name: rrpartifacts
@@ -34,7 +34,6 @@ AssetBundleManifest:
     Info_7:
       Name: rrpindev
       Dependencies:
-        Dependency_0: msuassets
+        Dependency_0: runtimemsuassetbundle
         Dependency_1: rrpmain
         Dependency_2: rrpbase
-        Dependency_3: rrpinteractables

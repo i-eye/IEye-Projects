@@ -1,9 +1,10 @@
-﻿using Moonstorm.Config;
+﻿/*
+using Moonstorm.Config;
 using R2API.ScriptableObjects;
 using System.Collections.Generic;
 using System.Linq;
 using RiskOfOptions.OptionConfigs;
-using Moonstorm;
+using MSU;
 
 namespace IEye.RRP.Modules
 {
@@ -30,7 +31,7 @@ namespace IEye.RRP.Modules
             Instance = this;
             base.Initialize();
             if (!EnableInteractables) return;
-            RRPMain.logger.LogInfo($"Initializing Interactables.");
+            RRPLog.Info($"Initializing Interactables.");
             GetInteractableBases();
         }
 
@@ -58,3 +59,4 @@ namespace IEye.RRP.Modules
         }
     }
 }
+*/

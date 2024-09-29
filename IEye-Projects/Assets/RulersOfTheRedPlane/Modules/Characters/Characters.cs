@@ -1,9 +1,10 @@
-﻿using Moonstorm.Config;
+﻿/*
+using Moonstorm.Config;
 using R2API.ScriptableObjects;
 using RiskOfOptions.OptionConfigs;
 using System.Collections.Generic;
 using System.Linq;
-using Moonstorm;
+using MSU;
 
 namespace IEye.RRP.Modules
 {
@@ -31,18 +32,18 @@ namespace IEye.RRP.Modules
             b.Section = "Enable Survivors";
             b.Key = "Enable Survivors";
             b.Description = "Enables Starstorm 2's survivors. Set to false to disable survivors.";
-            b.ConfigFile = SS2Config.ConfigMain;
+            b.ConfigFile = RRPConfig.ConfigMain;
             b.CheckBoxConfig = new CheckBoxConfig
             {
                 restartRequired = true,
             };
         }).DoConfigure();
-        */
+        
         public override void Initialize()
         {
             Instance = this;
             base.Initialize();
-            RRPMain.logger.LogInfo($"Initializing Bodies.");
+            RRPLog.Info($"Initializing Bodies.");
             GetCharacterBases();
         }
 
@@ -52,7 +53,7 @@ namespace IEye.RRP.Modules
             base.GetCharacterBases()
             .Where(character =>
             {
-                /*
+                
                 if (character is SurvivorBase survivor)
                 {
                     string name = MSUtil.NicifyString(character.BodyPrefab.name);
@@ -72,14 +73,14 @@ namespace IEye.RRP.Modules
                         b.Section = "Survivors";
                         b.Key = name;
                         b.Description = "Enable/Disable this Survivor";
-                        b.ConfigFile = SS2Config.ConfigMain;
+                        b.ConfigFile = RRPConfig.ConfigMain;
                         b.CheckBoxConfig = new CheckBoxConfig
                         {
                             checkIfDisabled = () => !EnableSurvivors,
                             restartRequired = true
                         };
                     }).DoConfigure();
-                } */
+                } 
                 if (character is MonsterBase monster)
                 {
                     string name = MSUtil.NicifyString(character.BodyPrefab.name);
@@ -110,7 +111,7 @@ namespace IEye.RRP.Modules
                 }
                 else
                 {
-                    RRPMain.logger.LogInfo("Character " + character + " was not a survivor or monster.");
+                    RRPLog.Info("Character " + character + " was not a survivor or monster.");
                     return false;
                 }
             })
@@ -122,12 +123,12 @@ namespace IEye.RRP.Modules
             //base.GetCharacterBases()
             //    .Where(character =>
             //    {
-            //        return SS2Config.MakeConfigurableBool(true, (b) =>
+            //        return RRPConfig.MakeConfigurableBool(true, (b) =>
             //        {
             //            b.Section = "Bodies";
             //            b.Key = MSUtil.NicifyString(character.BodyPrefab.name);
             //            b.Description = "Enable/Disable this Body";
-            //            b.ConfigFile = SS2Config.ConfigMain;
+            //            b.ConfigFile = RRPConfig.ConfigMain;
             //            b.CheckBoxConfig = new CheckBoxConfig
             //            {
             //                checkIfDisabled = () => !EnableMonsters,
@@ -142,3 +143,4 @@ namespace IEye.RRP.Modules
         }
     }
 }
+*/
