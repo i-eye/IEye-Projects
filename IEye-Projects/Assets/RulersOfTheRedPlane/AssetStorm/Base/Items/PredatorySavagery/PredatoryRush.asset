@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: PredatoryRush
   m_EditorClassIdentifier: 
   iconPath: 
-  iconSprite: {fileID: 21300000, guid: 96bf7b2963f2bd64386180003172a54d, type: 3}
-  buffColor: {r: 0.8584906, g: 0.19842473, b: 0.83020204, a: 0.33333334}
+  iconSprite: {fileID: 21300000, guid: d0bed30fdc3745d47bb2ccd02170af39, type: 3}
+  buffColor: {r: 0.8773585, g: 0.041384835, b: 0, a: 1}
   canStack: 0
   eliteDef: {fileID: 0}
   isDebuff: 0
+  ignoreGrowthNectar: 0
   isCooldown: 0
   isHidden: 0
   startSfx: {fileID: 0}

@@ -18,15 +18,12 @@ MonoBehaviour:
   hidden: 0
   achievementIcon: {fileID: 21300000, guid: cdef925c6139f8246848684b30f43725, type: 3}
   achievementCondition:
-    assemblyQualifiedName: IEye.RRP.Unlocks.Artifacts.CognationUnlockable+LoopAchievement,
-      RulersOfTheRedPlane, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null
+    assemblyQualifiedName: 
   serverTracked: 0
   baseServerAchievement:
     assemblyQualifiedName: 
   achievementNameToken: RRP_ACHIEVEMENT_LOOPART_NAME
   achievementDescToken: RRP_ACHIEVEMENT_LOOPART_DESC
-  achievedIcon: {fileID: 0}
-  unachievedIcon: {fileID: 0}
   prerequisiteAchievement:
     AchievementIdentifier: 
     UnlockableDef: {fileID: 0}

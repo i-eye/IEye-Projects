@@ -5,29 +5,30 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using Moonstorm;
+using MSU;
 using RoR2;
 using R2API;
+using RoR2.ContentManagement;
 
 namespace IEye.RRP.Scenes
 {
     //[DisabledContent]
-    public sealed class ProvidenceGarden: SceneBase
+    public sealed class ProvidenceGarden: RRPScene
     {
-        public override SceneDef SceneDef { get; } = RRPAssets.LoadAsset<SceneDef>("rrp_ProvidenceGarden", RRPBundle.Indev);
+        public override RRPAssetRequest<SceneAssetCollection> assetRequest => RRPAssets.LoadAssetAsync<SceneAssetCollection>("acProvidenceGarden", RRPBundle.Indev);
+        
         public static MusicTrackDef musicBoss { get; } = Addressables.LoadAssetAsync<MusicTrackDef>("RoR2/Base/Common/muSong23.asset").WaitForCompletion();
         public static MusicTrackDef musicReg { get; } = Addressables.LoadAssetAsync<MusicTrackDef>("RoR2/Base/Common/muFULLSong19.asset").WaitForCompletion();
         public override void Initialize()
         {
-            base.Initialize();
-            SceneDef.mainTrack = musicReg;
-            SceneDef.bossTrack = musicBoss;
+            sceneDef.mainTrack = musicReg;
+            sceneDef.bossTrack = musicBoss;
             Stage.onStageStartGlobal += Stage_onStageStartGlobal;
         }
 
         private void Stage_onStageStartGlobal(Stage obj)
         {
-            if (obj.sceneDef == SceneDef)
+            if (obj.sceneDef == sceneDef)
             {
                 SceneDirector.onPostPopulateSceneServer += SceneDirector_onPostPopulateSceneServer;
             }
@@ -36,6 +37,15 @@ namespace IEye.RRP.Scenes
         private void SceneDirector_onPostPopulateSceneServer(SceneDirector obj)
         {
             
+        }
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+#if DEBUG
+            return true;
+#else
+            return false;
+#endif
         }
     }
 }

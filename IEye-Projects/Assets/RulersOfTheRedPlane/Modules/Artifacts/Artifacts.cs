@@ -4,10 +4,10 @@ using RoR2;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using Moonstorm;
+
 
 namespace IEye.RRP.Modules
-{
+{   /*
     public sealed class Artifacts : ArtifactModuleBase
     {
         public static Artifacts Instance { get; private set; }
@@ -17,7 +17,7 @@ namespace IEye.RRP.Modules
         {
             Instance = this;
             base.Initialize();
-            RRPMain.logger.LogInfo($"Initializing Artifacts");
+            RRPLog.Info($"Initializing Artifacts");
             GetArtifactBases();
             
 
@@ -34,4 +34,5 @@ namespace IEye.RRP.Modules
             return null;
         }
     }
+    */
 }

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182e1f7b5df3a874f85eb35b6ee52241, type: 3}
+  m_Name: acLoop
+  m_EditorClassIdentifier: 
+  assets:
+  - {fileID: 11400000, guid: b5ef55959a28e9e4ab0756670a37cdbc, type: 2}
+  - {fileID: 11400000, guid: 7cffa4ccd42cd764fb36af79f88bfc47, type: 2}
+  artifactCode: {fileID: 11400000, guid: 7cffa4ccd42cd764fb36af79f88bfc47, type: 2}
+  artifactDef: {fileID: 11400000, guid: b5ef55959a28e9e4ab0756670a37cdbc, type: 2}

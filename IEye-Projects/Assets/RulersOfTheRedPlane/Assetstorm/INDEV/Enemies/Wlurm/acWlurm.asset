@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0908c843a43eb7479ef1a2c0df8fe78, type: 3}
+  m_Name: acWlurm
+  m_EditorClassIdentifier: 
+  assets:
+  - {fileID: 11400000, guid: ac05bd40103d14941a23fc97a0da45ba, type: 2}
+  - {fileID: 4167487959143460351, guid: fef4eddef64507142afe758ed55d0362, type: 3}
+  - {fileID: 985943252020054491, guid: b1361a191e23e6a42b5405907d721506, type: 3}
+  bodyPrefab: {fileID: 985943252020054491, guid: b1361a191e23e6a42b5405907d721506,
+    type: 3}
+  masterPrefab: {fileID: 4167487959143460351, guid: fef4eddef64507142afe758ed55d0362,
+    type: 3}
+  monsterCardProvider: {fileID: 11400000, guid: ac05bd40103d14941a23fc97a0da45ba,
+    type: 2}

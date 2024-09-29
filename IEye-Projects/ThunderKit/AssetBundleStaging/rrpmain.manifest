@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 4193480462
+CRC: 44698313
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 75adf98835261315c45e71b3f44703e4
+    Hash: dd2ca19ce336e725a68fbb47da33f05b
   TypeTreeHash:
     serializedVersion: 2
-    Hash: d7db53669c1a86f1084789e05d14bb99
+    Hash: fe9afd8ba8d8418dc11b800ed928bd9e
 HashAppended: 0
 ClassTypes:
 - Class: 28
@@ -22,8 +22,8 @@ ClassTypes:
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/ContentPack.asset
-- Assets/RulersOfTheRedPlane/Expansion.png
+- Assets/RulersOfTheRedPlane/Assetstorm/RRPExpansionDef.asset
 - Assets/RulersOfTheRedPlane/icon.png
 - Assets/RulersOfTheRedPlane/Expansion_Invert.png
-- Assets/RulersOfTheRedPlane/Assetstorm/RRPExpansionDef.asset
+- Assets/RulersOfTheRedPlane/Expansion.png
 Dependencies: []

@@ -1,6 +1,6 @@
 ﻿using R2API;
 using RoR2;
-using Moonstorm;
+using MSU;
 using R2API.AddressReferencedAssets;
 using UnityEngine;
 using System.Collections.Generic;
@@ -9,18 +9,22 @@ using R2API.ScriptableObjects;
 using UnityEngine.AddressableAssets;
 using System.Collections;
 using System.Security.Cryptography;
+using RoR2.ContentManagement;
 
 namespace IEye.RRP.Artifacts
 {
-    public sealed class Loop : ArtifactBase
+    public sealed class Loop : RRPArtifact
     {
-        public override ArtifactDef ArtifactDef { get; } = RRPAssets.LoadAsset<ArtifactDef>("Loop", RRPBundle.Artifacts);
-        public override ArtifactCode ArtifactCode => RRPAssets.LoadAsset<ArtifactCode>("LoopCode", RRPBundle.Artifacts);
-        
+        public override RRPAssetRequest LoadAssetRequest() => RRPAssets.LoadAssetAsync<ArtifactAssetCollection>("acLoop", RRPBundle.Artifacts);
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return true;
+        }
+
         public override void Initialize()
         {
-            base.Initialize();
-            ArtifactDef.pickupModelPrefab = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Teleporters/LunarTeleporter Variant.prefab").WaitForCompletion();
+            artifactDef.pickupModelPrefab = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Teleporters/LunarTeleporter Variant.prefab").WaitForCompletion();
         }
         public override void OnArtifactDisabled()
         {
@@ -58,7 +62,7 @@ namespace IEye.RRP.Artifacts
         {
             
             run.stageClearCount += 5;
-            RRPMain.logger.LogDebug("Stage Increased");
+            RRPLog.Debug("Stage Increased");
             float randTime = Random.Range(2100f, 2520f);
             //run.difficultyCoefficient += Random.Range(8.8f,10f);
             run.time = randTime;
@@ -66,9 +70,9 @@ namespace IEye.RRP.Artifacts
             
             
 
-            RRPMain.logger.LogMessage("Time Increased");
+            RRPLog.Message("Time Increased");
 
-            //RRPMain.logger.LogMessage("onPlayerFirstCreatedServer run");
+            //RRPLog.Message("onPlayerFirstCreatedServer run");
 
             if (PlayerCharacterMasterController.instances != null)
             {
@@ -89,14 +93,14 @@ namespace IEye.RRP.Artifacts
 
             }
 
-            RRPMain.logger.LogMessage("Items Given");
+            RRPLog.Message("Items Given");
 
 
         }
         public static void AddExperience(CharacterBody body)
         {
-            RRPMain.logger.LogMessage("Adding Experience");
-            RRPMain.logger.LogMessage("Body" + body);
+            RRPLog.Message("Adding Experience");
+            RRPLog.Message("Body" + body);
             body.master.GiveExperience((ulong)Random.Range(110000, 160000));
             body.master.onBodyStart -= AddExperience;
         }

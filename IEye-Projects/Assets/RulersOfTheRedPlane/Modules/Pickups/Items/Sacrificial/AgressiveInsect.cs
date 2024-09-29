@@ -1,32 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Moonstorm;
+using MSU;
+using MSU.Config;
 using RoR2;
 using RoR2.Items;
-using IEye.RRP.Buffs;
 using R2API;
 using Mono.Cecil;
 using System.Linq;
 using RoR2.Projectile;
 using RoR2.Orbs;
+using RoR2.ContentManagement;
+using static MSU.BaseBuffBehaviour;
 
 namespace IEye.RRP.Items
 {
     //[DisabledContent]
-    public class AgressiveInsect : ItemBase
+    public class AgressiveInsect : RRPItem
     {
 
         public const string token = "RRP_ITEM_AGROINSECT_DESC";
-        public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("AgressiveInsect", RRPBundle.Items);
+        //public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("AgressiveInsect", RRPBundle.Items);
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Duration of the insect blood debuff(default 8s)")]
-        [TokenModifier(token, StatTypes.Default, 0)]
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acAInsect", RRPBundle.Items);
+
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Duration of the insect blood debuff(default 8s)")]
+        [FormatToken(token, 0)]
         public static float duration = 8f;
 
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Armor taken away from the insect blood debuff victim(default 50)")]
-        [TokenModifier(token, StatTypes.Default, 1)]
-        public static int bloodyInsectExtraDamage = 50;
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percent damage per orb per stack(default 25%)")]
+        [FormatToken(token, 1)]
+        public static int bloodyInsectExtraDamage = 25;
 
         readonly static ProcType basedProc = (ProcType)382143;
 
@@ -91,6 +95,25 @@ namespace IEye.RRP.Items
             {
                 applyPoision(damageInfo.attacker.GetComponent<CharacterBody>());
             }
+        }
+
+        public sealed class BloodBehavior : BaseBuffBehaviour
+        {
+            [BuffDefAssociation]
+            private static BuffDef GetBuffDef() => RRPContent.Buffs.InsectBloody;
+
+
+
+        }
+
+        public override void Initialize()
+        {
+
+        }
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return true;
         }
     }
 }

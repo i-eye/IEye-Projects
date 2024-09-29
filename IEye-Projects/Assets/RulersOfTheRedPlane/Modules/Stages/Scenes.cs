@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using Moonstorm;
+using MSU;
 
-
+/*
 namespace IEye.RRP.Modules
 {
     public class Scenes : SceneModuleBase
@@ -17,7 +17,7 @@ namespace IEye.RRP.Modules
         {
             Instance = this;
             base.Initialize();
-            RRPMain.logger.LogInfo($"Initializing Stages.");
+            RRPLog.Info($"Initializing Stages.");
             GetSceneBases();
         }
         public override IEnumerable<SceneBase> GetSceneBases()
@@ -29,4 +29,5 @@ namespace IEye.RRP.Modules
         }
     }
 }
+*/
 

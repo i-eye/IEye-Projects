@@ -2,16 +2,19 @@
 using UnityEngine;
 using RoR2;
 using RoR2.Items;
-using Moonstorm;
+using MSU;
 using System.Collections.Generic;
 using R2API.Networking;
-using Moonstorm.Loaders;
+using MSU.Config;
 using BepInEx.Logging;
+using RoR2.ContentManagement;
+using static MSU.BaseBuffBehaviour;
+using R2API;
 
 namespace IEye.RRP.Items
 {
     //[DisabledContent]
-    public class PoisonIvy : ItemBase
+    public class PoisonIvy : RRPItem
     {
 
         private const string token = "RRP_ITEM_IVY_DESC";
@@ -25,8 +28,23 @@ namespace IEye.RRP.Items
         public static float stackDuration = 2f;
 
         public static float waitTime = 10f;
-        public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("PoisonIvy", RRPBundle.Items);
-        
+        //public override ItemDef ItemDef => RRPAssets.LoadAsset<ItemDef>("PoisonIvy", RRPBundle.Items);
+
+        public override RRPAssetRequest AssetRequest => RRPAssets.LoadAssetAsync<ItemAssetCollection>("acPoisonIvy",RRPBundle.Items);
+
+        public override void Initialize()
+        {
+            
+        }
+
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+#if DEBUG
+            return true;
+#else
+            return false;
+#endif
+        }
 
         public sealed class Behavior : BaseItemBodyBehavior
         {
@@ -116,7 +134,7 @@ namespace IEye.RRP.Items
 
                 if (healthComponents.Count == 0)
                 {
-                    //DefNotSS2Log.Message("Search is null");
+                    //DefNotRRPLog.Message("Search is null");
                     return null;
                 }
 
@@ -129,6 +147,38 @@ namespace IEye.RRP.Items
             private List<HealthComponent> healthComponents;
             public float baseRange = distance;
         }
+
+        public sealed class BlightBehavior : BaseBuffBehaviour, IOnDamageDealtServerReceiver
+        {
+            [BuffDefAssociation]
+            private static BuffDef GetBuffDef() => RRPContent.Buffs.IvyBlight;
+
+            public void OnDamageDealtServer(DamageReport damageReport)
+            {
+                if (hasAnyStacks && Util.CheckRoll(15f, characterBody.master))
+                {
+                    damageReport.victim.ApplyDot(characterBody.gameObject, DotController.DotIndex.Blight, 4f, .75f);
+                }
+            }
+        }
+
+        public sealed class PowerBehavior : BaseBuffBehaviour, IBodyStatArgModifier
+        {
+            [BuffDefAssociation]
+            private static BuffDef GetBuffDef() => RRPContent.Buffs.IvyPower;
+
+            public void ModifyStatArguments(RecalculateStatsAPI.StatHookEventArgs args)
+            {
+                if (hasAnyStacks)
+                {
+                    args.damageMultAdd += 20f;
+                    args.critDamageMultAdd += 25f;
+                    args.attackSpeedMultAdd += 20f;
+                }
+                
+            }
+        }
+
     }
 }
 

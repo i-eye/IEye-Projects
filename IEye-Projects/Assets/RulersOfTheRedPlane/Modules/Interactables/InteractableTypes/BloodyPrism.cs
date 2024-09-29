@@ -1,6 +1,4 @@
 ﻿using RoR2;
-using Moonstorm;
-using Moonstorm.AddressableAssets;
 using R2API;
 using IEye.RRP;
 using System.Collections;
@@ -14,47 +12,51 @@ using System.Linq;
 using Mono.Cecil;
 using RiskOfOptions;
 using BepInEx.Configuration;
-using Moonstorm.Config;
+using MSU;
 using RoR2.Hologram;
 using EntityStates.Headstompers;
 using EntityStates.BeetleQueenMonster;
 using UnityEngine.AddressableAssets;
+using RoR2.ContentManagement;
 
 namespace IEye.RRP.Interactables
 {
     //[DisabledContent]
     
-    public class BloodyPrism : InteractableBase
+    public class BloodyPrism : RRPInteractable
     {
-        public override GameObject Interactable { get; } = RRPAssets.LoadAsset<GameObject>("BloodyPrismGameObject", RRPBundle.Interactables);
-
-        public override List<MSInteractableDirectorCard> InteractableDirectorCards { get; } = new List<MSInteractableDirectorCard>();
+        public override RRPAssetRequest<InteractableAssetCollection> AssetRequest => RRPAssets.LoadAssetAsync<InteractableAssetCollection>("acBloodyPrism", RRPBundle.Interactables);
 
         /*
-        [RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Credits for the Imp Stuff interactable catagory(default 3.2)")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDInteractable, configDescOverride = "Credits for the Imp Stuff interactable catagory(default 3.2)")]
         public static ConfigurableFloat impStuffCredits = new ConfigurableFloat(3.2f);
         */
 
+        public override bool IsAvailable(ContentPack contentPack)
+        {
+            return true;
+        }
 
-        [RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Credits multiplied by difficulty for prism combat director on use(default 100)")]
-        public static int creditsCoef = 100;
 
-        //[RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Chance for for spawning(1.9 is default, 3 is void catagory(Probably requires restart)(may not work)")]
+        //[RiskOfOptionsConfigureField(RRPConfig.IDInteractable, configDescOverride = "Chance for for spawning(1.9 is default, 3 is void catagory(Probably requires restart)(may not work)")]
         //public static float catagoryWeight = 1.9f;
 
         /*
-        [RooConfigurableField(RRPConfig.IDInteractable, ConfigDesc = "Weight of bloody prism(default 15).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDInteractable, configDescOverride = "Weight of bloody prism(default 15).")]
         public int weight = 15;
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Director cost(default 30).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Director cost(default 30).")]
         public int directorCost = 30;
-        [RooConfigurableField(RRPConfig.IDItem, ConfigDesc = "Scenes needed to complete before encountering(default 2).")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Scenes needed to complete before encountering(default 2).")]
         public int minimumStages = 2;
         */
         public override void Initialize()
         {
-            InteractableDirectorCards.Add(RRPAssets.LoadAsset<MSInteractableDirectorCard>("iscBloodyPrism", RRPBundle.Interactables));
             //impStuffCredits.SetUseStepSlider(true);
-            //DefNotSS2Log.Message("InitializePrism");
+            //DefNotRRPLog.Message("InitializePrism");
+
+            RRPLog.Message("Prism Init Started");
+            GameObject Interactable = AssetCollection.FindAsset<GameObject>("BloodyPrismGameObject");
+
             var interactableToken = Interactable.AddComponent<PrismInteractableToken>();
             interactableToken.combatDirector = Interactable.AddComponent<CombatDirector>();
             interactableToken.combatSquad = Interactable.AddComponent<CombatSquad>();
@@ -62,8 +64,9 @@ namespace IEye.RRP.Interactables
             interactableToken.dropTransform = Interactable.GetComponent<Transform>();
             interactableToken.symbolTranform = null;
             interactableToken.behavior = Interactable.GetComponent<ShopTerminalBehavior>();
-            
-            
+            interactableToken.destroyVFX = AssetCollection.FindAsset<GameObject>("PrismVFX");
+
+            RRPLog.Message("Prism Init Finished");
 
             /*
             InteractableDirectorCard.directorCard.selectionWeight = weight;
@@ -95,22 +98,21 @@ namespace IEye.RRP.Interactables
             DirectorCard impCard;
             DirectorCard impBoss;
 
-            public ExplicitPickupDropTable dropTable { get; } = RRPAssets.LoadAsset<ExplicitPickupDropTable>("PrismDroptable", RRPBundle.Interactables);
+            public ExplicitPickupDropTable dropTable { get; set; }
 
             public static event Action<PrismInteractableToken> onDefeatedServer;
             
             public void Start()
             {
 
-                destroyVFX = RRPAssets.LoadAsset<GameObject>("PrismVFX", RRPBundle.Interactables);
-                
+                dropTable = new ExplicitPickupDropTable();
                 if (NetworkServer.active && Run.instance)
                 {
                     Interaction.SetAvailableTrue();
                 }
-                //DefNotSS2Log.Message("Getting Combat Squad");
+                //DefNotRRPLog.Message("Getting Combat Squad");
                 combatDirector.combatSquad = combatSquad;
-                //DefNotSS2Log.Message("Got Combat Squad");
+                //DefNotRRPLog.Message("Got Combat Squad");
                 combatSquad.onDefeatedServer += OnDefeatedServer;
                 GetComponent<Highlight>().enabled = true;
                 Interaction.onPurchase.AddListener(PrismInteractAttempt);
@@ -120,8 +122,8 @@ namespace IEye.RRP.Interactables
 
                 List<ItemDef> items = ItemTiers.Sacrificial.ItemDefsWithTier();
                 Array.Resize(ref dropTable.pickupEntries, items.Count);
-                //DefNotSS2Log.Message(dropTable.pickupEntries.IsFixedSize);
-                //DefNotSS2Log.Message(dropTable.pickupEntries.Length);
+                //DefNotRRPLog.Message(dropTable.pickupEntries.IsFixedSize);
+                //DefNotRRPLog.Message(dropTable.pickupEntries.Length);
 
                 impCard = new DirectorCard()
                 {
@@ -158,18 +160,20 @@ namespace IEye.RRP.Interactables
                     }
                     
                     dropTable.pickupEntries[i] = entry;
-                    //DefNotSS2Log.Message(dropTable.pickupEntries[i].pickupDef);
+                    //DefNotRRPLog.Message(dropTable.pickupEntries[i].pickupDef);
                 }
                 dropTable.Regenerate(Run.instance);
+                behavior.dropTable = dropTable;
+                RRPLog.Message("About to generate pickups");
 
-                RRPMain.logger.LogMessage("About to generate pickups");
-                behavior.GenerateNewPickupServer();
+                behavior.SetPickupIndex(dropTable.GenerateDrop(rng));
                 behavior.UpdatePickupDisplayAndAnimations();
-                RRPMain.logger.LogMessage("PickupIndex is:" + behavior.pickupIndex);
+
+                RRPLog.Message("PickupIndex is:" + behavior.pickupIndex);
 
                 
                 
-                //DefNotSS2Log.Message(dropTable.pickupEntries);
+                //DefNotRRPLog.Message(dropTable.pickupEntries);
 
             }
 
@@ -178,8 +182,8 @@ namespace IEye.RRP.Interactables
                 if (hasActivated)
                 {
 
-                    //DefNotSS2Log.Message(index);
-                    //DefNotSS2Log.Message(index.pickupDef.itemIndex);
+                    //DefNotRRPLog.Message(index);
+                    //DefNotRRPLog.Message(index.pickupDef.itemIndex);
                     behavior.DropPickup();
 
                     Chat.SimpleChatMessage message = new Chat.SimpleChatMessage();
@@ -188,10 +192,10 @@ namespace IEye.RRP.Interactables
                     
                     if (destroyVFX)
                     {
-                        RRPMain.logger.LogMessage("Bloody VFX about to instantiate");
+                        RRPLog.Message("Bloody VFX about to instantiate");
                         EffectManager.SimpleEffect(destroyVFX, dropTransform.position, dropTransform.rotation, true);
 
-                        RRPMain.logger.LogMessage("Bloody VFX instantiated");
+                        RRPLog.Message("Bloody VFX instantiated");
                     }
                     
                     Destroy(this.gameObject.transform.GetChild(0).gameObject);
@@ -205,11 +209,11 @@ namespace IEye.RRP.Interactables
             public void PrismInteractAttempt(Interactor interactor)
             {
 
-                //DefNotSS2Log.Message("Attempting Interaction");
+                //DefNotRRPLog.Message("Attempting Interaction");
                 if (!interactor) { return; }
                 Interaction.SetAvailable(false);
 
-                float monsterCredit = (float)(Run.instance.difficultyCoefficient * creditsCoef);
+                float monsterCredit = (float)(Run.instance.difficultyCoefficient * 50);
 
                 if(NetworkServer.active)
                 {
@@ -217,7 +221,7 @@ namespace IEye.RRP.Interactables
                     float rand = UnityEngine.Random.Range(0f, 1f);
                     if (rand > .5f)
                     {
-                        RRPMain.logger.LogMessage("Imp Selected");
+                        RRPLog.Message("Imp Selected");
                         card = impCard;
                     } 
                     if (monsterCredit > 800 && rand > .77f)

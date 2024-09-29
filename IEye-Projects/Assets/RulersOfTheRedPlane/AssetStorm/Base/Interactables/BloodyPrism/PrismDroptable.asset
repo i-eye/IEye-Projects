@@ -13,5 +13,13 @@ MonoBehaviour:
   m_Name: PrismDroptable
   m_EditorClassIdentifier: 
   canDropBeReplaced: 1
-  pickupEntries: []
-  entries: []
+  pickupEntries:
+  - pickupDef: {fileID: 0}
+    pickupWeight: 0
+  - pickupDef: {fileID: 0}
+    pickupWeight: 0
+  entries:
+  - pickupName: 
+    pickupWeight: 0
+  - pickupName: 
+    pickupWeight: 0

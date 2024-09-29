@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1412320378
+CRC: 1109447099
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a966ca79753586f927ed14d9a36e7e6d
+    Hash: da754ac2c2c44bfa025ad2805f9b8166
   TypeTreeHash:
     serializedVersion: 2
-    Hash: f8c6d8186e7d5fea2f993758cdffdb9b
+    Hash: 8c5044b345e55db557bb620e756a42f6
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -36,13 +36,13 @@ ClassTypes:
 - Class: 95
   Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: 161585894, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  Script: {fileID: 1297580292, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: f8258ea15b8f74c4889ce485d21cbbb1, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 525d8c10cfcd850448d08e73281d60e8, type: 3}
+  Script: {fileID: 495100722, guid: 45feadaaa90b2d2217207fb8b533753e, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
+  Script: {fileID: 2099981080, guid: 45feadaaa90b2d2217207fb8b533753e, type: 3}
 - Class: 114
   Script: {fileID: 1392865457, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
@@ -64,6 +64,10 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 1530905962, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
+  Script: {fileID: 161585894, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -380008858, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
   Script: {fileID: 2014855634, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: -578974823, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
@@ -71,8 +75,6 @@ ClassTypes:
   Script: {fileID: -104859921, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: 89795172, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-- Class: 114
-  Script: {fileID: 1297580292, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: 1144835783, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
@@ -122,13 +124,17 @@ ClassTypes:
 - Class: 114
   Script: {fileID: -315171339, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
-  Script: {fileID: 495100722, guid: 45feadaaa90b2d2217207fb8b533753e, type: 3}
+  Script: {fileID: 11500000, guid: f0908c843a43eb7479ef1a2c0df8fe78, type: 3}
 - Class: 114
-  Script: {fileID: 2099981080, guid: 45feadaaa90b2d2217207fb8b533753e, type: 3}
+  Script: {fileID: 11500000, guid: 525d8c10cfcd850448d08e73281d60e8, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 0777505d690470442828b06f82250916, type: 3}
+  Script: {fileID: 11500000, guid: 68b43d1b0b7e3074e9c105a44212585b, type: 3}
 - Class: 114
   Script: {fileID: -1568778350, guid: 050936fea8909af15a3fd3b64da1ff83, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2a1bcf8b7bf5d654a9ba124d10d27028, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 136
@@ -137,52 +143,116 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 319
   Script: {instanceID: 0}
-SerializeReferenceClassIdentifiers: []
+SerializeReferenceClassIdentifiers:
+- AssemblyName: HGUnityUtils
+  ClassName: HG.GeneralSerializer.SerializedField
+- AssemblyName: HGUnityUtils
+  ClassName: HG.GeneralSerializer.SerializedFieldCollection
+- AssemblyName: HGUnityUtils
+  ClassName: HG.GeneralSerializer.SerializedValue
+- AssemblyName: HGUnityUtils
+  ClassName: HG.SerializableSystemType
+- AssemblyName: MSU.Runtime
+  ClassName: MSU.MonsterCardProvider/StageMonsterCardPair
+- AssemblyName: MSU.Runtime
+  ClassName: MSU.NullableRef`1[RoR2.MusicTrackDef]
+- AssemblyName: R2API.Addressables
+  ClassName: R2API.AddressReferencedAssets.AddressReferencedExpansionDef
+- AssemblyName: R2API.Addressables
+  ClassName: R2API.AddressReferencedAssets.AddressReferencedSpawnCard
+- AssemblyName: R2API.Addressables
+  ClassName: R2API.AddressReferencedAssets.AddressReferencedUnlockableDef
+- AssemblyName: R2API.Director
+  ClassName: R2API.AddressableDCCSPool/Category
+- AssemblyName: R2API.Director
+  ClassName: R2API.AddressableDCCSPool/PoolEntry
+- AssemblyName: R2API.Director
+  ClassName: R2API.AddressableDirectorCard
+- AssemblyName: R2API.Director
+  ClassName: R2API.AddressableDirectorCardCategorySelection/Category
+- AssemblyName: R2API.Director
+  ClassName: R2API.DirectorAPI/StageSerde
+- AssemblyName: RoR2
+  ClassName: EntityStates.SerializableEntityStateType
+- AssemblyName: RoR2
+  ClassName: RoR2.AssetReferenceScene
+- AssemblyName: RoR2
+  ClassName: RoR2.CharacterFlightParameters
+- AssemblyName: RoR2
+  ClassName: RoR2.CharacterGravityParameters
+- AssemblyName: RoR2
+  ClassName: RoR2.Navigation.NodeGraph/Link
+- AssemblyName: RoR2
+  ClassName: RoR2.Navigation.NodeGraph/LinkListIndex
+- AssemblyName: RoR2
+  ClassName: RoR2.Navigation.NodeGraph/Node
+- AssemblyName: RoR2
+  ClassName: RoR2.Navigation.NodeGraph/NodeIndex
+- AssemblyName: RoR2
+  ClassName: RoR2.SerializableLoadout
+- AssemblyName: RoR2
+  ClassName: RoR2.SerializablePickupIndex
+- AssemblyName: RoR2
+  ClassName: RoR2.SkillLocator/PassiveSkill
+- AssemblyName: RoR2
+  ClassName: RoR2.Skills.SkillFamily/Variant
+- AssemblyName: RoR2
+  ClassName: SerializableBitArray
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.UnityEvent
+- AssemblyName: com.unity.multiplayer-hlapi.Runtime
+  ClassName: UnityEngine.Networking.NetworkHash128
+- AssemblyName: com.unity.multiplayer-hlapi.Runtime
+  ClassName: UnityEngine.Networking.NetworkSceneId
 Assets:
-- Assets/RoR2/Normals/texRockyNormalsFlattened.png
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/adccsGardenMonsters.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/dccsGardenMonsters.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/animWorm.controller
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/rrp_ProvidenceGarden.asset
-- Packages/com.unity.postprocessing/PostProcessing/Gizmos/PostProcessLayer.png
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/dccsGardenInteractables.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Meshes/Main
-  Land.fbx
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/adpGardenMonsters.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/RedWormEye.png
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Skills/escLaser.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/GardenAirNodes.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Materials/matGardenCave.mat
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Skills/sdWlurm1.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/WormMesh_Normal_OpenGL.png
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Materials/matGardenGround.mat
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/matWormBody.mat
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Items/BloodFrenzy/BloodFrenzy.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/dpGardenInteractables.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/AvatarMask(for a
-  worm).mask
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/matWormTooth.mat
-- Assets/RoR2/Textures/texDCGravelDiffuse.png
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/adpGardenInteractables.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/acWlurm.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Skills/sfWlurm1.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/WlurmBossBody.prefab
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/RedWormTeeth.png
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/msmdcWlurm.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Visuals/rrp_ProvidenceGarden_Profiles/Fog
   Profile.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/GardenGroundNodes.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/RedWorm.fbx
-- Assets/RoR2/Textures/texDCGrass.png
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/dpGardenMonsters.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/adccsGardenInteractables.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/WlurmMaster.prefab
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/WormMesh_Base_color.png
-- Assets/RoR2/Textures/texDCRockSide.png
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/matWormEye.mat
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/RedWormEyeEmmsive.png
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/RedWorm.fbx
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/New Character Spawn Card.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/WormMesh_Normal_OpenGL.png
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Materials/matGardenCave.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/dpGardenInteractables.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/GardenGroundNodes.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Skills/escLaser.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/AvatarMask(for a
+  worm).mask
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Items/BloodFrenzy/BloodFrenzy.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/animWorm.controller
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/rrp_ProvidenceGarden.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/adccsGardenMonsters.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/dpGardenMonsters.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Materials/TheMaterial.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/dccsGardenInteractables.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Skills/sdWlurm1.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/WlurmBossBody.prefab
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/matWormBody.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Materials/matGardenGround.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/adpGardenInteractables.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/adpGardenMonsters.asset
+- Assets/RoR2/Textures/texDCGrass.png
+- Assets/RoR2/Textures/texDCGravelDiffuse.png
+- Packages/com.unity.postprocessing/PostProcessing/Gizmos/PostProcessLayer.png
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Meshes/Main
+  Land.fbx
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/matWormTooth.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/acProvidenceGarden.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/matWormEye.mat
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/RedWormTeeth.png
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/adccsGardenInteractables.asset
+- Assets/RoR2/Textures/texDCRockSide.png
+- Assets/RoR2/Normals/texRockyNormalsFlattened.png
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/mspWlurm.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/RedWormEye.png
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/dccsGardenMonsters.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/WormMesh_Base_color.png
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/GardenAirNodes.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/RedWormEyeEmmsive.png
 Dependencies:
-- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/msuassets
 - C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpbase
-- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpinteractables
 - C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain
+- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/runtimemsuassetbundle
