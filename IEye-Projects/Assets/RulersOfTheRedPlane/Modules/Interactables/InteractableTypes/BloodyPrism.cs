@@ -191,11 +191,11 @@ namespace IEye.RRP.Interactables
                 if (!interactor) { return; }
                 Interaction.SetAvailable(false);
 
-                float monsterCredit = (float)(Run.instance.difficultyCoefficient * 50);
+                float monsterCredit = (float)(Run.instance.difficultyCoefficient * 150f);
 
                 if(NetworkServer.active)
                 {
-                    DirectorCard card = combatDirector.SelectMonsterCardForCombatShrine(monsterCredit);
+                    //DirectorCard card = combatDirector.SelectMonsterCardForCombatShrine(monsterCredit);
                     
                     
                     SacrificeActivation(interactor, monsterCredit);
@@ -212,6 +212,7 @@ namespace IEye.RRP.Interactables
             {
                 combatDirector.enabled = true;
                 combatDirector.monsterCredit += monsterCredit;
+                combatDirector.OverrideCurrentMonsterCard(SelectFromPrismDDCS(monsterCredit));
                 combatDirector.monsterSpawnTimer = 0f;
                 //combatDirector.CombatShrineActivation
                 
@@ -229,6 +230,32 @@ namespace IEye.RRP.Interactables
                     }
                 }
                 //combatDirector.enabled = false;
+            }
+
+            private DirectorCard SelectFromPrismDDCS(float credit)
+            {
+                WeightedSelection<DirectorCard> weightedSelection = CreateReasonableDirectorCardSpawnList(credit, combatDirector.maximumNumberToSpawnBeforeSkipping, 1);
+                if (weightedSelection.Count == 0)
+                {
+                    return null;
+                }
+                return weightedSelection.Evaluate(rng.nextNormalizedFloat);
+            }
+
+            private WeightedSelection<DirectorCard> CreateReasonableDirectorCardSpawnList(float availableCredit, int maximumNumberToSpawnBeforeSkipping, int minimumToSpawn)
+            {
+                WeightedSelection<DirectorCard> monsterSelection = combatDirector.monsterCards.GenerateDirectorCardWeightedSelection();
+                WeightedSelection<DirectorCard> weightedSelection = new WeightedSelection<DirectorCard>();
+                for (int i = 0; i < monsterSelection.Count; i++)
+                {
+                    DirectorCard value = monsterSelection.choices[i].value;
+                    float combatDirectorHighestEliteCostMultiplier = CombatDirector.CalcHighestEliteCostMultiplier(value.spawnCard.eliteRules);
+                    if (Util.DirectorCardIsReasonableChoice(availableCredit, maximumNumberToSpawnBeforeSkipping, minimumToSpawn, value, combatDirectorHighestEliteCostMultiplier))
+                    {
+                        weightedSelection.AddChoice(value, monsterSelection.choices[i].weight);
+                    }
+                }
+                return weightedSelection;
             }
         }
     }

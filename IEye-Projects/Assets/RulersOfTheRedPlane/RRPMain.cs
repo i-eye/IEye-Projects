@@ -33,7 +33,7 @@ namespace IEye.RRP
 	{
 		public const string GUID = "com.I_Eye.RulersOfTheRedPlane";
 		public const string MODNAME = "Rulers of the Red Plane";
-		public const string VERSION = "0.1.5";
+		public const string VERSION = "0.1.6";
 
         public static RRPMain instance;
         public static PluginInfo pluginInfo;

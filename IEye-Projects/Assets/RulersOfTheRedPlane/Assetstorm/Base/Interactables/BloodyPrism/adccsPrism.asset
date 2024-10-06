@@ -37,10 +37,10 @@ MonoBehaviour:
         _asset: {fileID: 0}
         _address: RoR2/Base/ImpBoss/cscImpBoss.asset
         _useDirectReference: 0
-      selectionWeight: 2
+      selectionWeight: 8
       spawnDistance: 1
       preventOverhead: 0
-      minimumStageCompletions: 3
+      minimumStageCompletions: 4
       requiredUnlockableDef:
         _asset: {fileID: 0}
         _address: 

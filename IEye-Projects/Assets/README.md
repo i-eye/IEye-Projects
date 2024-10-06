@@ -30,6 +30,10 @@ Nyctophiliac for creating the logo
 
 # Changelog
 
+### 0.1.6
+- Aggressive Insect no longer breaks things that take your health but aren't enemies(such as void cradles)
+- Bloody Prism is more consistent and more dangerous
+
 ### 0.1.5
 - Updated for SOTS
   - MSU2.0 LET'S GO

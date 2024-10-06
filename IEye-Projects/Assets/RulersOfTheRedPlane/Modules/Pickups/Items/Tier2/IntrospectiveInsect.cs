@@ -106,7 +106,7 @@ namespace IEye.RRP.Items
             {
                 var attacker = report.attacker;
                 var cb = attacker.GetComponent<CharacterBody>();
-                if (cb)
+                if (cb  && report.damageInfo.procCoefficient > 0)
                 {
                     applyPoision(cb);
                 }

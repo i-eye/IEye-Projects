@@ -34,7 +34,7 @@ namespace IEye.RRP.Items
 
         readonly static ProcType basedProc = (ProcType)382143;
 
-        public sealed class Behavior : BaseItemBodyBehavior, IOnDamageDealtServerReceiver, IOnIncomingDamageServerReceiver
+        public sealed class Behavior : BaseItemBodyBehavior, IOnDamageDealtServerReceiver, IOnTakeDamageServerReceiver
         {
             [ItemDefAssociation]
             private static ItemDef GetItemDef() => RRPContent.Items.AgressiveInsect;
@@ -91,12 +91,13 @@ namespace IEye.RRP.Items
                 cb.AddTimedBuffAuthority(RRPContent.Buffs.InsectBloody.buffIndex, duration * stack);
             }
 
-            public void OnIncomingDamageServer(DamageInfo damageInfo)
+            public void OnTakeDamageServer(DamageReport report)
             {
-                CharacterBody aBody;
-                if(damageInfo.procCoefficient > 0 && (aBody = damageInfo.attacker.GetComponent<CharacterBody>()) && aBody != body)
+                var attacker = report.attacker;
+                var cb = attacker.GetComponent<CharacterBody>();
+                if (cb && report.damageInfo.procCoefficient > 0)
                 {
-                    applyPoision(aBody);
+                    applyPoision(cb);
                 }
             }
         }

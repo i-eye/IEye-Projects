@@ -228,12 +228,12 @@ MonoBehaviour:
   requiredUnlockable: 
   ignoreSpherecastForInteractability: 0
   purchaseStatNames: []
-  setUnavailableOnTeleporterActivated: 1
+  setUnavailableOnTeleporterActivated: 0
   isShrine: 0
   isGoldShrine: 0
   shouldProximityHighlight: 1
   saleStarCompatible: 0
-  requiredExpansion: {fileID: 0}
+  requiredExpansion: {fileID: 11400000, guid: 0d7ea78905bfc2c4c8636a77b83a5661, type: 2}
   lastActivator: {fileID: 0}
   lockGameObject: {fileID: 0}
   onPurchase:
@@ -349,14 +349,14 @@ MonoBehaviour:
   moneyWaveIntervals: []
   teamIndex: 2
   creditMultiplier: 1
-  spawnDistanceMultiplier: 0.5
+  spawnDistanceMultiplier: 1
   maxSpawnDistance: 30
   minSpawnRange: 0
   shouldSpawnOneWave: 1
-  targetPlayers: 1
+  targetPlayers: 0
   skipSpawnIfTooCheap: 0
   maxConsecutiveCheapSkips: 2147483647
-  resetMonsterCardIfFailed: 0
+  resetMonsterCardIfFailed: 1
   maximumNumberToSpawnBeforeSkipping: 6
   eliteBias: 1
   onSpawnedServer:
@@ -366,8 +366,8 @@ MonoBehaviour:
   spawnEffectPrefab: {fileID: 0}
   ignoreTeamSizeLimit: 0
   _monsterCards: {fileID: 11400000, guid: ec9b2a465bf9c8b498e59179b7887792, type: 2}
-  fallBackToStageMonsterCards: 1
-  currentSpawnTarget: {fileID: 0}
+  fallBackToStageMonsterCards: 0
+  currentSpawnTarget: {fileID: 800851431774492465}
 --- !u!114 &8022818945800359157
 MonoBehaviour:
   m_ObjectHideFlags: 0
