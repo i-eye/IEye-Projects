@@ -31,6 +31,7 @@ namespace IEye.RRP
     [BepInPlugin(GUID, MODNAME, VERSION)]
     public class RRPMain : BaseUnityPlugin
 	{
+        //hrrrng hamburger, colonel
 		public const string GUID = "com.I_Eye.RulersOfTheRedPlane";
 		public const string MODNAME = "Rulers of the Red Plane";
 		public const string VERSION = "0.1.6";
