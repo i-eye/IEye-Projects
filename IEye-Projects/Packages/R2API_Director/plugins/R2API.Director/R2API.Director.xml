@@ -12,7 +12,7 @@
         </member>
         <member name="T:R2API.AddressableDCCSPool.PoolEntry">
             <summary>
-            Represents a version of <see cref="T:RoR2.DccsPool.PoolEntry"/> that uses <see cref="T:R2API.AddressableDirectorCardCategorySelection"/> for representing a pool entry
+            Represents a version of <see cref="T:RoR2.DccsPool.PoolEntry"/> that can use either a <see cref="T:R2API.AddressableDirectorCardCategorySelection"/> for representing a pool entry, or a <see cref="T:R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection"/> for representing a family entr.
             </summary>
         </member>
         <member name="T:R2API.AddressableDCCSPool.ConditionalPoolEntry">
@@ -41,6 +41,51 @@
         <member name="T:R2API.AddressableDirectorCardCategorySelection.Category">
             <summary>
             Represents a category of spawn cards
+            </summary>
+        </member>
+        <member name="T:R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection">
+            <summary>
+            <inheritdoc cref="T:R2API.AddressReferencedAssets.AddressReferencedAsset`1"/>
+            <br>T is <see cref="T:RoR2.FamilyDirectorCardCategorySelection"/></br>
+            </summary>
+        </member>
+        <member name="M:R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection.op_Implicit(R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection)~System.Boolean">
+            <summary>
+            Operator for casting <see cref="T:R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection"/> to a boolean value
+            <br>Allows you to keep using the unity Syntax for checking if an object exists.</br>
+            </summary>
+        </member>
+        <member name="M:R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection.op_Implicit(R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection)~RoR2.FamilyDirectorCardCategorySelection">
+            <summary>
+            Operator for casting <see cref="T:R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection"/> to it's currently loaded <see cref="!:Asset"/> value
+            </summary>
+        </member>
+        <member name="M:R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection.op_Implicit(System.String)~R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection">
+            <summary>
+            Operator for encapsulating a <see cref="T:System.String"/> inside an <see cref="T:R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection"/>
+            </summary>
+        </member>
+        <member name="M:R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection.op_Implicit(RoR2.FamilyDirectorCardCategorySelection)~R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection">
+            <summary>
+            Operator for encapsulating an <see cref="T:RoR2.FamilyDirectorCardCategorySelection"/> inside an <see cref="T:R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection"/>
+            </summary>
+        </member>
+        <member name="M:R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection.#ctor">
+            <summary>
+            <inheritdoc cref="M:R2API.AddressReferencedAssets.AddressReferencedAsset`1.#ctor"/>
+            <br>T is <see cref="T:RoR2.FamilyDirectorCardCategorySelection"/></br>
+            </summary>
+        </member>
+        <member name="M:R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection.#ctor(RoR2.FamilyDirectorCardCategorySelection)">
+            <summary>
+            <inheritdoc cref="M:R2API.AddressReferencedAssets.AddressReferencedAsset`1.#ctor(`0)"/>
+            <br>T is <see cref="T:RoR2.FamilyDirectorCardCategorySelection"/></br>
+            </summary>
+        </member>
+        <member name="M:R2API.AddressReferencedAssets.AddressReferencedFamilyDirectorCardCategorySelection.#ctor(System.String)">
+            <summary>
+            <inheritdoc cref="M:R2API.AddressReferencedAssets.AddressReferencedAsset`1.#ctor(System.String)"/>
+            <br>T is <see cref="T:RoR2.FamilyDirectorCardCategorySelection"/></br>
             </summary>
         </member>
         <member name="T:R2API.DirectorAPI">

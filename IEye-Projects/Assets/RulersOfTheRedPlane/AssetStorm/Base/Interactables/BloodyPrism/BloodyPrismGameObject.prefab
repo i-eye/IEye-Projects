@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 618175808815801000}
   - component: {fileID: 486688833571479362}
   - component: {fileID: 5910662640509223041}
+  - component: {fileID: 2085618376414900766}
+  - component: {fileID: 8022818945800359157}
   m_Layer: 0
   m_Name: BloodyPrismGameObject
   m_TagString: Untagged
@@ -39,6 +41,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3461092024747223359}
   - {fileID: 4173171564902147866}
@@ -69,10 +72,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -97,6 +102,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &5596141701151170411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +153,7 @@ MonoBehaviour:
   targetRenderer: {fileID: 1161311132165060324}
   strength: 1
   highlightColor: 0
+  CustomColor: {r: 1, g: 0, b: 1, a: 1}
   isOn: 0
 --- !u!114 &7157290030955077749
 MonoBehaviour:
@@ -187,12 +194,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _modelTransform: {fileID: 24455950974340491}
+  modelVisibility: {fileID: 0}
   modelBaseTransform: {fileID: 24455950974340491}
+  modelScaleCompensation: 1
   autoUpdateModelTransform: 1
   dontDetatchFromParent: 1
   noCorpse: 0
   dontReleaseModelOnDeath: 0
   preserveModel: 0
+  forceCulled: 0
   normalizeToFloor: 0
   normalSmoothdampTime: 0.1
   normalMaxAngleDelta: 90
@@ -213,6 +223,7 @@ MonoBehaviour:
   costType: 0
   available: 1
   cost: 0
+  solitudeCost: 0
   automaticallyScaleCostWithDifficulty: 0
   requiredUnlockable: 
   ignoreSpherecastForInteractability: 0
@@ -220,6 +231,9 @@ MonoBehaviour:
   setUnavailableOnTeleporterActivated: 1
   isShrine: 0
   isGoldShrine: 0
+  shouldProximityHighlight: 1
+  saleStarCompatible: 0
+  requiredExpansion: {fileID: 0}
   lastActivator: {fileID: 0}
   lockGameObject: {fileID: 0}
   onPurchase:
@@ -252,6 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entity: {fileID: 800851431774492465}
+  entityZoneIndex: 0
 --- !u!114 &618175808815801000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,6 +284,12 @@ MonoBehaviour:
   dropTable: {fileID: 11400000, guid: ee40cde6f74fe3b4f83493e3c46ee1ee, type: 2}
   dropVelocity: {x: 0, y: 20, z: 0}
   animator: {fileID: 0}
+  MysteryItemInspectDef: {fileID: 0}
+  inspectHintOverrideToken: 
+  hintWantsItemFormatting: 0
+  disablesInspectionOnPurchase: 1
+  inspectShop: 0
+  shopInspectDef: {fileID: 0}
   itemTier: 10
   bannedItemTag: 0
   selfGeneratePickup: 1
@@ -300,9 +321,73 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: 0
+  oldFade: 1
   bounds: {fileID: -5114303073284197904}
   renderers:
   - {fileID: 1161311132165060324}
+--- !u!114 &2085618376414900766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800851431774492465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 653292689, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customName: PrismDirector
+  monsterCredit: 0
+  refundedMonsterCredit: 0
+  expRewardCoefficient: 0.2
+  goldRewardCoefficient: 0.2
+  minSeriesSpawnInterval: 0.05
+  maxSeriesSpawnInterval: 0.1
+  minRerollSpawnInterval: 2.3333333
+  maxRerollSpawnInterval: 4.3333335
+  moneyWaveIntervals: []
+  teamIndex: 2
+  creditMultiplier: 1
+  spawnDistanceMultiplier: 0.5
+  maxSpawnDistance: 30
+  minSpawnRange: 0
+  shouldSpawnOneWave: 1
+  targetPlayers: 1
+  skipSpawnIfTooCheap: 0
+  maxConsecutiveCheapSkips: 2147483647
+  resetMonsterCardIfFailed: 0
+  maximumNumberToSpawnBeforeSkipping: 6
+  eliteBias: 1
+  onSpawnedServer:
+    m_PersistentCalls:
+      m_Calls: []
+  combatSquad: {fileID: 8022818945800359157}
+  spawnEffectPrefab: {fileID: 0}
+  ignoreTeamSizeLimit: 0
+  _monsterCards: {fileID: 11400000, guid: ec9b2a465bf9c8b498e59179b7887792, type: 2}
+  fallBackToStageMonsterCards: 1
+  currentSpawnTarget: {fileID: 0}
+--- !u!114 &8022818945800359157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800851431774492465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1720486850, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  propagateMembershipToSummons: 0
+  grantBonusHealthInMultiplayer: 1
+  onDefeatedClientLogicEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onDefeatedServerLogicEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &981804718665715722
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +414,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 24455950974340491}
   m_RootOrder: 2
@@ -360,6 +446,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 24455950974340491}
   m_RootOrder: 0
@@ -423,6 +510,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &6781087799712723173
@@ -453,6 +541,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.016, y: 2.898, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 24455950974340491}
   m_RootOrder: 1
@@ -501,6 +590,7 @@ MonoBehaviour:
   targetRenderer: {fileID: 0}
   strength: 1
   highlightColor: 1
+  CustomColor: {r: 1, g: 0, b: 1, a: 1}
   isOn: 0
 --- !u!1001 &1574191430137800469
 PrefabInstance:

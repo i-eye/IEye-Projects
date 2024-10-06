@@ -58,8 +58,8 @@ namespace IEye.RRP.Interactables
             GameObject Interactable = AssetCollection.FindAsset<GameObject>("BloodyPrismGameObject");
 
             var interactableToken = Interactable.AddComponent<PrismInteractableToken>();
-            interactableToken.combatDirector = Interactable.AddComponent<CombatDirector>();
-            interactableToken.combatSquad = Interactable.AddComponent<CombatSquad>();
+            interactableToken.combatDirector = Interactable.GetComponent<CombatDirector>();
+            interactableToken.combatSquad = Interactable.GetComponent<CombatSquad>();
             interactableToken.Interaction = Interactable.GetComponent<PurchaseInteraction>();
             interactableToken.dropTransform = Interactable.GetComponent<Transform>();
             interactableToken.symbolTranform = null;
@@ -95,8 +95,6 @@ namespace IEye.RRP.Interactables
 
             public GameObject destroyVFX;
 
-            DirectorCard impCard;
-            DirectorCard impBoss;
 
             public ExplicitPickupDropTable dropTable { get; set; }
 
@@ -111,36 +109,16 @@ namespace IEye.RRP.Interactables
                     Interaction.SetAvailableTrue();
                 }
                 //DefNotRRPLog.Message("Getting Combat Squad");
-                combatDirector.combatSquad = combatSquad;
                 //DefNotRRPLog.Message("Got Combat Squad");
                 combatSquad.onDefeatedServer += OnDefeatedServer;
                 GetComponent<Highlight>().enabled = true;
                 Interaction.onPurchase.AddListener(PrismInteractAttempt);
                 rng = new Xoroshiro128Plus(Run.instance.treasureRng.nextUlong);
-                combatDirector.expRewardCoefficient = .1f;
-                combatDirector.goldRewardCoefficient = .1f;
 
                 List<ItemDef> items = ItemTiers.Sacrificial.ItemDefsWithTier();
                 Array.Resize(ref dropTable.pickupEntries, items.Count);
                 //DefNotRRPLog.Message(dropTable.pickupEntries.IsFixedSize);
                 //DefNotRRPLog.Message(dropTable.pickupEntries.Length);
-
-                impCard = new DirectorCard()
-                {
-                    spawnCard = Addressables.LoadAssetAsync<CharacterSpawnCard>("RoR2/Base/Imp/cscImp.asset").WaitForCompletion(),
-                    selectionWeight = 10,
-                    spawnDistance = DirectorCore.MonsterSpawnDistance.Standard,
-                    preventOverhead = false,
-                    minimumStageCompletions = 0,
-                };
-                impBoss = new DirectorCard()
-                {
-                    spawnCard = Addressables.LoadAssetAsync<CharacterSpawnCard>("RoR2/Base/ImpBoss/cscImpBoss.asset").WaitForCompletion(),
-                    selectionWeight = 10,
-                    spawnDistance = DirectorCore.MonsterSpawnDistance.Standard,
-                    preventOverhead = false,
-                    minimumStageCompletions = 0,
-                };
 
 
                 for (int i = 0; i < dropTable.pickupEntries.Length; i++)
@@ -218,20 +196,9 @@ namespace IEye.RRP.Interactables
                 if(NetworkServer.active)
                 {
                     DirectorCard card = combatDirector.SelectMonsterCardForCombatShrine(monsterCredit);
-                    float rand = UnityEngine.Random.Range(0f, 1f);
-                    if (rand > .5f)
-                    {
-                        RRPLog.Message("Imp Selected");
-                        card = impCard;
-                    } 
-                    if (monsterCredit > 800 && rand > .77f)
-                    {
-                        card = impBoss;
-                    }
                     
                     
-                    
-                    SacrificeActivation(interactor, monsterCredit, card);
+                    SacrificeActivation(interactor, monsterCredit);
 
                     /*foreach(CharacterMaster master in combatSquad.membersList)
                     {
@@ -241,14 +208,14 @@ namespace IEye.RRP.Interactables
                 }
             }
 
-            public void SacrificeActivation(Interactor interactor, float monsterCredit, DirectorCard card)
+            public void SacrificeActivation(Interactor interactor, float monsterCredit)
             {
                 combatDirector.enabled = true;
                 combatDirector.monsterCredit += monsterCredit;
-                combatDirector.OverrideCurrentMonsterCard(card);
                 combatDirector.monsterSpawnTimer = 0f;
                 //combatDirector.CombatShrineActivation
-                CharacterMaster component = card.spawnCard.prefab.GetComponent<CharacterMaster>();
+                
+                CharacterMaster component = combatDirector.lastAttemptedMonsterCard.spawnCard.prefab.GetComponent<CharacterMaster>();
                 if ((bool)(UnityEngine.Object)(object)component)
                 {
                     CharacterBody component2 = component.bodyPrefab.GetComponent<CharacterBody>();

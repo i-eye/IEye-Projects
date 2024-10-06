@@ -93,7 +93,11 @@ namespace IEye.RRP.Items
 
             public void OnIncomingDamageServer(DamageInfo damageInfo)
             {
-                applyPoision(damageInfo.attacker.GetComponent<CharacterBody>());
+                CharacterBody aBody;
+                if(damageInfo.procCoefficient > 0 && (aBody = damageInfo.attacker.GetComponent<CharacterBody>()) && aBody != body)
+                {
+                    applyPoision(aBody);
+                }
             }
         }
 

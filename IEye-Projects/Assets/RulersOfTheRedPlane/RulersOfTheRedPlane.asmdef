@@ -5,14 +5,13 @@
         "Unity.Postprocessing.Runtime",
         "com.unity.multiplayer-hlapi.Runtime",
         "MSU.Runtime",
-        "Wwise",
         "Ak.Wwise.Api.WAAPI",
-        "AK.Wwise.Unity.API",
         "AK.Wwise.Unity.API.WwiseTypes",
         "AK.Wwise.Unity.MonoBehaviour",
         "AK.Wwise.Unity.Timeline",
         "UnityEngine.UI",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "AK.Wwise.Unity.API"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

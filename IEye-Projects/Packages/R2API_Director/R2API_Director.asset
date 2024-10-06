@@ -19,7 +19,7 @@ MonoBehaviour:
   Author: RiskofThunder
   Name: R2API_Director
   Description: API for easily modifiying the Director (RoR2 monster / interactable spawner) behaviour
-  Version: 2.2.1
+  Version: 2.3.1
   Dependencies: 
   - {fileID: 11400000, guid: 2d4d09ec817c24698d35dc9bf0704fdc, type: 2}
   - {fileID: 11400000, guid: bff73382628f698c89c1d9ae43c8f350, type: 2}

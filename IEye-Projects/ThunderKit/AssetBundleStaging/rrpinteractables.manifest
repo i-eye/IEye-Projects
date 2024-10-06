@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2517245337
+CRC: 2975347748
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 84fa1316bc6e4a3c51b9b64932a3ddac
+    Hash: ac86691adeea38abfb206baff83fc1ba
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 33989059cfc8ba66e289b650878726b7
+    Hash: 195e10b89f345c4afb51674b9eb17c5c
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -32,15 +32,33 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 511512695, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
-  Script: {fileID: 268574540, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  Script: {fileID: 816898038, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: f8258ea15b8f74c4889ce485d21cbbb1, type: 3}
+- Class: 114
+  Script: {fileID: 268574540, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 288573216, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 370243918, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 451251496, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 871971028, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 2099981080, guid: 45feadaaa90b2d2217207fb8b533753e, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: d10af29dc523c7243a6e6e3d787aa1d6, type: 3}
 - Class: 114
   Script: {fileID: -226763392, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
+  Script: {fileID: 653292689, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -1720486850, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
   Script: {fileID: -335047464, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -104859921, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: -1161602148, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
@@ -50,23 +68,13 @@ ClassTypes:
 - Class: 114
   Script: {fileID: -1620867292, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
-  Script: {fileID: 871971028, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-- Class: 114
   Script: {fileID: 1063210218, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: -1699741063, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: -1247058517, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
-  Script: {fileID: 288573216, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-- Class: 114
-  Script: {fileID: 370243918, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-- Class: 114
   Script: {fileID: -565067572, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-- Class: 114
-  Script: {fileID: 451251496, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-- Class: 114
-  Script: {fileID: 816898038, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 59d64183cbf51584d983f414184f1d36, type: 3}
 - Class: 115
@@ -89,9 +97,13 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: R2API.Director
   ClassName: R2API.AddressableDirectorCard
 - AssemblyName: R2API.Director
+  ClassName: R2API.AddressableDirectorCardCategorySelection/Category
+- AssemblyName: R2API.Director
   ClassName: R2API.DirectorAPI/StageSerde
 - AssemblyName: RoR2
   ClassName: ChildLocator/NameTransformPair
+- AssemblyName: RoR2
+  ClassName: RoR2.CombatDirector/OnSpawnedServer
 - AssemblyName: RoR2
   ClassName: RoR2.ExplicitPickupDropTable/PickupDefEntry
 - AssemblyName: RoR2
@@ -104,12 +116,15 @@ SerializeReferenceClassIdentifiers:
   ClassName: Wave
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.UnityEvent
 - AssemblyName: com.unity.multiplayer-hlapi.Runtime
   ClassName: UnityEngine.Networking.NetworkHash128
 - AssemblyName: com.unity.multiplayer-hlapi.Runtime
   ClassName: UnityEngine.Networking.NetworkSceneId
 Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/iscBloodyPrism.asset
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/adccsPrism.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/DistTex.asset
 - Assets/RoR2/Pebble1Mesh.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/acBloodyPrism.asset
@@ -127,6 +142,7 @@ Assets:
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/PrismDroptable.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/BloodyPrismGameObject.prefab
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/MiniPrism.prefab
+- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/dccsPrism.asset
 - Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/PrismVFX.prefab
 Dependencies:
 - C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain
