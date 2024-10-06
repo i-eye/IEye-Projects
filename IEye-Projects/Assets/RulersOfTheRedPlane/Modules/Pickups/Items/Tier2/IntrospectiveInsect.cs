@@ -36,9 +36,9 @@ namespace IEye.RRP.Items
         [FormatToken(token, 2)]
         public static float insectMoveSpeed = 50f;
 
-        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percent life restored on hitting enemies per stack(default 8%)")]
+        [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Percent life restored on hitting enemies per stack(default 10%)")]
         [FormatToken(token, 3)]
-        public static float insectHealAmount = 8f;
+        public static float insectHealAmount = 10f;
 
         [RiskOfOptionsConfigureField(RRPConfig.IDItem, configDescOverride = "Hits needed to heal(default 5)")]
         [FormatToken(token, 4)]
@@ -67,6 +67,10 @@ namespace IEye.RRP.Items
             
             public void OnDamageDealtServer(DamageReport damageReport)
             {
+                if(damageReport == null)
+                {
+                    return;
+                }
                 var victimBody = damageReport.victimBody;
                 
                 if (victimBody)
@@ -75,12 +79,12 @@ namespace IEye.RRP.Items
                     HitCounter component;
                     if (victimBody.GetBuffCount(RRPContent.Buffs.InsectPoison) > 0)
                     {
-                        if (!gameObject.TryGetComponent<HitCounter>(out component))
+                        if (!gameObject.TryGetComponent(out component))
                         {
                             component = gameObject.AddComponent<HitCounter>();
                         }
                         component.AddHit();
-                        if (component.CheckForHit())
+                        if (component.CheckForHeal())
                         {
                             victimBody.RemoveBuff(RRPContent.Buffs.InsectPoison);
                             SpawnOrb(damageReport, victimBody);
@@ -104,11 +108,17 @@ namespace IEye.RRP.Items
 
             public void OnTakeDamageServer(DamageReport report)
             {
-                var attacker = report.attacker;
-                var cb = attacker.GetComponent<CharacterBody>();
-                if (cb  && report.damageInfo.procCoefficient > 0)
+                if (report == null)
                 {
-                    applyPoision(cb);
+                    return;
+                }
+                var attacker = report.attacker;
+                if (attacker) { 
+                    var cb = attacker.GetComponent<CharacterBody>();
+                    if (cb && report.damageInfo.procCoefficient > 0)
+                    {
+                        applyPoision(cb);
+                    }
                 }
             }
 
@@ -132,7 +142,7 @@ namespace IEye.RRP.Items
 
             public void AddHit() { hitNumber++; }
             public void ResetHit() { hitNumber = 0; }
-            public bool CheckForHit()
+            public bool CheckForHeal()
             {
                 if(hitNumber == hitsNeeded) 
                 {

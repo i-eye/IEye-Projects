@@ -30,6 +30,9 @@ Nyctophiliac for creating the logo
 
 # Changelog
 
+### 0.1.7
+- More null checking for Insects
+
 ### 0.1.6
 - Aggressive Insect no longer breaks things that take your health but aren't enemies(such as void cradles)
 - Bloody Prism is more consistent and more dangerous

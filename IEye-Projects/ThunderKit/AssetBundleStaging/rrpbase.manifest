@@ -3,7 +3,7 @@ CRC: 1364927750
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3c02666990ec3deea94369a554489947
+    Hash: b98946f18fb4e746abf5dd8e21044c6d
   TypeTreeHash:
     serializedVersion: 2
     Hash: c5a912956200c152603f183e9a0dd58d
@@ -37,11 +37,11 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: RoR2
   ClassName: RoR2.ItemDef/Pair
 Assets:
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/ItemTiers/Sacrificial/SacrificialRelationshipType.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/ItemTiers/Sacrificial/SacrificialRelationshipProvider.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/ItemTiers/Sacrificial/SacrificialPickupVFX.prefab
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/ItemTiers/Sacrificial/Sacrificial.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/ItemTiers/Sacrificial/Background.png
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/ItemTiers/Sacrificial/acSacrificial.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/ItemTiers/Sacrificial/SacrificialRelationshipType.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/ItemTiers/Sacrificial/SacrificialRelationshipProvider.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/ItemTiers/Sacrificial/SacrificialPickupVFX.prefab
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/ItemTiers/Sacrificial/Sacrificial.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/ItemTiers/Sacrificial/Background.png
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/ItemTiers/Sacrificial/acSacrificial.asset
 Dependencies:
-- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpitems
+- C:/Users/Admin/Documents/GitHub/IEye-Projects/IEye-Projects/ThunderKit/AssetBundleStaging/rrpitems

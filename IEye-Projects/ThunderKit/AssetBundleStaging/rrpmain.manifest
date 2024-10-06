@@ -3,7 +3,7 @@ CRC: 44698313
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: dd2ca19ce336e725a68fbb47da33f05b
+    Hash: 20f219a60e1e92d7df841b232d650512
   TypeTreeHash:
     serializedVersion: 2
     Hash: fe9afd8ba8d8418dc11b800ed928bd9e
@@ -21,8 +21,8 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/RulersOfTheRedPlane/Assetstorm/ContentPack.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/RRPExpansionDef.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/ContentPack.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/RRPExpansionDef.asset
 - Assets/RulersOfTheRedPlane/icon.png
 - Assets/RulersOfTheRedPlane/Expansion_Invert.png
 - Assets/RulersOfTheRedPlane/Expansion.png

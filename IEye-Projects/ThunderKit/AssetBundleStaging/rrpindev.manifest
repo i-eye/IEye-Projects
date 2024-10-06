@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1304011480
+CRC: 1220091935
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3898efa1d22fb3d97a6114369cd2c218
+    Hash: 3ee6a3e669e3dae99532c1efa3f25d6a
   TypeTreeHash:
     serializedVersion: 2
     Hash: a317d4fb9bda3aec323995b2e273b296
@@ -209,52 +209,52 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: com.unity.multiplayer-hlapi.Runtime
   ClassName: UnityEngine.Networking.NetworkSceneId
 Assets:
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/acWlurm.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Skills/sfWlurm1.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Visuals/rrp_ProvidenceGarden_Profiles/Fog
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/acWlurm.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/Skills/sfWlurm1.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/Visuals/rrp_ProvidenceGarden_Profiles/Fog
   Profile.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/WlurmMaster.prefab
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/RedWorm.fbx
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/New Character Spawn Card.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/WormMesh_Normal_OpenGL.png
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Materials/matGardenCave.mat
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/dpGardenInteractables.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/GardenGroundNodes.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Skills/escLaser.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/AvatarMask(for a
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/WlurmMaster.prefab
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/Art/RedWorm.fbx
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/New Character Spawn Card.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/Art/WormMesh_Normal_OpenGL.png
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/Materials/matGardenCave.mat
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/dpGardenInteractables.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/GardenGroundNodes.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/Skills/escLaser.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/Art/AvatarMask(for a
   worm).mask
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Items/BloodFrenzy/BloodFrenzy.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/animWorm.controller
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/rrp_ProvidenceGarden.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/adccsGardenMonsters.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/dpGardenMonsters.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Materials/TheMaterial.mat
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/dccsGardenInteractables.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Skills/sdWlurm1.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/WlurmBossBody.prefab
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/matWormBody.mat
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Materials/matGardenGround.mat
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/adpGardenInteractables.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/adpGardenMonsters.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Items/BloodFrenzy/BloodFrenzy.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/Art/animWorm.controller
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/rrp_ProvidenceGarden.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/adccsGardenMonsters.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/dpGardenMonsters.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/Materials/TheMaterial.mat
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/dccsGardenInteractables.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/Skills/sdWlurm1.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/WlurmBossBody.prefab
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/Art/matWormBody.mat
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/Materials/matGardenGround.mat
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/adpGardenInteractables.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/adpGardenMonsters.asset
 - Assets/RoR2/Textures/texDCGrass.png
 - Assets/RoR2/Textures/texDCGravelDiffuse.png
 - Packages/com.unity.postprocessing/PostProcessing/Gizmos/PostProcessLayer.png
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/Meshes/Main
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/Meshes/Main
   Land.fbx
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/matWormTooth.mat
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/acProvidenceGarden.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/matWormEye.mat
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/RedWormTeeth.png
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/adccsGardenInteractables.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/Art/matWormTooth.mat
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/acProvidenceGarden.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/Art/matWormEye.mat
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/Art/RedWormTeeth.png
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/DCCS/Interactable/adccsGardenInteractables.asset
 - Assets/RoR2/Textures/texDCRockSide.png
 - Assets/RoR2/Normals/texRockyNormalsFlattened.png
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/mspWlurm.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/RedWormEye.png
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/dccsGardenMonsters.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/WormMesh_Base_color.png
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Stages/ProvidenceGarden/GardenAirNodes.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/INDEV/Enemies/Wlurm/Art/RedWormEyeEmmsive.png
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/mspWlurm.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/Art/RedWormEye.png
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/DCCS/Monster/dccsGardenMonsters.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/Art/WormMesh_Base_color.png
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Stages/ProvidenceGarden/GardenAirNodes.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/INDEV/Enemies/Wlurm/Art/RedWormEyeEmmsive.png
 Dependencies:
-- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpbase
-- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain
-- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/runtimemsuassetbundle
+- C:/Users/Admin/Documents/GitHub/IEye-Projects/IEye-Projects/ThunderKit/AssetBundleStaging/rrpbase
+- C:/Users/Admin/Documents/GitHub/IEye-Projects/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain
+- C:/Users/Admin/Documents/GitHub/IEye-Projects/IEye-Projects/ThunderKit/AssetBundleStaging/runtimemsuassetbundle

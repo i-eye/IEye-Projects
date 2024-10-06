@@ -50,7 +50,7 @@ namespace IEye.RRP.Items
             
             public void OnDamageDealtServer(DamageReport damageReport)
             {
-                if (damageReport.victimBody.GetBuffCount(RRPContent.Buffs.InsectBloody) > 0 && !damageReport.damageInfo.procChainMask.HasProc(basedProc))
+                if (damageReport.victimBody && damageReport.victimBody.GetBuffCount(RRPContent.Buffs.InsectBloody) > 0 && !damageReport.damageInfo.procChainMask.HasProc(basedProc))
                 {
                     SpawnMissile(damageReport);
                 }
@@ -93,11 +93,18 @@ namespace IEye.RRP.Items
 
             public void OnTakeDamageServer(DamageReport report)
             {
-                var attacker = report.attacker;
-                var cb = attacker.GetComponent<CharacterBody>();
-                if (cb && report.damageInfo.procCoefficient > 0)
+                if (report == null)
                 {
-                    applyPoision(cb);
+                    return;
+                }
+                var attacker = report.attacker;
+                if (attacker)
+                {
+                    var cb = attacker.GetComponent<CharacterBody>();
+                    if (cb && report.damageInfo.procCoefficient > 0)
+                    {
+                        applyPoision(cb);
+                    }
                 }
             }
         }

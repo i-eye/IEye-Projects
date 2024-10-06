@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1562225282
+CRC: 3661061383
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: db3f9fe0d570f675cac2281358dde017
+    Hash: 22b190e94a186434270c2849f20cb62a
   TypeTreeHash:
     serializedVersion: 2
     Hash: 3db2885ffddb1b91299b3a51f35407c5
@@ -153,6 +153,6 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/RulersOfTheRedPlane/Assetstorm/Scenes/rrp_ProvidenceGarden.unity
+- Assets/RulersOfTheRedPlane/AssetStorm/Scenes/rrp_ProvidenceGarden.unity
 Dependencies:
-- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpindev
+- C:/Users/Admin/Documents/GitHub/IEye-Projects/IEye-Projects/ThunderKit/AssetBundleStaging/rrpindev

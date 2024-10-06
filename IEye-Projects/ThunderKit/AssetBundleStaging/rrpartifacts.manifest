@@ -3,7 +3,7 @@ CRC: 1728157733
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 030191a09ad7937ad3a382894bb524cc
+    Hash: acc2bbcd3619dd6f66a384699a1bddd6
   TypeTreeHash:
     serializedVersion: 2
     Hash: a7c7283b06d7043ce187b19560b89a8f
@@ -31,12 +31,12 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: MoonstormSharedUtils
   ClassName: Moonstorm.MSUnlockableDef/AchievementStringAssetRef
 Assets:
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/acLoop.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/Loop.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/Loop Artifact.png
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/LoopCode.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/Loop Artifact Achievement.png
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/rrp.artifact.loop.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Artifacts/Loop Artifact Disabled.png
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/acLoop.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/Loop.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/Loop Artifact.png
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/LoopCode.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/Loop Artifact Achievement.png
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/rrp.artifact.loop.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Artifacts/Loop Artifact Disabled.png
 Dependencies:
-- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain
+- C:/Users/Admin/Documents/GitHub/IEye-Projects/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain

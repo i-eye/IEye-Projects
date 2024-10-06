@@ -3,7 +3,7 @@ CRC: 3575722993
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 23dbea29f1fbc0a233632728177597df
+    Hash: 991525c1ebf773c2f8fb00a78b5cd424
   TypeTreeHash:
     serializedVersion: 2
     Hash: d8d66547868427aec6060c19bff80d61
@@ -123,27 +123,27 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: com.unity.multiplayer-hlapi.Runtime
   ClassName: UnityEngine.Networking.NetworkSceneId
 Assets:
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/iscBloodyPrism.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/adccsPrism.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/DistTex.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/iscBloodyPrism.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/adccsPrism.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/VFX/DistTex.asset
 - Assets/RoR2/Pebble1Mesh.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/acBloodyPrism.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/Main_Prism.fbx
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/Prism
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/acBloodyPrism.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/Art/Main_Prism.fbx
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/Art/Prism
   Mat.mat
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/icpPrism.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/Material
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/icpPrism.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/Art/Material
   Base Color.png
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/texShrineIconOutlined.png
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/Art/MiniPrism.fbx
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/ExplosionMat.mat
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/Red Shard.png
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/Ramp.png
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/PrismDroptable.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/BloodyPrismGameObject.prefab
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/MiniPrism.prefab
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/dccsPrism.asset
-- Assets/RulersOfTheRedPlane/Assetstorm/Base/Interactables/BloodyPrism/VFX/PrismVFX.prefab
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/Art/texShrineIconOutlined.png
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/Art/MiniPrism.fbx
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/VFX/ExplosionMat.mat
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/VFX/Red Shard.png
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/VFX/Ramp.png
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/PrismDroptable.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/BloodyPrismGameObject.prefab
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/MiniPrism.prefab
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/dccsPrism.asset
+- Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/VFX/PrismVFX.prefab
 Dependencies:
-- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain
-- C:/Users/Admin/Documents/Priority-Projects/RRP/IEyeProject/IEye-Projects/ThunderKit/AssetBundleStaging/runtimemsuassetbundle
+- C:/Users/Admin/Documents/GitHub/IEye-Projects/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain
+- C:/Users/Admin/Documents/GitHub/IEye-Projects/IEye-Projects/ThunderKit/AssetBundleStaging/runtimemsuassetbundle
