@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace EntityStates.Wlurm
 {
-    public class Laser : BaseSkillState
+    public class Laser : BaseState
     {
         public static GameObject laserProjectile;
         public static GameObject[] tentacleEnds;

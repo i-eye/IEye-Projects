@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace EntityStates.Wlurm
 {
-    public class SpawnState : BaseState
+    public class WlurmSpawn : BaseState
     {
         private float stopwatch;
         public static float duration = 4f;

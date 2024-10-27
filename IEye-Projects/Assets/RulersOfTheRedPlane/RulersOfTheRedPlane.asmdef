@@ -58,7 +58,7 @@
         "R2API.Addressables.dll",
         "R2API.Director.dll",
         "R2API.ArtifactCode.dll",
-        ""
+        "KinematicCharacterController.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [],
