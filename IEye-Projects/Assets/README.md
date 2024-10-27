@@ -30,6 +30,9 @@ Nyctophiliac for creating the logo
 
 # Changelog
 
+### 0.1.8
+- Increased networking error checking for Bloody Prism
+
 ### 0.1.7
 - More null checking for Insects
 

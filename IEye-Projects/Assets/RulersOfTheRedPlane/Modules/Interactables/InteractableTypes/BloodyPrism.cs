@@ -18,6 +18,7 @@ using EntityStates.Headstompers;
 using EntityStates.BeetleQueenMonster;
 using UnityEngine.AddressableAssets;
 using RoR2.ContentManagement;
+using RoR2.Networking;
 
 namespace IEye.RRP.Interactables
 {
@@ -76,8 +77,10 @@ namespace IEye.RRP.Interactables
         }
         //[RequireComponent(typeof(PurchaseInteraction))]
 
-        
-        public class PrismInteractableToken : NetworkBehaviour
+        [RequireComponent(typeof(CombatDirector))]
+        [RequireComponent(typeof(CombatSquad))]
+        [RequireComponent(typeof(PurchaseInteraction))]
+        public class PrismInteractableToken : ShrineBehavior
         {
             bool hasActivated = false;
             public CharacterBody Activator;
@@ -100,6 +103,10 @@ namespace IEye.RRP.Interactables
 
             public static event Action<PrismInteractableToken> onDefeatedServer;
             
+            public override int GetNetworkChannel()
+            {
+                return QosChannelIndex.defaultReliable.intVal;
+            }
             public void Start()
             {
 
@@ -184,6 +191,8 @@ namespace IEye.RRP.Interactables
                 
                 
             }
+
+            
             public void PrismInteractAttempt(Interactor interactor)
             {
 
@@ -205,9 +214,13 @@ namespace IEye.RRP.Interactables
                         master.gameObject.AddComponent<PositionIndicator>();
                     } */
                     hasActivated = true;
+                } else
+                {
+                    RRPLog.Warning("PrismInteractableToken PrismInteractAttempt called on client");
                 }
             }
 
+            [Server]
             public void SacrificeActivation(Interactor interactor, float monsterCredit)
             {
                 combatDirector.enabled = true;
@@ -256,6 +269,23 @@ namespace IEye.RRP.Interactables
                     }
                 }
                 return weightedSelection;
+            }
+
+            public override bool OnSerialize(NetworkWriter writer, bool forceAll)
+            {
+                bool flag = base.OnSerialize(writer, forceAll);
+                bool flag2 = default(bool);
+                return flag2 || flag;
+            }
+
+            public override void OnDeserialize(NetworkReader reader, bool initialState)
+            {
+                base.OnDeserialize(reader, initialState);
+            }
+
+            public override void PreStartClient()
+            {
+                base.PreStartClient();
             }
         }
     }

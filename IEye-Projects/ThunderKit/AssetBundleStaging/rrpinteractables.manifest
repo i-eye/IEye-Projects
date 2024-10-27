@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3575722993
+CRC: 2091355921
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 991525c1ebf773c2f8fb00a78b5cd424
+    Hash: 579da420a8dba7d9ec4f973c493ef3b0
   TypeTreeHash:
     serializedVersion: 2
     Hash: d8d66547868427aec6060c19bff80d61
@@ -146,4 +146,3 @@ Assets:
 - Assets/RulersOfTheRedPlane/AssetStorm/Base/Interactables/BloodyPrism/VFX/PrismVFX.prefab
 Dependencies:
 - C:/Users/Admin/Documents/GitHub/IEye-Projects/IEye-Projects/ThunderKit/AssetBundleStaging/rrpmain
-- C:/Users/Admin/Documents/GitHub/IEye-Projects/IEye-Projects/ThunderKit/AssetBundleStaging/runtimemsuassetbundle

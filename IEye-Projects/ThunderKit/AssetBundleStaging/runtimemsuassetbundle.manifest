@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2254347440
+CRC: 3388926230
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4e739e73e936cb9140f10dc43f1f323f
+    Hash: 84c6823952cc7a2965af728b5f4b269a
   TypeTreeHash:
     serializedVersion: 2
     Hash: 4adbfb2e7c56a2b27bfedce63d72b925
@@ -94,16 +94,12 @@ SerializeReferenceClassIdentifiers:
   ClassName: UnityEngine.Networking.NetworkSceneId
 Assets:
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/TextMeshPro/TMP_Bitmap.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/PostProcess/HGVisionLimit.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/UI/HGUICustomBlend.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/README.md
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/PostProcess/HGSobelBuffer.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/CalmWater/CalmWater
   - SingleSided.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/PsychoseNGGS/NGSS_ContactShadows.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/CustomPostProcess/SobelOutline.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/TextMeshPro/TMP_SDF-Mobile.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Deferred/HGWavyCloth.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/TextMeshPro/TMP_SDF
   Overlay.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/Speedtree
@@ -113,29 +109,18 @@ Assets:
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/Internal-ScreenSpaceShadows_Cheaper.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/Optimized/Mods/DoublePassUnlitTemplate.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/UI/HGUIOverbrighten.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/FX/HGVertexOnly.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/PostProcess/HGScreenDamage.shader
 - Packages/teammoonstorm-moonstormsharedutils/RuntimeLegacy/MSUAssets/DummyEventCard.asset
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/UI/HGUIOverbrighten.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/FX/HGCloudRemap.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/Deferred/HGStandard.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/PostProcess/HGScopeShader.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/Deferred/HGSnowTopped.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/Prefabs/CustomSpriteWalk.prefab
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/Prefabs/GameplayEventText.prefab
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/Environment/HGFlag.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/FX/HGSolidParallax.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/PostProcess/HGOutlineHighlight.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/CalmWater/CalmWater
   - DoubleSided.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/CustomPostProcess/RampFog.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/MobileBlur.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/UI/HGUIBlur.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/TextMeshPro/TMP_Bitmap-Custom-Atlas.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/LeTai'sAsset/EfficientBlur.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/CustomPostProcess/SobelRain.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/TextMeshPro/TMP_Bitmap-Mobile.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/UI/HGUIIgnoreZ.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/UI/HealthBar.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/Decalicious/DecaliciousDeferredDecal.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/TextMeshPro/TMP_SDF.shader
@@ -151,26 +136,19 @@ Assets:
   Overlay.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/TextMeshPro/TMP_Sprite.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/Decalicious/Shader/DecaliciousUnlitDecal.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Environment/HGWaterfall.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/TextMeshPro/TMP_SDF-Surface-Mobile.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/FX/HGIntersectionCloudRemap.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/FX/HGDamageNumber.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/skymeadow/Fill-Linear.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Deferred/HGSnowTopped.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Environment/HGGrass.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/Deferred/HGTriplanarTerrainBlend.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/FX/HGCloudRemap.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/CalmWater/CalmWater
   - DX11.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/LeTai'sAsset/QuickDumbBlur.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/FX/HGForwardPlanet.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Core/Outline/OutlineHighlightSurf.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/TextMeshPro/TMP_SDF-Surface.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/Decalicious/DecaliciousGameObjectID.shader
 - Packages/teammoonstorm-moonstormsharedutils/RuntimeLegacy/MSUAssets/Prefabs/MSUEventDirector.prefab
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/Speedtree
   Override/SpeedTreeBillboard.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/PostProcess/HGSobelBuffer.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/CustomPostProcess/HopooSSR.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/PostProcess/HGOutlineHighlight.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/FX/HGSolidParallax.shader
@@ -179,7 +157,6 @@ Assets:
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/CalmWater/ProjectorCaustics.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/Decalicious/Shader/DecaliciousDeferredDecal.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/FX/HGVertexOnly.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/FX/HGOpaqueCloudRemap.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/UI/HGUICustomBlend.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/TextMeshPro/TMP_SDF-Mobile
   SSD.shader
@@ -190,7 +167,6 @@ Assets:
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/texEmptySprite.png
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/LeTai'sAsset/DownTent.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/Decalicious/DecaliciousUnlitDecal.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Deferred/HGStandardWithDistortion.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/CustomPostProcess/SobelRain.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Core/Outline/OutlineHighlightNew.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/PsychoseNGGS/NGSS_FrustumShadows.shader
@@ -203,28 +179,19 @@ Assets:
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/EmptySpriteAnimation.asset
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/TextMeshPro/TMP_SDF-Mobile
   Masking.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/FX/HGDistortion.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Environment/HGDistantWater.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Deferred/HGTriplanarTerrainBlend.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/TextMeshPro/Distance
   Field.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/UI/HGUIBarRemap.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/FX/HGDamageNumber.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/TextMeshPro/TMP_SDF
   SSD.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/CustomPostProcess/SobelOutline.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/LeTai'sAsset/TranslucentImage.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/PostProcess/HGVisionLimit.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Deferred/HGStandard.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/MobileBlur.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/CustomPostProcess/SceneTint.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/Deferred/HGOnTop.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/FX/HGOpaqueCloudRemap.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/Environment/HGDistantWater.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/PostProcess/HGScopeShader.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/UI/HGUIBarRemap.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/CustomPostProcess/HopooSSR.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/LeTai'sAsset/FillCrop.shader
-- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/UI/HGUIAnimateAlpha.shader
 - Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/StubbedShaders/RoR2/Base/Shaders/Deferred/HGStandardWithDistortion.shader
 Dependencies: []
