@@ -13,23 +13,67 @@ MonoBehaviour:
   m_Name: escLaser
   m_EditorClassIdentifier: 
   targetType:
-    assemblyQualifiedName: EntityStates.Wlurm.Laser, RulersOfTheRedPlane, Version=0.0.1.0,
+    assemblyQualifiedName: EntityStates.Wlurm.WlurmLaser, RulersOfTheRedPlane, Version=0.0.1.0,
       Culture=neutral, PublicKeyToken=null
   serializedFieldsCollection:
     serializedFields:
-    - fieldName: laserProjectile
-      fieldValue:
-        stringValue: 
-        objectValue: {fileID: 0}
     - fieldName: duration
       fieldValue:
         stringValue: 0
         objectValue: {fileID: 0}
-    - fieldName: baseTimeBetweenShots
+    - fieldName: aimMaxSpeed
       fieldValue:
         stringValue: 0
         objectValue: {fileID: 0}
-    - fieldName: tentacleStart
+    - fieldName: effectPrefab
       fieldValue:
         stringValue: 
+        objectValue: {fileID: 0}
+    - fieldName: hitEffectPrefab
+      fieldValue:
+        stringValue: 
+        objectValue: {fileID: 0}
+    - fieldName: laserPrefab
+      fieldValue:
+        stringValue: 
+        objectValue: {fileID: 0}
+    - fieldName: muzzleString
+      fieldValue:
+        stringValue: 
+        objectValue: {fileID: 0}
+    - fieldName: attackSoundString
+      fieldValue:
+        stringValue: 
+        objectValue: {fileID: 0}
+    - fieldName: damageCoefficient
+      fieldValue:
+        stringValue: 0
+        objectValue: {fileID: 0}
+    - fieldName: procCoefficient
+      fieldValue:
+        stringValue: 0
+        objectValue: {fileID: 0}
+    - fieldName: force
+      fieldValue:
+        stringValue: 0
+        objectValue: {fileID: 0}
+    - fieldName: minSpread
+      fieldValue:
+        stringValue: 0
+        objectValue: {fileID: 0}
+    - fieldName: maxSpread
+      fieldValue:
+        stringValue: 0
+        objectValue: {fileID: 0}
+    - fieldName: bulletCount
+      fieldValue:
+        stringValue: 0
+        objectValue: {fileID: 0}
+    - fieldName: fireFrequency
+      fieldValue:
+        stringValue: 0
+        objectValue: {fileID: 0}
+    - fieldName: maxDistance
+      fieldValue:
+        stringValue: 0
         objectValue: {fileID: 0}
