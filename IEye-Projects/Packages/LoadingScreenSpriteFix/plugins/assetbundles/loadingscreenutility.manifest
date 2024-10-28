@@ -1,0 +1,41 @@
+ManifestFileVersion: 0
+CRC: 71294059
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6be6fc7eee72d695973fc797222d33f0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cd206fc3b9c9a1e9ce2373514d017373
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 2054123791, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -1239196500, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -765806418, guid: d3e719b59ab71ba3f6b398058c866280, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: RoR2
+  ClassName: RoR2.SimpleSpriteAnimation/Frame
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+Assets:
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/Prefabs/CustomSpriteWalk.prefab
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/EmptySpriteAnimation.asset
+- Packages/teammoonstorm-moonstormsharedutils/Runtime/MSUAssets/texEmptySprite.png
+Dependencies: []
